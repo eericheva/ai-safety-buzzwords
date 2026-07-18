@@ -7,7 +7,9 @@ Each entry: (display_term, cluster, s2_query).
 S2 bulk query syntax: "phrase", +(AND), |(OR), -(NOT), *(prefix)
 """
 
-SCOPE = '("language model" | "large language model" | LLM | chatbot | "AI safety" | "AI alignment")'
+CONTEXT = ["language model", "large language model", "LLM", "chatbot",
+           "AI safety", "AI alignment"]
+SCOPE = "(%s)" % " | ".join('"%s"' % c if " " in c else c for c in CONTEXT)
 
 
 def p(term):        # bare phrase (specific enough on its own)
@@ -29,6 +31,8 @@ BUZZWORDS = [
     ("overconfidence",          "1. Truthfulness",      s("overconfidence")),
     ("honesty",                 "1. Truthfulness",      s("honesty")),
     ("deception",               "1. Truthfulness",      s("deception")),
+    ("verbalized confidence",   "1. Truthfulness",      '"verbalized confidence" | "verbalized probability" | "verbalized uncertainty"'),
+    ("knowledge conflict",      "1. Truthfulness",      p("knowledge conflict")),
 
     # 2. Harm
     ("harmfulness",             "2. Harm",              s("harmfulness")),
@@ -38,6 +42,9 @@ BUZZWORDS = [
     ("dangerous capabilities",  "2. Harm",              p("dangerous capabilities")),
     ("dual use",                "2. Harm",              s("dual-use")),
     ("propensity",              "2. Harm",              s("propensity")),
+    ("automated decision-making", "2. Harm",            '"automated decision-making" | "automated decision making" | "automatic decision-making"'),
+    ("advice in regulated industries", "2. Harm",       p("regulated industries")),
+    ("influence operations",    "2. Harm",              '"influence operations" | "influence operation"'),
 
     # 3. Social bias
     ("bias",                    "3. Social bias",       s("bias")),
@@ -71,7 +78,7 @@ BUZZWORDS = [
     ("situational awareness",   "5. Alignment risks",   s("situational awareness")),
     ("evaluation awareness",    "5. Alignment risks",   p("evaluation awareness")),
     ("sandbagging",             "5. Alignment risks",   s("sandbagging")),
-    ("scheming",                "5. Alignment risks",   '("scheming" | "in-context scheming") + ("language model" | LLM | "AI safety" | agent | deceptive)'),
+    ("scheming",                "5. Alignment risks",   'scheming + (deceptive | sandbagging | covert | misalignment | "hidden goal" | "situational awareness" | "in-context")'),
     ("deceptive alignment",     "5. Alignment risks",   p("deceptive alignment")),
     ("alignment faking",        "5. Alignment risks",   p("alignment faking")),
     ("emergent misalignment",   "5. Alignment risks",   p("emergent misalignment")),
@@ -91,6 +98,9 @@ BUZZWORDS = [
     ("PII extraction",          "7. Data/privacy",      p("PII")),
     ("copyright",               "7. Data/privacy",      s("copyright")),
     ("unlearning",              "7. Data/privacy",      s("unlearning")),
+    ("membership inference",    "7. Data/privacy",      p("membership inference")),
+    ("differential privacy",    "7. Data/privacy",      p("differential privacy")),
+    ("knowledge editing",       "7. Data/privacy",      '"knowledge editing" | "model editing"'),
 
     # 8. Agentic safety
     ("agentic safety",          "8. Agentic",           p("agentic safety")),
@@ -110,6 +120,9 @@ BUZZWORDS = [
     ("persona vector",          "9. Representational",  p("persona vector")),
     ("sparse autoencoder",      "9. Representational",  p("sparse autoencoder")),
     ("concept cone",            "9. Representational",  p("concept cone")),
+
+    # 11. Multimodality
+    ("object hallucination",    "11. Multimodality",    p("object hallucination")),
 
     # 12. CoT faithfulness
     ("CoT faithfulness",        "12. CoT faithfulness", '"chain-of-thought faithfulness" | "chain of thought faithfulness"'),
@@ -221,6 +234,15 @@ VARIANTS = {
     "power-seeking": ["power-seeking", "power seeking"],
     "instrumental behavior": ["instrumental", "instrumental convergence", "instrumental subgoal"],
     "sparse autoencoder": ["sparse autoencoder"],
+    "verbalized confidence": ["verbalized confidence", "verbalized probability", "verbalized uncertainty"],
+    "knowledge conflict": ["knowledge conflict", "context-memory conflict", "context memory conflict"],
+    "membership inference": ["membership inference", "membership inference attack"],
+    "differential privacy": ["differential privacy", "differentially private", "dp-sgd"],
+    "knowledge editing": ["knowledge editing", "model editing", "factual editing"],
+    "automated decision-making": ["automated decision-making", "automated decision making",
+                                   "automatic decision-making"],
+    "advice in regulated industries": ["regulated industries", "regulated industry", "regulated advice"],
+    "influence operations": ["influence operation", "influence operations"],
 }
 
 

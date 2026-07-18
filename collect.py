@@ -21,7 +21,7 @@ Outputs: data/raw/<slug>.json, data/papers.csv, data/buzzword_counts.csv
 import csv, json, os, re, time, sys
 import urllib.parse, urllib.request
 
-from buzzwords import BUZZWORDS, variants
+from buzzwords import BUZZWORDS, CONTEXT, SCOPE, variants
 
 API_KEY = "s2k-ZOHSvEHee6VvgAyjrfPDQ88TXPswpt5ts8AOMUuU"
 BULK = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
@@ -38,9 +38,14 @@ def slug(t):
     return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
 
 
-def fetch(query):
+# Terms whose stem is a common word: citation-sort buries literal matches, so
+# retrieve most-recent-first instead (these buzzwords are recent anyway).
+SORT_OVERRIDE = {"scheming": "publicationDate:desc"}
+
+
+def fetch(query, sort="citationCount:desc"):
     params = {"query": query, "year": YEAR, "fields": FIELDS,
-              "fieldsOfStudy": "Computer Science", "sort": "citationCount:desc"}
+              "fieldsOfStudy": "Computer Science", "sort": sort}
     url = BULK + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"x-api-key": API_KEY})
     for attempt in range(5):
@@ -54,11 +59,14 @@ def fetch(query):
     return None
 
 
-def make_matcher(term):
-    pats = [re.compile(r"\b" + re.escape(v), re.IGNORECASE) for v in variants(term)]
+def make_matcher(surfaces):
+    pats = [re.compile(r"\b" + re.escape(v), re.IGNORECASE) for v in surfaces]
     def hit(text):
         return any(p.search(text) for p in pats)
     return hit
+
+
+ctx_hit = make_matcher(CONTEXT)
 
 
 def main():
@@ -70,7 +78,7 @@ def main():
             with open(cache) as f:
                 d = json.load(f)
         else:
-            d = fetch(query)
+            d = fetch(query, SORT_OVERRIDE.get(term, "citationCount:desc"))
             if d is None:
                 print(f"[{i}/{len(BUZZWORDS)}] {term}: FAILED", file=sys.stderr)
                 continue
@@ -80,7 +88,8 @@ def main():
 
         raw_total = d.get("total", 0) or 0
         data = d.get("data", []) or []
-        hit = make_matcher(term)
+        hit = make_matcher(variants(term))
+        scoped = SCOPE in query
 
         verified = []
         for pp in data:
@@ -90,6 +99,8 @@ def main():
                 continue
             text = (pp.get("title") or "") + " . " + (pp.get("abstract") or "")
             if not hit(text):
+                continue
+            if scoped and not ctx_hit(text):
                 continue
             verified.append((axid, pp))
 

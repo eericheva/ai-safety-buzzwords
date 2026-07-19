@@ -12,11 +12,21 @@ def b64(path):
         return "data:image/png;base64," + base64.b64encode(f.read()).decode()
 
 
-def main():
-    d = json.load(open(os.path.join(HERE, "data", "viz_data.json")))
-    d.pop("papers", None)   # paper table removed from the page; full table stays in data/papers.csv
+SOURCE_LABELS = {"curated": "Curated", "raw2": "Mined phrases", "openalex": "OpenAlex keywords"}
 
-    payload = json.dumps(d, ensure_ascii=False, separators=(",", ":"))
+
+def main():
+    curated = json.load(open(os.path.join(HERE, "data", "viz_data.json")))
+    curated.pop("papers", None)
+    curated["label"] = SOURCE_LABELS["curated"]
+    sources = {"curated": curated}
+    for s in ("raw2", "openalex"):
+        p = os.path.join(HERE, "data", "src_" + s, "viz_data.json")
+        if os.path.exists(p):
+            sd = json.load(open(p)); sd.pop("papers", None); sd["label"] = SOURCE_LABELS[s]
+            sources[s] = sd
+
+    payload = json.dumps(sources, ensure_ascii=False, separators=(",", ":"))
     html = TEMPLATE.replace("/*__DATA__*/", payload)
     out = os.path.join(HERE, "index.html")
     with open(out, "w") as f:
@@ -201,14 +211,15 @@ footer{padding:34px 0 60px;color:var(--muted);font-size:13px}
   <a class="cur" href="#">🧭 Word cloud</a>
   <a href="https://claude.ai/code/artifact/77473750-146a-4348-a4c1-5d476b986789">📈 Trends</a>
   <a href="https://claude.ai/code/artifact/8f0e56b3-eed4-414d-8414-585d553a26fe">🗂️ Groupings</a>
+  <span class="sep"></span>
+  <span class="eyebrow" style="align-self:center">Source</span>
+  <div class="seg" id="srcseg"></div>
 </nav></div>
 
 <header><div class="wrap hero">
   <div class="eyebrow">arXiv · Semantic Scholar · 2005–2026</div>
   <h1>The vocabulary of <em>AI safety</em>, counted</h1>
-  <p class="lead"><b id="leadn">—</b> canonical buzzwords from an AI-safety glossary, searched across arXiv
-  abstracts and verified by exact phrase. For every term: how many papers use it, when it
-  first appeared, and how much it's cited — pulled live from Semantic Scholar.</p>
+  <p class="lead" id="lead"></p>
 </div></header>
 
 <div class="wrap">
@@ -263,16 +274,25 @@ footer{padding:34px 0 60px;color:var(--muted);font-size:13px}
 </div></footer>
 
 <script>
-const DATA = /*__DATA__*/;
+const SOURCES = /*__DATA__*/;
+let curSource='curated';
+let DATA = SOURCES[curSource];
+const LEADS={
+  curated:'<b id="leadn">—</b> canonical buzzwords curated from an AI-safety glossary, matched across arXiv abstracts by exact phrase — papers, dates and citations pulled from Semantic Scholar.',
+  raw2:'<b id="leadn">—</b> candidate phrases discovered <b>bottom-up</b> from safety-paper abstracts (frequent n-grams), run through the same S2 pipeline. Noisier than the curated set — a look at what the corpus surfaces on its own.',
+  openalex:'<b id="leadn">—</b> keywords/topics harvested <b>bottom-up</b> from <b>OpenAlex</b> for safety papers, run through the same S2 pipeline. Broad academic labels, not curated concepts.'};
+const TILE1={curated:'from the glossary',raw2:'mined from abstracts',openalex:'OpenAlex keywords'};
 const isDark = () => document.documentElement.getAttribute('data-theme')==='dark' ||
   (!document.documentElement.getAttribute('data-theme') && matchMedia('(prefers-color-scheme:dark)').matches);
-const GC = () => isDark() ? DATA.group_color_dark : DATA.group_color;   // glossary (for the cloud legend)
+const GC = () => isDark() ? DATA.group_color_dark : DATA.group_color;
 /* grouping-lens helpers */
-let curLens='glossary';
+let curLens=Object.keys(DATA.lens_meta)[0];
 const lensColors = () => { const m=DATA.lens_meta[curLens]; return isDark()?m.colors_dark:m.colors; };
 const lensGroups = () => DATA.lens_meta[curLens].groups;
 const grpOf = s => (s.lenses && s.lenses[curLens]) || s.group;
-const statMap = {}; DATA.stats.forEach(s=>statMap[s.term]=s);
+let statMap = {};
+function buildStatMap(){ statMap={}; DATA.stats.forEach(s=>statMap[s.term]=s); }
+buildStatMap();
 const grpOfTerm = term => { const s=statMap[term]; return s?grpOf(s):null; };
 const fmt = n => n.toLocaleString('en-US');
 /* weight metrics (cloud size + bar length + sorting) */
@@ -302,7 +322,7 @@ btn.onclick=()=>{const r=document.documentElement;
 /* tiles */
 function tiles(){
   const t=[
-    ['n_buzzwords_v', DATA.n_buzzwords, 'buzzwords tracked', 'from the glossary'],
+    ['n_buzzwords_v', DATA.n_buzzwords, curSource==='curated'?'buzzwords tracked':'candidate terms', TILE1[curSource]||''],
     ['p', fmt(DATA.n_papers), 'arXiv papers', 'deduplicated corpus'],
     ['c', fmt(DATA.total_citations), 'total citations', 'across the corpus'],
     ['y', DATA.year_min+'–'+DATA.year_max, 'year span', 'peak 2023→'],
@@ -439,9 +459,26 @@ function timeline(){
   });
 }
 
-function renderAll(){tiles();buildLensSegs();buildSizeSeg();buildRankChips();renderCloud();legend();bars();barLegend();}
-document.getElementById('leadn').textContent=DATA.n_buzzwords;
+function renderAll(){document.getElementById('lead').innerHTML=LEADS[curSource]||LEADS.curated;
+  tiles();buildLensSegs();buildSizeSeg();buildRankChips();renderCloud();legend();bars();barLegend();
+  document.getElementById('leadn').textContent=DATA.n_buzzwords;}
+/* source switcher (curated vs candidate corpora) */
+function buildSrcSeg(){
+  const el=document.getElementById('srcseg'); if(!el) return;
+  el.innerHTML=Object.keys(SOURCES).map(s=>
+    `<button data-s="${s}" class="${s===curSource?'on':''}">${SOURCES[s].label}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>setSource(b.dataset.s));
+}
+function setSource(src){
+  curSource=src; DATA=SOURCES[src];
+  curLens=Object.keys(DATA.lens_meta)[0]; curSize='papers'; rankMode='papers';
+  buildStatMap();
+  document.querySelectorAll('#srcseg button').forEach(b=>b.classList.toggle('on',b.dataset.s===src));
+  document.getElementById('cloudbox').dataset.metric='';   // force cloud SVG re-inject
+  renderAll();
+}
 document.getElementById('gen').textContent=DATA.generated;
+buildSrcSeg();
 renderAll();
 matchMedia('(prefers-color-scheme:dark)').addEventListener('change',renderAll);
 </script>

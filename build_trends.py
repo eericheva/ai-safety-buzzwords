@@ -4,12 +4,21 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
+LBL = {"curated": "Curated", "raw2": "Mined phrases", "openalex": "OpenAlex keywords"}
+
+
 def main():
-    d = json.load(open(os.path.join(HERE, "data", "trends_data.json")))
-    html = TEMPLATE.replace("/*__DATA__*/", json.dumps(d, ensure_ascii=False, separators=(",", ":")))
+    curated = json.load(open(os.path.join(HERE, "data", "trends_data.json")))
+    curated["label"] = LBL["curated"]
+    sources = {"curated": curated}
+    for s in ("raw2", "openalex"):
+        p = os.path.join(HERE, "data", "src_" + s, "trends_data.json")
+        if os.path.exists(p):
+            sd = json.load(open(p)); sd["label"] = LBL[s]; sources[s] = sd
+    html = TEMPLATE.replace("/*__DATA__*/", json.dumps(sources, ensure_ascii=False, separators=(",", ":")))
     out = os.path.join(HERE, "trends.html")
     open(out, "w").write(html)
-    print(f"wrote {out}  ({os.path.getsize(out)/1024:.0f} KB)  terms={len(d['terms'])}")
+    print(f"wrote {out}  ({os.path.getsize(out)/1024:.0f} KB)  sources={list(sources)}")
 
 
 TEMPLATE = r"""<title>AI Safety Buzzwords — Trends over time</title>
@@ -90,7 +99,17 @@ section{padding:26px 0 40px}
 .chip.on{color:#fff;border-color:transparent}
 
 /* atlas grid */
+.atlasctl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:16px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+/* atlas heatmap (one-screen) */
+.hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1px 20px}
+.hrow{display:grid;grid-template-columns:9px 1fr auto 132px;align-items:center;gap:7px;height:18px;cursor:default}
+.hrow:hover{background:var(--accent-soft)}
+.hsw{width:9px;height:9px;border-radius:2px}
+.hnm{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hnum{font:600 11px/1 ui-monospace,monospace;color:var(--ink2);font-variant-numeric:tabular-nums}
+.hcells{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;height:12px}
+.hcells i{border-radius:1px;display:block}
 .mini{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 12px 8px;
   cursor:pointer;box-shadow:var(--shadow);transition:border-color .12s,transform .12s}
 .mini:hover{border-color:var(--line2);transform:translateY(-1px)}
@@ -146,6 +165,7 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 .nav a{display:flex;align-items:center;gap:6px;text-decoration:none;font:600 13px/1 system-ui;
   color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:9px;padding:8px 12px}
 .nav a.cur{color:var(--ink);border-color:var(--accent);background:var(--accent-soft)}
+.nav .sep{flex:1}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
@@ -156,6 +176,8 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
   <a href="https://claude.ai/code/artifact/925356f2-6bd0-48bd-931e-4da6525c7b00">🧭 Word cloud</a>
   <a class="cur" href="#">📈 Trends</a>
   <a href="https://claude.ai/code/artifact/8f0e56b3-eed4-414d-8414-585d553a26fe">🗂️ Groupings</a>
+  <span class="sep"></span><span class="eyebrow" style="align-self:center">Source</span>
+  <div class="seg" id="srcseg"></div>
 </nav></div>
 
 <header><div class="wrap hero">
@@ -183,7 +205,7 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 <div class="wrap">
   <section id="view-atlas">
     <p class="hint" id="atlas-hint"></p>
-    <div class="chips" id="atlas-chips"></div>
+    <div class="atlasctl"><div class="seg" id="atlasviewseg"></div><div class="chips" id="atlas-chips"></div></div>
     <div class="grid" id="atlas-grid"></div>
   </section>
 
@@ -211,7 +233,9 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 </div></footer>
 
 <script>
-const D = /*__DATA__*/;
+const SOURCES = /*__DATA__*/;
+let curSource='curated';
+let D = SOURCES[curSource];
 const CAT = ['--c1','--c2','--c3','--c4','--c5','--c6','--c7','--c8'];
 const YEARS = []; for(let y=D.y0;y<=D.y1;y++) YEARS.push(y);
 const cssv = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -219,10 +243,12 @@ const isDark = () => document.documentElement.getAttribute('data-theme')==='dark
   (!document.documentElement.getAttribute('data-theme') && matchMedia('(prefers-color-scheme:dark)').matches);
 const fmt = n => n>=1000? (n/1000).toFixed(n>=10000?0:1)+'k' : ''+n;
 const fmtf = n => n.toLocaleString('en-US');
-const termMap = {}; D.terms.forEach(t=>termMap[t.term]=t);
+let termMap = {};
+function buildTermMap(){ termMap={}; D.terms.forEach(t=>termMap[t.term]=t); }
+buildTermMap();
 
-let state={view:'atlas',weight:'papers',sort:'papers',groups:new Set(),lens:'glossary',
-  hidden:new Set(), norm:false};
+let state={view:'atlas',atlasView:'heat',weight:'papers',sort:'papers',groups:new Set(),
+  lens:Object.keys(D.lens_meta)[0], hidden:new Set(), norm:false};
 
 /* weight metrics — the card number + sort; the sparkline stays a time series */
 const WSHORT = {papers:'Papers', citations:'Citations', cpp:'Cit/paper', recency:'Recency', momentum:'Momentum', debut:'Debut yr', peak:'Peak yr'};
@@ -272,16 +298,47 @@ function renderAtlasChips(){
   document.querySelectorAll('#atlas-chips .chip').forEach(ch=>ch.onclick=()=>{
     const g=ch.dataset.g; state.groups.has(g)?state.groups.delete(g):state.groups.add(g); renderAtlas();});
 }
+function buildAtlasViewSeg(){
+  const el=document.getElementById('atlasviewseg');
+  el.innerHTML=[['heat','Heatmap'],['cards','Cards']].map(([k,l])=>
+    `<button data-a="${k}" class="${k===state.atlasView?'on':''}">${l}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.atlasView=b.dataset.a;renderAtlas();});
+}
+function atlasTip(term){const t=termMap[term],mm=t.metrics;
+  return `<span class="tv">${term}</span><br>${fmtf(mm.papers)} papers · ${fmtf(mm.citations)} citations · ${(+mm.cpp).toFixed(1)}/paper
+    <br><span style="color:#bbb">${mm.recency}% since ’24 · debut ${t.debut} · peak ${t.peak_year}</span>`;}
 function renderAtlas(){
-  renderAtlasChips();
+  renderAtlasChips(); buildAtlasViewSeg();
   const c=lensColors();
   let ts=[...D.terms];
   if(state.groups.size) ts=ts.filter(t=>state.groups.has(grpOf(t.term)));
   ts.sort((a,b)=>(sortVal(b)-sortVal(a)) || (b.total_n-a.total_n));
+  const grid=document.getElementById('atlas-grid');
+  const seriesLbl=seriesKey()==='c'?'citations':'papers';
+  if(state.atlasView==='heat'){
+    document.getElementById('atlas-hint').innerHTML=
+      `<b>${ts.length}</b> buzzwords on one screen · each row is a <b>heat-strip</b> 2015→2026, shaded by
+       ${seriesLbl}/year (row-normalised, so darker = its own busy years); the number is <b>${wLabel(state.weight).toLowerCase()}</b>.`;
+    grid.className='hgrid';
+    grid.innerHTML=ts.map(t=>{
+      const col=c[grpOf(t.term)]||'var(--muted)';
+      const vals=t.series.map(s=>s[seriesKey()]), mx=Math.max(1,...vals);
+      const cells=vals.map(v=>`<i style="background:${col};opacity:${(0.05+0.95*v/mx).toFixed(2)}"></i>`).join('');
+      return `<div class="hrow" data-t="${t.term}"><span class="hsw" style="background:${col}"></span>
+        <span class="hnm" title="${t.term}">${t.term}</span>
+        <span class="hnum">${wFmt(state.weight,wv(t))}</span>
+        <span class="hcells">${cells}</span></div>`;
+    }).join('');
+    grid.querySelectorAll('.hrow').forEach(r=>{
+      r.onmousemove=e=>showTip(atlasTip(r.dataset.t),e.clientX,e.clientY);
+      r.onmouseleave=hideTip;});
+    return;
+  }
   document.getElementById('atlas-hint').innerHTML=
     `<b>${ts.length}</b> buzzwords · each mini-chart is self-scaled to its own peak so you read
      the <b>shape</b> of its rise; the number is <b>${wLabel(state.weight).toLowerCase()}</b>. Dot marks the peak year.`;
-  document.getElementById('atlas-grid').innerHTML=ts.map(t=>{
+  grid.className='grid';
+  grid.innerHTML=ts.map(t=>{
     const col=c[grpOf(t.term)]||'var(--muted)', tot=wFmt(state.weight,wv(t));
     return `<div class="mini" data-t="${t.term}">
       <div class="top"><span class="nm" title="${t.term}">${t.term}</span>
@@ -290,9 +347,7 @@ function renderAtlas(){
       <div class="meta"><span>debut ${t.debut}</span><span>peak ${t.peak_year}</span></div></div>`;
   }).join('');
   document.querySelectorAll('#atlas-grid .mini').forEach(m=>{
-    m.onmousemove=e=>{const t=termMap[m.dataset.t],mm=t.metrics;
-      showTip(`<span class="tv">${t.term}</span><br>${fmtf(mm.papers)} papers · ${fmtf(mm.citations)} citations · ${(+mm.cpp).toFixed(1)}/paper
-        <br><span style="color:#bbb">${mm.recency}% since ’24 · debut ${t.debut} · peak ${t.peak_year}</span>`,e.clientX,e.clientY);};
+    m.onmousemove=e=>showTip(atlasTip(m.dataset.t),e.clientX,e.clientY);
     m.onmouseleave=hideTip;
   });
 }
@@ -458,6 +513,21 @@ addEventListener('resize',()=>{clearTimeout(window._r);window._r=setTimeout(rere
 document.addEventListener('click',e=>{const m=document.getElementById('addmenu');
   if(m&&!e.target.closest('.addwrap'))m.classList.remove('open');});
 
+/* source switcher */
+function buildSrcSeg(){
+  const el=document.getElementById('srcseg'); if(!el) return;
+  el.innerHTML=Object.keys(SOURCES).map(s=>
+    `<button data-s="${s}" class="${s===curSource?'on':''}">${SOURCES[s].label}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>setSource(b.dataset.s));
+}
+function setSource(src){
+  curSource=src; D=SOURCES[src]; buildTermMap();
+  state.lens=Object.keys(D.lens_meta)[0]; state.weight='papers'; state.sort='papers';
+  state.groups.clear(); state.hidden.clear();
+  document.querySelectorAll('#srcseg button').forEach(b=>b.classList.toggle('on',b.dataset.s===src));
+  setView(state.view);
+}
+buildSrcSeg();
 setView('atlas');
 </script>
 """

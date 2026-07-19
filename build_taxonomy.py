@@ -5,12 +5,21 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
+LBL = {"curated": "Curated", "raw2": "Mined phrases", "openalex": "OpenAlex keywords"}
+
+
 def main():
-    d = json.load(open(os.path.join(HERE, "data", "taxonomy_map.json")))
-    html = TEMPLATE.replace("/*__DATA__*/", json.dumps(d, ensure_ascii=False, separators=(",", ":")))
+    curated = json.load(open(os.path.join(HERE, "data", "taxonomy_map.json")))
+    curated["label"] = LBL["curated"]
+    sources = {"curated": curated}
+    for s in ("raw2", "openalex"):
+        p = os.path.join(HERE, "data", "src_" + s, "taxonomy_map.json")
+        if os.path.exists(p):
+            sd = json.load(open(p)); sd["label"] = LBL[s]; sources[s] = sd
+    html = TEMPLATE.replace("/*__DATA__*/", json.dumps(sources, ensure_ascii=False, separators=(",", ":")))
     out = os.path.join(HERE, "taxonomy.html")
     open(out, "w").write(html)
-    print(f"wrote {out} ({os.path.getsize(out)/1024:.0f} KB)")
+    print(f"wrote {out} ({os.path.getsize(out)/1024:.0f} KB) sources={list(sources)}")
 
 
 TEMPLATE = r"""<title>AI Safety Buzzwords — one map, many groupings</title>
@@ -48,6 +57,7 @@ a{color:var(--accent)}
 .nav a{display:flex;align-items:center;gap:6px;text-decoration:none;font:600 13px/1 system-ui;
   color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:9px;padding:8px 12px}
 .nav a.cur{color:var(--ink);border-color:var(--accent);background:var(--accent-soft)}
+.nav .sep{flex:1}
 header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--paper),var(--plane))}
 .hero{padding:40px 0 26px;display:grid;gap:14px}
 .hero h1{font-size:clamp(28px,4.4vw,46px);font-weight:800;letter-spacing:-.02em}
@@ -102,15 +112,17 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
   <a href="https://claude.ai/code/artifact/925356f2-6bd0-48bd-931e-4da6525c7b00">🧭 Word cloud</a>
   <a href="https://claude.ai/code/artifact/77473750-146a-4348-a4c1-5d476b986789">📈 Trends</a>
   <a class="cur" href="#">🗂️ Groupings</a>
+  <span class="sep"></span><span class="eyebrow" style="align-self:center">Source</span>
+  <div class="seg" id="srcseg"></div>
 </nav></div>
 
 <header><div class="wrap hero">
-  <div class="eyebrow">125 buzzwords · one map · three controls</div>
+  <div class="eyebrow" id="eyebrow">125 buzzwords · one map · three controls</div>
   <h1>One map, <em>many groupings</em></h1>
   <p class="lead">Every buzzword is a dot. <b>Layout</b> arranges the dots in space by one grouping;
   <b>Colour</b> paints them by another; <b>Size</b> scales them by a metric. Set layout and colour to the
   <em>same</em> lens to see clean clusters; set them <em>differently</em> to see how one grouping cuts across another.</p>
-  <div class="findings">
+  <div class="findings" id="findings">
     <div class="finding"><h4>THEMES MOSTLY HOLD</h4><p>Layout by co-occurrence or meaning, colour by glossary theme — the colours stay clumped. The manual themes aren’t arbitrary.</p></div>
     <div class="finding"><h4>ONE BIG MERGE</h4><p>In the co-occurrence layout, alignment + agents + oversight collapse into one blob: the literature writes about them together.</p></div>
     <div class="finding"><h4>A REAL GAP</h4><p>Layout by MIT risk: every empty region is socioeconomic (labour, inequality, governance). Our vocabulary is model-centric.</p></div>
@@ -138,15 +150,19 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 </div></footer>
 
 <script>
-const D = /*__DATA__*/;
-const T = D.terms, LM = D.lens_meta;
-const termMap={}; T.forEach(t=>termMap[t.term]=t);
+const SOURCES = /*__DATA__*/;
+let curSource='curated';
+let D = SOURCES[curSource], T = D.terms, LM = D.lens_meta, termMap = {};
+function buildMaps(){ T=D.terms; LM=D.lens_meta; termMap={}; T.forEach(t=>termMap[t.term]=t); }
+buildMaps();
 const isDark=()=>document.documentElement.getAttribute('data-theme')==='dark'||
   (!document.documentElement.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
 const fmt=n=>n>=1000?(n/1000).toFixed(n>=10000?0:1)+'k':''+n;
 const WSHORT={papers:'Papers',citations:'Citations',cpp:'Cit/paper',recency:'Recency',momentum:'Momentum',debut:'Debut yr',peak:'Peak yr'};
 const YEARM=k=>k==='debut'||k==='peak';
-let state={layout:'semantic',colour:'glossary',size:'papers'};
+const defLayout=()=>D.layouts.semantic?'semantic':Object.keys(D.layouts)[0];
+const defColour=()=>LM.glossary?'glossary':Object.keys(LM)[0];
+let state={layout:defLayout(),colour:defColour(),size:'papers'};
 
 const tip=document.getElementById('tip');
 function showTip(h,x,y){tip.innerHTML=h;tip.style.opacity=1;const w=tip.offsetWidth,ht=tip.offsetHeight;
@@ -178,6 +194,19 @@ function segs(){
   document.querySelectorAll('#sizeseg button').forEach(b=>b.onclick=()=>set('size',b.dataset.k));
 }
 function set(key,val){ state[key]=val; segs(); render(); }
+function buildSrcSeg(){
+  const el=document.getElementById('srcseg'); if(!el) return;
+  el.innerHTML=Object.keys(SOURCES).map(s=>`<button data-s="${s}" class="${s===curSource?'on':''}">${SOURCES[s].label}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>setSource(b.dataset.s));
+}
+function setSource(src){
+  curSource=src; D=SOURCES[src]; buildMaps();
+  state.layout=defLayout(); state.colour=defColour(); state.size='papers';
+  document.querySelectorAll('#srcseg button').forEach(b=>b.classList.toggle('on',b.dataset.s===src));
+  const dots=svg.querySelector('#dots'); if(dots) dots.remove();   // term set changed → rebuild dots
+  const labels=svg.querySelector('#labels'); if(labels) labels.remove();
+  segs(); render();
+}
 
 const svg=document.getElementById('map');
 let W=1100,H=620,PAD=42;
@@ -232,17 +261,21 @@ function render(){
   document.getElementById('hint').innerHTML=
     `Position clusters by <b>${LM[state.layout].label}</b>, colour by <b>${LM[state.colour].label}</b>, size by <b>${WSHORT[state.size]}</b>.
      Hover a dot to isolate its colour group. ${state.layout===state.colour?'Layout = colour → clean single-colour clusters.':'Layout ≠ colour → watch how the colours mix inside each cluster.'}`;
-  // MIT gaps note
-  document.getElementById('mitnote').innerHTML=
-    `<b>What a scatter can’t show —</b> ${D.mit_gaps.length} MIT risk subdomains have <b>no buzzword</b> at all
+  document.getElementById('eyebrow').textContent=T.length+' terms · one map · three controls';
+  document.getElementById('findings').style.display=curSource==='curated'?'':'none';
+  // MIT gaps note (curated only)
+  const note=document.getElementById('mitnote');
+  if(D.mit_gaps&&D.mit_gaps.length){note.style.display='';
+    note.innerHTML=`<b>What a scatter can’t show —</b> ${D.mit_gaps.length} MIT risk subdomains have <b>no buzzword</b> at all
      (they’d be empty regions in the MIT layout): ${D.mit_gaps.map(s=>s.split(',')[0]).join(' · ')}. All socioeconomic.`;
+  }else{note.style.display='none';}
 }
 
 document.getElementById('themebtn').onclick=()=>{const r=document.documentElement;
   r.setAttribute('data-theme',isDark()?'light':'dark');render();};
 matchMedia('(prefers-color-scheme:dark)').addEventListener('change',render);
 addEventListener('resize',()=>{clearTimeout(window._r);window._r=setTimeout(render,150);});
-segs();render();
+buildSrcSeg();segs();render();
 </script>
 """
 

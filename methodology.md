@@ -1,17 +1,18 @@
-# Методология: как мы собираем баззворды AI Safety
+# Методология: как мы собираем и визуализируем баззворды AI Safety
 
-Документ описывает весь конвейер: откуда берутся термины, как по ним собираются статьи, как отсеивается шум, какие метрики считаются и как искать новые баззворды. Сопутствующий словарь концептов — [ai-safety-concepts-glossary.md](ai-safety-concepts-glossary.md).
+Документ описывает весь конвейер: откуда берутся термины, как по ним собираются статьи, как отсеивается шум, какие метрики и группировки считаются, как это визуализируется и как искать новые баззворды. Сопутствующий словарь концептов — [ai-safety-concepts-glossary.md](ai-safety-concepts-glossary.md). English version: [methodology_en.md](methodology_en.md).
 
 ---
 
-## 1. Цель
+## 1. Цель и три слоя
 
-Для каждого концепта AI Safety получить измеримую картину: сколько по нему статей на arXiv, насколько он «горячий» (сумма цитирований), в каком смысловом кластере живёт. И отдельно — уметь находить **новые** баззворды, которых ещё нет в словаре.
+Для каждого концепта AI Safety получить измеримую картину: сколько по нему статей на arXiv, насколько он «горячий» (цитирования), когда появился, в какой группе живёт — и всё это отрисовать интерактивно.
 
-Две независимые задачи, два набора скриптов:
+Три слоя, каждый со своими скриптами:
 
-- **Top-down сбор** ([buzzwords.py](buzzwords.py) + [collect.py](collect.py)) — по фиксированному списку терминов из словаря.
-- **Bottom-up обнаружение** ([discover.py](discover.py)) — вытаскивание кандидатов из корпусов и таксономий.
+- **Top-down сбор** ([buzzwords.py](buzzwords.py) + [collect.py](collect.py)) — по фиксированному курированному списку из словаря.
+- **Bottom-up обнаружение** ([discover.py](discover.py)) — вытаскивание кандидатов из корпусов и таксономий. Эти кандидаты используются двояко: (а) для ручного пополнения словаря и (б) как **самостоятельные источники** для визуализации (см. §8).
+- **Визуализация** ([build_viz.py](build_viz.py), [build_source_data.py](build_source_data.py), [build_dashboard.py](build_dashboard.py) / [build_trends.py](build_trends.py) / [build_taxonomy.py](build_taxonomy.py)) — облако слов, тренды и карта группировок, с переключением между источниками, метриками и линзами.
 
 ---
 
@@ -19,34 +20,36 @@
 
 ```mermaid
 flowchart TD
-    Glossary["ai-safety-concepts-glossary.md<br/>(словарь концептов)"] --> Buzzwords["buzzwords.py<br/>BUZZWORDS: (термин, кластер, запрос)"]
+    Glossary["ai-safety-concepts-glossary.md"] --> Buzzwords["buzzwords.py<br/>BUZZWORDS (125 терминов)"]
     Buzzwords --> Collect["collect.py"]
-    Collect --> S2["Semantic Scholar<br/>bulk search API"]
-    S2 --> Cache["data/raw2/&lt;slug&gt;.json<br/>(кэш кандидатов + абстракты)"]
-    Cache --> Verify["Верификация:<br/>точная фраза + safety-контекст"]
-    Verify --> Out1["data/papers.csv"]
-    Verify --> Out2["data/buzzword_counts.csv"]
+    Collect --> S2["Semantic Scholar<br/>bulk search + verify"]
+    S2 --> Papers["data/papers.csv<br/>data/buzzword_counts.csv"]
 
-    Corpus["data/raw2 / OpenAlex / MIT Risk Repo"] --> Discover["discover.py"]
-    Discover --> Novel["novelty-фильтр<br/>(нет в словаре и в BUZZWORDS)"]
-    Novel --> Cand["data/candidate_terms.csv<br/>data/openalex_keywords.csv<br/>data/mit_risk_gaps.csv"]
+    Corpus["data/raw2 / OpenAlex / MIT"] --> Discover["discover.py"]
+    Discover --> Cand["candidate_terms.csv (300)<br/>openalex_keywords.csv (300)<br/>mit_risk_gaps.csv"]
     Cand -.ручной отбор.-> Glossary
+    Cand --> CollectSrc["collect_source.py<br/>(тот же S2-пайплайн по кандидатам)"]
+    CollectSrc --> SrcData["build_source_data.py<br/>co-occurrence + semantic"]
+
+    Papers --> Viz["build_viz.py / groupings*.py"]
+    Viz --> VD["viz / trends / taxonomy_map .json<br/>(curated)"]
+    SrcData --> SD["...(Mined phrases, OpenAlex)"]
+    VD --> Art["build_dashboard / build_trends / build_taxonomy"]
+    SD --> Art
+    Art --> HTML["index.html · trends.html · taxonomy.html<br/>(переключатель Source)"]
 ```
 
 ---
 
-## 3. Источник баззвордов — `buzzwords.py`
+## 3. Курированный словарь и запросы — `buzzwords.py`
 
-Список **курируется из словаря**. Основная структура — `BUZZWORDS`: список кортежей `(display_term, cluster, s2_query)`. Сейчас в нём 125 терминов по 20 смысловым кластерам (кластеры совпадают с разделами словаря).
+Список **курируется из словаря**. Структура — `BUZZWORDS`: кортежи `(display_term, cluster, s2_query)`. Сейчас **125 терминов** по 19 смысловым кластерам (разделы словаря 1–20; §10 «Umbrella taxonomies» — мета-раздел без терминов).
 
-### Синтаксис поисковых запросов
+**Синтаксис запросов.** Два хелпера:
+- `p(term)` — «голая» фраза в кавычках, для специфичных многословных терминов (`"prompt injection"`, `"membership inference"`).
+- `s(term)` — фраза, **сужённая safety-контекстом** `SCOPE`, для общих однословных (`bias`, `probing`, `calibration`), дающих много офтопа.
 
-Запрос к Semantic Scholar строится двумя хелперами:
-
-- `p(term)` — «голая» фраза в кавычках. Для достаточно специфичных многословных терминов (`"prompt injection"`, `"membership inference"`).
-- `s(term)` — фраза, **сужённая safety-контекстом** `SCOPE`. Для общих однословных терминов (`bias`, `probing`, `calibration`), которые сами по себе дают много офтопа.
-
-`SCOPE` собирается из единого списка `CONTEXT` (одна точка правды, чтобы совпадало с проверкой на этапе верификации):
+`SCOPE` собирается из единого `CONTEXT` (одна точка правды — совпадает с проверкой на верификации):
 
 ```10:12:buzzwords.py
 CONTEXT = ["language model", "large language model", "LLM", "chatbot",
@@ -54,11 +57,9 @@ CONTEXT = ["language model", "large language model", "LLM", "chatbot",
 SCOPE = "(%s)" % " | ".join('"%s"' % c if " " in c else c for c in CONTEXT)
 ```
 
-Синтаксис bulk-запроса S2: `"фраза"`, `+` (AND), `|` (OR), `-` (NOT), `*` (префикс). Некоторые термины имеют кастомный запрос с OR-синонимами (например `scheming`, `reward overoptimization`, `pluralistic alignment`).
+Синтаксис bulk S2: `"фраза"`, `+`(AND), `|`(OR), `-`(NOT), `*`(префикс). Часть терминов имеют кастомный запрос с OR-синонимами (`scheming`, `reward overoptimization`, …).
 
-### Surface-формы для верификации — `VARIANTS` и `variants()`
-
-Один термин может писаться по-разному (`dual-use` / `dual use`, `PII` / `personally identifiable information`). `VARIANTS` задаёт точные поверхностные формы, засчитываемые как попадание; для терминов без явной записи `variants()` авто-выводит формы (замена `-`/пробела). Матчинг регистронезависимый, по границе слова, с любым суффиксом (`bias` ловит `biased`/`biases`).
+**Surface-формы (`VARIANTS`/`variants()`).** Один термин пишется по-разному (`dual-use`/`dual use`, `PII`/`personally identifiable information`). `VARIANTS` задаёт формы, засчитываемые как попадание; иначе `variants()` авто-выводит их. Матчинг регистронезависимый, по границе слова, **префиксный** — ловит суффиксы (`bias`→`biased`/`biases`), но **не** смену корня (`hallucination`→`hallucinate`), поэтому такие формы приходится прописывать явно. Поверх `VARIANTS` функция `variants()` домешивает одобренные человеком семантические синонимы из `data/variants_approved.json` (см. §13).
 
 ---
 
@@ -66,107 +67,164 @@ SCOPE = "(%s)" % " | ".join('"%s"' % c if " " in c else c for c in CONTEXT)
 
 На каждый баззворд:
 
-1. **Retrieval (кандидаты).** Один bulk-вызов Semantic Scholar:
-   - `year = 2005-` (с 2005 года),
-   - `fieldsOfStudy = Computer Science`,
-   - `sort = citationCount:desc` (для `scheming` — `publicationDate:desc`, т.к. по цитированиям свежие литеральные совпадения тонут — см. `SORT_OVERRIDE`),
-   - поля: `title, abstract, year, publicationDate, citationCount, externalIds`.
-   - Возвращает до 1000 кандидатов **с абстрактами**.
-2. **Кэш.** Ответ кладётся в `data/raw2/<slug>.json`; повторный запуск читает кэш и не ходит в сеть. (`data/raw` — старый кэш без абстрактов, не используется активно.)
-3. Между сетевыми вызовами пауза 1.2 c; при ошибке — до 5 ретраев с нарастающей задержкой.
-
-Ключ S2 API хранится в `collect.py` (`API_KEY`). Репозиторий приватный.
-
----
+1. **Retrieval.** Один bulk-вызов S2: `year=2005-`, `fieldsOfStudy=Computer Science`, `sort=citationCount:desc` (для `scheming` — `publicationDate:desc`, см. `SORT_OVERRIDE`), поля `title, abstract, year, publicationDate, citationCount, externalIds`. До 1000 кандидатов **с абстрактами**.
+2. **Кэш** в `data/raw2/<slug>.json`; повторный запуск читает кэш.
+3. Пауза 1.2 c между вызовами; до 5 ретраев с backoff при ошибке. Ключ S2 — в `collect.py` (репозиторий приватный).
 
 ## 5. Фильтрация и верификация
 
-S2 матчит **со стеммингом** и по своей релевантности, поэтому «сырой» ответ шумит. Мы прогоняем каждого кандидата через три фильтра:
+S2 матчит **со стеммингом**, поэтому сырой ответ шумит. Три фильтра:
 
-1. **Только arXiv.** Оставляем статьи с `externalIds.ArXiv` (нужен стабильный id и ссылка).
-2. **Точная фраза.** В `title + abstract` должна встретиться поверхностная форма термина как целое слово (`make_matcher(variants(term))`). Это убирает стемминг-ложняки (`scheme` ≠ `scheming`) и случайные со-совпадения.
-3. **Safety-контекст (для scoped-терминов).** Если запрос был сужён (`SCOPE in query`), дополнительно требуем, чтобы в тексте был хотя бы один токен из `CONTEXT`:
+1. **Только arXiv** — статьи с `externalIds.ArXiv`.
+2. **Точная фраза** — в `title + abstract` встречается surface-форма как целое слово (`make_matcher(variants(term))`). Убирает стемминг-ложняки (`scheme` ≠ `scheming`).
+3. **Safety-контекст** (для scoped-терминов) — если запрос сужён, требуем хотя бы один токен из `CONTEXT`. Без него под `bias`/`backdoor`/`probing` пролезали beamforming, DOA-estimation, медицина, IoT.
 
-```101:105:collect.py
-            if not hit(text):
-                continue
-            if scoped and not ctx_hit(text):
-                continue
-            verified.append((axid, pp))
-```
-
-Зачем третий фильтр: без него под общими словами (`bias`, `backdoor`, `probing`, `provenance`, `containment`) пролезали статьи из совсем других областей — `adaptive beamforming`, `DOA estimation`, `intrusion detection`, медицина, IoT. Фильтр требует, чтобы статья была ещё и «про языковые модели / AI safety».
+Итог курированного слоя: **125 терминов → 4 726 уникальных arXiv-статей** (`data/papers.csv`, top-60 по цитированиям на термин, дедуп).
 
 ---
 
-## 6. Метрики — `data/buzzword_counts.csv`
+## 6. Метрики (7 «весов»)
 
-На каждый баззворд:
+Считаются на каждый термин; в артефактах любой можно выбрать для размера/сортировки:
 
-| Поле | Смысл |
+| Метрика | Смысл |
 |---|---|
-| `raw_s2_total` | «Сырой» total от S2 (стеммингованный) — только для справки, доверять нельзя |
-| `candidates_arxiv` | Сколько arXiv-кандидатов пришло в выдаче (до верификации) |
-| `verified_arxiv` | Сколько прошло верификацию — **основной вес** концепта (ограничен глубиной ретрива в 1000) |
-| `sum_citations_verified` | Сумма цитирований верифицированных arXiv-статей — «горячесть» |
+| **Papers** | число верифицированных arXiv-статей (основной вес) |
+| **Citations** | сумма цитирований этих статей |
+| **Citations / paper** | средняя цитируемость (импакт на статью) |
+| **Recency** | доля статей с 2024+ (%) — «свежесть» |
+| **Momentum** | число статей с 2024+ (недавний объём) |
+| **Debut yr** | год, когда термин набрал ≥2 статей |
+| **Peak yr** | год пика по числу статей |
 
-Строки отсортированы по `verified_arxiv` убыв.
+Плюс временной ряд по годам (2015–2026) — статьи и цитаты на год, для трендов.
 
----
-
-## 7. Выходные файлы
-
-- `data/raw2/<slug>.json` — кэш кандидатов S2 (с абстрактами), по одному на баззворд.
-- `data/buzzword_counts.csv` — метрики по каждому баззворду (см. §6).
-- `data/papers.csv` — уникальные arXiv-статьи (top-N=60 по цитированиям на баззворд), с колонками: `arxiv_id, title, publicationDate, year, citationCount, n_matched_terms, matched_terms, matched_clusters, arxiv_url, s2_paperId`. Одна статья может матчиться на несколько терминов/кластеров.
+> Оговорка про цитаты: S2 отдаёт **текущий** total, поэтому «citations в год Y» = цитаты статей, **опубликованных** в Y (импакт когорты), а не накопление по годам.
 
 ---
 
-## 8. Обнаружение новых баззвордов — `discover.py`
+## 7. Группировки (линзы)
 
-Top-down сбор по построению не находит новых терминов. Для этого — отдельный модуль с общими хелперами (`known_terms`, `novelty_filter`, `write_csv`) и тремя режимами `--source`. Кандидат проходит, если он **новый**: не встречается ни в тексте словаря, ни в `BUZZWORDS`/`VARIANTS`.
+Термины раскрашиваются/раскладываются по одной из **линз**. У курированного набора их четыре; строятся в `groupings.py` / `groupings_embed.py`, собираются в `lenses.py`:
+
+| Линза | Как считается |
+|---|---|
+| **Glossary** | 20 кластеров словаря → 8 макро-тем (ручная группировка) |
+| **MIT risk** | маппинг кластеров на таксономию MIT AI Risk Repository ([arXiv:2408.12622](https://arxiv.org/abs/2408.12622)), 7 доменов / 24 субдомена |
+| **Semantic** | эмбеддинги статей **SPECTER2** (S2) → усреднение по термину → k-means + PCA-2D |
+| **Co-occurrence** | граф со-встречаемости терминов в статьях → Louvain-сообщества |
+
+Ключевой приём карты: **Layout = Colour** → чистые одноцветные кластеры (группировка «настоящая»); **Layout ≠ Colour** → видно, как одна группировка режет другую.
+
+---
+
+## 8. Три источника визуализации
+
+Артефакты умеют переключать **источник** — не только курированный словарь, но и bottom-up кандидаты, прогнанные через тот же пайплайн:
+
+| Источник | Метод | Терминов | Статей | Линзы |
+|---|---|---|---|---|
+| **Curated** | ручной словарь (§3–5) | 125 | 4 726 | glossary · MIT · semantic · co-occurrence |
+| **Mined phrases** | частые фразы из абстрактов (`discover.py --source raw2`) | 278 | 11 583 | co-occurrence · semantic |
+| **OpenAlex keywords** | keywords/topics из OpenAlex | 203 | 6 195 | co-occurrence · semantic |
+
+### Как собираются candidate-источники — `collect_source.py`
+
+1. Из `data/candidate_terms.csv` / `data/openalex_keywords.csv` берётся **топ-300** по частоте (dedup, длина ≥3).
+2. Каждая фраза → тот же S2-пайплайн, что `collect.py`: bulk-поиск голой фразы, `year=2005-`, CS, **верификация точным вхождением** в title+abstract.
+3. Кэш в `data/src_<source>/raw/`, вывод: `terms.json` (метрики + ряды на термин) и `papers.csv` (top-60/термин, дедуп).
+
+**Почему не ровно 300.** Из 300 кандидатов остаётся меньше — это **легитимный отсев верификацией**, не сбой:
+- raw2: 300 → **278** (−22: n-граммы со «склеенной» аббревиатурой, `retrieval-augmented generation rag`, `vision-language models vlms` — дословно в абстрактах не встречаются, там `... (RAG)` со скобками);
+- OpenAlex: 300 → **203** (−97: длинные названия топиков и поля со скобками, `risk analysis (engineering)`, `context (archaeology)` — не встречаются дословно в CS-arXiv). Плюс по 1 фразе на источник упало на 429 при сборе.
+
+### Группировки для candidate-источников — `build_source_data.py`
+
+Glossary/MIT привязаны к нашему словарю и к чужим терминам неприменимы. Считаются две линзы:
+- **Co-occurrence** — Louvain по со-встречаемости в статьях (локально, без API);
+- **Semantic** — SPECTER2-эмбеддинги статей источника (S2 batch, с кэшем `embeddings.npz`) → k-means + PCA.
+
+Плюс на выходе те же форматы, что у curated: `viz_data.json`, `trends_data.json`, `taxonomy_map.json` (облака-SVG на каждую из 7 метрик, потоки по годам, раскладки для карты).
+
+---
+
+## 9. Артефакты (три страницы)
+
+Все страницы читают одни и те же per-source данные и делят навигацию + переключатель **Source** (Curated / Mined phrases / OpenAlex).
+
+- **Word cloud** ([build_dashboard.py](build_dashboard.py) → `index.html`) — интерактивное SVG-облако (размер по любой из 7 метрик, цвет по любой линзе) + бары топ-терминов. Плитки: терминов / статей / цитат / диапазон лет.
+- **Trends** ([build_trends.py](build_trends.py) → `trends.html`) — три вида: **Atlas** (heatmap/cards — все термины на одном экране, теплополоса по годам), **Overlay** (все линии сразу, группы прячутся «глазиком»), **Themes** (стримграф состава поля во времени, papers/citations).
+- **Groupings** ([build_taxonomy.py](build_taxonomy.py) → `taxonomy.html`) — одна карта-scatter: **Layout** (позиция по линзе) × **Colour** (цвет по линзе) × **Size** (радиус по метрике).
+
+Общие контролы: **Source**, **Size** (7 метрик), **Colour**/**Layout** (линзы), тема (свет/тьма).
+
+---
+
+## 10. Обнаружение кандидатов — `discover.py`
+
+Top-down сбор по построению не находит новых терминов. Отдельный модуль, три режима `--source`; кандидат проходит, если **новый** (нет ни в словаре, ни в `BUZZWORDS`/`VARIANTS`):
 
 | Режим | Источник | Что делает | Выход |
 |---|---|---|---|
-| `raw2` | кэш `data/raw2` | Извлекает би/три-граммы из абстрактов safety-статей, ранжирует по частоте, вычитает известное | `data/candidate_terms.csv` |
-| `openalex` | [OpenAlex API](https://api.openalex.org) | Тянет поля `keywords` и `topics` у работ по safety-запросу (курсорная пагинация), агрегирует по частоте | `data/openalex_keywords.csv` |
-| `mit` | MIT AI Risk Repository | Диффит 7 доменов / 24 субдомена таксономии ([arXiv:2408.12622](https://arxiv.org/abs/2408.12622)) против словаря | `data/mit_risk_gaps.csv` |
+| `raw2` | кэш `data/raw2` | би/три-граммы из абстрактов, ранг по частоте, вычет известного | `data/candidate_terms.csv` |
+| `openalex` | [OpenAlex API](https://api.openalex.org) | поля `keywords`/`topics` работ по safety-запросу, агрегат по частоте | `data/openalex_keywords.csv` |
+| `mit` | MIT AI Risk Repository | дифф 7 доменов / 24 субдомена против словаря | `data/mit_risk_gaps.csv` |
 
-Все три дают **ранжированные списки кандидатов для ручного ревью** — автоматически в словарь ничего не добавляется. Отобранные термины затем вручную заносятся в словарь и в `BUZZWORDS`.
-
-Почему именно эти источники: у arXiv нет списка keywords (только грубая таксономия категорий), у Semantic Scholar тоже нет концепт-словаря. OpenAlex — единственный с полем `keywords` + 4-уровневой таксономией topics. MIT AI Risk Repository — крупнейший мета-обзор (1700+ рисков из 74 фреймворков), удобен как top-down эталон.
+Списки — **ранжированные кандидаты для ручного ревью**; в словарь автоматически ничего не попадает. Дальше они идут двумя путями: часть руками заносится в словарь, а списки raw2/openalex целиком становятся источниками визуализации (§8). MIT — таксономия рисков, не корпус терминов, поэтому визуализируется только как gap-анализ покрытия.
 
 ---
 
-## 9. Известные ограничения
+## 11. Известные ограничения
 
-- **Глубина ретрива** — 1000 кандидатов на запрос. Для самых массовых терминов (`bias`, `hallucination`) `verified_arxiv` упирается в этот потолок, поэтому вес занижен относительно реального.
-- **Остаточный шум** в `discover.py --source raw2`: статистическое извлечение оставляет генерик-фразы (`findings suggest`, `address this gap`) — это ожидаемо, список для ручного просмотра.
-- **OpenAlex keywords** крупноблочные (`computer science`, `psychology`) вперемешку с полезными topics — тоже фильтруется глазами.
-- **`mit`-эвристика покрытия** грубая (совпадение по отдельным словам), колонка `covered` — подсказка, а не приговор.
-- **`raw_s2_total` недостоверен** (стемминг) — сравнивать концепты по нему нельзя, только по `verified_arxiv`.
+- **Глубина ретрива** — 1000 кандидатов на запрос; для массовых терминов (`bias`, `hallucination`) вес занижен.
+- **Верификация точной фразой** режет n-граммы со склеенными аббревиатурами и длинные названия топиков — часть кандидатов законно отваливается (§8).
+- **candidate-источники шумны:** raw2 содержит генерик-фразы (`findings suggest`), OpenAlex — широкие поля (`computer science`, `psychology`). Это ожидаемо — «что корпус выдаёт сам по себе».
+- **Semantic по годам:** «citations» = импакт когорты по году публикации, не накопление.
+- **`raw_s2_total` недостоверен** (стемминг) — сравнивать только по `verified`/`Papers`.
+- **glossary/MIT не существуют** для candidate-источников — у них только co-occurrence + semantic.
 
 ---
 
-## 10. Как запускать
+## 12. Как запускать
 
 ```bash
-# статистика по списку баззвордов
-python buzzwords.py
+# — курированный слой —
+python buzzwords.py            # статистика по списку
+python collect.py             # сбор статей (кэш data/raw2)
+python build_viz.py           # метрики + облака + viz_data (+ groupings*.py линзы)
+python trends_data.py; python taxonomy_map.py
 
-# полный сбор (читает кэш data/raw2, добирает недостающее из S2)
-python collect.py
+# — обнаружение кандидатов —
+python discover.py --source raw2
+python discover.py --source openalex --pages 25
+python discover.py --source mit
 
-# обнаружение новых кандидатов
-python discover.py --source raw2                 # из уже собранных абстрактов
-python discover.py --source openalex --pages 25  # из OpenAlex
-python discover.py --source mit                  # из MIT Risk Repository
+# — candidate-источники как корпуса —
+python collect_source.py raw2 300      # сбор + верификация топ-300
+python collect_source.py openalex 300
+python build_source_data.py raw2       # co-occurrence + semantic + форматы
+python build_source_data.py openalex
+
+# — курация вариантов / кандидатов (без сети; переиспользует кэш эмбеддингов) —
+python variants_suggest.py    # -> data/variants_suggestions.csv (формы-синонимы на ревью)
+python build_triage.py        # -> data/candidate_triage.csv (раскладка кандидатов)
+
+# — сборка страниц (встраивают все доступные источники) —
+python build_dashboard.py
+python build_trends.py
+python build_taxonomy.py
 ```
 
-Параметры `discover.py` (порог частоты, годы, число страниц, mailto для polite-pool OpenAlex) задаются флагами argparse — значения по умолчанию только там.
+### Как добавить новый баззворд (в курированный набор)
 
-### Как добавить новый баззворд
+1. Строка в `ai-safety-concepts-glossary.md` (каноническое имя + ссылка).
+2. Кортеж в `BUZZWORDS` (`buzzwords.py`), при нужде surface-формы в `VARIANTS`.
+3. `python collect.py` → термин доберётся из S2 и попадёт в метрики; затем пересобрать данные и страницы.
 
-1. Добавить строку в `ai-safety-concepts-glossary.md` (каноническое имя + ссылка).
-2. Добавить кортеж в `BUZZWORDS` (`buzzwords.py`) и при нужде surface-формы в `VARIANTS`.
-3. Запустить `python collect.py` — новый термин доберётся из S2 и попадёт в метрики.
+---
+
+## 13. Инструменты обогащения и future work
+
+- **Semantic VARIANTS-обогащение (реализовано).** Синонимы ловятся только если прописаны, поэтому статья с непрописанным синонимом молча пропускалась → занижение счётчиков. `variants_suggest.py` берёт mean-centered SPECTER2-центроид термина, ранжирует n-граммы корпуса по cosine к нему и пишет `data/variants_suggestions.csv` на ревью. Одобренные формы — почищены человеком, защищены от раздувания метрик блок-листом генерик-корней **и** эмпирической проверкой контаминации по кэшу (она поймала, например, что «harmful content» тянет jailbreak-статьи в *harmfulness*) — лежат в `data/variants_approved.json` и домешиваются в `variants()`. Применённый эффект: **+741 верифицированная статья (+8.4%)** на 37 терминах (напр. `memorize`/`memorized` для *memorization*, `hallucinate` для *hallucination*). Не авто-инжект — человек в петле.
+- **Триаж кандидатов (реализовано).** `build_triage.py` проецирует bottom-up источники (`data/src_raw2`, `data/src_openalex`) на 125 курированных баззвордов через mean-centered SPECTER2-cosine и раскладывает каждого кандидата по корзинам `{variant, related, new-candidate, discard}` (близость для дедупа + когерентность «концепт vs шум» + порог по числу статей) → `data/candidate_triage.csv`, один размеченный лист для курации.
+- **Cross-source validation через OpenAlex (future).** Для терминов с OpenAlex topic ID тянуть `works?filter=topics.id:…` как независимый счётчик и сверять с нашим verified-count; сильное расхождение = сигнал дыры в `VARIANTS` или неверного scope. Только диагностика — в основной счётчик не подмешивается.

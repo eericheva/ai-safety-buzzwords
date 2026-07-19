@@ -1,7 +1,7 @@
 # What I learned mapping AI safety buzzwords
 
 I collected 125 AI safety concepts, pulled papers for each from Semantic Scholar,
-filtered down to arXiv, and computed metrics — 4,683 unique papers in the end. On top of
+filtered down to arXiv, and computed metrics — 4,726 unique papers in the end. On top of
 that I tried to discover new buzzwords bottom-up (mining phrases from abstracts, OpenAlex
 keywords, a diff against the MIT risk taxonomy). While I was at it, a handful of
 observations piled up that are more interesting than the numbers themselves.
@@ -199,6 +199,34 @@ And the healthiest part: the field has a built-in meta-skepticism. *The Ghost in
 Grammar* ([arXiv:2603.13255](https://arxiv.org/abs/2603.13255)) directly accuses the safety
 literature of being **methodologically anthropomorphic itself** — describing models through
 "intentions" and "schemes" where it isn't earned.
+
+---
+
+## 9. The missing synonyms move the numbers more than the noise does
+
+A mirror image of §2. There the lesson was that filtering *noise* barely touched the
+final metrics — the false positives sat in the candidate pool, not in the counts.
+Cleaning up the opposite error turned out to matter far more.
+
+The matcher only counts a synonym if it's spelled out. It matches on a word's prefix,
+so `bias` catches `biased`/`biases` for free — but a stem change slips through: a paper
+that says `hallucinate` and never `hallucination` is silently dropped. Those are false
+*negatives*, and unlike false positives they land directly in the final numbers.
+
+I closed the gap semantically: rank corpus phrases by how close their papers sit to a
+term's own papers (SPECTER2 embeddings), and add the approved forms. Effect: **+741
+verified papers (+8.4%)** across 37 terms. `memorization` alone went 526 → 837 (+59%)
+once `memorize`/`memorized` counted.
+
+Two honest caveats kept it from being a free lunch:
+
+- **The fix is bounded by retrieval.** It only recovers papers the original query
+  already pulled. So `memorization` jumped, but `hallucination` moved +0 — its synonym
+  papers were never fetched in the first place. Recall has two leaks; this patches one.
+- **Synonyms leak across concepts.** Adding `harmful content` to *harmfulness* quietly
+  dragged in jailbreak papers; `factual knowledge` pulled RAG papers into *factuality*.
+  The same homonym trap as §2, now on the recall side. Every added form needs a
+  contamination check, or you inflate the very numbers you set out to fix.
 
 ---
 

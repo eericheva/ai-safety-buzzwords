@@ -6,6 +6,7 @@ Each entry: (display_term, cluster, s2_query).
 - specific multi-word phrases are searched as bare quoted phrases
 S2 bulk query syntax: "phrase", +(AND), |(OR), -(NOT), *(prefix)
 """
+import json, os
 
 CONTEXT = ["language model", "large language model", "LLM", "chatbot",
            "AI safety", "AI alignment"]
@@ -246,15 +247,27 @@ VARIANTS = {
 }
 
 
+# Approved synonym forms surfaced by variants_suggest.py (semantic) and
+# human-pruned. Merged on top of VARIANTS so the phrase matcher catches the
+# morphological synonyms a bare prefix match misses (e.g. hallucinate,
+# sycophantic). Reversible: empty/delete the file to drop all additions.
+_APPROVED_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "data", "variants_approved.json")
+try:
+    with open(_APPROVED_PATH) as _f:
+        VARIANTS_EXTRA = json.load(_f)
+except (OSError, ValueError):
+    VARIANTS_EXTRA = {}
+
+
 def variants(term):
     """Return the list of surface strings that count as a hit for `term`."""
     if term in VARIANTS:
-        return VARIANTS[term]
-    base = term.lower()
-    out = {base}
-    out.add(base.replace("-", " "))
-    out.add(base.replace(" ", "-"))
-    out.add(base.replace("-", ""))
+        out = set(VARIANTS[term])
+    else:
+        base = term.lower()
+        out = {base, base.replace("-", " "), base.replace(" ", "-"), base.replace("-", "")}
+    out |= set(VARIANTS_EXTRA.get(term, []))
     return sorted(out)
 
 

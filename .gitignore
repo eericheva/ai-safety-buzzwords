@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 .DS_Store
 *_backup_*
+*venv*
 data/raw/
 data/raw2/
 data/src_*/raw/
@@ -9,3 +10,5 @@ data/src_*/embeddings.npz
 data/_*.log
 *.humanize_eval*
 *_humanized*
+*_humanized.*
+.hf-cache/

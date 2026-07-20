@@ -22,7 +22,7 @@ from statistics import median
 
 from collect import fetch, slug   # reuse the S2 fetch + slug
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 Y0, Y1 = 2015, 2026
 TOP_N = 60
 

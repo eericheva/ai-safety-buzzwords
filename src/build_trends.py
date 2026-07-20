@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Assemble trends.html — the time-series visualizer (Atlas / Overlay / Themes)."""
 import json, os
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 LBL = {"curated": "Curated", "raw2": "Mined phrases", "openalex": "OpenAlex keywords"}
@@ -16,7 +16,7 @@ def main():
         if os.path.exists(p):
             sd = json.load(open(p)); sd["label"] = LBL[s]; sources[s] = sd
     html = TEMPLATE.replace("/*__DATA__*/", json.dumps(sources, ensure_ascii=False, separators=(",", ":")))
-    out = os.path.join(HERE, "trends.html")
+    out = os.path.join(HERE, "web", "trends.html")
     open(out, "w").write(html)
     print(f"wrote {out}  ({os.path.getsize(out)/1024:.0f} KB)  sources={list(sources)}")
 

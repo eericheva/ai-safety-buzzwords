@@ -29,7 +29,7 @@ FIELDS = "title,abstract,year,publicationDate,citationCount,externalIds"
 TOP_N = 60
 YEAR = "2005-"
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(HERE, "data", "raw2")   # new cache (now includes abstracts)
 os.makedirs(RAW, exist_ok=True)
 

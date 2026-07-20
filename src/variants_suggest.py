@@ -28,7 +28,7 @@ import numpy as np
 from buzzwords import BUZZWORDS, variants
 from discover import ngrams, novelty_filter, WORD
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(HERE, "data", "raw2")
 NPZ = os.path.join(HERE, "data", "embeddings.npz")
 OUT = os.path.join(HERE, "data", "variants_suggestions.csv")

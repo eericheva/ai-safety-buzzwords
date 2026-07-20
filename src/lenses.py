@@ -12,7 +12,7 @@ import json, os
 from build_viz import group_of, GROUP_ORDER, GROUP_COLOR
 from buzzwords import BUZZWORDS
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CAT_LIGHT = ['#2a78d6', '#008300', '#e87ba4', '#eda100', '#1baf7a', '#eb6834', '#4a3aa7', '#e34948']
 CAT_DARK  = ['#3987e5', '#38ad38', '#e87ba4', '#eda100', '#1baf7a', '#eb6834', '#9085e9', '#e66767']

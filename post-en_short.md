@@ -241,5 +241,5 @@ noise:
    means nothing.)
 4. **Who judges** — a human, a classifier, an LLM judge? Each has its own bias.
 
-A full breakdown of all 125 concepts is in the [glossary](ai-safety-concepts-glossary_en.md),
-and the collection methodology is in [methodology_en.md](methodology_en.md).
+A full breakdown of all 125 concepts is in the [glossary](docs/ai-safety-concepts-glossary_en.md),
+and the collection methodology is in [methodology_en.md](docs/methodology_en.md).

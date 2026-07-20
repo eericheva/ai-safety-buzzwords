@@ -251,7 +251,7 @@ VARIANTS = {
 # human-pruned. Merged on top of VARIANTS so the phrase matcher catches the
 # morphological synonyms a bare prefix match misses (e.g. hallucinate,
 # sycophantic). Reversible: empty/delete the file to drop all additions.
-_APPROVED_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+_APPROVED_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                               "data", "variants_approved.json")
 try:
     with open(_APPROVED_PATH) as _f:

@@ -17,7 +17,7 @@ from sklearn.decomposition import PCA
 
 from taxonomy_map import packed_layout
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 Y0, Y1 = 2015, 2026
 API_KEY = "s2k-ZOHSvEHee6VvgAyjrfPDQ88TXPswpt5ts8AOMUuU"
 BATCH = "https://api.semanticscholar.org/graph/v1/paper/batch?fields=embedding.specter_v2"

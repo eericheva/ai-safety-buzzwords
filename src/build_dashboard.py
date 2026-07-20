@@ -4,7 +4,7 @@
 full 4212-row corpus stays in data/papers.csv."""
 import base64, json, os
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def b64(path):
@@ -28,7 +28,7 @@ def main():
 
     payload = json.dumps(sources, ensure_ascii=False, separators=(",", ":"))
     html = TEMPLATE.replace("/*__DATA__*/", payload)
-    out = os.path.join(HERE, "index.html")
+    out = os.path.join(HERE, "web", "index.html")
     with open(out, "w") as f:
         f.write(html)
     print(f"wrote {out}  ({os.path.getsize(out)/1024:.0f} KB)")

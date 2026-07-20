@@ -31,7 +31,7 @@ import numpy as np
 from buzzwords import BUZZWORDS
 from discover import STOP
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(HERE, "data", "candidate_triage.csv")
 
 VAR_CUT, REL_CUT = 0.80, 0.60      # cosine band edges (proximity to existing)

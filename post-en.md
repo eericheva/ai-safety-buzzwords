@@ -6,7 +6,7 @@ that I tried to discover new buzzwords bottom-up (mining phrases from abstracts,
 keywords, a diff against the MIT risk taxonomy). While I was at it, a handful of
 observations piled up that are more interesting than the numbers themselves.
 
-![A cloud of 125 AI safety concepts: size = paper count, color = glossary theme](img/wordcloud_dark.png)
+![A cloud of 125 AI safety concepts: size = paper count, color = glossary theme](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/wordcloud_dark.png)
 
 *125 concepts; word size = number of verified papers, color = theme. This is just one of
 dozens of possible maps: you can set the size seven ways, the coloring four ways, and the
@@ -115,7 +115,7 @@ how the field is glued together out of borrowings and newborns.
 First, the scale. The field grew from 45 papers in 2015 to 7,723 in 2025 — roughly ×170 in
 a decade (2026 is a partial year):
 
-![Safety papers per year, 2015–2026](img/growth.png)
+![Safety papers per year, 2015–2026](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/growth.png)
 
 *Verified papers per year. The take-off lands squarely on 2023 — the year after ChatGPT.*
 **View:** `📈 Trends → Source: Curated`
@@ -146,13 +146,13 @@ Seven ways to size a word and four ways to color it — that's already 28 maps f
 source, and almost no two of them share a "biggest word." The sharpest example is one size
 switch, from *citations* to *recency*:
 
-![Cloud, size = total citations](img/cloud_citations.png)
+![Cloud, size = total citations](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/cloud_citations.png)
 
 *Size = citations. The giants — differential privacy (outlined), adversarial robustness,
 membership inference, bias — are all inherited from neighboring fields (see §3).*
 **View:** `🧭 Word cloud → Source: Curated → Size: Citations → Colour: Glossary`
 
-![Cloud, size = recency (share of recent papers)](img/cloud_recency.png)
+![Cloud, size = recency (share of recent papers)](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/cloud_recency.png)
 
 *Size = recency. That same differential privacy is a tiny speck on the left. What floats up
 is what didn't exist two years ago: activation steering, emergent misalignment, CoT
@@ -186,7 +186,7 @@ the crown changed hands — Attacks (2020–21), Harm/bias (2023–24), Attacks 
 2026 the field is **balanced**: no theme above 21%. A privacy monoculture turned into an even
 eight-theme field.
 
-![Themes: theme share of the paper stream by year, 2015–2026](img/trends_themes.png)
+![Themes: theme share of the paper stream by year, 2015–2026](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/trends_themes.png)
 **View:** `📈 Trends → Themes tab · Source: Curated · Colour: Glossary`
 
 **Overlay — the changing of the guard.** Overlay the "old guard" (adversarial robustness,
@@ -196,7 +196,7 @@ inference in 2024; the new ones shoot up vertically from 2023. `jailbreak` even 
 spike and crash by 2026 (a partial year), while `refusal` breaks away into the lead. One
 chart, the whole drama of §3–§4.
 
-![Overlay: the old guard vs the class of 2023, papers/year](img/trends_overlay.png)
+![Overlay: the old guard vs the class of 2023, papers/year](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/trends_overlay.png)
 **View:** `📈 Trends → Overlay tab · Source: Curated`
 
 **Atlas — every term has its own silhouette.** The third view breaks all 125 terms into
@@ -204,7 +204,7 @@ individual sparklines, and two shapes jump out: the "bell" of the old guard (dif
 privacy peaking 2020, adversarial robustness 2021, then decline) and the "hockey stick" of the
 newborns (jailbreak, refusal, sandbagging, scheming — flat until 2023, then straight up).
 
-![Atlas: a per-term sparkline for every year](img/trends_atlas.png)
+![Atlas: a per-term sparkline for every year](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/trends_atlas.png)
 **View:** `📈 Trends → Atlas tab · Source: Curated`
 
 Three tabs — three cross-sections of the same field over time.
@@ -219,7 +219,7 @@ changed" isn't a fact — it's a function of the grouping you pick.
 Under the manual theme (Glossary, above) the crown passed from hand to hand: Privacy → Attacks →
 Harm → Attacks again. Recolor the exact same stream by **MIT risk**:
 
-![Themes under MIT risk: "Privacy & security" leads every year](img/trends_themes_mit.png)
+![Themes under MIT risk: "Privacy & security" leads every year](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/trends_themes_mit.png)
 **View:** `📈 Trends → Themes tab · Source: Curated · Colour: MIT risk`
 
 "Privacy & security" (green) leads **every single year** — from 71% in 2015 to 28% in 2026. No
@@ -280,7 +280,7 @@ Nicely, bottom-up confirmed top-down: `knowledge conflict`, `object hallucinatio
 `verbalized confidence` — concepts I had added to the glossary by hand — surface from the
 abstracts on their own. So adding them wasn't for nothing.
 
-![Cloud of mined phrases (raw2): a reasoning/preference wave, with boilerplate and near-duplicates on top](img/cloud_raw2.png)
+![Cloud of mined phrases (raw2): a reasoning/preference wave, with boilerplate and near-duplicates on top](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/cloud_raw2.png)
 
 *Bottom-up mining "as is": the biggest phrases are verifiable rewards, direct preference
 optimization, multimodal reasoning, instruction following. The `attack …` family
@@ -321,12 +321,12 @@ and that's an argument *for* manual curation, not against it.
 The coloring says the same. Take one cloud (size = paper count) and recolor it two ways — by
 the manual theme and by automatic semantic clusters (embeddings):
 
-![Colored by the manual glossary theme — 8 meaningful themes](img/cloud_glossary.png)
+![Colored by the manual glossary theme — 8 meaningful themes](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/cloud_glossary.png)
 
 *Colored by manual theme: 8 themes, each about its own thing.*
 **View:** `🧭 Word cloud → Source: Curated → Size: Papers → Colour: Glossary`
 
-![Colored by semantic clusters — S3 swallows a quarter of the terms](img/cloud_semantic.png)
+![Colored by semantic clusters — S3 swallows a quarter of the terms](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/cloud_semantic.png)
 
 *Same map, colored by embedding semantics: the orange "S3 · calibration & truthfulness"
 cluster floods a quarter of the terms.*
@@ -342,13 +342,13 @@ There's a whole page for this — **Groupings** ("one map, many groupings"): it 
 125 terms out in space by the chosen grouping. By the manual theme you get eight clean colored
 islands:
 
-![Groupings: the term map laid out by glossary theme](img/groupings_glossary.png)
+![Groupings: the term map laid out by glossary theme](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/groupings_glossary.png)
 **View:** `🗂️ Groupings → Layout: Glossary · Colour: Glossary · Size: Papers · Source: Curated`
 
 Switch **Layout** to Co-occurrence and the islands reassemble by what co-occurs with what,
 not by meaning:
 
-![Groupings, Layout = Co-occurrence: same theme colors, now mixed](img/groupings_cooccur.png)
+![Groupings, Layout = Co-occurrence: same theme colors, now mixed](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/groupings_cooccur.png)
 **View:** `🗂️ Groupings → Layout: Co-occurrence · Colour: Glossary · Size: Papers · Source: Curated`
 
 The colors (themes) are the same, but now they're **mixed** inside each cluster: `jailbreak`
@@ -377,7 +377,7 @@ has nowhere to "live" as a discipline.**
   `artificial intelligence`, `psychology`, `political science`, `medicine`, `law`.
   Safety is smeared across other people's sciences.
 
-![OpenAlex keyword cloud over the same papers — safety is nowhere to be seen](img/cloud_openalex.png)
+![OpenAlex keyword cloud over the same papers — safety is nowhere to be seen](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/cloud_openalex.png)
 
 *The same safety papers through OpenAlex's eyes: the biggest are reinforcement learning, deep
 learning, natural language processing, then physics, law, finance, chemistry. Highlighted are
@@ -454,5 +454,5 @@ noise:
    means nothing.)
 4. **Who judges** — a human, a classifier, an LLM judge? Each has its own bias.
 
-A full breakdown of all 125 concepts is in the [glossary](ai-safety-concepts-glossary_en.md),
-and the collection methodology is in [methodology_en.md](methodology_en.md).
+A full breakdown of all 125 concepts is in the [glossary](docs/ai-safety-concepts-glossary_en.md),
+and the collection methodology is in [methodology_en.md](docs/methodology_en.md).

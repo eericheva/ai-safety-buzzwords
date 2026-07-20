@@ -19,7 +19,7 @@ import networkx as nx
 from build_viz import group_of, GROUP_COLOR, slug
 from buzzwords import BUZZWORDS, variants
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(HERE, "data", "raw2")
 term_cluster = {t: c for t, c, _ in BUZZWORDS}
 term_group = {t: group_of(c) for t, c, _ in BUZZWORDS}

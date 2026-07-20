@@ -18,7 +18,7 @@ from sklearn.metrics import silhouette_score
 from build_viz import group_of, GROUP_COLOR
 from buzzwords import BUZZWORDS
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 API_KEY = "s2k-ZOHSvEHee6VvgAyjrfPDQ88TXPswpt5ts8AOMUuU"
 BATCH = "https://api.semanticscholar.org/graph/v1/paper/batch?fields=embedding.specter_v2"
 NPZ = os.path.join(HERE, "data", "embeddings.npz")

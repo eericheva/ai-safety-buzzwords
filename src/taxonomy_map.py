@@ -16,7 +16,7 @@ Output: data/taxonomy_map.json
 import json, os, math
 from lenses import build as build_lenses
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GOLDEN = math.pi * (3 - math.sqrt(5))   # ~2.399963 rad
 
 

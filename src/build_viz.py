@@ -12,7 +12,7 @@ from collections import defaultdict
 
 from buzzwords import BUZZWORDS, variants
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(HERE, "data", "raw2")
 
 

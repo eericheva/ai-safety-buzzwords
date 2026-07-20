@@ -2,7 +2,7 @@
 """Assemble taxonomy.html — ONE unified grouping map of the 125 buzzwords.
 Three independent controls: Layout (position), Colour, Size (radius)."""
 import json, os
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 LBL = {"curated": "Curated", "raw2": "Mined phrases", "openalex": "OpenAlex keywords"}
@@ -17,7 +17,7 @@ def main():
         if os.path.exists(p):
             sd = json.load(open(p)); sd["label"] = LBL[s]; sources[s] = sd
     html = TEMPLATE.replace("/*__DATA__*/", json.dumps(sources, ensure_ascii=False, separators=(",", ":")))
-    out = os.path.join(HERE, "taxonomy.html")
+    out = os.path.join(HERE, "web", "taxonomy.html")
     open(out, "w").write(html)
     print(f"wrote {out} ({os.path.getsize(out)/1024:.0f} KB) sources={list(sources)}")
 

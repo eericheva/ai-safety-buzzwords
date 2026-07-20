@@ -213,12 +213,12 @@ noise:
    means nothing.)
 4. **Who judges** — a human, a classifier, an LLM judge? Each has its own bias.
 
-A full breakdown of all 125 concepts is in the [glossary](ai-safety-concepts-glossary_en.md),
-and the collection methodology is in [methodology_en.md](methodology_en.md).
+A full breakdown of all 125 concepts is in the [glossary](docs/ai-safety-concepts-glossary_en.md),
+and the collection methodology is in [methodology_en.md](docs/methodology_en.md).
 
 # Methodology: how we collect and visualize AI-safety buzzwords
 
-This document describes the whole pipeline: where the terms come from, how papers are collected per term, how noise is filtered, which metrics and groupings are computed, how it's visualized, and how new buzzwords are discovered. The companion concept glossary is [ai-safety-concepts-glossary_en.md](ai-safety-concepts-glossary_en.md).
+This document describes the whole pipeline: where the terms come from, how papers are collected per term, how noise is filtered, which metrics and groupings are computed, how it's visualized, and how new buzzwords are discovered. The companion concept glossary is [ai-safety-concepts-glossary_en.md](docs/ai-safety-concepts-glossary_en.md).
 
 ---
 
@@ -228,9 +228,9 @@ For every AI-safety concept, get a measurable picture: how many arXiv papers use
 
 Three layers, each with its own scripts:
 
-- **Top-down collection** ([buzzwords.py](buzzwords.py) + [collect.py](collect.py)) — over a fixed, curated list from the glossary.
-- **Bottom-up discovery** ([discover.py](discover.py)) — pulling candidate terms out of corpora and taxonomies. These candidates are used two ways: (a) to manually grow the glossary and (b) as **standalone sources** for visualization (see §8).
-- **Visualization** ([build_viz.py](build_viz.py), [build_source_data.py](build_source_data.py), [build_dashboard.py](build_dashboard.py) / [build_trends.py](build_trends.py) / [build_taxonomy.py](build_taxonomy.py)) — a word cloud, trends, and a groupings map, with switching between sources, metrics, and lenses.
+- **Top-down collection** ([buzzwords.py](src/buzzwords.py) + [collect.py](src/collect.py)) — over a fixed, curated list from the glossary.
+- **Bottom-up discovery** ([discover.py](src/discover.py)) — pulling candidate terms out of corpora and taxonomies. These candidates are used two ways: (a) to manually grow the glossary and (b) as **standalone sources** for visualization (see §8).
+- **Visualization** ([build_viz.py](src/build_viz.py), [build_source_data.py](src/build_source_data.py), [build_dashboard.py](src/build_dashboard.py) / [build_trends.py](src/build_trends.py) / [build_taxonomy.py](src/build_taxonomy.py)) — a word cloud, trends, and a groupings map, with switching between sources, metrics, and lenses.
 
 ---
 
@@ -238,7 +238,7 @@ Three layers, each with its own scripts:
 
 ```mermaid
 flowchart TD
-    Glossary["ai-safety-concepts-glossary.md"] --> Buzzwords["buzzwords.py<br/>BUZZWORDS (125 terms)"]
+    Glossary["docs/ai-safety-concepts-glossary.md"] --> Buzzwords["src/buzzwords.py<br/>BUZZWORDS (125 terms)"]
     Buzzwords --> Collect["collect.py"]
     Collect --> S2["Semantic Scholar<br/>bulk search + verify"]
     S2 --> Papers["data/papers.csv<br/>data/buzzword_counts.csv"]
@@ -270,7 +270,7 @@ The list is **curated from the glossary**. The structure is `BUZZWORDS`: tuples 
 
 `SCOPE` is built from a single `CONTEXT` list (one source of truth — it must match the verification step):
 
-```10:12:buzzwords.py
+```10:12:src/buzzwords.py
 CONTEXT = ["language model", "large language model", "LLM", "chatbot",
            "AI safety", "AI alignment"]
 SCOPE = "(%s)" % " | ".join('"%s"' % c if " " in c else c for c in CONTEXT)
@@ -373,9 +373,9 @@ It also emits the same formats as curated: `viz_data.json`, `trends_data.json`, 
 
 All pages read the same per-source data and share the nav + a **Source** switcher (Curated / Mined phrases / OpenAlex).
 
-- **Word cloud** ([build_dashboard.py](build_dashboard.py) → `index.html`) — an interactive SVG cloud (size by any of the 7 metrics, colour by any lens) + a top-terms bar chart. Tiles: terms / papers / citations / year span.
-- **Trends** ([build_trends.py](build_trends.py) → `trends.html`) — three views: **Atlas** (heatmap/cards — every term on one screen, a per-year heat-strip), **Overlay** (all lines at once, groups hidden via an "eye"), **Themes** (streamgraph of the field's composition over time, papers/citations).
-- **Groupings** ([build_taxonomy.py](build_taxonomy.py) → `taxonomy.html`) — one scatter map: **Layout** (position by lens) × **Colour** (colour by lens) × **Size** (radius by metric).
+- **Word cloud** ([build_dashboard.py](src/build_dashboard.py) → `index.html`) — an interactive SVG cloud (size by any of the 7 metrics, colour by any lens) + a top-terms bar chart. Tiles: terms / papers / citations / year span.
+- **Trends** ([build_trends.py](src/build_trends.py) → `trends.html`) — three views: **Atlas** (heatmap/cards — every term on one screen, a per-year heat-strip), **Overlay** (all lines at once, groups hidden via an "eye"), **Themes** (streamgraph of the field's composition over time, papers/citations).
+- **Groupings** ([build_taxonomy.py](src/build_taxonomy.py) → `taxonomy.html`) — one scatter map: **Layout** (position by lens) × **Colour** (colour by lens) × **Size** (radius by metric).
 
 Shared controls: **Source**, **Size** (7 metrics), **Colour**/**Layout** (lenses), theme (light/dark).
 
@@ -410,33 +410,33 @@ The lists are **ranked candidates for manual review** — nothing is added to th
 
 ```bash
 # — curated layer —
-python buzzwords.py            # stats over the list
-python collect.py             # collect papers (caches data/raw2)
-python build_viz.py           # metrics + clouds + viz_data (+ groupings*.py lenses)
-python trends_data.py; python taxonomy_map.py
+python src/buzzwords.py            # stats over the list
+python src/collect.py             # collect papers (caches data/raw2)
+python src/build_viz.py           # metrics + clouds + viz_data (+ groupings*.py lenses)
+python src/trends_data.py; python src/taxonomy_map.py
 
 # — candidate discovery —
-python discover.py --source raw2
-python discover.py --source openalex --pages 25
-python discover.py --source mit
+python src/discover.py --source raw2
+python src/discover.py --source openalex --pages 25
+python src/discover.py --source mit
 
 # — candidate sources as corpora —
-python collect_source.py raw2 300      # collect + verify top-300
-python collect_source.py openalex 300
-python build_source_data.py raw2       # co-occurrence + semantic + formats
-python build_source_data.py openalex
+python src/collect_source.py raw2 300      # collect + verify top-300
+python src/collect_source.py openalex 300
+python src/build_source_data.py raw2       # co-occurrence + semantic + formats
+python src/build_source_data.py openalex
 
 # — build pages (embed all available sources) —
-python build_dashboard.py
-python build_trends.py
-python build_taxonomy.py
+python src/build_dashboard.py
+python src/build_trends.py
+python src/build_taxonomy.py
 ```
 
 ### How to add a new buzzword (to the curated set)
 
-1. Add a line to `ai-safety-concepts-glossary.md` (canonical name + link).
+1. Add a line to `docs/ai-safety-concepts-glossary.md` (canonical name + link).
 2. Add a tuple to `BUZZWORDS` (`buzzwords.py`), and surface forms to `VARIANTS` if needed.
-3. `python collect.py` → the term is pulled from S2 and enters the metrics; then rebuild the data and pages.
+3. `python src/collect.py` → the term is pulled from S2 and enters the metrics; then rebuild the data and pages.
 
 ---
 

@@ -7,3 +7,4 @@ data/raw2/
 data/src_*/raw/
 data/src_*/embeddings.npz
 data/_*.log
+*.humanize_eval*

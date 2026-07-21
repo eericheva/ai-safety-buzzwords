@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Assemble the self-contained dashboard artifact (index.html) from viz_data.json
-+ the two word-cloud PNGs. Embeds top-1200 papers for the in-page table; the
-full 4212-row corpus stays in data/papers.csv."""
-import base64, json, os
+"""Assemble the self-contained dashboard artifact (index.html) from viz_data.json.
+The word clouds are rendered in-page as interactive SVGs (DATA.cloud_svgs), not
+embedded images. Embeds top-1200 papers for the in-page table; the full
+4212-row corpus stays in data/papers.csv."""
+import json, os
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-def b64(path):
-    with open(path, "rb") as f:
-        return "data:image/png;base64," + base64.b64encode(f.read()).decode()
 
 
 SOURCE_LABELS = {"curated": "Curated", "raw2": "Mined phrases", "openalex": "OpenAlex keywords"}

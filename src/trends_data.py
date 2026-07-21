@@ -12,7 +12,7 @@ import json, os, re
 from collections import defaultdict
 
 from buzzwords import BUZZWORDS, variants
-from build_viz import GROUPS, GROUP_ORDER, GROUP_COLOR, group_of, slug
+from build_viz import GROUP_ORDER, GROUP_COLOR, group_of, slug
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(HERE, "data", "raw2")

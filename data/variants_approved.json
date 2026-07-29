@@ -1,0 +1,137 @@
+{
+ "CoT monitorability": [
+  "cot monitoring"
+ ],
+ "activation steering": [
+  "internal activations"
+ ],
+ "advice in regulated industries": [
+  "regulatory compliance"
+ ],
+ "agentic safety": [
+  "agent safety"
+ ],
+ "anthropomorphism": [
+  "anthropomorphic"
+ ],
+ "calibration": [
+  "calibrate",
+  "calibrating"
+ ],
+ "companion AI": [
+  "companions",
+  "companionship"
+ ],
+ "cultural alignment": [
+  "culturally sensitive"
+ ],
+ "dangerous capabilities": [
+  "capability evaluations",
+  "dangerous capability"
+ ],
+ "deception": [
+  "deceptive behavior"
+ ],
+ "deceptive alignment": [
+  "agentic misalignment",
+  "strategic deception"
+ ],
+ "differential privacy": [
+  "differentially"
+ ],
+ "emergent misalignment": [
+  "broadly misaligned",
+  "misaligned",
+  "misaligned behavior"
+ ],
+ "evaluation awareness": [
+  "being evaluated"
+ ],
+ "exaggerated safety": [
+  "refusal rate"
+ ],
+ "factuality": [
+  "factual errors"
+ ],
+ "faithfulness": [
+  "faithfully"
+ ],
+ "hallucination": [
+  "hallucinate",
+  "hallucinated",
+  "hallucinatory"
+ ],
+ "harmful fine-tuning": [
+  "fine-tuning attack",
+  "fine-tuning attacks"
+ ],
+ "harmlessness": [
+  "helpful and harmless"
+ ],
+ "introspection": [
+  "introspective"
+ ],
+ "linear representation hypothesis": [
+  "linear representations"
+ ],
+ "memorization": [
+  "memorize",
+  "memorized",
+  "memorizing"
+ ],
+ "misalignment": [
+  "broadly misaligned",
+  "misaligned behaviors"
+ ],
+ "object hallucination": [
+  "hallucinations large vision-language"
+ ],
+ "overconfidence": [
+  "confidence calibration",
+  "confidence estimation",
+  "confidence scores",
+  "overconfident"
+ ],
+ "persuasion": [
+  "persuade",
+  "persuasive",
+  "persuasiveness"
+ ],
+ "post-hoc rationalization": [
+  "rationalizations"
+ ],
+ "recursive self-critiquing": [
+  "critique",
+  "critiques"
+ ],
+ "representation engineering": [
+  "internal representations"
+ ],
+ "sparse autoencoder": [
+  "autoencoders",
+  "autoencoders saes"
+ ],
+ "steganography": [
+  "steganalysis",
+  "steganographic"
+ ],
+ "stereotype": [
+  "stereotypical",
+  "stereotyping"
+ ],
+ "sycophancy": [
+  "sycophantic",
+  "sycophantic behavior"
+ ],
+ "toxicity": [
+  "toxic content"
+ ],
+ "unlearning": [
+  "unlearned"
+ ],
+ "watermarking": [
+  "watermark detection",
+  "watermarked",
+  "watermarks"
+ ]
+}

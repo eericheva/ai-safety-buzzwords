@@ -1,0 +1,11 @@
+# The three page builders (build_dashboard, build_trends, build_taxonomy) and
+# taxonomy_map.py run on the standard library alone - nothing here is needed to
+# rebuild web/*.html from the data already in data/.
+#
+# These are for the collection and analysis stages. Left unpinned so the install works
+# on older interpreters too; the versions this was last run against, on Python 3.12, are
+# numpy 2.5.1, scikit-learn 1.9.0, networkx 3.6.1, wordcloud 1.9.6 (with Pillow 12.3.0).
+numpy            # vector maths for the SPECTER2 embeddings
+scikit-learn     # k-means, PCA and silhouette for the semantic lens
+networkx         # Louvain communities for the co-occurrence lens
+wordcloud        # the word-cloud SVGs (pulls in Pillow)

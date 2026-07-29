@@ -1,0 +1,69 @@
+This repository holds two kinds of work under two licences.
+
+===============================================================================
+1. CODE - MIT License
+===============================================================================
+Applies to everything in src/ and templates/.
+
+Copyright (c) 2026 eericheva
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+===============================================================================
+2. WRITING, GLOSSARY AND DERIVED DATA - CC BY 4.0
+===============================================================================
+Applies to the posts (post.md, post-en.md, README.md), the methodology notes
+(methodology.md, methodology_en.md), the glossary (ai-safety-concepts-glossary*.md),
+the figures in img/, the generated pages in web/, and the derived measurements in
+data/.
+
+Licensed under the Creative Commons Attribution 4.0 International License. You
+may share and adapt this material for any purpose, including commercially, as
+long as you give appropriate credit and indicate whether changes were made.
+
+  Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+  Summary:   https://creativecommons.org/licenses/by/4.0/
+
+Suggested attribution:
+  "AI Safety Buzzwords" by eericheva,
+  https://github.com/eericheva/ai-safety-buzzwords, CC BY 4.0.
+
+===============================================================================
+3. THIRD-PARTY SOURCES
+===============================================================================
+The measurements in data/ are computed from metadata retrieved from external
+services. Those services own their data and set their own terms; nothing above
+grants rights over it.
+
+  Semantic Scholar Academic Graph API - paper metadata, abstracts and SPECTER2
+  embeddings. Data licensed CC BY-NC 4.0 for the corpus as distributed by AI2.
+  https://www.semanticscholar.org/product/api
+
+  OpenAlex - keywords and topics, used for the bottom-up candidate branch.
+  Released as CC0 (public domain).
+  https://openalex.org/
+
+  arXiv - the paper set counted here consists of arXiv preprints. Titles and
+  abstracts belong to their authors; per-paper licences vary.
+  https://arxiv.org/
+
+  MIT AI Risk Repository (arXiv:2408.12622) - the 7-domain / 24-subdomain risk
+  taxonomy that src/common.py reproduces verbatim in order to map the glossary
+  onto it. Credit to Slattery et al.
+  https://airisk.mit.edu/

@@ -1,0 +1,79 @@
+- generic [ref=f24e3]:
+  - generic [ref=f24e7]:
+    - 'heading "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning" [level=1] [ref=f24e8]': "The WMDP Benchmark: Measuring and ReducingMalicious Use With Unlearning"
+    - button [ref=f24e11] [cursor=pointer]:
+      - button [ref=f24e13]:
+        - generic [ref=f24e14]:
+          - text: The WMDP Team
+          - img "caret-down" [ref=f24e16]
+    - generic [ref=f24e20]:
+      - link [ref=f24e22] [cursor=pointer]:
+        - /url: https://arxiv.org/abs/2403.03218
+        - generic [ref=f24e23]:
+          - img "file" [ref=f24e24]
+          - text: Paper
+      - link [ref=f24e28] [cursor=pointer]:
+        - /url: https://github.com/centerforaisafety/wmdp
+        - generic [ref=f24e29]:
+          - img "github" [ref=f24e30]
+          - text: GitHub
+      - link [ref=f24e34] [cursor=pointer]:
+        - /url: https://huggingface.co/collections/cais/wmdp-benchmark-661ed0abb589122164900e0e
+      - link [ref=f24e38] [cursor=pointer]:
+        - /url: https://www.safe.ai/blog/wmdp-benchmark
+  - generic [ref=f24e43]:
+    - generic [ref=f24e45]:
+      - generic [ref=f24e47]:
+        - heading "Introduction" [level=2] [ref=f24e48]
+        - generic [ref=f24e49]:
+          - text: The
+          - strong [ref=f24e50]: W
+          - text: eapons of
+          - strong [ref=f24e51]: M
+          - text: ass
+          - strong [ref=f24e52]: D
+          - text: estruction
+          - strong [ref=f24e53]: P
+          - text: roxy (WMDP) benchmark is a dataset of 3,668 multiple-choice questions surrounding hazardous knowledge in
+          - generic [ref=f24e54]:
+            - img "Biosecurity Icon" [ref=f24e55]
+            - text: biosecurity
+          - text: ","
+          - generic [ref=f24e56]:
+            - img "Cybersecurity Icon" [ref=f24e57]
+            - text: cybersecurity
+          - text: ", and"
+          - generic [ref=f24e58]:
+            - img "Chemical Security Icon" [ref=f24e59]
+            - text: chemical security
+          - text: . WMDP serves as both a proxy evaluation for hazardous knowledge in large language models (LLMs) and a benchmark for unlearning methods to remove such knowledge. To guide progress on mitigating risk from LLMs, we develop RMU, a state-of-the-art unlearning method which reduces model performance on WMDP while maintaining general language model capabilities.
+      - img "outline" [ref=f24e62]
+    - generic [ref=f24e64]:
+      - heading "Evaluating Risk From LLMs" [level=2] [ref=f24e65]
+      - generic [ref=f24e66]:
+        - img "outline" [ref=f24e71]
+        - generic [ref=f24e72]: To measure risks of malicious use, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private and are limited to a narrow range of misuse scenarios. To fill these gaps, we publicly release WMDP, an expert-written dataset which measures how LLMs could aid malicious actors in developing biological, cyber, and chemical attack capabilities. To avoid releasing sensitive and export-controlled information, we collect questions that are precursors, neighbors, and components of the hazardous knowledge we wish to remove.
+    - generic [ref=f24e75]:
+      - heading "Mitigating Risk from LLMs" [level=2] [ref=f24e76]
+      - generic [ref=f24e78]:
+        - figure [ref=f24e79]:
+          - img "outline" [ref=f24e80]
+        - generic [ref=f24e81]: "On closed source API-access models, such as GPT-4 and Gemini, adversaries can deploy adversarial attacks or harmful API-finetuning to bypass models’ refusal training and unlock their knowledge. Fortunately, model providers have leverage, as they may apply safety interventions before serving the model. In particular, providers may perform machine unlearning to directly remove hazardous knowledge from models. Unlearned models have higher inherent safety: even if they are jailbroken, unlearned models lack the knowledge to be repurposed for malicious use."
+        - generic [ref=f24e82]:
+          - generic [ref=f24e85]:
+            - text: To guide progress on unlearning, we develop RMU, a state-of-the-art method inspired by
+            - link "representation engineering" [ref=f24e86] [cursor=pointer]:
+              - /url: https://www.ai-transparency.org/
+            - text: ", which improves unlearning precision: removing dangerous knowledge while preserving general model capabilities. RMU significantly reduces model performance on WMDP, while mostly retaining general capabilities on MMLU and MT-Bench, suggesting that concrete progress in unlearning is feasible."
+          - img "outline" [ref=f24e89]
+        - generic [ref=f24e90]:
+          - heading "Citation:" [level=4] [ref=f24e91]
+          - generic [ref=f24e93]:
+            - text: "@misc{li2024wmdp,"
+            - generic [ref=f24e94]: "title={The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning},"
+            - generic [ref=f24e95]: "author={Nathaniel Li and Alexander Pan and Anjali Gopal and Summer Yue and Daniel Berrios and Alice Gatti and Justin D. Li and Ann-Kathrin Dombrowski and Shashwat Goel and Long Phan and Gabriel Mukobi and Nathan Helm-Burger and Rassin Lababidi and Lennart Justen and Andrew B. Liu and Michael Chen and Isabelle Barrass and Oliver Zhang and Xiaoyuan Zhu and Rishub Tamirisa and Bhrugu Bharathi and Adam Khoja and Zhenqi Zhao and Ariel Herbert-Voss and Cort B. Breuer and Samuel Marks and Oam Patel and Andy Zou and Mantas Mazeika and Zifan Wang and Palash Oswal and Weiran Liu and Adam A. Hunt and Justin Tienken-Harder and Kevin Y. Shih and Kemper Talley and John Guan and Russell Kaplan and Ian Steneker and David Campbell and Brad Jokubaitis and Alex Levinson and Jean Wang and William Qian and Kallol Krishna Karmakar and Steven Basart and Stephen Fitz and Mindy Levine and Ponnurangam Kumaraguru and Uday Tupakula and Vijay Varadharajan and Yan Shoshitaishvili and Jimmy Ba and Kevin M. Esvelt and Alexandr Wang and Dan Hendrycks},"
+            - generic [ref=f24e96]: "year={2024},"
+            - generic [ref=f24e97]: "eprint={2403.03218},"
+            - generic [ref=f24e98]: "archivePrefix={arXiv},"
+            - generic [ref=f24e99]: "primaryClass={cs.LG}"
+            - generic [ref=f24e100]: "}"

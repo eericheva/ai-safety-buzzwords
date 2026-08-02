@@ -1,0 +1,436 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e3]:
+    - generic [ref=f7e4]: We use cookies to make your experience on this website better.
+    - generic [ref=f7e5]:
+      - button "Agree" [ref=f7e6] [cursor=pointer]
+      - button "Disagree" [ref=f7e7] [cursor=pointer]
+  - banner [ref=f7e8]:
+    - list [ref=f7e9]:
+      - listitem [ref=f7e10]:
+        - link "Main site" [ref=f7e11] [cursor=pointer]:
+          - /url: http://safer-ai.org/
+      - listitem [ref=f7e12]:
+        - link "Companies Companies":
+          - /url: "#"
+      - listitem [ref=f7e13]:
+        - link "Best in Class Best in Class" [ref=f7e14] [cursor=pointer]:
+          - /url: https://tracker.safer-ai.org/best-in-class/
+    - link "SaferAI Ratings" [ref=f7e15] [cursor=pointer]:
+      - /url: /
+    - list [ref=f7e16]:
+      - listitem [ref=f7e17]:
+        - link "Methodology Methodology" [ref=f7e18] [cursor=pointer]:
+          - /url: https://tracker.safer-ai.org/methodology/
+      - listitem [ref=f7e19]:
+        - link "Comparison table Comparison table" [ref=f7e20] [cursor=pointer]:
+          - /url: https://tracker.safer-ai.org/comparison/
+  - generic [ref=f7e22]:
+    - main [ref=f7e23]:
+      - generic [ref=f7e30]:
+        - heading "Assessing the risk management practices of frontier AI companies" [level=1] [ref=f7e32]
+        - generic [ref=f7e34]:
+          - generic [ref=f7e35]: Featured in
+          - group "Main" [ref=f7e37]:
+            - generic:
+              - button "Go to last slide" [ref=f7e38] [cursor=pointer]
+              - button "Next slide" [ref=f7e39] [cursor=pointer]
+            - generic [ref=f7e40]:
+              - group [ref=f7e41]:
+                - link [ref=f7e42] [cursor=pointer]:
+                  - /url: https://techcrunch.com/2025/05/13/xais-promised-safety-report-is-mia/
+              - group [ref=f7e43]:
+                - link [ref=f7e44] [cursor=pointer]:
+                  - /url: https://www.theguardian.com/technology/2025/jul/17/ai-firms-unprepared-for-dangers-of-building-human-level-systems-report-warns
+              - group [ref=f7e45]:
+                - link [ref=f7e46] [cursor=pointer]:
+                  - /url: https://time.com/7302757/anthropic-xai-meta-openai-risk-management-2/
+              - group [ref=f7e47]:
+                - link [ref=f7e48] [cursor=pointer]:
+                  - /url: https://www.euractiv.com/section/tech/news/top-ai-companies-suffer-from-poor-ai-risk-management-says-french-non-profit/
+              - group [ref=f7e49]:
+                - link [ref=f7e50] [cursor=pointer]:
+                  - /url: https://techcrunch.com/2025/05/13/xais-promised-safety-report-is-mia/
+              - group [ref=f7e51]:
+                - link [ref=f7e52] [cursor=pointer]:
+                  - /url: https://www.theguardian.com/technology/2025/jul/17/ai-firms-unprepared-for-dangers-of-building-human-level-systems-report-warns
+              - group "1 of 4" [ref=f7e53]:
+                - link [ref=f7e54] [cursor=pointer]:
+                  - /url: https://time.com/7302757/anthropic-xai-meta-openai-risk-management-2/
+              - group "2 of 4" [ref=f7e55]:
+                - link [ref=f7e56] [cursor=pointer]:
+                  - /url: https://www.euractiv.com/section/tech/news/top-ai-companies-suffer-from-poor-ai-risk-management-says-french-non-profit/
+              - group "3 of 4" [ref=f7e57]:
+                - link [ref=f7e58] [cursor=pointer]:
+                  - /url: https://techcrunch.com/2025/05/13/xais-promised-safety-report-is-mia/
+              - group [ref=f7e59]:
+                - link [ref=f7e60] [cursor=pointer]:
+                  - /url: https://www.theguardian.com/technology/2025/jul/17/ai-firms-unprepared-for-dangers-of-building-human-level-systems-report-warns
+              - group [ref=f7e61]:
+                - link [ref=f7e62] [cursor=pointer]:
+                  - /url: https://time.com/7302757/anthropic-xai-meta-openai-risk-management-2/
+              - group [ref=f7e63]:
+                - link [ref=f7e64] [cursor=pointer]:
+                  - /url: https://www.euractiv.com/section/tech/news/top-ai-companies-suffer-from-poor-ai-risk-management-says-french-non-profit/
+              - group [ref=f7e65]:
+                - link [ref=f7e66] [cursor=pointer]:
+                  - /url: https://techcrunch.com/2025/05/13/xais-promised-safety-report-is-mia/
+              - group [ref=f7e67]:
+                - link [ref=f7e68] [cursor=pointer]:
+                  - /url: https://www.theguardian.com/technology/2025/jul/17/ai-firms-unprepared-for-dangers-of-building-human-level-systems-report-warns
+              - group [ref=f7e69]:
+                - link [ref=f7e70] [cursor=pointer]:
+                  - /url: https://time.com/7302757/anthropic-xai-meta-openai-risk-management-2/
+              - group [ref=f7e71]:
+                - link [ref=f7e72] [cursor=pointer]:
+                  - /url: https://www.euractiv.com/section/tech/news/top-ai-companies-suffer-from-poor-ai-risk-management-says-french-non-profit/
+      - generic [ref=f7e75]:
+        - heading "our mission" [level=5] [ref=f7e79]
+        - generic [ref=f7e82]:
+          - heading "We track frontier AI companies' risk management frameworks. Our objective is to make frontier AI safer through improved risk management practices and to enhance the accountability of private actors shaping the development of AI." [level=3] [ref=f7e83]
+          - generic [ref=f7e84]:
+            - text: Our complete methodology can be found
+            - link "here" [ref=f7e85] [cursor=pointer]:
+              - /url: /methodology/
+            - text: .
+      - generic [ref=f7e87]:
+        - generic [ref=f7e93]:
+          - generic [ref=f7e96]:
+            - generic [ref=f7e97]:
+              - generic [ref=f7e98]:
+                - generic [ref=f7e99]: "Filter:"
+                - list [ref=f7e100] [cursor=pointer]:
+                  - listitem [ref=f7e101]: All
+                  - listitem [ref=f7e102]: Frontier Companies
+              - generic [ref=f7e103]: Click logos to visit company pages
+            - generic [ref=f7e105]:
+              - generic: Best in class Best in class
+              - link "Anthropic Anthropic" [ref=f7e107] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/anthropic/
+              - link "OpenAI OpenAI" [ref=f7e109] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/openai/
+              - link "Microsoft Microsoft" [ref=f7e111] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/microsoft/
+              - link "Meta Meta" [ref=f7e113] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/meta/
+              - link "G42 G42" [ref=f7e115] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/g42/
+              - link "Google DeepMind Google DeepMind" [ref=f7e117] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/deepmind/
+              - link "xAI xAI" [ref=f7e119] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/xai/
+              - link "Amazon Amazon" [ref=f7e121] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/amazon/
+              - link "NVIDIA NVIDIA" [ref=f7e123] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/nvidia/
+              - link "Magic Magic" [ref=f7e125] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/magic/
+              - link "Naver Naver" [ref=f7e127] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/naver/
+              - link "Cohere Cohere" [ref=f7e129] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/company/cohere/
+          - generic [ref=f7e138]:
+            - generic [ref=f7e140]:
+              - generic [ref=f7e141]: Overall score
+              - generic [ref=f7e143]:
+                - link [ref=f7e146] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/anthropic/
+                - link "35%" [ref=f7e148] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/anthropic/
+                - link "34%" [ref=f7e150] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/openai/
+                - link "33%" [ref=f7e152] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/microsoft/
+                - link "33%" [ref=f7e154] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/meta/
+                - link "24%" [ref=f7e156] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/g42/
+                - link "20%" [ref=f7e158] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/deepmind/
+                - link "18%" [ref=f7e160] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/xai/
+                - link "18%" [ref=f7e162] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/amazon/
+                - link "16%" [ref=f7e164] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/nvidia/
+                - link "11%" [ref=f7e166] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/magic/
+                - link "10%" [ref=f7e168] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/naver/
+                - link "8%" [ref=f7e170] [cursor=pointer]:
+                  - /url: https://tracker.safer-ai.org/company/cohere/
+            - generic [ref=f7e172]:
+              - generic [ref=f7e173]: 1. Risk Identification
+              - generic [ref=f7e175]:
+                - link [ref=f7e178] [cursor=pointer]:
+                  - /url: "#"
+                - link "41%" [ref=f7e180] [cursor=pointer]:
+                  - /url: "#"
+                - link "33%" [ref=f7e182] [cursor=pointer]:
+                  - /url: "#"
+                - link "62%" [ref=f7e184] [cursor=pointer]:
+                  - /url: "#"
+                - link "49%" [ref=f7e186] [cursor=pointer]:
+                  - /url: "#"
+                - link "17%" [ref=f7e188] [cursor=pointer]:
+                  - /url: "#"
+                - link "27%" [ref=f7e190] [cursor=pointer]:
+                  - /url: "#"
+                - link "22%" [ref=f7e192] [cursor=pointer]:
+                  - /url: "#"
+                - link "11%" [ref=f7e194] [cursor=pointer]:
+                  - /url: "#"
+                - link "14%" [ref=f7e196] [cursor=pointer]:
+                  - /url: "#"
+                - link "12%" [ref=f7e198] [cursor=pointer]:
+                  - /url: "#"
+                - link "7%" [ref=f7e200] [cursor=pointer]:
+                  - /url: "#"
+                - link "7%" [ref=f7e202] [cursor=pointer]:
+                  - /url: "#"
+            - generic [ref=f7e204]:
+              - generic [ref=f7e205]: 2. Risk Analysis and Evaluation
+              - generic [ref=f7e207]:
+                - link [ref=f7e210] [cursor=pointer]:
+                  - /url: "#"
+                - link "19%" [ref=f7e212] [cursor=pointer]:
+                  - /url: "#"
+                - link "28%" [ref=f7e214] [cursor=pointer]:
+                  - /url: "#"
+                - link "12%" [ref=f7e216] [cursor=pointer]:
+                  - /url: "#"
+                - link "36%" [ref=f7e218] [cursor=pointer]:
+                  - /url: "#"
+                - link "18%" [ref=f7e220] [cursor=pointer]:
+                  - /url: "#"
+                - link "21%" [ref=f7e222] [cursor=pointer]:
+                  - /url: "#"
+                - link "20%" [ref=f7e224] [cursor=pointer]:
+                  - /url: "#"
+                - link "16%" [ref=f7e226] [cursor=pointer]:
+                  - /url: "#"
+                - link "11%" [ref=f7e228] [cursor=pointer]:
+                  - /url: "#"
+                - link "14%" [ref=f7e230] [cursor=pointer]:
+                  - /url: "#"
+                - link "7%" [ref=f7e232] [cursor=pointer]:
+                  - /url: "#"
+                - link "5%" [ref=f7e234] [cursor=pointer]:
+                  - /url: "#"
+            - generic [ref=f7e236]:
+              - generic [ref=f7e237]: 3. Risk Treatment
+              - generic [ref=f7e239]:
+                - link [ref=f7e242] [cursor=pointer]:
+                  - /url: "#"
+                - link "30%" [ref=f7e244] [cursor=pointer]:
+                  - /url: "#"
+                - link "38%" [ref=f7e246] [cursor=pointer]:
+                  - /url: "#"
+                - link "28%" [ref=f7e248] [cursor=pointer]:
+                  - /url: "#"
+                - link "20%" [ref=f7e250] [cursor=pointer]:
+                  - /url: "#"
+                - link "24%" [ref=f7e252] [cursor=pointer]:
+                  - /url: "#"
+                - link "20%" [ref=f7e254] [cursor=pointer]:
+                  - /url: "#"
+                - link "6%" [ref=f7e256] [cursor=pointer]:
+                  - /url: "#"
+                - link "23%" [ref=f7e258] [cursor=pointer]:
+                  - /url: "#"
+                - link "14%" [ref=f7e260] [cursor=pointer]:
+                  - /url: "#"
+                - link "8%" [ref=f7e262] [cursor=pointer]:
+                  - /url: "#"
+                - link "8%" [ref=f7e264] [cursor=pointer]:
+                  - /url: "#"
+                - link "12%" [ref=f7e266] [cursor=pointer]:
+                  - /url: "#"
+            - generic [ref=f7e268]:
+              - generic [ref=f7e269]: 4. Risk Governance
+              - generic [ref=f7e271]:
+                - link [ref=f7e274] [cursor=pointer]:
+                  - /url: "#"
+                - link "50%" [ref=f7e276] [cursor=pointer]:
+                  - /url: "#"
+                - link "39%" [ref=f7e278] [cursor=pointer]:
+                  - /url: "#"
+                - link "33%" [ref=f7e280] [cursor=pointer]:
+                  - /url: "#"
+                - link "28%" [ref=f7e282] [cursor=pointer]:
+                  - /url: "#"
+                - link "38%" [ref=f7e284] [cursor=pointer]:
+                  - /url: "#"
+                - link "12%" [ref=f7e286] [cursor=pointer]:
+                  - /url: "#"
+                - link "23%" [ref=f7e288] [cursor=pointer]:
+                  - /url: "#"
+                - link "21%" [ref=f7e290] [cursor=pointer]:
+                  - /url: "#"
+                - link "23%" [ref=f7e292] [cursor=pointer]:
+                  - /url: "#"
+                - link "10%" [ref=f7e294] [cursor=pointer]:
+                  - /url: "#"
+                - link "18%" [ref=f7e296] [cursor=pointer]:
+                  - /url: "#"
+                - link "7%" [ref=f7e298] [cursor=pointer]:
+                  - /url: "#"
+        - generic [ref=f7e300]:
+          - link "Full comparison table here" [ref=f7e303] [cursor=pointer]:
+            - /url: https://tracker.safer-ai.org/comparison/
+          - generic [ref=f7e304]: Up to date as of July 2026
+      - generic [ref=f7e307]:
+        - heading "What can be achieved" [level=5] [ref=f7e311]
+        - generic [ref=f7e312]:
+          - generic [ref=f7e315]:
+            - heading "35%" [level=3] [ref=f7e316]
+            - generic [ref=f7e317]: is currently the highest overall assessment score, given to Anthropic.
+          - generic [ref=f7e320]:
+            - heading "59%" [level=3] [ref=f7e321]
+            - generic [ref=f7e322]:
+              - text: is currently the best overall assessment score if a company adopted all the industry
+              - link "best practices" [ref=f7e323] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/best-in-class/
+              - text: found across companies.
+      - generic [ref=f7e326]:
+        - heading "Why we are TRACKING AI companies" [level=5] [ref=f7e330]
+        - generic [ref=f7e333]:
+          - heading "Advanced AI systems are arguably one of the most transformative technologies ever built." [level=3] [ref=f7e334]
+          - paragraph [ref=f7e335]: Frontier AI companies are advancing technology at an astonishing rate, leading the three most cited AI researchers—Geoffrey Hinton, Ilya Sutskever, and Yoshua Bengio—to believe it will have a profound impact on societies and could even potentially contribute to their downfall.
+          - paragraph [ref=f7e336]: Yet, we don’t currently know how to properly manage AI risks. Frontier models are quickly becoming more capable, and they already pose potential large-scale risks. For example, they can now increasingly automate sophisticated cyber attack operations. As AI capabilities continue to advance rapidly, the gap between these growing risks and our inadequate risk management frameworks widens. This situation underscores the urgent need for robust risk management practices in the AI industry.
+          - list
+      - generic [ref=f7e339]:
+        - heading "HOW We selected companies" [level=5] [ref=f7e343]
+        - generic [ref=f7e346]:
+          - paragraph [ref=f7e347]:
+            - text: At the
+            - link "AI Seoul Summit" [ref=f7e348] [cursor=pointer]:
+              - /url: https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024
+            - text: "in 2024, multiple companies pledged to publish safety frameworks by the Paris AI Summit in February 2025, detailing how they manage risks when developing and deploying frontier AI models and systems. We have assessed the 12 companies that fulfilled this commitment: Amazon, Anthropic, Cohere, G42, Google DeepMind, Magic, Meta, Microsoft, Naver, NVIDIA, OpenAI, and xAI on the latest versions of their frameworks and related documents."
+          - paragraph [ref=f7e349]: "Six companies: 01.AI, Inflection AI, Minimax, Mistral AI, Technology Innovation Institute, and Zhipu AI, did not publish their frameworks despite the commitment. Additionally, IBM summarized its existing AI governance practices without addressing severe AI risks, while Samsung published a framework limited to on-device AI safety, neither of which met our criteria for frontier AI risk management evaluation. These approaches fall outside the scope of frontier AI risk management."
+          - list
+      - generic [ref=f7e352]:
+        - generic [ref=f7e353]:
+          - heading "Risk Management Reporting in four Dimensions" [level=5] [ref=f7e357]
+          - generic [ref=f7e361]:
+            - text: We assess AI companies'
+            - link "frontier safety frameworks" [ref=f7e362] [cursor=pointer]:
+              - /url: https://metr.org/faisc
+            - text: ", which outline their risk management practices. At a high level, these frameworks should address the following 4 dimensions:"
+        - generic [ref=f7e365]:
+          - generic [ref=f7e367]:
+            - heading "Risk identification" [level=3] [ref=f7e369]
+            - generic [ref=f7e370]: To what extent has the AI company identified potential risks comprehensively?
+          - generic [ref=f7e373]:
+            - heading "Risk Analysis and Evaluation" [level=3] [ref=f7e375]
+            - generic [ref=f7e376]: Has the AI company clearly defined acceptable risk levels and established measurable thresholds for both risk and mitigation levels?
+          - generic [ref=f7e379]:
+            - heading "Risk treatment" [level=3] [ref=f7e381]
+            - generic [ref=f7e382]: Does the AI company implement adequate mitigation measures and continuously monitor both risk levels and mitigation effectiveness to ensure risks remain below defined tolerances?
+          - generic [ref=f7e385]:
+            - heading "Risk governance" [level=3] [ref=f7e387]
+            - generic [ref=f7e388]: Has the AI company established clear organizational structures, accountability mechanisms, and transparency practices to ensure consistent and rigorous risk management?
+      - generic [ref=f7e392]:
+        - heading "Conclusion" [level=5] [ref=f7e396]
+        - generic [ref=f7e397]:
+          - generic [ref=f7e399]:
+            - generic [ref=f7e400]: "1"
+            - heading "All companies currently have significant opportunities to grow in their risk management practices." [level=4] [ref=f7e401]
+          - generic [ref=f7e403]:
+            - generic [ref=f7e404]: "2"
+            - heading "If a company were to apply all the best practices currently found across the other companies, they would achieve a score of 59%, a substantial improvement over the current best score of 35%." [level=4] [ref=f7e405]
+          - generic [ref=f7e407]:
+            - generic [ref=f7e408]: "3"
+            - heading "As AI systems become capable of causing large-scale physical harm, the current state of risk management is unacceptable. Companies must urgently prioritize improving their practices." [level=4] [ref=f7e409]
+        - generic [ref=f7e414]:
+          - generic [ref=f7e415]: We believe that these assessments will equip companies with the tools to develop more comprehensive and transparent AI risk management procedures and will result in improved safety across the board.
+          - generic [ref=f7e416]: We intend to continually track company policies. Ultimately, we aim for these assessments to be used across the AI deployer and investment community.
+      - generic [ref=f7e419]:
+        - heading "Current strengths" [level=5] [ref=f7e423]
+        - generic [ref=f7e426]:
+          - paragraph
+          - list [ref=f7e427]:
+            - listitem [ref=f7e428]: Risk identification is partially addressed, with companies typically covering 2-4 risks, though many improperly exclude the risks that they do not fully understand. Companies generally address core risks from domains such as CBRN (Chemical, Biological, Nuclear, Radiological), cyber offense, and in a few cases, automated AI R&D. Some companies, like GoogleDeepMind and OpenAI, show sophistication by breaking down complex loss of control risks into granular categories such as deceptive alignment and autonomous replication.
+            - listitem [ref=f7e429]: Some companies recognize the importance of risk modeling and define measurable Key Risk Indicators (KRIs) relatively well. Companies have established KRI thresholds such as capability thresholds, which indicate types of evaluations that will be needed to determine if the capability threshold has been crossed. However, KRIs should in general map to the actual evaluations performed, which is not often described currently in companies’ frameworks.
+            - listitem [ref=f7e430]: Some companies have established clear risk governance structures. For instance, companies like G42, OpenAI, Microsoft, and Anthropic have created specialized governance bodies including dedicated risk officers, safety advisory groups, and risk councils that represent meaningful institutionalization of risk management. Nonetheless, these remain fairly high-level and crucial details about final decision authority, oversight mechanisms, and handling of edge cases, are lacking.
+            - listitem [ref=f7e431]: Additional areas where companies show promise include early steps towards transparency and inclusion of third parties. Companies like Anthropic, Microsoft, and Cohere have made commitments to share evaluation results with stakeholders, engage third parties in assessments, and report externally on governance structures, representing positive movement toward industry accountability.
+          - paragraph
+      - generic [ref=f7e434]:
+        - heading "Opportunities for improvement" [level=5] [ref=f7e438]
+        - generic [ref=f7e441]:
+          - paragraph
+          - list [ref=f7e442]:
+            - listitem [ref=f7e443]: Risk tolerance (the maximum level of risk companies are willing to impose on society) is almost universally undefined, creating a fundamental gap where companies set capability thresholds and select mitigations without explicit bounds to ensure risks remain acceptable. This fundamental weakness undermines the entire risk management process, as companies cannot make principled decisions about acceptable risk levels without explicit tolerance thresholds. Instead, the criteria for these decisions remain discretionary and vague.
+            - listitem [ref=f7e444]: Open-ended red teaming, which is necessary to discover unknown, emergent risks, remains largely absent from frameworks, leaving companies unprepared for unforeseen dangers that arise as AI capabilities advance beyond the existing risk categories. Most companies focus narrowly on known risk domains without having systematic processes for identifying novel threats that may emerge as capabilities evolve. Given that AI companies are explicitly aiming to develop novel capabilities in their frontier models, this is crucial.
+            - listitem [ref=f7e445]: Most companies do not have a policy to put development on hold if they cannot sufficiently mitigate risk, or their threshold for doing so is vaguely defined, discretionary and non pre-emptive. While companies provide thresholds for when deployment would be paused, the same does not apply for development. This is problematic since many risks arise already during development. This represents a critical failure to prioritize safety over business objectives.
+            - listitem [ref=f7e446]: Separation of roles and responsibilities remains limited. A sound risk governance framework calls for distinct and separate entities and roles that can act as checks and balances on each other. The well-known Three Lines model, for example, calls for independent internal audit, clear responsibilities for the Board of Directors and an appropriately resourced central risk function that can challenge management on its risk decisions. None of the AI companies currently have all necessary components in place and only a few have distinct audit or risk teams with any independence.
+            - listitem [ref=f7e447]: Most frameworks are reactive rather than proactive with mitigations, failing to develop comprehensive, measurable ex ante risk management plans specifying precisely how they will mitigate risk, and why they believe these measures will be sufficient. To improve, frameworks should include more details on how they will evaluate the quality of their risk mitigation measures and provide proof that such measures will be sufficient before risks materialize. This is a critical gap given that effective mitigation measures require substantial development time and extensive advance planning.
+            - listitem [ref=f7e448]: There is a concerning development of ‘marginal risk clauses’, which make deployment decisions contingent on other companies’ risk tolerances. One company to include such a clause is OpenAI. Risk management is predicated on having an ‘unacceptable risk level’ that companies commit not to cross. Importantly then, this level should be independent of other companies’ risk levels. We strongly caution against these clauses, as they go against the spirit of risk management.
+          - paragraph
+          - list
+      - generic [ref=f7e454]:
+        - heading "FAQ" [level=5] [ref=f7e456]
+        - generic [ref=f7e458]:
+          - generic [ref=f7e460]:
+            - generic [ref=f7e461] [cursor=pointer]: What do these assessments achieve?
+            - paragraph [ref=f7e464]: Our main concern is to push for transparency and accountability as AI progresses, and we view these ratings as a good first step in achieving that goal. At this stage there is no private actor we would feel comfortable moving forward and developing AI systems for the next few years without substantial overhaul – our assessments make that clear and incentivize change.
+          - generic [ref=f7e466]:
+            - generic [ref=f7e467] [cursor=pointer]: Won't these assessments encourage safety washing?
+            - paragraph [ref=f7e470]: This is a challenge we’ve given a lot of thought to. Without compliance reviews of their frameworks, commitments may not amount to actual action. However, we believe commitments are the starting point. This is why we give concrete points of how companies can improve their practices for every criterion. Moreover, to avoid the gaming of our assessments, we may update the scale over time as industry practices mature.
+          - generic [ref=f7e472]:
+            - generic [ref=f7e473] [cursor=pointer]: Won’t SaferAI's risk management framework prevent us from reaping the benefits of AI?
+            - paragraph [ref=f7e476]:
+              - text: This
+              - link "risk management framework" [ref=f7e477] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2502.06656
+              - text: is designed to favor transparency from AI companies. It is designed to ensure that democratically chosen risk preferences are respected through AI development & deployment, accounting for the benefits. As such, it should incentivize AI companies to develop technologies that have the highest chance of delivering AI benefits safely. Moreover, greater transparency from foundation model providers simplifies downstream deployment, accelerating adoption across the ecosystem.
+          - generic [ref=f7e479]:
+            - generic [ref=f7e480] [cursor=pointer]: Do you want corporate governance to substitute for regulation?
+            - paragraph [ref=f7e483]: We want AI companies to improve their transparency and expect that to be complementary to existing regulations and to favor the development of future adequate regulations, providing well-needed data to encourage reasonable trade-offs when designing future rules.
+          - generic [ref=f7e485]:
+            - generic [ref=f7e486] [cursor=pointer]: What does a 100% assessment score mean?
+            - paragraph [ref=f7e489]:
+              - text: A 100% assessment score indicates that a company has implemented risk management practices we consider strong and sufficient to manage the risks posed by advanced AI systems. This represents comprehensive implementation across all four dimensions of our framework. Companies achieving this score demonstrate mature, well-documented processes with robust oversight and accountability mechanisms. For a detailed explanation of each component and its importance, please refer to our
+              - link "risk management framework" [ref=f7e490] [cursor=pointer]:
+                - /url: https://arxiv.org/pdf/2502.06656
+              - text: .
+          - generic [ref=f7e492]:
+            - generic [ref=f7e493] [cursor=pointer]: Why do you only look at frontier safety frameworks?
+            - generic [ref=f7e495]:
+              - paragraph [ref=f7e496]: First, while some companies do include relevant risk management information in their research publications or model cards, focusing exclusively on the frontier safety frameworks and the immediately related documentation enables a systematic, apples-to-apples comparison across all companies. Companies vary significantly in their publication volume, and publications serve different purposes, which would create assessment imbalances if we looked at all documents.
+              - paragraph [ref=f7e497]: Second, frontier safety frameworks represent formal, ongoing commitments to risk management practices, whereas research papers and model cards often demonstrate point-in-time implementations. By concentrating on these official frameworks, we ensure our ratings reflect companies' sustained approaches to AI safety rather than isolated examples of good practice.
+    - contentinfo [ref=f7e498]:
+      - generic [ref=f7e499]:
+        - generic [ref=f7e500]:
+          - link "SaferAI Ratings" [ref=f7e502] [cursor=pointer]:
+            - /url: /
+          - list [ref=f7e504]:
+            - listitem [ref=f7e505]:
+              - link "Main website" [ref=f7e506] [cursor=pointer]:
+                - /url: https://www.safer-ai.org/
+            - listitem [ref=f7e507]:
+              - link "Contact" [ref=f7e508] [cursor=pointer]:
+                - /url: https://www.safer-ai.org/contact
+        - generic [ref=f7e512]:
+          - generic [ref=f7e514]:
+            - paragraph [ref=f7e515]: SaferAI is a governance and research non-profit focused on AI risk management. Our organisation, based in France, works to incentivize responsible AI practices through policy recommendations, research, and innovative risk assessment tools.
+            - paragraph [ref=f7e516]: Lily Stelling and Malcolm Murray conducted the company assessments. Siméon Campos and Henry Papadatos reviewed the assessment. Henry Papadatos led the project.
+          - generic [ref=f7e517]:
+            - list [ref=f7e518]:
+              - listitem [ref=f7e519]: ©2026 SaferAI. All rights reserved
+            - list [ref=f7e520]:
+              - listitem [ref=f7e521]:
+                - link "LinkedIn" [ref=f7e522] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/saferai
+              - listitem [ref=f7e523]:
+                - link "Report Mistake and Feedback" [ref=f7e524] [cursor=pointer]:
+                  - /url: https://www.safer-ai.org/contact
+          - list [ref=f7e527]:
+            - listitem [ref=f7e528]:
+              - link "Terms of service" [ref=f7e529] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/terms-of-service/
+            - listitem [ref=f7e530]:
+              - link "Cookie Policy" [ref=f7e531] [cursor=pointer]:
+                - /url: https://tracker.safer-ai.org/cookie-policy/
+            - listitem [ref=f7e532]:
+              - link "Designed by And—Now" [ref=f7e533] [cursor=pointer]:
+                - /url: https://and-now.co.uk/

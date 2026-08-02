@@ -1,0 +1,41 @@
+- main [ref=f9e3]:
+  - generic [ref=f9e4]:
+    - generic [ref=f9e5]:
+      - heading "AI Safety Coverage Maps" [level=1] [ref=f9e6]
+      - navigation [ref=f9e7]:
+        - link "Mrs Wallbreaker on Telegram" [ref=f9e8] [cursor=pointer]:
+          - /url: https://t.me/MrsWallbreaker
+        - link "LinkedIn" [ref=f9e9] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/elena-ericheva/
+    - generic [ref=f9e10]:
+      - textbox "Access code" [ref=f9e11]
+      - button "Sign in" [ref=f9e12] [cursor=pointer]
+  - paragraph [ref=f9e13]: Interactive maps of how research covers different areas of AI safety — see what is done, partial, and still open.
+  - generic [ref=f9e14]:
+    - heading "Field maps" [level=2] [ref=f9e15]
+    - link "See all →" [ref=f9e16] [cursor=pointer]:
+      - /url: /maps
+  - heading "More projects" [level=2] [ref=f9e19]
+  - generic [ref=f9e20]:
+    - link "AI Safety Field Genealogy An interactive genealogy map of AI safety research." [ref=f9e21] [cursor=pointer]:
+      - /url: /genealogy/index.html
+      - heading "AI Safety Field Genealogy" [level=2] [ref=f9e23]
+      - paragraph [ref=f9e24]: An interactive genealogy map of AI safety research.
+    - link "AI Safety Buzzwords The vocabulary of AI safety, counted from arXiv (2005–2026)." [ref=f9e25] [cursor=pointer]:
+      - /url: /buzzwords/index.html
+      - heading "AI Safety Buzzwords" [level=2] [ref=f9e27]
+      - paragraph [ref=f9e28]: The vocabulary of AI safety, counted from arXiv (2005–2026).
+    - 'link "AI Safety Genealogy: Mid-2026 State 53 research directions, ranked by two demand metrics: money and citations." [ref=f9e29] [cursor=pointer]':
+      - /url: /ai-safety-map/index.html
+      - 'heading "AI Safety Genealogy: Mid-2026 State" [level=2] [ref=f9e31]'
+      - paragraph [ref=f9e32]: "53 research directions, ranked by two demand metrics: money and citations."
+  - heading "Educational projects" [level=2] [ref=f9e33]
+  - link "Open XAI Course A hands-on course on explainable and safe AI." [ref=f9e35] [cursor=pointer]:
+    - /url: https://open-xai-platform.web.app/
+    - heading "Open XAI Course" [level=2] [ref=f9e37]
+    - paragraph [ref=f9e38]: A hands-on course on explainable and safe AI.
+  - generic [ref=f9e39]:
+    - link "Mrs Wallbreaker on Telegram" [ref=f9e40] [cursor=pointer]:
+      - /url: https://t.me/MrsWallbreaker
+    - link "LinkedIn" [ref=f9e41] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/elena-ericheva/

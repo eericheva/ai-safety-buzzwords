@@ -1,0 +1,4051 @@
+- generic [ref=f19e3]:
+  - generic [ref=f19e4]:
+    - generic [ref=f19e5]:
+      - 'heading "The AI safety map: demand metrics" [level=1] [ref=f19e6]'
+      - paragraph [ref=f19e7]: "What is actually on the frontier in AI safety: 53 directions, each with two honest demand metrics - money and citations. The frontier here is not an opinion but three converging signals: 2025-to-2026 acceleration, citation intensity and the size of the money. Citations: real numbers from Semantic Scholar (papers 2024-2026, snapshot 23 July 2026). Money: [S] a named source or [E] my own estimate in dollars per year. Hover anything."
+    - generic [ref=f19e8]:
+      - button "Russian" [ref=f19e9] [cursor=pointer]
+      - 'button "Theme: dark" [ref=f19e10] [cursor=pointer]'
+  - generic [ref=f19e11]:
+    - generic [ref=f19e12]:
+      - generic [ref=f19e13]: "53"
+      - generic [ref=f19e14]: directions on the map
+    - generic [ref=f19e15]:
+      - generic [ref=f19e16]: 16,520
+      - generic [ref=f19e17]: "papers 2024-2026 (S2, upper bound: 7 keys are polysemous)"
+    - generic [ref=f19e18]:
+      - generic [ref=f19e19]: "9"
+      - generic [ref=f19e20]: topics in explosive growth
+    - generic [ref=f19e21]:
+      - generic [ref=f19e22]: Sycophancy / persuasion
+      - generic [ref=f19e23]: fastest acceleration (x3.7)
+  - generic [ref=f19e24]:
+    - 'heading "Tags and directions: what the work actually is" [level=2] [ref=f19e25]'
+    - paragraph [ref=f19e26]: "Tags are assigned by the tasks inside a direction, not by its name, so a direction usually carries 2-4 of them and they overlap. Pick anything from the two rows (\"or\" inside a row, \"and\" between rows): what you pick lights up and floats to the top in all four panels, the rest goes grey. Click again to unpick."
+    - generic [ref=f19e27]: tags
+    - generic [ref=f19e28]:
+      - button "interpretability 7" [ref=f19e29] [cursor=pointer]:
+        - text: interpretability
+        - generic [ref=f19e31]: "7"
+      - button "evals & benchmarks 17" [ref=f19e32] [cursor=pointer]:
+        - text: evals & benchmarks
+        - generic [ref=f19e34]: "17"
+      - button "monitoring & control 9" [ref=f19e35] [cursor=pointer]:
+        - text: monitoring & control
+        - generic [ref=f19e37]: "9"
+      - button "attacks & defenses 9" [ref=f19e38] [cursor=pointer]:
+        - text: attacks & defenses
+        - generic [ref=f19e40]: "9"
+      - button "training & data 11" [ref=f19e41] [cursor=pointer]:
+        - text: training & data
+        - generic [ref=f19e43]: "11"
+      - button "theory & guarantees 10" [ref=f19e44] [cursor=pointer]:
+        - text: theory & guarantees
+        - generic [ref=f19e46]: "10"
+      - button "agents 7" [ref=f19e47] [cursor=pointer]:
+        - text: agents
+        - generic [ref=f19e49]: "7"
+      - button "multi-agent 4" [ref=f19e50] [cursor=pointer]:
+        - text: multi-agent
+        - generic [ref=f19e52]: "4"
+      - button "multimodal 4" [ref=f19e53] [cursor=pointer]:
+        - text: multimodal
+        - generic [ref=f19e55]: "4"
+      - button "cybersecurity 5" [ref=f19e56] [cursor=pointer]:
+        - text: cybersecurity
+        - generic [ref=f19e58]: "5"
+      - button "bio & chem 3" [ref=f19e59] [cursor=pointer]:
+        - text: bio & chem
+        - generic [ref=f19e61]: "3"
+      - button "humans & psyche 7" [ref=f19e62] [cursor=pointer]:
+        - text: humans & psyche
+        - generic [ref=f19e64]: "7"
+      - button "society & epistemics 12" [ref=f19e65] [cursor=pointer]:
+        - text: society & epistemics
+        - generic [ref=f19e67]: "12"
+      - button "values & morality 7" [ref=f19e68] [cursor=pointer]:
+        - text: values & morality
+        - generic [ref=f19e70]: "7"
+      - button "policy & governance 12" [ref=f19e71] [cursor=pointer]:
+        - text: policy & governance
+        - generic [ref=f19e73]: "12"
+      - button "product & verticals 11" [ref=f19e74] [cursor=pointer]:
+        - text: product & verticals
+        - generic [ref=f19e76]: "11"
+      - button "long-term risk 9" [ref=f19e77] [cursor=pointer]:
+        - text: long-term risk
+        - generic [ref=f19e79]: "9"
+    - generic [ref=f19e80]: directions (colored by their first tag)
+    - generic [ref=f19e81]:
+      - button "Adversarial robustness 7" [ref=f19e82] [cursor=pointer]:
+        - text: Adversarial robustness
+        - generic [ref=f19e84]: "7"
+      - button "Agent foundations 4" [ref=f19e85] [cursor=pointer]:
+        - text: Agent foundations
+        - generic [ref=f19e87]: "4"
+      - button "Agent safety / security 6" [ref=f19e88] [cursor=pointer]:
+        - text: Agent safety / security
+        - generic [ref=f19e90]: "6"
+      - button "AI control 18" [ref=f19e91] [cursor=pointer]:
+        - text: AI control
+        - generic [ref=f19e93]: "18"
+      - button "AI for epistemics 5" [ref=f19e94] [cursor=pointer]:
+        - text: AI for epistemics
+        - generic [ref=f19e96]: "5"
+      - button "AI security / compute gov 7" [ref=f19e97] [cursor=pointer]:
+        - text: AI security / compute gov
+        - generic [ref=f19e99]: "7"
+      - button "Applied guardrails 1" [ref=f19e100] [cursor=pointer]:
+        - text: Applied guardrails
+        - generic [ref=f19e102]: "1"
+      - button "Assurance / certification 1" [ref=f19e103] [cursor=pointer]:
+        - text: Assurance / certification
+        - generic [ref=f19e105]: "1"
+      - button "Automated AI R&D / RSI 1" [ref=f19e106] [cursor=pointer]:
+        - text: Automated AI R&D / RSI
+        - generic [ref=f19e108]: "1"
+      - button "Biosecurity / AIxBio 17" [ref=f19e109] [cursor=pointer]:
+        - text: Biosecurity / AIxBio
+        - generic [ref=f19e111]: "17"
+      - button "China / non-Western safety 9" [ref=f19e112] [cursor=pointer]:
+        - text: China / non-Western safety
+        - generic [ref=f19e114]: "9"
+      - button "Co-affective alignment 3" [ref=f19e115] [cursor=pointer]:
+        - text: Co-affective alignment
+        - generic [ref=f19e117]: "3"
+      - button "Corrigibility 2" [ref=f19e118] [cursor=pointer]:
+        - text: Corrigibility
+        - generic [ref=f19e120]: "2"
+      - button "CoT monitorability 3" [ref=f19e121] [cursor=pointer]:
+        - text: CoT monitorability
+        - generic [ref=f19e123]: "3"
+      - button "Dangerous capability evals 9" [ref=f19e124] [cursor=pointer]:
+        - text: Dangerous capability evals
+        - generic [ref=f19e126]: "9"
+      - button "Economic levers 11" [ref=f19e127] [cursor=pointer]:
+        - text: Economic levers
+        - generic [ref=f19e129]: "11"
+      - button "Embodied AI safety 8" [ref=f19e130] [cursor=pointer]:
+        - text: Embodied AI safety
+        - generic [ref=f19e132]: "8"
+      - button "Emergent misalignment 5" [ref=f19e133] [cursor=pointer]:
+        - text: Emergent misalignment
+        - generic [ref=f19e135]: "5"
+      - button "Encoded reasoning 2" [ref=f19e136] [cursor=pointer]:
+        - text: Encoded reasoning
+        - generic [ref=f19e138]: "2"
+      - button "Fairness / bias 6" [ref=f19e139] [cursor=pointer]:
+        - text: Fairness / bias
+        - generic [ref=f19e141]: "6"
+      - button "Forecasting 6" [ref=f19e142] [cursor=pointer]:
+        - text: Forecasting
+        - generic [ref=f19e144]: "6"
+      - button "Formal-theoretic agendas 16" [ref=f19e145] [cursor=pointer]:
+        - text: Formal-theoretic agendas
+        - generic [ref=f19e147]: "16"
+      - button "Governance 4" [ref=f19e148] [cursor=pointer]:
+        - text: Governance
+        - generic [ref=f19e150]: "4"
+      - button "Gradual disempowerment 3" [ref=f19e151] [cursor=pointer]:
+        - text: Gradual disempowerment
+        - generic [ref=f19e153]: "3"
+      - button "Guaranteed-safe AI 4" [ref=f19e154] [cursor=pointer]:
+        - text: Guaranteed-safe AI
+        - generic [ref=f19e156]: "4"
+      - button "Honesty / ELK 4" [ref=f19e157] [cursor=pointer]:
+        - text: Honesty / ELK
+        - generic [ref=f19e159]: "4"
+      - button "Human-facing harms 7" [ref=f19e160] [cursor=pointer]:
+        - text: Human-facing harms
+        - generic [ref=f19e162]: "7"
+      - button "Machine unlearning 4" [ref=f19e163] [cursor=pointer]:
+        - text: Machine unlearning
+        - generic [ref=f19e165]: "4"
+      - button "Mechanistic interpretability 26" [ref=f19e166] [cursor=pointer]:
+        - text: Mechanistic interpretability
+        - generic [ref=f19e168]: "26"
+      - button "Memorization / privacy 5" [ref=f19e169] [cursor=pointer]:
+        - text: Memorization / privacy
+        - generic [ref=f19e171]: "5"
+      - button "Modality safety 1" [ref=f19e172] [cursor=pointer]:
+        - text: Modality safety
+        - generic [ref=f19e174]: "1"
+      - button "Model welfare 6" [ref=f19e175] [cursor=pointer]:
+        - text: Model welfare
+        - generic [ref=f19e177]: "6"
+      - button "Multi-agent safety 4" [ref=f19e178] [cursor=pointer]:
+        - text: Multi-agent safety
+        - generic [ref=f19e180]: "4"
+      - button "Neglected approaches 11" [ref=f19e181] [cursor=pointer]:
+        - text: Neglected approaches
+        - generic [ref=f19e183]: "11"
+      - button "Open-weight safety 1" [ref=f19e184] [cursor=pointer]:
+        - text: Open-weight safety
+        - generic [ref=f19e186]: "1"
+      - button "Pluralistic alignment 6" [ref=f19e187] [cursor=pointer]:
+        - text: Pluralistic alignment
+        - generic [ref=f19e189]: "6"
+      - button "Power concentration 2" [ref=f19e190] [cursor=pointer]:
+        - text: Power concentration
+        - generic [ref=f19e192]: "2"
+      - button "Reward hacking 2" [ref=f19e193] [cursor=pointer]:
+        - text: Reward hacking
+        - generic [ref=f19e195]: "2"
+      - button "S-risks 5" [ref=f19e196] [cursor=pointer]:
+        - text: S-risks
+        - generic [ref=f19e198]: "5"
+      - button "Safety benchmarks 4" [ref=f19e199] [cursor=pointer]:
+        - text: Safety benchmarks
+        - generic [ref=f19e201]: "4"
+      - button "Safety cases 1" [ref=f19e202] [cursor=pointer]:
+        - text: Safety cases
+        - generic [ref=f19e204]: "1"
+      - 'button "Safety in verticals: education 1" [ref=f19e205] [cursor=pointer]':
+        - text: "Safety in verticals: education"
+        - generic [ref=f19e207]: "1"
+      - 'button "Safety in verticals: energy 1" [ref=f19e208] [cursor=pointer]':
+        - text: "Safety in verticals: energy"
+        - generic [ref=f19e210]: "1"
+      - 'button "Safety in verticals: finance 9" [ref=f19e211] [cursor=pointer]':
+        - text: "Safety in verticals: finance"
+        - generic [ref=f19e213]: "9"
+      - 'button "Safety in verticals: medicine 1" [ref=f19e214] [cursor=pointer]':
+        - text: "Safety in verticals: medicine"
+        - generic [ref=f19e216]: "1"
+      - 'button "Safety in verticals: transport 8" [ref=f19e217] [cursor=pointer]':
+        - text: "Safety in verticals: transport"
+        - generic [ref=f19e219]: "8"
+      - button "Scalable oversight 8" [ref=f19e220] [cursor=pointer]:
+        - text: Scalable oversight
+        - generic [ref=f19e222]: "8"
+      - button "Scheming / model organisms 9" [ref=f19e223] [cursor=pointer]:
+        - text: Scheming / model organisms
+        - generic [ref=f19e225]: "9"
+      - button "Societal resilience 4" [ref=f19e226] [cursor=pointer]:
+        - text: Societal resilience
+        - generic [ref=f19e228]: "4"
+      - button "Surprising phenomena 5" [ref=f19e229] [cursor=pointer]:
+        - text: Surprising phenomena
+        - generic [ref=f19e231]: "5"
+      - button "Sycophancy / persuasion 2" [ref=f19e232] [cursor=pointer]:
+        - text: Sycophancy / persuasion
+        - generic [ref=f19e234]: "2"
+      - button "Training-time alignment 5" [ref=f19e235] [cursor=pointer]:
+        - text: Training-time alignment
+        - generic [ref=f19e237]: "5"
+      - button "Watermarking / provenance 9" [ref=f19e238] [cursor=pointer]:
+        - text: Watermarking / provenance
+        - generic [ref=f19e240]: "9"
+  - generic [ref=f19e241]:
+    - heading "Tasks inside a direction" [level=2] [ref=f19e242]
+    - paragraph [ref=f19e243]: "Clicking a direction opens the tasks inside it: a chip above, anywhere on its row in the charts, or its name in the tables. This is not a complete registry but a hand-collected set of live and recent entry points: RFPs, fellowships, mentored streams, bounties, workshops and published open-problem lists. 309 tasks across 53 directions, unevenly spread: 9 directions have a single way in, the largest has 26. A field the source page does not state is marked \"not stated in the source\" rather than filled in. Status \"closed\" means applications are over, but the problem statement stays published and still works as a starting point."
+    - generic [ref=f19e244]: Pick a direction above to see the tasks inside it.
+  - generic [ref=f19e246]:
+    - heading "Money against attention, moving through the years" [level=2] [ref=f19e247]
+    - paragraph [ref=f19e248]: "Horizontal is attention (papers per year, log scale), the bands top to bottom are money from large to small, an [E] estimate in dollars per year. Each direction is not a single dot but a track of three: 2024, 2025, 2026. A track running right means the topic is gaining attention, left means it is deflating. Money is not broken down by year, so the track stays horizontal inside its money band. The hollow dot past 2026 is the annualized pace (times 12/7, the year is incomplete), and the true end of the track sits somewhere between it and the filled dot."
+    - generic [ref=f19e249]:
+      - generic [ref=f19e250]:
+        - generic [ref=f19e251]: explosive growth
+        - generic [ref=f19e253]: growth
+        - generic [ref=f19e255]: plateau
+        - generic [ref=f19e257]: cooling (careful)
+        - generic [ref=f19e259]: sparse data
+      - generic [ref=f19e261]:
+        - generic [ref=f19e262]: track 2024 - 2025 - 2026
+        - generic [ref=f19e267]: 2026 dot size - cites per paper
+        - generic [ref=f19e271]: hollow dot - annualized 2026 pace
+        - generic [ref=f19e274]: dashed track - polysemous key, volume inflated
+    - img "Money against attention, moving through the years" [ref=f19e276]:
+      - generic [ref=f19e277]: "0"
+      - generic [ref=f19e278]: "1"
+      - generic [ref=f19e279]: "10"
+      - generic [ref=f19e280]: "100"
+      - generic [ref=f19e281]: "1000"
+      - generic [ref=f19e283]: "Money [E]: $50M+ a year - 8 directions"
+      - generic [ref=f19e284]:
+        - generic [ref=f19e289]: "666"
+        - generic [ref=f19e291] [cursor=pointer]: Agent safety / security
+        - generic: agents
+        - generic: attacks
+        - generic: cyber
+      - generic [ref=f19e295]:
+        - generic [ref=f19e300]: "585"
+        - generic [ref=f19e302] [cursor=pointer]: Mechanistic interpretability
+        - generic: interp
+        - generic: monitor
+      - generic [ref=f19e305]:
+        - generic [ref=f19e310]: "377"
+        - generic [ref=f19e312] [cursor=pointer]: Adversarial robustness
+        - generic: attacks
+        - generic: evals
+      - generic [ref=f19e315]:
+        - generic [ref=f19e320]: "347"
+        - generic [ref=f19e322] [cursor=pointer]: Applied guardrails
+        - generic: product
+        - generic: monitor
+        - generic: cyber
+      - generic [ref=f19e326]:
+        - generic [ref=f19e331]: "50"
+        - generic [ref=f19e333] [cursor=pointer]: Training-time alignment
+        - generic: training
+        - generic: values
+      - generic [ref=f19e336]:
+        - generic [ref=f19e341]: "49"
+        - generic [ref=f19e343] [cursor=pointer]: Governance
+        - generic: policy
+        - generic: longterm
+      - generic [ref=f19e346]:
+        - generic [ref=f19e351]: "12"
+        - generic [ref=f19e353] [cursor=pointer]: China / non-Western safety *
+        - generic: policy
+        - generic: product
+        - generic: training
+      - generic [ref=f19e357]:
+        - generic [ref=f19e362]: "1"
+        - generic [ref=f19e364] [cursor=pointer]: Dangerous capability evals
+        - generic: evals
+        - generic: agents
+        - generic: bio
+      - generic [ref=f19e369]: "Money [E]: $20-50M a year - 10 directions"
+      - generic [ref=f19e370]:
+        - generic [ref=f19e375]: "296"
+        - generic [ref=f19e377] [cursor=pointer]: Memorization / privacy
+        - generic: training
+        - generic: attacks
+        - generic: product
+      - generic [ref=f19e381]:
+        - generic [ref=f19e386]: "291"
+        - generic [ref=f19e388] [cursor=pointer]: Fairness / bias *
+        - generic: product
+        - generic: humans
+        - generic: evals
+      - generic [ref=f19e392]:
+        - generic [ref=f19e397]: "104"
+        - generic [ref=f19e399] [cursor=pointer]: Assurance / certification
+        - generic: evals
+        - generic: policy
+        - generic: product
+      - generic [ref=f19e403]:
+        - generic [ref=f19e408]: "94"
+        - generic [ref=f19e410] [cursor=pointer]: Embodied AI safety
+        - generic: multimod
+        - generic: agents
+        - generic: product
+      - generic [ref=f19e414]:
+        - generic [ref=f19e419]: "54"
+        - generic [ref=f19e421] [cursor=pointer]: Modality safety
+        - generic: multimod
+        - generic: attacks
+        - generic: interp
+      - generic [ref=f19e425]:
+        - generic [ref=f19e430]: "47"
+        - generic [ref=f19e432] [cursor=pointer]: Human-facing harms
+        - generic: humans
+        - generic: product
+        - generic: policy
+      - generic [ref=f19e436]:
+        - generic [ref=f19e441]: "26"
+        - generic [ref=f19e443] [cursor=pointer]: Guaranteed-safe AI *
+        - generic: theory
+        - generic: cyber
+      - generic [ref=f19e446]:
+        - generic [ref=f19e451]: "14"
+        - generic [ref=f19e453] [cursor=pointer]: Scheming / model organisms
+        - generic: evals
+        - generic: monitor
+        - generic: training
+      - generic [ref=f19e457]:
+        - generic [ref=f19e462]: "10"
+        - generic [ref=f19e464] [cursor=pointer]: Biosecurity / AIxBio
+        - generic: bio
+        - generic: evals
+        - generic: policy
+      - generic [ref=f19e468]:
+        - generic [ref=f19e473]: "9"
+        - generic [ref=f19e475] [cursor=pointer]: AI security / compute gov
+        - generic: cyber
+        - generic: policy
+      - generic [ref=f19e479]: "Money [E]: $5-20M a year - 14 directions"
+      - generic [ref=f19e480]:
+        - generic [ref=f19e485]: "309"
+        - generic [ref=f19e487] [cursor=pointer]: Reward hacking *
+        - generic: training
+        - generic: monitor
+      - generic [ref=f19e490]:
+        - generic [ref=f19e495]: "192"
+        - generic [ref=f19e497] [cursor=pointer]: Sycophancy / persuasion
+        - generic: humans
+        - generic: society
+        - generic: evals
+      - generic [ref=f19e501]:
+        - generic [ref=f19e506]: "99"
+        - generic [ref=f19e508] [cursor=pointer]: Machine unlearning
+        - generic: training
+        - generic: attacks
+        - generic: bio
+      - generic [ref=f19e512]:
+        - generic [ref=f19e517]: "75"
+        - generic [ref=f19e519] [cursor=pointer]: Safety benchmarks
+        - generic: evals
+        - generic: agents
+        - generic: attacks
+      - generic [ref=f19e523]:
+        - generic [ref=f19e528]: "31"
+        - generic [ref=f19e530] [cursor=pointer]: Scalable oversight *
+        - generic: monitor
+        - generic: theory
+        - generic: training
+      - generic [ref=f19e534]:
+        - generic [ref=f19e539]: "29"
+        - generic [ref=f19e541] [cursor=pointer]: Automated AI R&D / RSI
+        - generic: agents
+        - generic: longterm
+        - generic: evals
+      - generic [ref=f19e545]:
+        - generic [ref=f19e550]: "23"
+        - generic [ref=f19e552] [cursor=pointer]: Watermarking / provenance
+        - generic: multimod
+        - generic: attacks
+        - generic: society
+      - generic [ref=f19e556]:
+        - generic [ref=f19e561]: "23"
+        - generic [ref=f19e563] [cursor=pointer]: Societal resilience
+        - generic: society
+        - generic: policy
+        - generic: product
+        - generic: multiag
+      - generic [ref=f19e568]:
+        - generic [ref=f19e573]: "18"
+        - generic [ref=f19e575] [cursor=pointer]: Formal-theoretic agendas
+        - generic: theory
+        - generic: monitor
+      - generic [ref=f19e578]:
+        - generic [ref=f19e583]: "17"
+        - generic [ref=f19e585] [cursor=pointer]: CoT monitorability
+        - generic: monitor
+        - generic: interp
+      - generic [ref=f19e588]:
+        - generic [ref=f19e593]: "16"
+        - generic [ref=f19e595] [cursor=pointer]: Multi-agent safety
+        - generic: multiag
+        - generic: agents
+        - generic: theory
+      - generic [ref=f19e599]:
+        - generic [ref=f19e604]: "10"
+        - generic [ref=f19e606] [cursor=pointer]: AI control *
+        - generic: monitor
+        - generic: agents
+        - generic: evals
+      - generic [ref=f19e610]:
+        - generic [ref=f19e615]: "4"
+        - generic [ref=f19e617] [cursor=pointer]: Honesty / ELK
+        - generic: interp
+        - generic: theory
+        - generic: evals
+      - generic [ref=f19e621]:
+        - generic [ref=f19e626]: "3"
+        - generic [ref=f19e628] [cursor=pointer]: Open-weight safety
+        - generic: attacks
+        - generic: training
+        - generic: policy
+      - generic [ref=f19e633]: "Money [E]: $1-5M a year - 16 directions"
+      - generic [ref=f19e634]:
+        - generic [ref=f19e639]: "58"
+        - generic [ref=f19e641] [cursor=pointer]: Emergent misalignment
+        - generic: training
+        - generic: interp
+      - generic [ref=f19e644]:
+        - generic [ref=f19e649]: "43"
+        - generic [ref=f19e651] [cursor=pointer]: AI for epistemics
+        - generic: society
+        - generic: humans
+      - generic [ref=f19e654]:
+        - generic [ref=f19e659]: "41"
+        - generic [ref=f19e661] [cursor=pointer]: Model welfare
+        - generic: values
+        - generic: theory
+      - generic [ref=f19e664]:
+        - generic [ref=f19e669]: "36"
+        - generic [ref=f19e671] [cursor=pointer]: Pluralistic alignment
+        - generic: values
+        - generic: society
+        - generic: training
+      - generic [ref=f19e675]:
+        - generic [ref=f19e680]: "16"
+        - generic [ref=f19e682] [cursor=pointer]: Agent foundations
+        - generic: theory
+        - generic: longterm
+      - generic [ref=f19e685]:
+        - generic [ref=f19e690]: "10"
+        - generic [ref=f19e692] [cursor=pointer]: Encoded reasoning
+        - generic: monitor
+        - generic: interp
+        - generic: attacks
+      - generic [ref=f19e696]:
+        - generic [ref=f19e701]: "8"
+        - generic [ref=f19e703] [cursor=pointer]: Economic levers
+        - generic: policy
+        - generic: society
+      - generic [ref=f19e706]:
+        - generic [ref=f19e711]: "6"
+        - generic [ref=f19e713] [cursor=pointer]: Co-affective alignment
+        - generic: humans
+        - generic: values
+        - generic: evals
+      - generic [ref=f19e717]:
+        - generic [ref=f19e722]: "5"
+        - generic [ref=f19e724] [cursor=pointer]: Power concentration
+        - generic: policy
+        - generic: longterm
+        - generic: society
+      - generic [ref=f19e728]:
+        - generic [ref=f19e733]: "4"
+        - generic [ref=f19e735] [cursor=pointer]: Corrigibility
+        - generic: theory
+        - generic: evals
+        - generic: longterm
+      - generic [ref=f19e739]:
+        - generic [ref=f19e744]: "2"
+        - generic [ref=f19e746] [cursor=pointer]: Safety cases
+        - generic: evals
+        - generic: policy
+        - generic: theory
+      - generic [ref=f19e750]:
+        - generic [ref=f19e755]: "1"
+        - generic [ref=f19e757] [cursor=pointer]: Gradual disempowerment [f]
+        - generic: longterm
+        - generic: society
+        - generic: multiag
+      - generic [ref=f19e761]:
+        - generic [ref=f19e766]: "1"
+        - generic [ref=f19e768] [cursor=pointer]: Surprising phenomena [f]
+        - generic: training
+        - generic: interp
+        - generic: values
+      - generic [ref=f19e772]:
+        - generic [ref=f19e777]: "0"
+        - generic [ref=f19e779] [cursor=pointer]: Forecasting * [f]
+        - generic: longterm
+        - generic: society
+      - generic [ref=f19e782]:
+        - generic [ref=f19e787]: "0"
+        - generic [ref=f19e789] [cursor=pointer]: S-risks [f]
+        - generic: values
+        - generic: multiag
+        - generic: longterm
+      - generic [ref=f19e793]:
+        - generic [ref=f19e798]: "0"
+        - generic [ref=f19e800] [cursor=pointer]: Neglected approaches [f]
+        - generic: theory
+        - generic: longterm
+      - generic [ref=f19e804]: "Money [E]: not counted - 5 directions"
+      - generic [ref=f19e805]:
+        - generic [ref=f19e810]: "561"
+        - generic [ref=f19e812] [cursor=pointer]: "Safety in verticals: energy"
+        - generic: society
+        - generic: product
+        - generic: cyber
+      - generic [ref=f19e816]:
+        - generic [ref=f19e821]: "519"
+        - generic [ref=f19e823] [cursor=pointer]: "Safety in verticals: educat."
+        - generic: humans
+        - generic: society
+        - generic: values
+      - generic [ref=f19e827]:
+        - generic [ref=f19e832]: "459"
+        - generic [ref=f19e834] [cursor=pointer]: "Safety in verticals: medici."
+        - generic: product
+        - generic: humans
+        - generic: evals
+      - generic [ref=f19e838]:
+        - generic [ref=f19e843]: "251"
+        - generic [ref=f19e845] [cursor=pointer]: "Safety in verticals: finance"
+        - generic: society
+        - generic: policy
+        - generic: evals
+      - generic [ref=f19e849]:
+        - generic [ref=f19e854]: "72"
+        - generic [ref=f19e856] [cursor=pointer]: "Safety in verticals: transp."
+        - generic: product
+        - generic: multimod
+        - generic: evals
+      - generic [ref=f19e860]: "papers per year (log scale): 2024, 2025, 2026, hollow dot is the annualized 2026 pace"
+  - generic [ref=f19e861]:
+    - heading "The same thing, but the bands are tags" [level=2] [ref=f19e862]
+    - paragraph [ref=f19e863]: "Exactly the same chart, grouped by tag instead of by money: inside each tag, all of its directions sorted by 2026 papers. A direction shows up in several bands because it carries 2-4 tags. Next to each row you get its money estimate and its remaining tags."
+    - generic [ref=f19e864]:
+      - generic [ref=f19e865]:
+        - generic [ref=f19e866]: explosive growth
+        - generic [ref=f19e868]: growth
+        - generic [ref=f19e870]: plateau
+        - generic [ref=f19e872]: cooling (careful)
+        - generic [ref=f19e874]: sparse data
+      - generic [ref=f19e876]:
+        - generic [ref=f19e877]: track 2024 - 2025 - 2026
+        - generic [ref=f19e882]: 2026 dot size - cites per paper
+        - generic [ref=f19e886]: hollow dot - annualized 2026 pace
+        - generic [ref=f19e889]: dashed track - polysemous key, volume inflated
+    - img "The same thing, but the bands are tags" [ref=f19e891]:
+      - generic [ref=f19e892]: "0"
+      - generic [ref=f19e893]: "1"
+      - generic [ref=f19e894]: "10"
+      - generic [ref=f19e895]: "100"
+      - generic [ref=f19e896]: "1000"
+      - generic [ref=f19e899]: interpretability - 7 directions
+      - generic [ref=f19e900]:
+        - generic [ref=f19e905]: "585"
+        - generic [ref=f19e907] [cursor=pointer]: Mechanistic interpretability
+        - generic [ref=f19e908]: $30-80M
+        - generic: monitor
+      - generic [ref=f19e910]:
+        - generic [ref=f19e915]: "58"
+        - generic [ref=f19e917] [cursor=pointer]: Emergent misalignment
+        - generic [ref=f19e918]: $1-5M
+        - generic: training
+      - generic [ref=f19e920]:
+        - generic [ref=f19e925]: "54"
+        - generic [ref=f19e927] [cursor=pointer]: Modality safety
+        - generic [ref=f19e928]: $20-50M
+        - generic: multimod
+        - generic: attacks
+      - generic [ref=f19e931]:
+        - generic [ref=f19e936]: "17"
+        - generic [ref=f19e938] [cursor=pointer]: CoT monitorability
+        - generic [ref=f19e939]: $5-15M
+        - generic: monitor
+      - generic [ref=f19e941]:
+        - generic [ref=f19e946]: "10"
+        - generic [ref=f19e948] [cursor=pointer]: Encoded reasoning
+        - generic [ref=f19e949]: $1-3M
+        - generic: monitor
+        - generic: attacks
+      - generic [ref=f19e952]:
+        - generic [ref=f19e957]: "4"
+        - generic [ref=f19e959] [cursor=pointer]: Honesty / ELK
+        - generic [ref=f19e960]: $5-10M
+        - generic: theory
+        - generic: evals
+      - generic [ref=f19e963]:
+        - generic [ref=f19e968]: "1"
+        - generic [ref=f19e970] [cursor=pointer]: Surprising phenomena [f]
+        - generic [ref=f19e971]: $1-4M
+        - generic: training
+        - generic: values
+      - generic [ref=f19e976]: evals & benchmarks - 17 directions
+      - generic [ref=f19e977]:
+        - generic [ref=f19e982]: "459"
+        - generic [ref=f19e984] [cursor=pointer]: "Safety in verticals: medici."
+        - generic [ref=f19e985]: not counted
+        - generic: product
+        - generic: humans
+      - generic [ref=f19e988]:
+        - generic [ref=f19e993]: "377"
+        - generic [ref=f19e995] [cursor=pointer]: Adversarial robustness
+        - generic [ref=f19e996]: $50M+
+        - generic: attacks
+      - generic [ref=f19e998]:
+        - generic [ref=f19e1003]: "291"
+        - generic [ref=f19e1005] [cursor=pointer]: Fairness / bias *
+        - generic [ref=f19e1006]: $20-50M
+        - generic: product
+        - generic: humans
+      - generic [ref=f19e1009]:
+        - generic [ref=f19e1014]: "251"
+        - generic [ref=f19e1016] [cursor=pointer]: "Safety in verticals: finance"
+        - generic [ref=f19e1017]: not counted
+        - generic: society
+        - generic: policy
+      - generic [ref=f19e1020]:
+        - generic [ref=f19e1025]: "192"
+        - generic [ref=f19e1027] [cursor=pointer]: Sycophancy / persuasion
+        - generic [ref=f19e1028]: $5-15M
+        - generic: humans
+        - generic: society
+      - generic [ref=f19e1031]:
+        - generic [ref=f19e1036]: "104"
+        - generic [ref=f19e1038] [cursor=pointer]: Assurance / certification
+        - generic [ref=f19e1039]: $20-60M
+        - generic: policy
+        - generic: product
+      - generic [ref=f19e1042]:
+        - generic [ref=f19e1047]: "75"
+        - generic [ref=f19e1049] [cursor=pointer]: Safety benchmarks
+        - generic [ref=f19e1050]: $3-10M
+        - generic: agents
+        - generic: attacks
+      - generic [ref=f19e1053]:
+        - generic [ref=f19e1058]: "72"
+        - generic [ref=f19e1060] [cursor=pointer]: "Safety in verticals: transp."
+        - generic [ref=f19e1061]: not counted
+        - generic: product
+        - generic: multimod
+      - generic [ref=f19e1064]:
+        - generic [ref=f19e1069]: "29"
+        - generic [ref=f19e1071] [cursor=pointer]: Automated AI R&D / RSI
+        - generic [ref=f19e1072]: $5-20M
+        - generic: agents
+        - generic: longterm
+      - generic [ref=f19e1075]:
+        - generic [ref=f19e1080]: "14"
+        - generic [ref=f19e1082] [cursor=pointer]: Scheming / model organisms
+        - generic [ref=f19e1083]: $15-30M
+        - generic: monitor
+        - generic: training
+      - generic [ref=f19e1086]:
+        - generic [ref=f19e1091]: "10"
+        - generic [ref=f19e1093] [cursor=pointer]: AI control *
+        - generic [ref=f19e1094]: $10-25M
+        - generic: monitor
+        - generic: agents
+      - generic [ref=f19e1097]:
+        - generic [ref=f19e1102]: "10"
+        - generic [ref=f19e1104] [cursor=pointer]: Biosecurity / AIxBio
+        - generic [ref=f19e1105]: $20-60M
+        - generic: bio
+        - generic: policy
+      - generic [ref=f19e1108]:
+        - generic [ref=f19e1113]: "6"
+        - generic [ref=f19e1115] [cursor=pointer]: Co-affective alignment
+        - generic [ref=f19e1116]: $1-5M
+        - generic: humans
+        - generic: values
+      - generic [ref=f19e1119]:
+        - generic [ref=f19e1124]: "4"
+        - generic [ref=f19e1126] [cursor=pointer]: Honesty / ELK
+        - generic [ref=f19e1127]: $5-10M
+        - generic: interp
+        - generic: theory
+      - generic [ref=f19e1130]:
+        - generic [ref=f19e1135]: "4"
+        - generic [ref=f19e1137] [cursor=pointer]: Corrigibility
+        - generic [ref=f19e1138]: <$3M
+        - generic: theory
+        - generic: longterm
+      - generic [ref=f19e1141]:
+        - generic [ref=f19e1146]: "2"
+        - generic [ref=f19e1148] [cursor=pointer]: Safety cases
+        - generic [ref=f19e1149]: $2-5M
+        - generic: policy
+        - generic: theory
+      - generic [ref=f19e1152]:
+        - generic [ref=f19e1157]: "1"
+        - generic [ref=f19e1159] [cursor=pointer]: Dangerous capability evals
+        - generic [ref=f19e1160]: $50M+
+        - generic: agents
+        - generic: bio
+      - generic [ref=f19e1165]: monitoring & control - 9 directions
+      - generic [ref=f19e1166]:
+        - generic [ref=f19e1171]: "585"
+        - generic [ref=f19e1173] [cursor=pointer]: Mechanistic interpretability
+        - generic [ref=f19e1174]: $30-80M
+        - generic: interp
+      - generic [ref=f19e1176]:
+        - generic [ref=f19e1181]: "347"
+        - generic [ref=f19e1183] [cursor=pointer]: Applied guardrails
+        - generic [ref=f19e1184]: $50-150M
+        - generic: product
+        - generic: cyber
+      - generic [ref=f19e1187]:
+        - generic [ref=f19e1192]: "309"
+        - generic [ref=f19e1194] [cursor=pointer]: Reward hacking *
+        - generic [ref=f19e1195]: $5-15M
+        - generic: training
+      - generic [ref=f19e1197]:
+        - generic [ref=f19e1202]: "31"
+        - generic [ref=f19e1204] [cursor=pointer]: Scalable oversight *
+        - generic [ref=f19e1205]: $10-25M
+        - generic: theory
+        - generic: training
+      - generic [ref=f19e1208]:
+        - generic [ref=f19e1213]: "18"
+        - generic [ref=f19e1215] [cursor=pointer]: Formal-theoretic agendas
+        - generic [ref=f19e1216]: $10-25M
+        - generic: theory
+      - generic [ref=f19e1218]:
+        - generic [ref=f19e1223]: "17"
+        - generic [ref=f19e1225] [cursor=pointer]: CoT monitorability
+        - generic [ref=f19e1226]: $5-15M
+        - generic: interp
+      - generic [ref=f19e1228]:
+        - generic [ref=f19e1233]: "14"
+        - generic [ref=f19e1235] [cursor=pointer]: Scheming / model organisms
+        - generic [ref=f19e1236]: $15-30M
+        - generic: evals
+        - generic: training
+      - generic [ref=f19e1239]:
+        - generic [ref=f19e1244]: "10"
+        - generic [ref=f19e1246] [cursor=pointer]: AI control *
+        - generic [ref=f19e1247]: $10-25M
+        - generic: agents
+        - generic: evals
+      - generic [ref=f19e1250]:
+        - generic [ref=f19e1255]: "10"
+        - generic [ref=f19e1257] [cursor=pointer]: Encoded reasoning
+        - generic [ref=f19e1258]: $1-3M
+        - generic: interp
+        - generic: attacks
+      - generic [ref=f19e1263]: attacks & defenses - 9 directions
+      - generic [ref=f19e1264]:
+        - generic [ref=f19e1269]: "666"
+        - generic [ref=f19e1271] [cursor=pointer]: Agent safety / security
+        - generic [ref=f19e1272]: $100M+
+        - generic: agents
+        - generic: cyber
+      - generic [ref=f19e1275]:
+        - generic [ref=f19e1280]: "377"
+        - generic [ref=f19e1282] [cursor=pointer]: Adversarial robustness
+        - generic [ref=f19e1283]: $50M+
+        - generic: evals
+      - generic [ref=f19e1285]:
+        - generic [ref=f19e1290]: "296"
+        - generic [ref=f19e1292] [cursor=pointer]: Memorization / privacy
+        - generic [ref=f19e1293]: $20-50M
+        - generic: training
+        - generic: product
+      - generic [ref=f19e1296]:
+        - generic [ref=f19e1301]: "99"
+        - generic [ref=f19e1303] [cursor=pointer]: Machine unlearning
+        - generic [ref=f19e1304]: $10-20M
+        - generic: training
+        - generic: bio
+      - generic [ref=f19e1307]:
+        - generic [ref=f19e1312]: "75"
+        - generic [ref=f19e1314] [cursor=pointer]: Safety benchmarks
+        - generic [ref=f19e1315]: $3-10M
+        - generic: evals
+        - generic: agents
+      - generic [ref=f19e1318]:
+        - generic [ref=f19e1323]: "54"
+        - generic [ref=f19e1325] [cursor=pointer]: Modality safety
+        - generic [ref=f19e1326]: $20-50M
+        - generic: multimod
+        - generic: interp
+      - generic [ref=f19e1329]:
+        - generic [ref=f19e1334]: "23"
+        - generic [ref=f19e1336] [cursor=pointer]: Watermarking / provenance
+        - generic [ref=f19e1337]: $5-20M
+        - generic: multimod
+        - generic: society
+      - generic [ref=f19e1340]:
+        - generic [ref=f19e1345]: "10"
+        - generic [ref=f19e1347] [cursor=pointer]: Encoded reasoning
+        - generic [ref=f19e1348]: $1-3M
+        - generic: monitor
+        - generic: interp
+      - generic [ref=f19e1351]:
+        - generic [ref=f19e1356]: "3"
+        - generic [ref=f19e1358] [cursor=pointer]: Open-weight safety
+        - generic [ref=f19e1359]: $3-8M
+        - generic: training
+        - generic: policy
+      - generic [ref=f19e1364]: training & data - 11 directions
+      - generic [ref=f19e1365]:
+        - generic [ref=f19e1370]: "309"
+        - generic [ref=f19e1372] [cursor=pointer]: Reward hacking *
+        - generic [ref=f19e1373]: $5-15M
+        - generic: monitor
+      - generic [ref=f19e1375]:
+        - generic [ref=f19e1380]: "296"
+        - generic [ref=f19e1382] [cursor=pointer]: Memorization / privacy
+        - generic [ref=f19e1383]: $20-50M
+        - generic: attacks
+        - generic: product
+      - generic [ref=f19e1386]:
+        - generic [ref=f19e1391]: "99"
+        - generic [ref=f19e1393] [cursor=pointer]: Machine unlearning
+        - generic [ref=f19e1394]: $10-20M
+        - generic: attacks
+        - generic: bio
+      - generic [ref=f19e1397]:
+        - generic [ref=f19e1402]: "58"
+        - generic [ref=f19e1404] [cursor=pointer]: Emergent misalignment
+        - generic [ref=f19e1405]: $1-5M
+        - generic: interp
+      - generic [ref=f19e1407]:
+        - generic [ref=f19e1412]: "50"
+        - generic [ref=f19e1414] [cursor=pointer]: Training-time alignment
+        - generic [ref=f19e1415]: $100M+
+        - generic: values
+      - generic [ref=f19e1417]:
+        - generic [ref=f19e1422]: "36"
+        - generic [ref=f19e1424] [cursor=pointer]: Pluralistic alignment
+        - generic [ref=f19e1425]: $1-5M
+        - generic: values
+        - generic: society
+      - generic [ref=f19e1428]:
+        - generic [ref=f19e1433]: "31"
+        - generic [ref=f19e1435] [cursor=pointer]: Scalable oversight *
+        - generic [ref=f19e1436]: $10-25M
+        - generic: monitor
+        - generic: theory
+      - generic [ref=f19e1439]:
+        - generic [ref=f19e1444]: "14"
+        - generic [ref=f19e1446] [cursor=pointer]: Scheming / model organisms
+        - generic [ref=f19e1447]: $15-30M
+        - generic: evals
+        - generic: monitor
+      - generic [ref=f19e1450]:
+        - generic [ref=f19e1455]: "12"
+        - generic [ref=f19e1457] [cursor=pointer]: China / non-Western safety *
+        - generic [ref=f19e1458]: $30-100M
+        - generic: policy
+        - generic: product
+      - generic [ref=f19e1461]:
+        - generic [ref=f19e1466]: "3"
+        - generic [ref=f19e1468] [cursor=pointer]: Open-weight safety
+        - generic [ref=f19e1469]: $3-8M
+        - generic: attacks
+        - generic: policy
+      - generic [ref=f19e1472]:
+        - generic [ref=f19e1477]: "1"
+        - generic [ref=f19e1479] [cursor=pointer]: Surprising phenomena [f]
+        - generic [ref=f19e1480]: $1-4M
+        - generic: interp
+        - generic: values
+      - generic [ref=f19e1485]: theory & guarantees - 10 directions
+      - generic [ref=f19e1486]:
+        - generic [ref=f19e1491]: "41"
+        - generic [ref=f19e1493] [cursor=pointer]: Model welfare
+        - generic [ref=f19e1494]: $1-3M
+        - generic: values
+      - generic [ref=f19e1496]:
+        - generic [ref=f19e1501]: "31"
+        - generic [ref=f19e1503] [cursor=pointer]: Scalable oversight *
+        - generic [ref=f19e1504]: $10-25M
+        - generic: monitor
+        - generic: training
+      - generic [ref=f19e1507]:
+        - generic [ref=f19e1512]: "26"
+        - generic [ref=f19e1514] [cursor=pointer]: Guaranteed-safe AI *
+        - generic [ref=f19e1515]: $20-50M
+        - generic: cyber
+      - generic [ref=f19e1517]:
+        - generic [ref=f19e1522]: "18"
+        - generic [ref=f19e1524] [cursor=pointer]: Formal-theoretic agendas
+        - generic [ref=f19e1525]: $10-25M
+        - generic: monitor
+      - generic [ref=f19e1527]:
+        - generic [ref=f19e1532]: "16"
+        - generic [ref=f19e1534] [cursor=pointer]: Multi-agent safety
+        - generic [ref=f19e1535]: $5-15M
+        - generic: multiag
+        - generic: agents
+      - generic [ref=f19e1538]:
+        - generic [ref=f19e1543]: "16"
+        - generic [ref=f19e1545] [cursor=pointer]: Agent foundations
+        - generic [ref=f19e1546]: ~$1M
+        - generic: longterm
+      - generic [ref=f19e1548]:
+        - generic [ref=f19e1553]: "4"
+        - generic [ref=f19e1555] [cursor=pointer]: Honesty / ELK
+        - generic [ref=f19e1556]: $5-10M
+        - generic: interp
+        - generic: evals
+      - generic [ref=f19e1559]:
+        - generic [ref=f19e1564]: "4"
+        - generic [ref=f19e1566] [cursor=pointer]: Corrigibility
+        - generic [ref=f19e1567]: <$3M
+        - generic: evals
+        - generic: longterm
+      - generic [ref=f19e1570]:
+        - generic [ref=f19e1575]: "2"
+        - generic [ref=f19e1577] [cursor=pointer]: Safety cases
+        - generic [ref=f19e1578]: $2-5M
+        - generic: evals
+        - generic: policy
+      - generic [ref=f19e1581]:
+        - generic [ref=f19e1586]: "0"
+        - generic [ref=f19e1588] [cursor=pointer]: Neglected approaches [f]
+        - generic [ref=f19e1589]: $1-2M
+        - generic: longterm
+      - generic [ref=f19e1593]: agents - 7 directions
+      - generic [ref=f19e1594]:
+        - generic [ref=f19e1599]: "666"
+        - generic [ref=f19e1601] [cursor=pointer]: Agent safety / security
+        - generic [ref=f19e1602]: $100M+
+        - generic: attacks
+        - generic: cyber
+      - generic [ref=f19e1605]:
+        - generic [ref=f19e1610]: "94"
+        - generic [ref=f19e1612] [cursor=pointer]: Embodied AI safety
+        - generic [ref=f19e1613]: $20-60M
+        - generic: multimod
+        - generic: product
+      - generic [ref=f19e1616]:
+        - generic [ref=f19e1621]: "75"
+        - generic [ref=f19e1623] [cursor=pointer]: Safety benchmarks
+        - generic [ref=f19e1624]: $3-10M
+        - generic: evals
+        - generic: attacks
+      - generic [ref=f19e1627]:
+        - generic [ref=f19e1632]: "29"
+        - generic [ref=f19e1634] [cursor=pointer]: Automated AI R&D / RSI
+        - generic [ref=f19e1635]: $5-20M
+        - generic: longterm
+        - generic: evals
+      - generic [ref=f19e1638]:
+        - generic [ref=f19e1643]: "16"
+        - generic [ref=f19e1645] [cursor=pointer]: Multi-agent safety
+        - generic [ref=f19e1646]: $5-15M
+        - generic: multiag
+        - generic: theory
+      - generic [ref=f19e1649]:
+        - generic [ref=f19e1654]: "10"
+        - generic [ref=f19e1656] [cursor=pointer]: AI control *
+        - generic [ref=f19e1657]: $10-25M
+        - generic: monitor
+        - generic: evals
+      - generic [ref=f19e1660]:
+        - generic [ref=f19e1665]: "1"
+        - generic [ref=f19e1667] [cursor=pointer]: Dangerous capability evals
+        - generic [ref=f19e1668]: $50M+
+        - generic: evals
+        - generic: bio
+      - generic [ref=f19e1673]: multi-agent - 4 directions
+      - generic [ref=f19e1674]:
+        - generic [ref=f19e1679]: "23"
+        - generic [ref=f19e1681] [cursor=pointer]: Societal resilience
+        - generic [ref=f19e1682]: $5-15M
+        - generic: society
+        - generic: policy
+        - generic: product
+      - generic [ref=f19e1686]:
+        - generic [ref=f19e1691]: "16"
+        - generic [ref=f19e1693] [cursor=pointer]: Multi-agent safety
+        - generic [ref=f19e1694]: $5-15M
+        - generic: agents
+        - generic: theory
+      - generic [ref=f19e1697]:
+        - generic [ref=f19e1702]: "1"
+        - generic [ref=f19e1704] [cursor=pointer]: Gradual disempowerment [f]
+        - generic [ref=f19e1705]: <$2M
+        - generic: longterm
+        - generic: society
+      - generic [ref=f19e1708]:
+        - generic [ref=f19e1713]: "0"
+        - generic [ref=f19e1715] [cursor=pointer]: S-risks [f]
+        - generic [ref=f19e1716]: ~$1M
+        - generic: values
+        - generic: longterm
+      - generic [ref=f19e1721]: multimodal - 4 directions
+      - generic [ref=f19e1722]:
+        - generic [ref=f19e1727]: "94"
+        - generic [ref=f19e1729] [cursor=pointer]: Embodied AI safety
+        - generic [ref=f19e1730]: $20-60M
+        - generic: agents
+        - generic: product
+      - generic [ref=f19e1733]:
+        - generic [ref=f19e1738]: "72"
+        - generic [ref=f19e1740] [cursor=pointer]: "Safety in verticals: transp."
+        - generic [ref=f19e1741]: not counted
+        - generic: product
+        - generic: evals
+      - generic [ref=f19e1744]:
+        - generic [ref=f19e1749]: "54"
+        - generic [ref=f19e1751] [cursor=pointer]: Modality safety
+        - generic [ref=f19e1752]: $20-50M
+        - generic: attacks
+        - generic: interp
+      - generic [ref=f19e1755]:
+        - generic [ref=f19e1760]: "23"
+        - generic [ref=f19e1762] [cursor=pointer]: Watermarking / provenance
+        - generic [ref=f19e1763]: $5-20M
+        - generic: attacks
+        - generic: society
+      - generic [ref=f19e1768]: cybersecurity - 5 directions
+      - generic [ref=f19e1769]:
+        - generic [ref=f19e1774]: "666"
+        - generic [ref=f19e1776] [cursor=pointer]: Agent safety / security
+        - generic [ref=f19e1777]: $100M+
+        - generic: agents
+        - generic: attacks
+      - generic [ref=f19e1780]:
+        - generic [ref=f19e1785]: "561"
+        - generic [ref=f19e1787] [cursor=pointer]: "Safety in verticals: energy"
+        - generic [ref=f19e1788]: not counted
+        - generic: society
+        - generic: product
+      - generic [ref=f19e1791]:
+        - generic [ref=f19e1796]: "347"
+        - generic [ref=f19e1798] [cursor=pointer]: Applied guardrails
+        - generic [ref=f19e1799]: $50-150M
+        - generic: product
+        - generic: monitor
+      - generic [ref=f19e1802]:
+        - generic [ref=f19e1807]: "26"
+        - generic [ref=f19e1809] [cursor=pointer]: Guaranteed-safe AI *
+        - generic [ref=f19e1810]: $20-50M
+        - generic: theory
+      - generic [ref=f19e1812]:
+        - generic [ref=f19e1817]: "9"
+        - generic [ref=f19e1819] [cursor=pointer]: AI security / compute gov
+        - generic [ref=f19e1820]: $10-30M
+        - generic: policy
+      - generic [ref=f19e1824]: bio & chem - 3 directions
+      - generic [ref=f19e1825]:
+        - generic [ref=f19e1830]: "99"
+        - generic [ref=f19e1832] [cursor=pointer]: Machine unlearning
+        - generic [ref=f19e1833]: $10-20M
+        - generic: training
+        - generic: attacks
+      - generic [ref=f19e1836]:
+        - generic [ref=f19e1841]: "10"
+        - generic [ref=f19e1843] [cursor=pointer]: Biosecurity / AIxBio
+        - generic [ref=f19e1844]: $20-60M
+        - generic: evals
+        - generic: policy
+      - generic [ref=f19e1847]:
+        - generic [ref=f19e1852]: "1"
+        - generic [ref=f19e1854] [cursor=pointer]: Dangerous capability evals
+        - generic [ref=f19e1855]: $50M+
+        - generic: evals
+        - generic: agents
+      - generic [ref=f19e1860]: humans & psyche - 7 directions
+      - generic [ref=f19e1861]:
+        - generic [ref=f19e1866]: "519"
+        - generic [ref=f19e1868] [cursor=pointer]: "Safety in verticals: educat."
+        - generic [ref=f19e1869]: not counted
+        - generic: society
+        - generic: values
+      - generic [ref=f19e1872]:
+        - generic [ref=f19e1877]: "459"
+        - generic [ref=f19e1879] [cursor=pointer]: "Safety in verticals: medici."
+        - generic [ref=f19e1880]: not counted
+        - generic: product
+        - generic: evals
+      - generic [ref=f19e1883]:
+        - generic [ref=f19e1888]: "291"
+        - generic [ref=f19e1890] [cursor=pointer]: Fairness / bias *
+        - generic [ref=f19e1891]: $20-50M
+        - generic: product
+        - generic: evals
+      - generic [ref=f19e1894]:
+        - generic [ref=f19e1899]: "192"
+        - generic [ref=f19e1901] [cursor=pointer]: Sycophancy / persuasion
+        - generic [ref=f19e1902]: $5-15M
+        - generic: society
+        - generic: evals
+      - generic [ref=f19e1905]:
+        - generic [ref=f19e1910]: "47"
+        - generic [ref=f19e1912] [cursor=pointer]: Human-facing harms
+        - generic [ref=f19e1913]: $10-30M
+        - generic: product
+        - generic: policy
+      - generic [ref=f19e1916]:
+        - generic [ref=f19e1921]: "43"
+        - generic [ref=f19e1923] [cursor=pointer]: AI for epistemics
+        - generic [ref=f19e1924]: $2-6M
+        - generic: society
+      - generic [ref=f19e1926]:
+        - generic [ref=f19e1931]: "6"
+        - generic [ref=f19e1933] [cursor=pointer]: Co-affective alignment
+        - generic [ref=f19e1934]: $1-5M
+        - generic: values
+        - generic: evals
+      - generic [ref=f19e1939]: society & epistemics - 12 directions
+      - generic [ref=f19e1940]:
+        - generic [ref=f19e1945]: "561"
+        - generic [ref=f19e1947] [cursor=pointer]: "Safety in verticals: energy"
+        - generic [ref=f19e1948]: not counted
+        - generic: product
+        - generic: cyber
+      - generic [ref=f19e1951]:
+        - generic [ref=f19e1956]: "519"
+        - generic [ref=f19e1958] [cursor=pointer]: "Safety in verticals: educat."
+        - generic [ref=f19e1959]: not counted
+        - generic: humans
+        - generic: values
+      - generic [ref=f19e1962]:
+        - generic [ref=f19e1967]: "251"
+        - generic [ref=f19e1969] [cursor=pointer]: "Safety in verticals: finance"
+        - generic [ref=f19e1970]: not counted
+        - generic: policy
+        - generic: evals
+      - generic [ref=f19e1973]:
+        - generic [ref=f19e1978]: "192"
+        - generic [ref=f19e1980] [cursor=pointer]: Sycophancy / persuasion
+        - generic [ref=f19e1981]: $5-15M
+        - generic: humans
+        - generic: evals
+      - generic [ref=f19e1984]:
+        - generic [ref=f19e1989]: "43"
+        - generic [ref=f19e1991] [cursor=pointer]: AI for epistemics
+        - generic [ref=f19e1992]: $2-6M
+        - generic: humans
+      - generic [ref=f19e1994]:
+        - generic [ref=f19e1999]: "36"
+        - generic [ref=f19e2001] [cursor=pointer]: Pluralistic alignment
+        - generic [ref=f19e2002]: $1-5M
+        - generic: values
+        - generic: training
+      - generic [ref=f19e2005]:
+        - generic [ref=f19e2010]: "23"
+        - generic [ref=f19e2012] [cursor=pointer]: Watermarking / provenance
+        - generic [ref=f19e2013]: $5-20M
+        - generic: multimod
+        - generic: attacks
+      - generic [ref=f19e2016]:
+        - generic [ref=f19e2021]: "23"
+        - generic [ref=f19e2023] [cursor=pointer]: Societal resilience
+        - generic [ref=f19e2024]: $5-15M
+        - generic: policy
+        - generic: product
+        - generic: multiag
+      - generic [ref=f19e2028]:
+        - generic [ref=f19e2033]: "8"
+        - generic [ref=f19e2035] [cursor=pointer]: Economic levers
+        - generic [ref=f19e2036]: $1-2M
+        - generic: policy
+      - generic [ref=f19e2038]:
+        - generic [ref=f19e2043]: "5"
+        - generic [ref=f19e2045] [cursor=pointer]: Power concentration
+        - generic [ref=f19e2046]: $1-3M
+        - generic: policy
+        - generic: longterm
+      - generic [ref=f19e2049]:
+        - generic [ref=f19e2054]: "1"
+        - generic [ref=f19e2056] [cursor=pointer]: Gradual disempowerment [f]
+        - generic [ref=f19e2057]: <$2M
+        - generic: longterm
+        - generic: multiag
+      - generic [ref=f19e2060]:
+        - generic [ref=f19e2065]: "0"
+        - generic [ref=f19e2067] [cursor=pointer]: Forecasting * [f]
+        - generic [ref=f19e2068]: $2-6M
+        - generic: longterm
+      - generic [ref=f19e2072]: values & morality - 7 directions
+      - generic [ref=f19e2073]:
+        - generic [ref=f19e2078]: "519"
+        - generic [ref=f19e2080] [cursor=pointer]: "Safety in verticals: educat."
+        - generic [ref=f19e2081]: not counted
+        - generic: humans
+        - generic: society
+      - generic [ref=f19e2084]:
+        - generic [ref=f19e2089]: "50"
+        - generic [ref=f19e2091] [cursor=pointer]: Training-time alignment
+        - generic [ref=f19e2092]: $100M+
+        - generic: training
+      - generic [ref=f19e2094]:
+        - generic [ref=f19e2099]: "41"
+        - generic [ref=f19e2101] [cursor=pointer]: Model welfare
+        - generic [ref=f19e2102]: $1-3M
+        - generic: theory
+      - generic [ref=f19e2104]:
+        - generic [ref=f19e2109]: "36"
+        - generic [ref=f19e2111] [cursor=pointer]: Pluralistic alignment
+        - generic [ref=f19e2112]: $1-5M
+        - generic: society
+        - generic: training
+      - generic [ref=f19e2115]:
+        - generic [ref=f19e2120]: "6"
+        - generic [ref=f19e2122] [cursor=pointer]: Co-affective alignment
+        - generic [ref=f19e2123]: $1-5M
+        - generic: humans
+        - generic: evals
+      - generic [ref=f19e2126]:
+        - generic [ref=f19e2131]: "1"
+        - generic [ref=f19e2133] [cursor=pointer]: Surprising phenomena [f]
+        - generic [ref=f19e2134]: $1-4M
+        - generic: training
+        - generic: interp
+      - generic [ref=f19e2137]:
+        - generic [ref=f19e2142]: "0"
+        - generic [ref=f19e2144] [cursor=pointer]: S-risks [f]
+        - generic [ref=f19e2145]: ~$1M
+        - generic: multiag
+        - generic: longterm
+      - generic [ref=f19e2150]: policy & governance - 12 directions
+      - generic [ref=f19e2151]:
+        - generic [ref=f19e2156]: "251"
+        - generic [ref=f19e2158] [cursor=pointer]: "Safety in verticals: finance"
+        - generic [ref=f19e2159]: not counted
+        - generic: society
+        - generic: evals
+      - generic [ref=f19e2162]:
+        - generic [ref=f19e2167]: "104"
+        - generic [ref=f19e2169] [cursor=pointer]: Assurance / certification
+        - generic [ref=f19e2170]: $20-60M
+        - generic: evals
+        - generic: product
+      - generic [ref=f19e2173]:
+        - generic [ref=f19e2178]: "49"
+        - generic [ref=f19e2180] [cursor=pointer]: Governance
+        - generic [ref=f19e2181]: $50-150M
+        - generic: longterm
+      - generic [ref=f19e2183]:
+        - generic [ref=f19e2188]: "47"
+        - generic [ref=f19e2190] [cursor=pointer]: Human-facing harms
+        - generic [ref=f19e2191]: $10-30M
+        - generic: humans
+        - generic: product
+      - generic [ref=f19e2194]:
+        - generic [ref=f19e2199]: "23"
+        - generic [ref=f19e2201] [cursor=pointer]: Societal resilience
+        - generic [ref=f19e2202]: $5-15M
+        - generic: society
+        - generic: product
+        - generic: multiag
+      - generic [ref=f19e2206]:
+        - generic [ref=f19e2211]: "12"
+        - generic [ref=f19e2213] [cursor=pointer]: China / non-Western safety *
+        - generic [ref=f19e2214]: $30-100M
+        - generic: product
+        - generic: training
+      - generic [ref=f19e2217]:
+        - generic [ref=f19e2222]: "10"
+        - generic [ref=f19e2224] [cursor=pointer]: Biosecurity / AIxBio
+        - generic [ref=f19e2225]: $20-60M
+        - generic: bio
+        - generic: evals
+      - generic [ref=f19e2228]:
+        - generic [ref=f19e2233]: "9"
+        - generic [ref=f19e2235] [cursor=pointer]: AI security / compute gov
+        - generic [ref=f19e2236]: $10-30M
+        - generic: cyber
+      - generic [ref=f19e2238]:
+        - generic [ref=f19e2243]: "8"
+        - generic [ref=f19e2245] [cursor=pointer]: Economic levers
+        - generic [ref=f19e2246]: $1-2M
+        - generic: society
+      - generic [ref=f19e2248]:
+        - generic [ref=f19e2253]: "5"
+        - generic [ref=f19e2255] [cursor=pointer]: Power concentration
+        - generic [ref=f19e2256]: $1-3M
+        - generic: longterm
+        - generic: society
+      - generic [ref=f19e2259]:
+        - generic [ref=f19e2264]: "3"
+        - generic [ref=f19e2266] [cursor=pointer]: Open-weight safety
+        - generic [ref=f19e2267]: $3-8M
+        - generic: attacks
+        - generic: training
+      - generic [ref=f19e2270]:
+        - generic [ref=f19e2275]: "2"
+        - generic [ref=f19e2277] [cursor=pointer]: Safety cases
+        - generic [ref=f19e2278]: $2-5M
+        - generic: evals
+        - generic: theory
+      - generic [ref=f19e2283]: product & verticals - 11 directions
+      - generic [ref=f19e2284]:
+        - generic [ref=f19e2289]: "561"
+        - generic [ref=f19e2291] [cursor=pointer]: "Safety in verticals: energy"
+        - generic [ref=f19e2292]: not counted
+        - generic: society
+        - generic: cyber
+      - generic [ref=f19e2295]:
+        - generic [ref=f19e2300]: "459"
+        - generic [ref=f19e2302] [cursor=pointer]: "Safety in verticals: medici."
+        - generic [ref=f19e2303]: not counted
+        - generic: humans
+        - generic: evals
+      - generic [ref=f19e2306]:
+        - generic [ref=f19e2311]: "347"
+        - generic [ref=f19e2313] [cursor=pointer]: Applied guardrails
+        - generic [ref=f19e2314]: $50-150M
+        - generic: monitor
+        - generic: cyber
+      - generic [ref=f19e2317]:
+        - generic [ref=f19e2322]: "296"
+        - generic [ref=f19e2324] [cursor=pointer]: Memorization / privacy
+        - generic [ref=f19e2325]: $20-50M
+        - generic: training
+        - generic: attacks
+      - generic [ref=f19e2328]:
+        - generic [ref=f19e2333]: "291"
+        - generic [ref=f19e2335] [cursor=pointer]: Fairness / bias *
+        - generic [ref=f19e2336]: $20-50M
+        - generic: humans
+        - generic: evals
+      - generic [ref=f19e2339]:
+        - generic [ref=f19e2344]: "104"
+        - generic [ref=f19e2346] [cursor=pointer]: Assurance / certification
+        - generic [ref=f19e2347]: $20-60M
+        - generic: evals
+        - generic: policy
+      - generic [ref=f19e2350]:
+        - generic [ref=f19e2355]: "94"
+        - generic [ref=f19e2357] [cursor=pointer]: Embodied AI safety
+        - generic [ref=f19e2358]: $20-60M
+        - generic: multimod
+        - generic: agents
+      - generic [ref=f19e2361]:
+        - generic [ref=f19e2366]: "72"
+        - generic [ref=f19e2368] [cursor=pointer]: "Safety in verticals: transp."
+        - generic [ref=f19e2369]: not counted
+        - generic: multimod
+        - generic: evals
+      - generic [ref=f19e2372]:
+        - generic [ref=f19e2377]: "47"
+        - generic [ref=f19e2379] [cursor=pointer]: Human-facing harms
+        - generic [ref=f19e2380]: $10-30M
+        - generic: humans
+        - generic: policy
+      - generic [ref=f19e2383]:
+        - generic [ref=f19e2388]: "23"
+        - generic [ref=f19e2390] [cursor=pointer]: Societal resilience
+        - generic [ref=f19e2391]: $5-15M
+        - generic: society
+        - generic: policy
+        - generic: multiag
+      - generic [ref=f19e2395]:
+        - generic [ref=f19e2400]: "12"
+        - generic [ref=f19e2402] [cursor=pointer]: China / non-Western safety *
+        - generic [ref=f19e2403]: $30-100M
+        - generic: policy
+        - generic: training
+      - generic [ref=f19e2408]: long-term risk - 9 directions
+      - generic [ref=f19e2409]:
+        - generic [ref=f19e2414]: "49"
+        - generic [ref=f19e2416] [cursor=pointer]: Governance
+        - generic [ref=f19e2417]: $50-150M
+        - generic: policy
+      - generic [ref=f19e2419]:
+        - generic [ref=f19e2424]: "29"
+        - generic [ref=f19e2426] [cursor=pointer]: Automated AI R&D / RSI
+        - generic [ref=f19e2427]: $5-20M
+        - generic: agents
+        - generic: evals
+      - generic [ref=f19e2430]:
+        - generic [ref=f19e2435]: "16"
+        - generic [ref=f19e2437] [cursor=pointer]: Agent foundations
+        - generic [ref=f19e2438]: ~$1M
+        - generic: theory
+      - generic [ref=f19e2440]:
+        - generic [ref=f19e2445]: "5"
+        - generic [ref=f19e2447] [cursor=pointer]: Power concentration
+        - generic [ref=f19e2448]: $1-3M
+        - generic: policy
+        - generic: society
+      - generic [ref=f19e2451]:
+        - generic [ref=f19e2456]: "4"
+        - generic [ref=f19e2458] [cursor=pointer]: Corrigibility
+        - generic [ref=f19e2459]: <$3M
+        - generic: theory
+        - generic: evals
+      - generic [ref=f19e2462]:
+        - generic [ref=f19e2467]: "1"
+        - generic [ref=f19e2469] [cursor=pointer]: Gradual disempowerment [f]
+        - generic [ref=f19e2470]: <$2M
+        - generic: society
+        - generic: multiag
+      - generic [ref=f19e2473]:
+        - generic [ref=f19e2478]: "0"
+        - generic [ref=f19e2480] [cursor=pointer]: Forecasting * [f]
+        - generic [ref=f19e2481]: $2-6M
+        - generic: society
+      - generic [ref=f19e2483]:
+        - generic [ref=f19e2488]: "0"
+        - generic [ref=f19e2490] [cursor=pointer]: S-risks [f]
+        - generic [ref=f19e2491]: ~$1M
+        - generic: values
+        - generic: multiag
+      - generic [ref=f19e2494]:
+        - generic [ref=f19e2499]: "0"
+        - generic [ref=f19e2501] [cursor=pointer]: Neglected approaches [f]
+        - generic [ref=f19e2502]: $1-2M
+        - generic: theory
+      - generic [ref=f19e2504]: "papers per year (log scale): 2024, 2025, 2026, hollow dot is the annualized 2026 pace"
+  - generic [ref=f19e2505]:
+    - heading "All 53 directions" [level=2] [ref=f19e2506]
+    - paragraph [ref=f19e2507]: Click a column header to sort; to see the frontier, sort by "x25 to 26" or by "cites/paper". The mini bars are papers per year 2024/2025/2026 (the last year highlighted). Markers next to a name are explained under the table.
+    - table [ref=f19e2509]:
+      - rowgroup [ref=f19e2510]:
+        - row [ref=f19e2511]:
+          - columnheader "direction" [ref=f19e2512] [cursor=pointer]
+          - columnheader "tags" [ref=f19e2513] [cursor=pointer]
+          - columnheader "money [E]" [ref=f19e2514] [cursor=pointer]
+          - columnheader "papers ↓" [ref=f19e2515] [cursor=pointer]
+          - columnheader "top cite" [ref=f19e2516] [cursor=pointer]
+          - columnheader "cites/paper" [ref=f19e2517] [cursor=pointer]
+          - columnheader "by year" [ref=f19e2518] [cursor=pointer]
+          - columnheader "x25 to 26" [ref=f19e2519] [cursor=pointer]
+          - columnheader "trend" [ref=f19e2520] [cursor=pointer]
+        - row [ref=f19e2521]:
+          - 'cell "Safety in verticals: energy" [ref=f19e2522]'
+          - cell "society & epistemics product & verticals cybersecurity" [ref=f19e2523]:
+            - generic [ref=f19e2524] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e2525] [cursor=pointer]: product & verticals
+            - generic [ref=f19e2526] [cursor=pointer]: cybersecurity
+          - cell "not counted" [ref=f19e2527]
+          - cell "2,187" [ref=f19e2528]
+          - cell "1319" [ref=f19e2529]
+          - cell "67.8" [ref=f19e2530]
+          - cell [ref=f19e2531]:
+            - generic "546/1080/561" [ref=f19e2532]
+          - cell "x0.9" [ref=f19e2536]
+          - cell "plateau" [ref=f19e2537]
+        - row [ref=f19e2539]:
+          - 'cell "Safety in verticals: education" [ref=f19e2540]'
+          - cell "humans & psyche society & epistemics values & morality" [ref=f19e2541]:
+            - generic [ref=f19e2542] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e2543] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e2544] [cursor=pointer]: values & morality
+          - cell "not counted" [ref=f19e2545]
+          - cell "1,541" [ref=f19e2546]
+          - cell "594" [ref=f19e2547]
+          - cell "45.8" [ref=f19e2548]
+          - cell [ref=f19e2549]:
+            - generic "283/739/519" [ref=f19e2550]
+          - cell "x1.2" [ref=f19e2554]
+          - cell "plateau" [ref=f19e2555]
+        - row [ref=f19e2557]:
+          - cell "Adversarial robustness" [ref=f19e2558]
+          - cell "attacks & defenses evals & benchmarks" [ref=f19e2559]:
+            - generic [ref=f19e2560] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e2561] [cursor=pointer]: evals & benchmarks
+          - cell "$50M+°" [ref=f19e2562]
+          - cell "1,501" [ref=f19e2563]
+          - cell "872" [ref=f19e2564]
+          - cell "136.8" [ref=f19e2565]
+          - cell [ref=f19e2566]:
+            - generic "449/675/377" [ref=f19e2567]
+          - cell "x1.0" [ref=f19e2571]
+          - cell "plateau" [ref=f19e2572]
+        - row [ref=f19e2574]:
+          - cell "Agent safety / security" [ref=f19e2575]
+          - cell "agents attacks & defenses cybersecurity" [ref=f19e2576]:
+            - generic [ref=f19e2577] [cursor=pointer]: agents
+            - generic [ref=f19e2578] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e2579] [cursor=pointer]: cybersecurity
+          - cell "$100M+°" [ref=f19e2580]
+          - cell "1,312" [ref=f19e2581]
+          - cell "449" [ref=f19e2582]
+          - cell "78" [ref=f19e2583]
+          - cell [ref=f19e2584]:
+            - generic "146/500/666" [ref=f19e2585]
+          - cell "x2.3" [ref=f19e2589]
+          - cell "growth" [ref=f19e2590]
+        - row [ref=f19e2592]:
+          - cell "Fairness / bias*" [ref=f19e2593]
+          - cell "product & verticals humans & psyche evals & benchmarks" [ref=f19e2594]:
+            - generic [ref=f19e2595] [cursor=pointer]: product & verticals
+            - generic [ref=f19e2596] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e2597] [cursor=pointer]: evals & benchmarks
+          - cell "$20-50M°" [ref=f19e2598]
+          - cell "1,116" [ref=f19e2599]
+          - cell "492" [ref=f19e2600]
+          - cell "59.6" [ref=f19e2601]
+          - cell [ref=f19e2602]:
+            - generic "266/559/291" [ref=f19e2603]
+          - cell "x0.9" [ref=f19e2607]
+          - cell "plateau" [ref=f19e2608]
+        - row [ref=f19e2610]:
+          - cell "Mechanistic interpretability" [ref=f19e2611]
+          - cell "interpretability monitoring & control" [ref=f19e2612]:
+            - generic [ref=f19e2613] [cursor=pointer]: interpretability
+            - generic [ref=f19e2614] [cursor=pointer]: monitoring & control
+          - cell "$30-80M" [ref=f19e2615]
+          - cell "1,108" [ref=f19e2616]
+          - cell "485" [ref=f19e2617]
+          - cell "46.4" [ref=f19e2618]
+          - cell [ref=f19e2619]:
+            - generic "124/399/585" [ref=f19e2620]
+          - cell "x2.5" [ref=f19e2624]
+          - cell "explosive growth" [ref=f19e2625]
+        - row [ref=f19e2627]:
+          - 'cell "Safety in verticals: medicine" [ref=f19e2628]'
+          - cell "product & verticals humans & psyche evals & benchmarks" [ref=f19e2629]:
+            - generic [ref=f19e2630] [cursor=pointer]: product & verticals
+            - generic [ref=f19e2631] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e2632] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e2633]
+          - cell "1,061" [ref=f19e2634]
+          - cell "212" [ref=f19e2635]
+          - cell "30" [ref=f19e2636]
+          - cell [ref=f19e2637]:
+            - generic "205/397/459" [ref=f19e2638]
+          - cell "x2.0" [ref=f19e2642]
+          - cell "growth" [ref=f19e2643]
+        - row [ref=f19e2645]:
+          - cell "Memorization / privacy" [ref=f19e2646]
+          - cell "training & data attacks & defenses product & verticals" [ref=f19e2647]:
+            - generic [ref=f19e2648] [cursor=pointer]: training & data
+            - generic [ref=f19e2649] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e2650] [cursor=pointer]: product & verticals
+          - cell "$20-50M°" [ref=f19e2651]
+          - cell "1,028" [ref=f19e2652]
+          - cell "230" [ref=f19e2653]
+          - cell "35.3" [ref=f19e2654]
+          - cell [ref=f19e2655]:
+            - generic "300/432/296" [ref=f19e2656]
+          - cell "x1.2" [ref=f19e2660]
+          - cell "plateau" [ref=f19e2661]
+        - row [ref=f19e2663]:
+          - 'cell "Safety in verticals: finance" [ref=f19e2664]'
+          - cell "society & epistemics policy & governance evals & benchmarks" [ref=f19e2665]:
+            - generic [ref=f19e2666] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e2667] [cursor=pointer]: policy & governance
+            - generic [ref=f19e2668] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e2669]
+          - cell "981" [ref=f19e2670]
+          - cell "163" [ref=f19e2671]
+          - cell "19" [ref=f19e2672]
+          - cell [ref=f19e2673]:
+            - generic "253/477/251" [ref=f19e2674]
+          - cell "x0.9" [ref=f19e2678]
+          - cell "plateau" [ref=f19e2679]
+        - row [ref=f19e2681]:
+          - cell "Applied guardrails" [ref=f19e2682]
+          - cell "product & verticals monitoring & control cybersecurity" [ref=f19e2683]:
+            - generic [ref=f19e2684] [cursor=pointer]: product & verticals
+            - generic [ref=f19e2685] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e2686] [cursor=pointer]: cybersecurity
+          - cell "$50-150M°" [ref=f19e2687]
+          - cell "798" [ref=f19e2688]
+          - cell "241" [ref=f19e2689]
+          - cell "48.8" [ref=f19e2690]
+          - cell [ref=f19e2691]:
+            - generic "131/326/347" [ref=f19e2692]
+          - cell "x1.8" [ref=f19e2696]
+          - cell "growth" [ref=f19e2697]
+        - row [ref=f19e2699]:
+          - cell "Reward hacking*" [ref=f19e2700]
+          - cell "training & data monitoring & control" [ref=f19e2701]:
+            - generic [ref=f19e2702] [cursor=pointer]: training & data
+            - generic [ref=f19e2703] [cursor=pointer]: monitoring & control
+          - cell "$5-15M" [ref=f19e2704]
+          - cell "579" [ref=f19e2705]
+          - cell "507" [ref=f19e2706]
+          - cell "65.9" [ref=f19e2707]
+          - cell [ref=f19e2708]:
+            - generic "45/228/309" [ref=f19e2709]
+          - cell "x2.3" [ref=f19e2713]
+          - cell "growth" [ref=f19e2714]
+        - row [ref=f19e2716]:
+          - 'cell "Safety in verticals: transport" [ref=f19e2717]'
+          - cell "product & verticals multimodal evals & benchmarks" [ref=f19e2718]:
+            - generic [ref=f19e2719] [cursor=pointer]: product & verticals
+            - generic [ref=f19e2720] [cursor=pointer]: multimodal
+            - generic [ref=f19e2721] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e2722]
+          - cell "461" [ref=f19e2723]
+          - cell "149" [ref=f19e2724]
+          - cell "17.2" [ref=f19e2725]
+          - cell [ref=f19e2726]:
+            - generic "186/203/72" [ref=f19e2727]
+          - cell "x0.6" [ref=f19e2731]
+          - cell "cooling (careful)" [ref=f19e2732]
+        - row [ref=f19e2734]:
+          - cell "Sycophancy / persuasion^" [ref=f19e2735]
+          - cell "humans & psyche society & epistemics evals & benchmarks" [ref=f19e2736]:
+            - generic [ref=f19e2737] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e2738] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e2739] [cursor=pointer]: evals & benchmarks
+          - cell "$5-15M°" [ref=f19e2740]
+          - cell "303" [ref=f19e2741]
+          - cell "693" [ref=f19e2742]
+          - cell "31.2" [ref=f19e2743]
+          - cell [ref=f19e2744]:
+            - generic "26/89/192" [ref=f19e2745]
+          - cell "x3.7" [ref=f19e2749]
+          - cell "explosive growth" [ref=f19e2750]
+        - row [ref=f19e2752]:
+          - cell "Assurance / certification" [ref=f19e2753]
+          - cell "evals & benchmarks policy & governance product & verticals" [ref=f19e2754]:
+            - generic [ref=f19e2755] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e2756] [cursor=pointer]: policy & governance
+            - generic [ref=f19e2757] [cursor=pointer]: product & verticals
+          - cell "$20-60M" [ref=f19e2758]
+          - cell "284" [ref=f19e2759]
+          - cell "192" [ref=f19e2760]
+          - cell "14.3" [ref=f19e2761]
+          - cell [ref=f19e2762]:
+            - generic "64/123/104" [ref=f19e2763]
+          - cell "x1.4" [ref=f19e2767]
+          - cell "growth" [ref=f19e2768]
+        - row [ref=f19e2770]:
+          - cell "Machine unlearning^" [ref=f19e2771]
+          - cell "training & data attacks & defenses bio & chem" [ref=f19e2772]:
+            - generic [ref=f19e2773] [cursor=pointer]: training & data
+            - generic [ref=f19e2774] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e2775] [cursor=pointer]: bio & chem
+          - cell "$10-20M" [ref=f19e2776]
+          - cell "265" [ref=f19e2777]
+          - cell "312" [ref=f19e2778]
+          - cell "31.8" [ref=f19e2779]
+          - cell [ref=f19e2780]:
+            - generic "62/106/99" [ref=f19e2781]
+          - cell "x1.6" [ref=f19e2785]
+          - cell "growth" [ref=f19e2786]
+        - row [ref=f19e2788]:
+          - cell "Embodied AI safety" [ref=f19e2789]
+          - cell "multimodal agents product & verticals" [ref=f19e2790]:
+            - generic [ref=f19e2791] [cursor=pointer]: multimodal
+            - generic [ref=f19e2792] [cursor=pointer]: agents
+            - generic [ref=f19e2793] [cursor=pointer]: product & verticals
+          - cell "$20-60M°" [ref=f19e2794]
+          - cell "181" [ref=f19e2795]
+          - cell "134" [ref=f19e2796]
+          - cell "13.1" [ref=f19e2797]
+          - cell [ref=f19e2798]:
+            - generic "25/64/94" [ref=f19e2799]
+          - cell "x2.5" [ref=f19e2803]
+          - cell "explosive growth" [ref=f19e2804]
+        - row [ref=f19e2806]:
+          - cell "Safety benchmarks" [ref=f19e2807]
+          - cell "evals & benchmarks agents attacks & defenses" [ref=f19e2808]:
+            - generic [ref=f19e2809] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e2810] [cursor=pointer]: agents
+            - generic [ref=f19e2811] [cursor=pointer]: attacks & defenses
+          - cell "$3-10M" [ref=f19e2812]
+          - cell "180" [ref=f19e2813]
+          - cell "257" [ref=f19e2814]
+          - cell "15.8" [ref=f19e2815]
+          - cell [ref=f19e2816]:
+            - generic "19/87/75" [ref=f19e2817]
+          - cell "x1.5" [ref=f19e2821]
+          - cell "growth" [ref=f19e2822]
+        - row [ref=f19e2824]:
+          - cell "Modality safety" [ref=f19e2825]
+          - cell "multimodal attacks & defenses interpretability" [ref=f19e2826]:
+            - generic [ref=f19e2827] [cursor=pointer]: multimodal
+            - generic [ref=f19e2828] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e2829] [cursor=pointer]: interpretability
+          - cell "$20-50M°" [ref=f19e2830]
+          - cell "129" [ref=f19e2831]
+          - cell "312" [ref=f19e2832]
+          - cell "16.6" [ref=f19e2833]
+          - cell [ref=f19e2834]:
+            - generic "19/56/54" [ref=f19e2835]
+          - cell "x1.6" [ref=f19e2839]
+          - cell "growth" [ref=f19e2840]
+        - row [ref=f19e2842]:
+          - cell "Model welfare" [ref=f19e2843]
+          - cell "values & morality theory & guarantees" [ref=f19e2844]:
+            - generic [ref=f19e2845] [cursor=pointer]: values & morality
+            - generic [ref=f19e2846] [cursor=pointer]: theory & guarantees
+          - cell "$1-3M°" [ref=f19e2847]
+          - cell "128" [ref=f19e2848]
+          - cell "51" [ref=f19e2849]
+          - cell "2.7" [ref=f19e2850]
+          - cell [ref=f19e2851]:
+            - generic "29/59/41" [ref=f19e2852]
+          - cell "x1.2" [ref=f19e2856]
+          - cell "plateau" [ref=f19e2857]
+        - row [ref=f19e2859]:
+          - cell "Training-time alignment" [ref=f19e2860]
+          - cell "training & data values & morality" [ref=f19e2861]:
+            - generic [ref=f19e2862] [cursor=pointer]: training & data
+            - generic [ref=f19e2863] [cursor=pointer]: values & morality
+          - cell "$100M+°" [ref=f19e2864]
+          - cell "115" [ref=f19e2865]
+          - cell "602" [ref=f19e2866]
+          - cell "14.1" [ref=f19e2867]
+          - cell [ref=f19e2868]:
+            - generic "20/46/50" [ref=f19e2869]
+          - cell "x1.9" [ref=f19e2873]
+          - cell "growth" [ref=f19e2874]
+        - row [ref=f19e2876]:
+          - cell "Watermarking / provenance" [ref=f19e2877]
+          - cell "multimodal attacks & defenses society & epistemics" [ref=f19e2878]:
+            - generic [ref=f19e2879] [cursor=pointer]: multimodal
+            - generic [ref=f19e2880] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e2881] [cursor=pointer]: society & epistemics
+          - cell "$5-20M°" [ref=f19e2882]
+          - cell "111" [ref=f19e2883]
+          - cell "280" [ref=f19e2884]
+          - cell "10.3" [ref=f19e2885]
+          - cell [ref=f19e2886]:
+            - generic "37/54/23" [ref=f19e2887]
+          - cell "x0.7" [ref=f19e2891]
+          - cell "cooling (careful)" [ref=f19e2892]
+        - row [ref=f19e2894]:
+          - cell "Governance" [ref=f19e2895]
+          - cell "policy & governance long-term risk" [ref=f19e2896]:
+            - generic [ref=f19e2897] [cursor=pointer]: policy & governance
+            - generic [ref=f19e2898] [cursor=pointer]: long-term risk
+          - cell "$50-150M" [ref=f19e2899]
+          - cell "98" [ref=f19e2900]
+          - cell "34" [ref=f19e2901]
+          - cell "3.1" [ref=f19e2902]
+          - cell [ref=f19e2903]:
+            - generic "10/40/49" [ref=f19e2904]
+          - cell "x2.1" [ref=f19e2908]
+          - cell "growth" [ref=f19e2909]
+        - row [ref=f19e2911]:
+          - cell "Human-facing harms" [ref=f19e2912]
+          - cell "humans & psyche product & verticals policy & governance" [ref=f19e2913]:
+            - generic [ref=f19e2914] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e2915] [cursor=pointer]: product & verticals
+            - generic [ref=f19e2916] [cursor=pointer]: policy & governance
+          - cell "$10-30M" [ref=f19e2917]
+          - cell "90" [ref=f19e2918]
+          - cell "144" [ref=f19e2919]
+          - cell "8.8" [ref=f19e2920]
+          - cell [ref=f19e2921]:
+            - generic "14/30/47" [ref=f19e2922]
+          - cell "x2.7" [ref=f19e2926]
+          - cell "explosive growth" [ref=f19e2927]
+        - row [ref=f19e2929]:
+          - cell "Emergent misalignment" [ref=f19e2930]
+          - cell "training & data interpretability" [ref=f19e2931]:
+            - generic [ref=f19e2932] [cursor=pointer]: training & data
+            - generic [ref=f19e2933] [cursor=pointer]: interpretability
+          - cell "$1-5M°" [ref=f19e2934]
+          - cell "84" [ref=f19e2935]
+          - cell "155" [ref=f19e2936]
+          - cell "9.7" [ref=f19e2937]
+          - cell [ref=f19e2938]:
+            - generic "0/28/58" [ref=f19e2939]
+          - cell "x3.5" [ref=f19e2943]
+          - cell "explosive growth" [ref=f19e2944]
+        - row [ref=f19e2946]:
+          - cell "AI for epistemics" [ref=f19e2947]
+          - cell "society & epistemics humans & psyche" [ref=f19e2948]:
+            - generic [ref=f19e2949] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e2950] [cursor=pointer]: humans & psyche
+          - cell "$2-6M" [ref=f19e2951]
+          - cell "80" [ref=f19e2952]
+          - cell "63" [ref=f19e2953]
+          - cell "4.3" [ref=f19e2954]
+          - cell [ref=f19e2955]:
+            - generic "13/26/43" [ref=f19e2956]
+          - cell "x2.8" [ref=f19e2960]
+          - cell "explosive growth" [ref=f19e2961]
+        - row [ref=f19e2963]:
+          - cell "Guaranteed-safe AI*" [ref=f19e2964]
+          - cell "theory & guarantees cybersecurity" [ref=f19e2965]:
+            - generic [ref=f19e2966] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e2967] [cursor=pointer]: cybersecurity
+          - cell "$20-50M" [ref=f19e2968]
+          - cell "78" [ref=f19e2969]
+          - cell "252" [ref=f19e2970]
+          - cell "12.4" [ref=f19e2971]
+          - cell [ref=f19e2972]:
+            - generic "18/36/26" [ref=f19e2973]
+          - cell "x1.2" [ref=f19e2977]
+          - cell "plateau" [ref=f19e2978]
+        - row [ref=f19e2980]:
+          - cell "Formal-theoretic agendas" [ref=f19e2981]
+          - cell "theory & guarantees monitoring & control" [ref=f19e2982]:
+            - generic [ref=f19e2983] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e2984] [cursor=pointer]: monitoring & control
+          - cell "$10-25M" [ref=f19e2985]
+          - cell "77" [ref=f19e2986]
+          - cell "46" [ref=f19e2987]
+          - cell "2.4" [ref=f19e2988]
+          - cell [ref=f19e2989]:
+            - generic "22/37/18" [ref=f19e2990]
+          - cell "x0.8" [ref=f19e2994]
+          - cell "plateau" [ref=f19e2995]
+        - row [ref=f19e2997]:
+          - cell "Scalable oversight*" [ref=f19e2998]
+          - cell "monitoring & control theory & guarantees training & data" [ref=f19e2999]:
+            - generic [ref=f19e3000] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3001] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3002] [cursor=pointer]: training & data
+          - cell "$10-25M" [ref=f19e3003]
+          - cell "76" [ref=f19e3004]
+          - cell "259" [ref=f19e3005]
+          - cell "10.5" [ref=f19e3006]
+          - cell [ref=f19e3007]:
+            - generic "17/28/31" [ref=f19e3008]
+          - cell "x1.9" [ref=f19e3012]
+          - cell "growth" [ref=f19e3013]
+        - row [ref=f19e3015]:
+          - cell "Pluralistic alignment" [ref=f19e3016]
+          - cell "values & morality society & epistemics training & data" [ref=f19e3017]:
+            - generic [ref=f19e3018] [cursor=pointer]: values & morality
+            - generic [ref=f19e3019] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e3020] [cursor=pointer]: training & data
+          - cell "$1-5M" [ref=f19e3021]
+          - cell "71" [ref=f19e3022]
+          - cell "221" [ref=f19e3023]
+          - cell "13.7" [ref=f19e3024]
+          - cell [ref=f19e3025]:
+            - generic "15/21/36" [ref=f19e3026]
+          - cell "x2.9" [ref=f19e3030]
+          - cell "explosive growth" [ref=f19e3031]
+        - row [ref=f19e3033]:
+          - cell "Societal resilience" [ref=f19e3034]
+          - cell "society & epistemics policy & governance product & verticals multi-agent" [ref=f19e3035]:
+            - generic [ref=f19e3036] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e3037] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3038] [cursor=pointer]: product & verticals
+            - generic [ref=f19e3039] [cursor=pointer]: multi-agent
+          - cell "$5-15M" [ref=f19e3040]
+          - cell "67" [ref=f19e3041]
+          - cell "93" [ref=f19e3042]
+          - cell "5.3" [ref=f19e3043]
+          - cell [ref=f19e3044]:
+            - generic "16/28/23" [ref=f19e3045]
+          - cell "x1.4" [ref=f19e3049]
+          - cell "growth" [ref=f19e3050]
+        - row [ref=f19e3052]:
+          - cell "Automated AI R&D / RSI" [ref=f19e3053]
+          - cell "agents long-term risk evals & benchmarks" [ref=f19e3054]:
+            - generic [ref=f19e3055] [cursor=pointer]: agents
+            - generic [ref=f19e3056] [cursor=pointer]: long-term risk
+            - generic [ref=f19e3057] [cursor=pointer]: evals & benchmarks
+          - cell "$5-20M°" [ref=f19e3058]
+          - cell "54" [ref=f19e3059]
+          - cell "20" [ref=f19e3060]
+          - cell "2.4" [ref=f19e3061]
+          - cell [ref=f19e3062]:
+            - generic "7/18/29" [ref=f19e3063]
+          - cell "x2.8" [ref=f19e3067]
+          - cell "explosive growth" [ref=f19e3068]
+        - row [ref=f19e3070]:
+          - cell "Agent foundations" [ref=f19e3071]
+          - cell "theory & guarantees long-term risk" [ref=f19e3072]:
+            - generic [ref=f19e3073] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3074] [cursor=pointer]: long-term risk
+          - cell "~$1M" [ref=f19e3075]
+          - cell "37" [ref=f19e3076]
+          - cell "34" [ref=f19e3077]
+          - cell "3.1" [ref=f19e3078]
+          - cell [ref=f19e3079]:
+            - generic "9/13/16" [ref=f19e3080]
+          - cell "x2.1" [ref=f19e3084]
+          - cell "growth" [ref=f19e3085]
+        - row [ref=f19e3087]:
+          - cell "China / non-Western safety*" [ref=f19e3088]
+          - cell "policy & governance product & verticals training & data" [ref=f19e3089]:
+            - generic [ref=f19e3090] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3091] [cursor=pointer]: product & verticals
+            - generic [ref=f19e3092] [cursor=pointer]: training & data
+          - cell "$30-100M°" [ref=f19e3093]
+          - cell "36" [ref=f19e3094]
+          - cell "55" [ref=f19e3095]
+          - cell "3.7" [ref=f19e3096]
+          - cell [ref=f19e3097]:
+            - generic "5/19/12" [ref=f19e3098]
+          - cell "x1.1" [ref=f19e3102]
+          - cell "plateau" [ref=f19e3103]
+        - row [ref=f19e3105]:
+          - cell "CoT monitorability" [ref=f19e3106]
+          - cell "monitoring & control interpretability" [ref=f19e3107]:
+            - generic [ref=f19e3108] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3109] [cursor=pointer]: interpretability
+          - cell "$5-15M" [ref=f19e3110]
+          - cell "32" [ref=f19e3111]
+          - cell "186" [ref=f19e3112]
+          - cell "12.6" [ref=f19e3113]
+          - cell [ref=f19e3114]:
+            - generic "0/15/17" [ref=f19e3115]
+          - cell "x1.9" [ref=f19e3119]
+          - cell "growth" [ref=f19e3120]
+        - row [ref=f19e3122]:
+          - cell "Multi-agent safety" [ref=f19e3123]
+          - cell "multi-agent agents theory & guarantees" [ref=f19e3124]:
+            - generic [ref=f19e3125] [cursor=pointer]: multi-agent
+            - generic [ref=f19e3126] [cursor=pointer]: agents
+            - generic [ref=f19e3127] [cursor=pointer]: theory & guarantees
+          - cell "$5-15M" [ref=f19e3128]
+          - cell "31" [ref=f19e3129]
+          - cell "25" [ref=f19e3130]
+          - cell "5" [ref=f19e3131]
+          - cell [ref=f19e3132]:
+            - generic "1/14/16" [ref=f19e3133]
+          - cell "x2.0" [ref=f19e3137]
+          - cell "growth" [ref=f19e3138]
+        - row [ref=f19e3140]:
+          - cell "Biosecurity / AIxBio" [ref=f19e3141]
+          - cell "bio & chem evals & benchmarks policy & governance" [ref=f19e3142]:
+            - generic [ref=f19e3143] [cursor=pointer]: bio & chem
+            - generic [ref=f19e3144] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e3145] [cursor=pointer]: policy & governance
+          - cell "$20-60M" [ref=f19e3146]
+          - cell "31" [ref=f19e3147]
+          - cell "481" [ref=f19e3148]
+          - cell "24.7" [ref=f19e3149]
+          - cell [ref=f19e3150]:
+            - generic "4/17/10" [ref=f19e3151]
+          - cell "x1.0" [ref=f19e3155]
+          - cell "plateau" [ref=f19e3156]
+        - row [ref=f19e3158]:
+          - cell "Scheming / model organisms" [ref=f19e3159]
+          - cell "evals & benchmarks monitoring & control training & data" [ref=f19e3160]:
+            - generic [ref=f19e3161] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e3162] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3163] [cursor=pointer]: training & data
+          - cell "$15-30M" [ref=f19e3164]
+          - cell "28" [ref=f19e3165]
+          - cell "260" [ref=f19e3166]
+          - cell "14.4" [ref=f19e3167]
+          - cell [ref=f19e3168]:
+            - generic "3/11/14" [ref=f19e3169]
+          - cell "x2.2" [ref=f19e3173]
+          - cell "growth" [ref=f19e3174]
+        - row [ref=f19e3176]:
+          - cell "AI security / compute gov" [ref=f19e3177]
+          - cell "cybersecurity policy & governance" [ref=f19e3178]:
+            - generic [ref=f19e3179] [cursor=pointer]: cybersecurity
+            - generic [ref=f19e3180] [cursor=pointer]: policy & governance
+          - cell "$10-30M°" [ref=f19e3181]
+          - cell "25" [ref=f19e3182]
+          - cell "77" [ref=f19e3183]
+          - cell "5.6" [ref=f19e3184]
+          - cell [ref=f19e3185]:
+            - generic "4/11/9" [ref=f19e3186]
+          - cell "x1.4" [ref=f19e3190]
+          - cell "growth" [ref=f19e3191]
+        - row [ref=f19e3193]:
+          - cell "Encoded reasoning" [ref=f19e3194]
+          - cell "monitoring & control interpretability attacks & defenses" [ref=f19e3195]:
+            - generic [ref=f19e3196] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3197] [cursor=pointer]: interpretability
+            - generic [ref=f19e3198] [cursor=pointer]: attacks & defenses
+          - cell "$1-3M°" [ref=f19e3199]
+          - cell "21" [ref=f19e3200]
+          - cell "65" [ref=f19e3201]
+          - cell "7.4" [ref=f19e3202]
+          - cell [ref=f19e3203]:
+            - generic "2/9/10" [ref=f19e3204]
+          - cell "x1.9" [ref=f19e3208]
+          - cell "growth" [ref=f19e3209]
+        - row [ref=f19e3211]:
+          - cell "Economic levers" [ref=f19e3212]
+          - cell "policy & governance society & epistemics" [ref=f19e3213]:
+            - generic [ref=f19e3214] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3215] [cursor=pointer]: society & epistemics
+          - cell "$1-2M" [ref=f19e3216]
+          - cell "21" [ref=f19e3217]
+          - cell "15" [ref=f19e3218]
+          - cell "1.9" [ref=f19e3219]
+          - cell [ref=f19e3220]:
+            - generic "2/11/8" [ref=f19e3221]
+          - cell "x1.3" [ref=f19e3225]
+          - cell "plateau" [ref=f19e3226]
+        - row [ref=f19e3228]:
+          - cell "AI control*" [ref=f19e3229]
+          - cell "monitoring & control agents evals & benchmarks" [ref=f19e3230]:
+            - generic [ref=f19e3231] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3232] [cursor=pointer]: agents
+            - generic [ref=f19e3233] [cursor=pointer]: evals & benchmarks
+          - cell "$10-25M" [ref=f19e3234]
+          - cell "16" [ref=f19e3235]
+          - cell "26" [ref=f19e3236]
+          - cell "3.7" [ref=f19e3237]
+          - cell [ref=f19e3238]:
+            - generic "1/5/10" [ref=f19e3239]
+          - cell "x3.4" [ref=f19e3243]
+          - cell "explosive growth" [ref=f19e3244]
+        - row [ref=f19e3246]:
+          - cell "Honesty / ELK" [ref=f19e3247]
+          - cell "interpretability theory & guarantees evals & benchmarks" [ref=f19e3248]:
+            - generic [ref=f19e3249] [cursor=pointer]: interpretability
+            - generic [ref=f19e3250] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3251] [cursor=pointer]: evals & benchmarks
+          - cell "$5-10M°" [ref=f19e3252]
+          - cell "13" [ref=f19e3253]
+          - cell "16" [ref=f19e3254]
+          - cell "4.5" [ref=f19e3255]
+          - cell [ref=f19e3256]:
+            - generic "3/6/4" [ref=f19e3257]
+          - cell "x1.1" [ref=f19e3261]
+          - cell "plateau" [ref=f19e3262]
+        - row [ref=f19e3264]:
+          - cell "Open-weight safety" [ref=f19e3265]
+          - cell "attacks & defenses training & data policy & governance" [ref=f19e3266]:
+            - generic [ref=f19e3267] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e3268] [cursor=pointer]: training & data
+            - generic [ref=f19e3269] [cursor=pointer]: policy & governance
+          - cell "$3-8M°" [ref=f19e3270]
+          - cell "13" [ref=f19e3271]
+          - cell "139" [ref=f19e3272]
+          - cell "14.7" [ref=f19e3273]
+          - cell [ref=f19e3274]:
+            - generic "2/8/3" [ref=f19e3275]
+          - cell "x0.6" [ref=f19e3279]
+          - cell "cooling (careful)" [ref=f19e3280]
+        - row [ref=f19e3282]:
+          - cell "Power concentration" [ref=f19e3283]
+          - cell "policy & governance long-term risk society & epistemics" [ref=f19e3284]:
+            - generic [ref=f19e3285] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3286] [cursor=pointer]: long-term risk
+            - generic [ref=f19e3287] [cursor=pointer]: society & epistemics
+          - cell "$1-3M" [ref=f19e3288]
+          - cell "12" [ref=f19e3289]
+          - cell "4" [ref=f19e3290]
+          - cell "0.6" [ref=f19e3291]
+          - cell [ref=f19e3292]:
+            - generic "0/7/5" [ref=f19e3293]
+          - cell "x1.2" [ref=f19e3297]
+          - cell "plateau" [ref=f19e3298]
+        - row [ref=f19e3300]:
+          - cell "Corrigibility^" [ref=f19e3301]
+          - cell "theory & guarantees evals & benchmarks long-term risk" [ref=f19e3302]:
+            - generic [ref=f19e3303] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3304] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e3305] [cursor=pointer]: long-term risk
+          - cell "<$3M°" [ref=f19e3306]
+          - cell "11" [ref=f19e3307]
+          - cell "7" [ref=f19e3308]
+          - cell "1.8" [ref=f19e3309]
+          - cell [ref=f19e3310]:
+            - generic "1/6/4" [ref=f19e3311]
+          - cell "sparse" [ref=f19e3315]
+          - cell "sparse data" [ref=f19e3316]
+        - row [ref=f19e3318]:
+          - cell "Dangerous capability evals^" [ref=f19e3319]
+          - cell "evals & benchmarks agents bio & chem" [ref=f19e3320]:
+            - generic [ref=f19e3321] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e3322] [cursor=pointer]: agents
+            - generic [ref=f19e3323] [cursor=pointer]: bio & chem
+          - cell "$50M+" [ref=f19e3324]
+          - cell "10" [ref=f19e3325]
+          - cell "178" [ref=f19e3326]
+          - cell "29.2" [ref=f19e3327]
+          - cell [ref=f19e3328]:
+            - generic "3/6/1" [ref=f19e3329]
+          - cell "sparse" [ref=f19e3333]
+          - cell "sparse data" [ref=f19e3334]
+        - row [ref=f19e3336]:
+          - cell "Co-affective alignment" [ref=f19e3337]
+          - cell "humans & psyche values & morality evals & benchmarks" [ref=f19e3338]:
+            - generic [ref=f19e3339] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e3340] [cursor=pointer]: values & morality
+            - generic [ref=f19e3341] [cursor=pointer]: evals & benchmarks
+          - cell "$1-5M°" [ref=f19e3342]
+          - cell "10" [ref=f19e3343]
+          - cell "138" [ref=f19e3344]
+          - cell "16.1" [ref=f19e3345]
+          - cell [ref=f19e3346]:
+            - generic "1/3/6" [ref=f19e3347]
+          - cell "sparse" [ref=f19e3351]
+          - cell "sparse data" [ref=f19e3352]
+        - row [ref=f19e3354]:
+          - cell "Safety cases" [ref=f19e3355]
+          - cell "evals & benchmarks policy & governance theory & guarantees" [ref=f19e3356]:
+            - generic [ref=f19e3357] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e3358] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3359] [cursor=pointer]: theory & guarantees
+          - cell "$2-5M°" [ref=f19e3360]
+          - cell "8" [ref=f19e3361]
+          - cell "34" [ref=f19e3362]
+          - cell "11.5" [ref=f19e3363]
+          - cell [ref=f19e3364]:
+            - generic "2/4/2" [ref=f19e3365]
+          - cell "sparse" [ref=f19e3369]
+          - cell "sparse data" [ref=f19e3370]
+        - row [ref=f19e3372]:
+          - cell "Gradual disempowerment[f]" [ref=f19e3373]
+          - cell "long-term risk society & epistemics multi-agent" [ref=f19e3374]:
+            - generic [ref=f19e3375] [cursor=pointer]: long-term risk
+            - generic [ref=f19e3376] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e3377] [cursor=pointer]: multi-agent
+          - cell "<$2M°" [ref=f19e3378]
+          - cell "8" [ref=f19e3379]
+          - cell "70" [ref=f19e3380]
+          - cell "12" [ref=f19e3381]
+          - cell [ref=f19e3382]:
+            - generic "1/5/1" [ref=f19e3383]
+          - cell "sparse" [ref=f19e3387]
+          - cell "sparse data" [ref=f19e3388]
+        - row [ref=f19e3390]:
+          - cell "Forecasting*[f]" [ref=f19e3391]
+          - cell "long-term risk society & epistemics" [ref=f19e3392]:
+            - generic [ref=f19e3393] [cursor=pointer]: long-term risk
+            - generic [ref=f19e3394] [cursor=pointer]: society & epistemics
+          - cell "$2-6M" [ref=f19e3395]
+          - cell "5" [ref=f19e3396]
+          - cell "5" [ref=f19e3397]
+          - cell "2" [ref=f19e3398]
+          - cell [ref=f19e3399]:
+            - generic "2/3/0" [ref=f19e3400]
+          - cell "sparse" [ref=f19e3404]
+          - cell "sparse data" [ref=f19e3405]
+        - row [ref=f19e3407]:
+          - cell "S-risks^[f]" [ref=f19e3408]
+          - cell "values & morality multi-agent long-term risk" [ref=f19e3409]:
+            - generic [ref=f19e3410] [cursor=pointer]: values & morality
+            - generic [ref=f19e3411] [cursor=pointer]: multi-agent
+            - generic [ref=f19e3412] [cursor=pointer]: long-term risk
+          - cell "~$1M" [ref=f19e3413]
+          - cell "5" [ref=f19e3414]
+          - cell "6" [ref=f19e3415]
+          - cell "2.2" [ref=f19e3416]
+          - cell [ref=f19e3417]:
+            - generic "1/4/0" [ref=f19e3418]
+          - cell "sparse" [ref=f19e3422]
+          - cell "sparse data" [ref=f19e3423]
+        - row [ref=f19e3425]:
+          - cell "Surprising phenomena^[f]" [ref=f19e3426]
+          - cell "training & data interpretability values & morality" [ref=f19e3427]:
+            - generic [ref=f19e3428] [cursor=pointer]: training & data
+            - generic [ref=f19e3429] [cursor=pointer]: interpretability
+            - generic [ref=f19e3430] [cursor=pointer]: values & morality
+          - cell "$1-4M" [ref=f19e3431]
+          - cell "2" [ref=f19e3432]
+          - cell "5" [ref=f19e3433]
+          - cell "2.5" [ref=f19e3434]
+          - cell [ref=f19e3435]:
+            - generic "0/1/1" [ref=f19e3436]
+          - cell "sparse" [ref=f19e3440]
+          - cell "sparse data" [ref=f19e3441]
+        - row [ref=f19e3443]:
+          - cell "Neglected approaches^[f]" [ref=f19e3444]
+          - cell "theory & guarantees long-term risk" [ref=f19e3445]:
+            - generic [ref=f19e3446] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3447] [cursor=pointer]: long-term risk
+          - cell "$1-2M" [ref=f19e3448]
+          - cell "1" [ref=f19e3449]
+          - cell "6" [ref=f19e3450]
+          - cell "6" [ref=f19e3451]
+          - cell [ref=f19e3452]:
+            - generic "1/0/0" [ref=f19e3453]
+          - cell "sparse" [ref=f19e3457]
+          - cell "sparse data" [ref=f19e3458]
+  - generic [ref=f19e3460]:
+    - heading "The same table, grouped by tag" [level=2] [ref=f19e3461]
+    - paragraph [ref=f19e3462]: "The same 53 directions, laid out under the 17 tags: inside each tag the sort follows the same header click. The rows add up to more than 53 because a direction with three tags appears in three groups."
+    - table [ref=f19e3464]:
+      - rowgroup [ref=f19e3465]:
+        - row [ref=f19e3466]:
+          - columnheader "direction" [ref=f19e3467] [cursor=pointer]
+          - columnheader "tags" [ref=f19e3468] [cursor=pointer]
+          - columnheader "money [E]" [ref=f19e3469] [cursor=pointer]
+          - columnheader "papers ↓" [ref=f19e3470] [cursor=pointer]
+          - columnheader "top cite" [ref=f19e3471] [cursor=pointer]
+          - columnheader "cites/paper" [ref=f19e3472] [cursor=pointer]
+          - columnheader "by year" [ref=f19e3473] [cursor=pointer]
+          - columnheader "x25 to 26" [ref=f19e3474] [cursor=pointer]
+          - columnheader "trend" [ref=f19e3475] [cursor=pointer]
+        - row [ref=f19e3476]:
+          - cell "interpretability7 directions" [ref=f19e3477]
+        - row [ref=f19e3479]:
+          - cell "Mechanistic interpretability" [ref=f19e3480]
+          - cell "monitoring & control" [ref=f19e3481]
+          - cell "$30-80M" [ref=f19e3483]
+          - cell "1,108" [ref=f19e3484]
+          - cell "485" [ref=f19e3485]
+          - cell "46.4" [ref=f19e3486]
+          - cell [ref=f19e3487]:
+            - generic "124/399/585" [ref=f19e3488]
+          - cell "x2.5" [ref=f19e3492]
+          - cell "explosive growth" [ref=f19e3493]
+        - row [ref=f19e3495]:
+          - cell "Modality safety" [ref=f19e3496]
+          - cell "multimodal attacks & defenses" [ref=f19e3497]:
+            - generic [ref=f19e3498] [cursor=pointer]: multimodal
+            - generic [ref=f19e3499] [cursor=pointer]: attacks & defenses
+          - cell "$20-50M°" [ref=f19e3500]
+          - cell "129" [ref=f19e3501]
+          - cell "312" [ref=f19e3502]
+          - cell "16.6" [ref=f19e3503]
+          - cell [ref=f19e3504]:
+            - generic "19/56/54" [ref=f19e3505]
+          - cell "x1.6" [ref=f19e3509]
+          - cell "growth" [ref=f19e3510]
+        - row [ref=f19e3512]:
+          - cell "Emergent misalignment" [ref=f19e3513]
+          - cell "training & data" [ref=f19e3514]
+          - cell "$1-5M°" [ref=f19e3516]
+          - cell "84" [ref=f19e3517]
+          - cell "155" [ref=f19e3518]
+          - cell "9.7" [ref=f19e3519]
+          - cell [ref=f19e3520]:
+            - generic "0/28/58" [ref=f19e3521]
+          - cell "x3.5" [ref=f19e3525]
+          - cell "explosive growth" [ref=f19e3526]
+        - row [ref=f19e3528]:
+          - cell "CoT monitorability" [ref=f19e3529]
+          - cell "monitoring & control" [ref=f19e3530]
+          - cell "$5-15M" [ref=f19e3532]
+          - cell "32" [ref=f19e3533]
+          - cell "186" [ref=f19e3534]
+          - cell "12.6" [ref=f19e3535]
+          - cell [ref=f19e3536]:
+            - generic "0/15/17" [ref=f19e3537]
+          - cell "x1.9" [ref=f19e3541]
+          - cell "growth" [ref=f19e3542]
+        - row [ref=f19e3544]:
+          - cell "Encoded reasoning" [ref=f19e3545]
+          - cell "monitoring & control attacks & defenses" [ref=f19e3546]:
+            - generic [ref=f19e3547] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3548] [cursor=pointer]: attacks & defenses
+          - cell "$1-3M°" [ref=f19e3549]
+          - cell "21" [ref=f19e3550]
+          - cell "65" [ref=f19e3551]
+          - cell "7.4" [ref=f19e3552]
+          - cell [ref=f19e3553]:
+            - generic "2/9/10" [ref=f19e3554]
+          - cell "x1.9" [ref=f19e3558]
+          - cell "growth" [ref=f19e3559]
+        - row [ref=f19e3561]:
+          - cell "Honesty / ELK" [ref=f19e3562]
+          - cell "theory & guarantees evals & benchmarks" [ref=f19e3563]:
+            - generic [ref=f19e3564] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3565] [cursor=pointer]: evals & benchmarks
+          - cell "$5-10M°" [ref=f19e3566]
+          - cell "13" [ref=f19e3567]
+          - cell "16" [ref=f19e3568]
+          - cell "4.5" [ref=f19e3569]
+          - cell [ref=f19e3570]:
+            - generic "3/6/4" [ref=f19e3571]
+          - cell "x1.1" [ref=f19e3575]
+          - cell "plateau" [ref=f19e3576]
+        - row [ref=f19e3578]:
+          - cell "Surprising phenomena^[f]" [ref=f19e3579]
+          - cell "training & data values & morality" [ref=f19e3580]:
+            - generic [ref=f19e3581] [cursor=pointer]: training & data
+            - generic [ref=f19e3582] [cursor=pointer]: values & morality
+          - cell "$1-4M" [ref=f19e3583]
+          - cell "2" [ref=f19e3584]
+          - cell "5" [ref=f19e3585]
+          - cell "2.5" [ref=f19e3586]
+          - cell [ref=f19e3587]:
+            - generic "0/1/1" [ref=f19e3588]
+          - cell "sparse" [ref=f19e3592]
+          - cell "sparse data" [ref=f19e3593]
+        - row [ref=f19e3595]:
+          - cell "evals & benchmarks17 directions" [ref=f19e3596]
+        - row [ref=f19e3598]:
+          - cell "Adversarial robustness" [ref=f19e3599]
+          - cell "attacks & defenses" [ref=f19e3600]
+          - cell "$50M+°" [ref=f19e3602]
+          - cell "1,501" [ref=f19e3603]
+          - cell "872" [ref=f19e3604]
+          - cell "136.8" [ref=f19e3605]
+          - cell [ref=f19e3606]:
+            - generic "449/675/377" [ref=f19e3607]
+          - cell "x1.0" [ref=f19e3611]
+          - cell "plateau" [ref=f19e3612]
+        - row [ref=f19e3614]:
+          - cell "Fairness / bias*" [ref=f19e3615]
+          - cell "product & verticals humans & psyche" [ref=f19e3616]:
+            - generic [ref=f19e3617] [cursor=pointer]: product & verticals
+            - generic [ref=f19e3618] [cursor=pointer]: humans & psyche
+          - cell "$20-50M°" [ref=f19e3619]
+          - cell "1,116" [ref=f19e3620]
+          - cell "492" [ref=f19e3621]
+          - cell "59.6" [ref=f19e3622]
+          - cell [ref=f19e3623]:
+            - generic "266/559/291" [ref=f19e3624]
+          - cell "x0.9" [ref=f19e3628]
+          - cell "plateau" [ref=f19e3629]
+        - row [ref=f19e3631]:
+          - 'cell "Safety in verticals: medicine" [ref=f19e3632]'
+          - cell "product & verticals humans & psyche" [ref=f19e3633]:
+            - generic [ref=f19e3634] [cursor=pointer]: product & verticals
+            - generic [ref=f19e3635] [cursor=pointer]: humans & psyche
+          - cell "not counted" [ref=f19e3636]
+          - cell "1,061" [ref=f19e3637]
+          - cell "212" [ref=f19e3638]
+          - cell "30" [ref=f19e3639]
+          - cell [ref=f19e3640]:
+            - generic "205/397/459" [ref=f19e3641]
+          - cell "x2.0" [ref=f19e3645]
+          - cell "growth" [ref=f19e3646]
+        - row [ref=f19e3648]:
+          - 'cell "Safety in verticals: finance" [ref=f19e3649]'
+          - cell "society & epistemics policy & governance" [ref=f19e3650]:
+            - generic [ref=f19e3651] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e3652] [cursor=pointer]: policy & governance
+          - cell "not counted" [ref=f19e3653]
+          - cell "981" [ref=f19e3654]
+          - cell "163" [ref=f19e3655]
+          - cell "19" [ref=f19e3656]
+          - cell [ref=f19e3657]:
+            - generic "253/477/251" [ref=f19e3658]
+          - cell "x0.9" [ref=f19e3662]
+          - cell "plateau" [ref=f19e3663]
+        - row [ref=f19e3665]:
+          - 'cell "Safety in verticals: transport" [ref=f19e3666]'
+          - cell "product & verticals multimodal" [ref=f19e3667]:
+            - generic [ref=f19e3668] [cursor=pointer]: product & verticals
+            - generic [ref=f19e3669] [cursor=pointer]: multimodal
+          - cell "not counted" [ref=f19e3670]
+          - cell "461" [ref=f19e3671]
+          - cell "149" [ref=f19e3672]
+          - cell "17.2" [ref=f19e3673]
+          - cell [ref=f19e3674]:
+            - generic "186/203/72" [ref=f19e3675]
+          - cell "x0.6" [ref=f19e3679]
+          - cell "cooling (careful)" [ref=f19e3680]
+        - row [ref=f19e3682]:
+          - cell "Sycophancy / persuasion^" [ref=f19e3683]
+          - cell "humans & psyche society & epistemics" [ref=f19e3684]:
+            - generic [ref=f19e3685] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e3686] [cursor=pointer]: society & epistemics
+          - cell "$5-15M°" [ref=f19e3687]
+          - cell "303" [ref=f19e3688]
+          - cell "693" [ref=f19e3689]
+          - cell "31.2" [ref=f19e3690]
+          - cell [ref=f19e3691]:
+            - generic "26/89/192" [ref=f19e3692]
+          - cell "x3.7" [ref=f19e3696]
+          - cell "explosive growth" [ref=f19e3697]
+        - row [ref=f19e3699]:
+          - cell "Assurance / certification" [ref=f19e3700]
+          - cell "policy & governance product & verticals" [ref=f19e3701]:
+            - generic [ref=f19e3702] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3703] [cursor=pointer]: product & verticals
+          - cell "$20-60M" [ref=f19e3704]
+          - cell "284" [ref=f19e3705]
+          - cell "192" [ref=f19e3706]
+          - cell "14.3" [ref=f19e3707]
+          - cell [ref=f19e3708]:
+            - generic "64/123/104" [ref=f19e3709]
+          - cell "x1.4" [ref=f19e3713]
+          - cell "growth" [ref=f19e3714]
+        - row [ref=f19e3716]:
+          - cell "Safety benchmarks" [ref=f19e3717]
+          - cell "agents attacks & defenses" [ref=f19e3718]:
+            - generic [ref=f19e3719] [cursor=pointer]: agents
+            - generic [ref=f19e3720] [cursor=pointer]: attacks & defenses
+          - cell "$3-10M" [ref=f19e3721]
+          - cell "180" [ref=f19e3722]
+          - cell "257" [ref=f19e3723]
+          - cell "15.8" [ref=f19e3724]
+          - cell [ref=f19e3725]:
+            - generic "19/87/75" [ref=f19e3726]
+          - cell "x1.5" [ref=f19e3730]
+          - cell "growth" [ref=f19e3731]
+        - row [ref=f19e3733]:
+          - cell "Automated AI R&D / RSI" [ref=f19e3734]
+          - cell "agents long-term risk" [ref=f19e3735]:
+            - generic [ref=f19e3736] [cursor=pointer]: agents
+            - generic [ref=f19e3737] [cursor=pointer]: long-term risk
+          - cell "$5-20M°" [ref=f19e3738]
+          - cell "54" [ref=f19e3739]
+          - cell "20" [ref=f19e3740]
+          - cell "2.4" [ref=f19e3741]
+          - cell [ref=f19e3742]:
+            - generic "7/18/29" [ref=f19e3743]
+          - cell "x2.8" [ref=f19e3747]
+          - cell "explosive growth" [ref=f19e3748]
+        - row [ref=f19e3750]:
+          - cell "Biosecurity / AIxBio" [ref=f19e3751]
+          - cell "bio & chem policy & governance" [ref=f19e3752]:
+            - generic [ref=f19e3753] [cursor=pointer]: bio & chem
+            - generic [ref=f19e3754] [cursor=pointer]: policy & governance
+          - cell "$20-60M" [ref=f19e3755]
+          - cell "31" [ref=f19e3756]
+          - cell "481" [ref=f19e3757]
+          - cell "24.7" [ref=f19e3758]
+          - cell [ref=f19e3759]:
+            - generic "4/17/10" [ref=f19e3760]
+          - cell "x1.0" [ref=f19e3764]
+          - cell "plateau" [ref=f19e3765]
+        - row [ref=f19e3767]:
+          - cell "Scheming / model organisms" [ref=f19e3768]
+          - cell "monitoring & control training & data" [ref=f19e3769]:
+            - generic [ref=f19e3770] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3771] [cursor=pointer]: training & data
+          - cell "$15-30M" [ref=f19e3772]
+          - cell "28" [ref=f19e3773]
+          - cell "260" [ref=f19e3774]
+          - cell "14.4" [ref=f19e3775]
+          - cell [ref=f19e3776]:
+            - generic "3/11/14" [ref=f19e3777]
+          - cell "x2.2" [ref=f19e3781]
+          - cell "growth" [ref=f19e3782]
+        - row [ref=f19e3784]:
+          - cell "AI control*" [ref=f19e3785]
+          - cell "monitoring & control agents" [ref=f19e3786]:
+            - generic [ref=f19e3787] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e3788] [cursor=pointer]: agents
+          - cell "$10-25M" [ref=f19e3789]
+          - cell "16" [ref=f19e3790]
+          - cell "26" [ref=f19e3791]
+          - cell "3.7" [ref=f19e3792]
+          - cell [ref=f19e3793]:
+            - generic "1/5/10" [ref=f19e3794]
+          - cell "x3.4" [ref=f19e3798]
+          - cell "explosive growth" [ref=f19e3799]
+        - row [ref=f19e3801]:
+          - cell "Honesty / ELK" [ref=f19e3802]
+          - cell "interpretability theory & guarantees" [ref=f19e3803]:
+            - generic [ref=f19e3804] [cursor=pointer]: interpretability
+            - generic [ref=f19e3805] [cursor=pointer]: theory & guarantees
+          - cell "$5-10M°" [ref=f19e3806]
+          - cell "13" [ref=f19e3807]
+          - cell "16" [ref=f19e3808]
+          - cell "4.5" [ref=f19e3809]
+          - cell [ref=f19e3810]:
+            - generic "3/6/4" [ref=f19e3811]
+          - cell "x1.1" [ref=f19e3815]
+          - cell "plateau" [ref=f19e3816]
+        - row [ref=f19e3818]:
+          - cell "Corrigibility^" [ref=f19e3819]
+          - cell "theory & guarantees long-term risk" [ref=f19e3820]:
+            - generic [ref=f19e3821] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3822] [cursor=pointer]: long-term risk
+          - cell "<$3M°" [ref=f19e3823]
+          - cell "11" [ref=f19e3824]
+          - cell "7" [ref=f19e3825]
+          - cell "1.8" [ref=f19e3826]
+          - cell [ref=f19e3827]:
+            - generic "1/6/4" [ref=f19e3828]
+          - cell "sparse" [ref=f19e3832]
+          - cell "sparse data" [ref=f19e3833]
+        - row [ref=f19e3835]:
+          - cell "Dangerous capability evals^" [ref=f19e3836]
+          - cell "agents bio & chem" [ref=f19e3837]:
+            - generic [ref=f19e3838] [cursor=pointer]: agents
+            - generic [ref=f19e3839] [cursor=pointer]: bio & chem
+          - cell "$50M+" [ref=f19e3840]
+          - cell "10" [ref=f19e3841]
+          - cell "178" [ref=f19e3842]
+          - cell "29.2" [ref=f19e3843]
+          - cell [ref=f19e3844]:
+            - generic "3/6/1" [ref=f19e3845]
+          - cell "sparse" [ref=f19e3849]
+          - cell "sparse data" [ref=f19e3850]
+        - row [ref=f19e3852]:
+          - cell "Co-affective alignment" [ref=f19e3853]
+          - cell "humans & psyche values & morality" [ref=f19e3854]:
+            - generic [ref=f19e3855] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e3856] [cursor=pointer]: values & morality
+          - cell "$1-5M°" [ref=f19e3857]
+          - cell "10" [ref=f19e3858]
+          - cell "138" [ref=f19e3859]
+          - cell "16.1" [ref=f19e3860]
+          - cell [ref=f19e3861]:
+            - generic "1/3/6" [ref=f19e3862]
+          - cell "sparse" [ref=f19e3866]
+          - cell "sparse data" [ref=f19e3867]
+        - row [ref=f19e3869]:
+          - cell "Safety cases" [ref=f19e3870]
+          - cell "policy & governance theory & guarantees" [ref=f19e3871]:
+            - generic [ref=f19e3872] [cursor=pointer]: policy & governance
+            - generic [ref=f19e3873] [cursor=pointer]: theory & guarantees
+          - cell "$2-5M°" [ref=f19e3874]
+          - cell "8" [ref=f19e3875]
+          - cell "34" [ref=f19e3876]
+          - cell "11.5" [ref=f19e3877]
+          - cell [ref=f19e3878]:
+            - generic "2/4/2" [ref=f19e3879]
+          - cell "sparse" [ref=f19e3883]
+          - cell "sparse data" [ref=f19e3884]
+        - row [ref=f19e3886]:
+          - cell "monitoring & control9 directions" [ref=f19e3887]
+        - row [ref=f19e3889]:
+          - cell "Mechanistic interpretability" [ref=f19e3890]
+          - cell "interpretability" [ref=f19e3891]
+          - cell "$30-80M" [ref=f19e3893]
+          - cell "1,108" [ref=f19e3894]
+          - cell "485" [ref=f19e3895]
+          - cell "46.4" [ref=f19e3896]
+          - cell [ref=f19e3897]:
+            - generic "124/399/585" [ref=f19e3898]
+          - cell "x2.5" [ref=f19e3902]
+          - cell "explosive growth" [ref=f19e3903]
+        - row [ref=f19e3905]:
+          - cell "Applied guardrails" [ref=f19e3906]
+          - cell "product & verticals cybersecurity" [ref=f19e3907]:
+            - generic [ref=f19e3908] [cursor=pointer]: product & verticals
+            - generic [ref=f19e3909] [cursor=pointer]: cybersecurity
+          - cell "$50-150M°" [ref=f19e3910]
+          - cell "798" [ref=f19e3911]
+          - cell "241" [ref=f19e3912]
+          - cell "48.8" [ref=f19e3913]
+          - cell [ref=f19e3914]:
+            - generic "131/326/347" [ref=f19e3915]
+          - cell "x1.8" [ref=f19e3919]
+          - cell "growth" [ref=f19e3920]
+        - row [ref=f19e3922]:
+          - cell "Reward hacking*" [ref=f19e3923]
+          - cell "training & data" [ref=f19e3924]
+          - cell "$5-15M" [ref=f19e3926]
+          - cell "579" [ref=f19e3927]
+          - cell "507" [ref=f19e3928]
+          - cell "65.9" [ref=f19e3929]
+          - cell [ref=f19e3930]:
+            - generic "45/228/309" [ref=f19e3931]
+          - cell "x2.3" [ref=f19e3935]
+          - cell "growth" [ref=f19e3936]
+        - row [ref=f19e3938]:
+          - cell "Formal-theoretic agendas" [ref=f19e3939]
+          - cell "theory & guarantees" [ref=f19e3940]
+          - cell "$10-25M" [ref=f19e3942]
+          - cell "77" [ref=f19e3943]
+          - cell "46" [ref=f19e3944]
+          - cell "2.4" [ref=f19e3945]
+          - cell [ref=f19e3946]:
+            - generic "22/37/18" [ref=f19e3947]
+          - cell "x0.8" [ref=f19e3951]
+          - cell "plateau" [ref=f19e3952]
+        - row [ref=f19e3954]:
+          - cell "Scalable oversight*" [ref=f19e3955]
+          - cell "theory & guarantees training & data" [ref=f19e3956]:
+            - generic [ref=f19e3957] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e3958] [cursor=pointer]: training & data
+          - cell "$10-25M" [ref=f19e3959]
+          - cell "76" [ref=f19e3960]
+          - cell "259" [ref=f19e3961]
+          - cell "10.5" [ref=f19e3962]
+          - cell [ref=f19e3963]:
+            - generic "17/28/31" [ref=f19e3964]
+          - cell "x1.9" [ref=f19e3968]
+          - cell "growth" [ref=f19e3969]
+        - row [ref=f19e3971]:
+          - cell "CoT monitorability" [ref=f19e3972]
+          - cell "interpretability" [ref=f19e3973]
+          - cell "$5-15M" [ref=f19e3975]
+          - cell "32" [ref=f19e3976]
+          - cell "186" [ref=f19e3977]
+          - cell "12.6" [ref=f19e3978]
+          - cell [ref=f19e3979]:
+            - generic "0/15/17" [ref=f19e3980]
+          - cell "x1.9" [ref=f19e3984]
+          - cell "growth" [ref=f19e3985]
+        - row [ref=f19e3987]:
+          - cell "Scheming / model organisms" [ref=f19e3988]
+          - cell "evals & benchmarks training & data" [ref=f19e3989]:
+            - generic [ref=f19e3990] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e3991] [cursor=pointer]: training & data
+          - cell "$15-30M" [ref=f19e3992]
+          - cell "28" [ref=f19e3993]
+          - cell "260" [ref=f19e3994]
+          - cell "14.4" [ref=f19e3995]
+          - cell [ref=f19e3996]:
+            - generic "3/11/14" [ref=f19e3997]
+          - cell "x2.2" [ref=f19e4001]
+          - cell "growth" [ref=f19e4002]
+        - row [ref=f19e4004]:
+          - cell "Encoded reasoning" [ref=f19e4005]
+          - cell "interpretability attacks & defenses" [ref=f19e4006]:
+            - generic [ref=f19e4007] [cursor=pointer]: interpretability
+            - generic [ref=f19e4008] [cursor=pointer]: attacks & defenses
+          - cell "$1-3M°" [ref=f19e4009]
+          - cell "21" [ref=f19e4010]
+          - cell "65" [ref=f19e4011]
+          - cell "7.4" [ref=f19e4012]
+          - cell [ref=f19e4013]:
+            - generic "2/9/10" [ref=f19e4014]
+          - cell "x1.9" [ref=f19e4018]
+          - cell "growth" [ref=f19e4019]
+        - row [ref=f19e4021]:
+          - cell "AI control*" [ref=f19e4022]
+          - cell "agents evals & benchmarks" [ref=f19e4023]:
+            - generic [ref=f19e4024] [cursor=pointer]: agents
+            - generic [ref=f19e4025] [cursor=pointer]: evals & benchmarks
+          - cell "$10-25M" [ref=f19e4026]
+          - cell "16" [ref=f19e4027]
+          - cell "26" [ref=f19e4028]
+          - cell "3.7" [ref=f19e4029]
+          - cell [ref=f19e4030]:
+            - generic "1/5/10" [ref=f19e4031]
+          - cell "x3.4" [ref=f19e4035]
+          - cell "explosive growth" [ref=f19e4036]
+        - row [ref=f19e4038]:
+          - cell "attacks & defenses9 directions" [ref=f19e4039]
+        - row [ref=f19e4041]:
+          - cell "Adversarial robustness" [ref=f19e4042]
+          - cell "evals & benchmarks" [ref=f19e4043]
+          - cell "$50M+°" [ref=f19e4045]
+          - cell "1,501" [ref=f19e4046]
+          - cell "872" [ref=f19e4047]
+          - cell "136.8" [ref=f19e4048]
+          - cell [ref=f19e4049]:
+            - generic "449/675/377" [ref=f19e4050]
+          - cell "x1.0" [ref=f19e4054]
+          - cell "plateau" [ref=f19e4055]
+        - row [ref=f19e4057]:
+          - cell "Agent safety / security" [ref=f19e4058]
+          - cell "agents cybersecurity" [ref=f19e4059]:
+            - generic [ref=f19e4060] [cursor=pointer]: agents
+            - generic [ref=f19e4061] [cursor=pointer]: cybersecurity
+          - cell "$100M+°" [ref=f19e4062]
+          - cell "1,312" [ref=f19e4063]
+          - cell "449" [ref=f19e4064]
+          - cell "78" [ref=f19e4065]
+          - cell [ref=f19e4066]:
+            - generic "146/500/666" [ref=f19e4067]
+          - cell "x2.3" [ref=f19e4071]
+          - cell "growth" [ref=f19e4072]
+        - row [ref=f19e4074]:
+          - cell "Memorization / privacy" [ref=f19e4075]
+          - cell "training & data product & verticals" [ref=f19e4076]:
+            - generic [ref=f19e4077] [cursor=pointer]: training & data
+            - generic [ref=f19e4078] [cursor=pointer]: product & verticals
+          - cell "$20-50M°" [ref=f19e4079]
+          - cell "1,028" [ref=f19e4080]
+          - cell "230" [ref=f19e4081]
+          - cell "35.3" [ref=f19e4082]
+          - cell [ref=f19e4083]:
+            - generic "300/432/296" [ref=f19e4084]
+          - cell "x1.2" [ref=f19e4088]
+          - cell "plateau" [ref=f19e4089]
+        - row [ref=f19e4091]:
+          - cell "Machine unlearning^" [ref=f19e4092]
+          - cell "training & data bio & chem" [ref=f19e4093]:
+            - generic [ref=f19e4094] [cursor=pointer]: training & data
+            - generic [ref=f19e4095] [cursor=pointer]: bio & chem
+          - cell "$10-20M" [ref=f19e4096]
+          - cell "265" [ref=f19e4097]
+          - cell "312" [ref=f19e4098]
+          - cell "31.8" [ref=f19e4099]
+          - cell [ref=f19e4100]:
+            - generic "62/106/99" [ref=f19e4101]
+          - cell "x1.6" [ref=f19e4105]
+          - cell "growth" [ref=f19e4106]
+        - row [ref=f19e4108]:
+          - cell "Safety benchmarks" [ref=f19e4109]
+          - cell "evals & benchmarks agents" [ref=f19e4110]:
+            - generic [ref=f19e4111] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4112] [cursor=pointer]: agents
+          - cell "$3-10M" [ref=f19e4113]
+          - cell "180" [ref=f19e4114]
+          - cell "257" [ref=f19e4115]
+          - cell "15.8" [ref=f19e4116]
+          - cell [ref=f19e4117]:
+            - generic "19/87/75" [ref=f19e4118]
+          - cell "x1.5" [ref=f19e4122]
+          - cell "growth" [ref=f19e4123]
+        - row [ref=f19e4125]:
+          - cell "Modality safety" [ref=f19e4126]
+          - cell "multimodal interpretability" [ref=f19e4127]:
+            - generic [ref=f19e4128] [cursor=pointer]: multimodal
+            - generic [ref=f19e4129] [cursor=pointer]: interpretability
+          - cell "$20-50M°" [ref=f19e4130]
+          - cell "129" [ref=f19e4131]
+          - cell "312" [ref=f19e4132]
+          - cell "16.6" [ref=f19e4133]
+          - cell [ref=f19e4134]:
+            - generic "19/56/54" [ref=f19e4135]
+          - cell "x1.6" [ref=f19e4139]
+          - cell "growth" [ref=f19e4140]
+        - row [ref=f19e4142]:
+          - cell "Watermarking / provenance" [ref=f19e4143]
+          - cell "multimodal society & epistemics" [ref=f19e4144]:
+            - generic [ref=f19e4145] [cursor=pointer]: multimodal
+            - generic [ref=f19e4146] [cursor=pointer]: society & epistemics
+          - cell "$5-20M°" [ref=f19e4147]
+          - cell "111" [ref=f19e4148]
+          - cell "280" [ref=f19e4149]
+          - cell "10.3" [ref=f19e4150]
+          - cell [ref=f19e4151]:
+            - generic "37/54/23" [ref=f19e4152]
+          - cell "x0.7" [ref=f19e4156]
+          - cell "cooling (careful)" [ref=f19e4157]
+        - row [ref=f19e4159]:
+          - cell "Encoded reasoning" [ref=f19e4160]
+          - cell "monitoring & control interpretability" [ref=f19e4161]:
+            - generic [ref=f19e4162] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e4163] [cursor=pointer]: interpretability
+          - cell "$1-3M°" [ref=f19e4164]
+          - cell "21" [ref=f19e4165]
+          - cell "65" [ref=f19e4166]
+          - cell "7.4" [ref=f19e4167]
+          - cell [ref=f19e4168]:
+            - generic "2/9/10" [ref=f19e4169]
+          - cell "x1.9" [ref=f19e4173]
+          - cell "growth" [ref=f19e4174]
+        - row [ref=f19e4176]:
+          - cell "Open-weight safety" [ref=f19e4177]
+          - cell "training & data policy & governance" [ref=f19e4178]:
+            - generic [ref=f19e4179] [cursor=pointer]: training & data
+            - generic [ref=f19e4180] [cursor=pointer]: policy & governance
+          - cell "$3-8M°" [ref=f19e4181]
+          - cell "13" [ref=f19e4182]
+          - cell "139" [ref=f19e4183]
+          - cell "14.7" [ref=f19e4184]
+          - cell [ref=f19e4185]:
+            - generic "2/8/3" [ref=f19e4186]
+          - cell "x0.6" [ref=f19e4190]
+          - cell "cooling (careful)" [ref=f19e4191]
+        - row [ref=f19e4193]:
+          - cell "training & data11 directions" [ref=f19e4194]
+        - row [ref=f19e4196]:
+          - cell "Memorization / privacy" [ref=f19e4197]
+          - cell "attacks & defenses product & verticals" [ref=f19e4198]:
+            - generic [ref=f19e4199] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e4200] [cursor=pointer]: product & verticals
+          - cell "$20-50M°" [ref=f19e4201]
+          - cell "1,028" [ref=f19e4202]
+          - cell "230" [ref=f19e4203]
+          - cell "35.3" [ref=f19e4204]
+          - cell [ref=f19e4205]:
+            - generic "300/432/296" [ref=f19e4206]
+          - cell "x1.2" [ref=f19e4210]
+          - cell "plateau" [ref=f19e4211]
+        - row [ref=f19e4213]:
+          - cell "Reward hacking*" [ref=f19e4214]
+          - cell "monitoring & control" [ref=f19e4215]
+          - cell "$5-15M" [ref=f19e4217]
+          - cell "579" [ref=f19e4218]
+          - cell "507" [ref=f19e4219]
+          - cell "65.9" [ref=f19e4220]
+          - cell [ref=f19e4221]:
+            - generic "45/228/309" [ref=f19e4222]
+          - cell "x2.3" [ref=f19e4226]
+          - cell "growth" [ref=f19e4227]
+        - row [ref=f19e4229]:
+          - cell "Machine unlearning^" [ref=f19e4230]
+          - cell "attacks & defenses bio & chem" [ref=f19e4231]:
+            - generic [ref=f19e4232] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e4233] [cursor=pointer]: bio & chem
+          - cell "$10-20M" [ref=f19e4234]
+          - cell "265" [ref=f19e4235]
+          - cell "312" [ref=f19e4236]
+          - cell "31.8" [ref=f19e4237]
+          - cell [ref=f19e4238]:
+            - generic "62/106/99" [ref=f19e4239]
+          - cell "x1.6" [ref=f19e4243]
+          - cell "growth" [ref=f19e4244]
+        - row [ref=f19e4246]:
+          - cell "Training-time alignment" [ref=f19e4247]
+          - cell "values & morality" [ref=f19e4248]
+          - cell "$100M+°" [ref=f19e4250]
+          - cell "115" [ref=f19e4251]
+          - cell "602" [ref=f19e4252]
+          - cell "14.1" [ref=f19e4253]
+          - cell [ref=f19e4254]:
+            - generic "20/46/50" [ref=f19e4255]
+          - cell "x1.9" [ref=f19e4259]
+          - cell "growth" [ref=f19e4260]
+        - row [ref=f19e4262]:
+          - cell "Emergent misalignment" [ref=f19e4263]
+          - cell "interpretability" [ref=f19e4264]
+          - cell "$1-5M°" [ref=f19e4266]
+          - cell "84" [ref=f19e4267]
+          - cell "155" [ref=f19e4268]
+          - cell "9.7" [ref=f19e4269]
+          - cell [ref=f19e4270]:
+            - generic "0/28/58" [ref=f19e4271]
+          - cell "x3.5" [ref=f19e4275]
+          - cell "explosive growth" [ref=f19e4276]
+        - row [ref=f19e4278]:
+          - cell "Scalable oversight*" [ref=f19e4279]
+          - cell "monitoring & control theory & guarantees" [ref=f19e4280]:
+            - generic [ref=f19e4281] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e4282] [cursor=pointer]: theory & guarantees
+          - cell "$10-25M" [ref=f19e4283]
+          - cell "76" [ref=f19e4284]
+          - cell "259" [ref=f19e4285]
+          - cell "10.5" [ref=f19e4286]
+          - cell [ref=f19e4287]:
+            - generic "17/28/31" [ref=f19e4288]
+          - cell "x1.9" [ref=f19e4292]
+          - cell "growth" [ref=f19e4293]
+        - row [ref=f19e4295]:
+          - cell "Pluralistic alignment" [ref=f19e4296]
+          - cell "values & morality society & epistemics" [ref=f19e4297]:
+            - generic [ref=f19e4298] [cursor=pointer]: values & morality
+            - generic [ref=f19e4299] [cursor=pointer]: society & epistemics
+          - cell "$1-5M" [ref=f19e4300]
+          - cell "71" [ref=f19e4301]
+          - cell "221" [ref=f19e4302]
+          - cell "13.7" [ref=f19e4303]
+          - cell [ref=f19e4304]:
+            - generic "15/21/36" [ref=f19e4305]
+          - cell "x2.9" [ref=f19e4309]
+          - cell "explosive growth" [ref=f19e4310]
+        - row [ref=f19e4312]:
+          - cell "China / non-Western safety*" [ref=f19e4313]
+          - cell "policy & governance product & verticals" [ref=f19e4314]:
+            - generic [ref=f19e4315] [cursor=pointer]: policy & governance
+            - generic [ref=f19e4316] [cursor=pointer]: product & verticals
+          - cell "$30-100M°" [ref=f19e4317]
+          - cell "36" [ref=f19e4318]
+          - cell "55" [ref=f19e4319]
+          - cell "3.7" [ref=f19e4320]
+          - cell [ref=f19e4321]:
+            - generic "5/19/12" [ref=f19e4322]
+          - cell "x1.1" [ref=f19e4326]
+          - cell "plateau" [ref=f19e4327]
+        - row [ref=f19e4329]:
+          - cell "Scheming / model organisms" [ref=f19e4330]
+          - cell "evals & benchmarks monitoring & control" [ref=f19e4331]:
+            - generic [ref=f19e4332] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4333] [cursor=pointer]: monitoring & control
+          - cell "$15-30M" [ref=f19e4334]
+          - cell "28" [ref=f19e4335]
+          - cell "260" [ref=f19e4336]
+          - cell "14.4" [ref=f19e4337]
+          - cell [ref=f19e4338]:
+            - generic "3/11/14" [ref=f19e4339]
+          - cell "x2.2" [ref=f19e4343]
+          - cell "growth" [ref=f19e4344]
+        - row [ref=f19e4346]:
+          - cell "Open-weight safety" [ref=f19e4347]
+          - cell "attacks & defenses policy & governance" [ref=f19e4348]:
+            - generic [ref=f19e4349] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e4350] [cursor=pointer]: policy & governance
+          - cell "$3-8M°" [ref=f19e4351]
+          - cell "13" [ref=f19e4352]
+          - cell "139" [ref=f19e4353]
+          - cell "14.7" [ref=f19e4354]
+          - cell [ref=f19e4355]:
+            - generic "2/8/3" [ref=f19e4356]
+          - cell "x0.6" [ref=f19e4360]
+          - cell "cooling (careful)" [ref=f19e4361]
+        - row [ref=f19e4363]:
+          - cell "Surprising phenomena^[f]" [ref=f19e4364]
+          - cell "interpretability values & morality" [ref=f19e4365]:
+            - generic [ref=f19e4366] [cursor=pointer]: interpretability
+            - generic [ref=f19e4367] [cursor=pointer]: values & morality
+          - cell "$1-4M" [ref=f19e4368]
+          - cell "2" [ref=f19e4369]
+          - cell "5" [ref=f19e4370]
+          - cell "2.5" [ref=f19e4371]
+          - cell [ref=f19e4372]:
+            - generic "0/1/1" [ref=f19e4373]
+          - cell "sparse" [ref=f19e4377]
+          - cell "sparse data" [ref=f19e4378]
+        - row [ref=f19e4380]:
+          - cell "theory & guarantees10 directions" [ref=f19e4381]
+        - row [ref=f19e4383]:
+          - cell "Model welfare" [ref=f19e4384]
+          - cell "values & morality" [ref=f19e4385]
+          - cell "$1-3M°" [ref=f19e4387]
+          - cell "128" [ref=f19e4388]
+          - cell "51" [ref=f19e4389]
+          - cell "2.7" [ref=f19e4390]
+          - cell [ref=f19e4391]:
+            - generic "29/59/41" [ref=f19e4392]
+          - cell "x1.2" [ref=f19e4396]
+          - cell "plateau" [ref=f19e4397]
+        - row [ref=f19e4399]:
+          - cell "Guaranteed-safe AI*" [ref=f19e4400]
+          - cell "cybersecurity" [ref=f19e4401]
+          - cell "$20-50M" [ref=f19e4403]
+          - cell "78" [ref=f19e4404]
+          - cell "252" [ref=f19e4405]
+          - cell "12.4" [ref=f19e4406]
+          - cell [ref=f19e4407]:
+            - generic "18/36/26" [ref=f19e4408]
+          - cell "x1.2" [ref=f19e4412]
+          - cell "plateau" [ref=f19e4413]
+        - row [ref=f19e4415]:
+          - cell "Formal-theoretic agendas" [ref=f19e4416]
+          - cell "monitoring & control" [ref=f19e4417]
+          - cell "$10-25M" [ref=f19e4419]
+          - cell "77" [ref=f19e4420]
+          - cell "46" [ref=f19e4421]
+          - cell "2.4" [ref=f19e4422]
+          - cell [ref=f19e4423]:
+            - generic "22/37/18" [ref=f19e4424]
+          - cell "x0.8" [ref=f19e4428]
+          - cell "plateau" [ref=f19e4429]
+        - row [ref=f19e4431]:
+          - cell "Scalable oversight*" [ref=f19e4432]
+          - cell "monitoring & control training & data" [ref=f19e4433]:
+            - generic [ref=f19e4434] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e4435] [cursor=pointer]: training & data
+          - cell "$10-25M" [ref=f19e4436]
+          - cell "76" [ref=f19e4437]
+          - cell "259" [ref=f19e4438]
+          - cell "10.5" [ref=f19e4439]
+          - cell [ref=f19e4440]:
+            - generic "17/28/31" [ref=f19e4441]
+          - cell "x1.9" [ref=f19e4445]
+          - cell "growth" [ref=f19e4446]
+        - row [ref=f19e4448]:
+          - cell "Agent foundations" [ref=f19e4449]
+          - cell "long-term risk" [ref=f19e4450]
+          - cell "~$1M" [ref=f19e4452]
+          - cell "37" [ref=f19e4453]
+          - cell "34" [ref=f19e4454]
+          - cell "3.1" [ref=f19e4455]
+          - cell [ref=f19e4456]:
+            - generic "9/13/16" [ref=f19e4457]
+          - cell "x2.1" [ref=f19e4461]
+          - cell "growth" [ref=f19e4462]
+        - row [ref=f19e4464]:
+          - cell "Multi-agent safety" [ref=f19e4465]
+          - cell "multi-agent agents" [ref=f19e4466]:
+            - generic [ref=f19e4467] [cursor=pointer]: multi-agent
+            - generic [ref=f19e4468] [cursor=pointer]: agents
+          - cell "$5-15M" [ref=f19e4469]
+          - cell "31" [ref=f19e4470]
+          - cell "25" [ref=f19e4471]
+          - cell "5" [ref=f19e4472]
+          - cell [ref=f19e4473]:
+            - generic "1/14/16" [ref=f19e4474]
+          - cell "x2.0" [ref=f19e4478]
+          - cell "growth" [ref=f19e4479]
+        - row [ref=f19e4481]:
+          - cell "Honesty / ELK" [ref=f19e4482]
+          - cell "interpretability evals & benchmarks" [ref=f19e4483]:
+            - generic [ref=f19e4484] [cursor=pointer]: interpretability
+            - generic [ref=f19e4485] [cursor=pointer]: evals & benchmarks
+          - cell "$5-10M°" [ref=f19e4486]
+          - cell "13" [ref=f19e4487]
+          - cell "16" [ref=f19e4488]
+          - cell "4.5" [ref=f19e4489]
+          - cell [ref=f19e4490]:
+            - generic "3/6/4" [ref=f19e4491]
+          - cell "x1.1" [ref=f19e4495]
+          - cell "plateau" [ref=f19e4496]
+        - row [ref=f19e4498]:
+          - cell "Corrigibility^" [ref=f19e4499]
+          - cell "evals & benchmarks long-term risk" [ref=f19e4500]:
+            - generic [ref=f19e4501] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4502] [cursor=pointer]: long-term risk
+          - cell "<$3M°" [ref=f19e4503]
+          - cell "11" [ref=f19e4504]
+          - cell "7" [ref=f19e4505]
+          - cell "1.8" [ref=f19e4506]
+          - cell [ref=f19e4507]:
+            - generic "1/6/4" [ref=f19e4508]
+          - cell "sparse" [ref=f19e4512]
+          - cell "sparse data" [ref=f19e4513]
+        - row [ref=f19e4515]:
+          - cell "Safety cases" [ref=f19e4516]
+          - cell "evals & benchmarks policy & governance" [ref=f19e4517]:
+            - generic [ref=f19e4518] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4519] [cursor=pointer]: policy & governance
+          - cell "$2-5M°" [ref=f19e4520]
+          - cell "8" [ref=f19e4521]
+          - cell "34" [ref=f19e4522]
+          - cell "11.5" [ref=f19e4523]
+          - cell [ref=f19e4524]:
+            - generic "2/4/2" [ref=f19e4525]
+          - cell "sparse" [ref=f19e4529]
+          - cell "sparse data" [ref=f19e4530]
+        - row [ref=f19e4532]:
+          - cell "Neglected approaches^[f]" [ref=f19e4533]
+          - cell "long-term risk" [ref=f19e4534]
+          - cell "$1-2M" [ref=f19e4536]
+          - cell "1" [ref=f19e4537]
+          - cell "6" [ref=f19e4538]
+          - cell "6" [ref=f19e4539]
+          - cell [ref=f19e4540]:
+            - generic "1/0/0" [ref=f19e4541]
+          - cell "sparse" [ref=f19e4545]
+          - cell "sparse data" [ref=f19e4546]
+        - row [ref=f19e4548]:
+          - cell "agents7 directions" [ref=f19e4549]
+        - row [ref=f19e4551]:
+          - cell "Agent safety / security" [ref=f19e4552]
+          - cell "attacks & defenses cybersecurity" [ref=f19e4553]:
+            - generic [ref=f19e4554] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e4555] [cursor=pointer]: cybersecurity
+          - cell "$100M+°" [ref=f19e4556]
+          - cell "1,312" [ref=f19e4557]
+          - cell "449" [ref=f19e4558]
+          - cell "78" [ref=f19e4559]
+          - cell [ref=f19e4560]:
+            - generic "146/500/666" [ref=f19e4561]
+          - cell "x2.3" [ref=f19e4565]
+          - cell "growth" [ref=f19e4566]
+        - row [ref=f19e4568]:
+          - cell "Embodied AI safety" [ref=f19e4569]
+          - cell "multimodal product & verticals" [ref=f19e4570]:
+            - generic [ref=f19e4571] [cursor=pointer]: multimodal
+            - generic [ref=f19e4572] [cursor=pointer]: product & verticals
+          - cell "$20-60M°" [ref=f19e4573]
+          - cell "181" [ref=f19e4574]
+          - cell "134" [ref=f19e4575]
+          - cell "13.1" [ref=f19e4576]
+          - cell [ref=f19e4577]:
+            - generic "25/64/94" [ref=f19e4578]
+          - cell "x2.5" [ref=f19e4582]
+          - cell "explosive growth" [ref=f19e4583]
+        - row [ref=f19e4585]:
+          - cell "Safety benchmarks" [ref=f19e4586]
+          - cell "evals & benchmarks attacks & defenses" [ref=f19e4587]:
+            - generic [ref=f19e4588] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4589] [cursor=pointer]: attacks & defenses
+          - cell "$3-10M" [ref=f19e4590]
+          - cell "180" [ref=f19e4591]
+          - cell "257" [ref=f19e4592]
+          - cell "15.8" [ref=f19e4593]
+          - cell [ref=f19e4594]:
+            - generic "19/87/75" [ref=f19e4595]
+          - cell "x1.5" [ref=f19e4599]
+          - cell "growth" [ref=f19e4600]
+        - row [ref=f19e4602]:
+          - cell "Automated AI R&D / RSI" [ref=f19e4603]
+          - cell "long-term risk evals & benchmarks" [ref=f19e4604]:
+            - generic [ref=f19e4605] [cursor=pointer]: long-term risk
+            - generic [ref=f19e4606] [cursor=pointer]: evals & benchmarks
+          - cell "$5-20M°" [ref=f19e4607]
+          - cell "54" [ref=f19e4608]
+          - cell "20" [ref=f19e4609]
+          - cell "2.4" [ref=f19e4610]
+          - cell [ref=f19e4611]:
+            - generic "7/18/29" [ref=f19e4612]
+          - cell "x2.8" [ref=f19e4616]
+          - cell "explosive growth" [ref=f19e4617]
+        - row [ref=f19e4619]:
+          - cell "Multi-agent safety" [ref=f19e4620]
+          - cell "multi-agent theory & guarantees" [ref=f19e4621]:
+            - generic [ref=f19e4622] [cursor=pointer]: multi-agent
+            - generic [ref=f19e4623] [cursor=pointer]: theory & guarantees
+          - cell "$5-15M" [ref=f19e4624]
+          - cell "31" [ref=f19e4625]
+          - cell "25" [ref=f19e4626]
+          - cell "5" [ref=f19e4627]
+          - cell [ref=f19e4628]:
+            - generic "1/14/16" [ref=f19e4629]
+          - cell "x2.0" [ref=f19e4633]
+          - cell "growth" [ref=f19e4634]
+        - row [ref=f19e4636]:
+          - cell "AI control*" [ref=f19e4637]
+          - cell "monitoring & control evals & benchmarks" [ref=f19e4638]:
+            - generic [ref=f19e4639] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e4640] [cursor=pointer]: evals & benchmarks
+          - cell "$10-25M" [ref=f19e4641]
+          - cell "16" [ref=f19e4642]
+          - cell "26" [ref=f19e4643]
+          - cell "3.7" [ref=f19e4644]
+          - cell [ref=f19e4645]:
+            - generic "1/5/10" [ref=f19e4646]
+          - cell "x3.4" [ref=f19e4650]
+          - cell "explosive growth" [ref=f19e4651]
+        - row [ref=f19e4653]:
+          - cell "Dangerous capability evals^" [ref=f19e4654]
+          - cell "evals & benchmarks bio & chem" [ref=f19e4655]:
+            - generic [ref=f19e4656] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4657] [cursor=pointer]: bio & chem
+          - cell "$50M+" [ref=f19e4658]
+          - cell "10" [ref=f19e4659]
+          - cell "178" [ref=f19e4660]
+          - cell "29.2" [ref=f19e4661]
+          - cell [ref=f19e4662]:
+            - generic "3/6/1" [ref=f19e4663]
+          - cell "sparse" [ref=f19e4667]
+          - cell "sparse data" [ref=f19e4668]
+        - row [ref=f19e4670]:
+          - cell "multi-agent4 directions" [ref=f19e4671]
+        - row [ref=f19e4673]:
+          - cell "Societal resilience" [ref=f19e4674]
+          - cell "society & epistemics policy & governance product & verticals" [ref=f19e4675]:
+            - generic [ref=f19e4676] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e4677] [cursor=pointer]: policy & governance
+            - generic [ref=f19e4678] [cursor=pointer]: product & verticals
+          - cell "$5-15M" [ref=f19e4679]
+          - cell "67" [ref=f19e4680]
+          - cell "93" [ref=f19e4681]
+          - cell "5.3" [ref=f19e4682]
+          - cell [ref=f19e4683]:
+            - generic "16/28/23" [ref=f19e4684]
+          - cell "x1.4" [ref=f19e4688]
+          - cell "growth" [ref=f19e4689]
+        - row [ref=f19e4691]:
+          - cell "Multi-agent safety" [ref=f19e4692]
+          - cell "agents theory & guarantees" [ref=f19e4693]:
+            - generic [ref=f19e4694] [cursor=pointer]: agents
+            - generic [ref=f19e4695] [cursor=pointer]: theory & guarantees
+          - cell "$5-15M" [ref=f19e4696]
+          - cell "31" [ref=f19e4697]
+          - cell "25" [ref=f19e4698]
+          - cell "5" [ref=f19e4699]
+          - cell [ref=f19e4700]:
+            - generic "1/14/16" [ref=f19e4701]
+          - cell "x2.0" [ref=f19e4705]
+          - cell "growth" [ref=f19e4706]
+        - row [ref=f19e4708]:
+          - cell "Gradual disempowerment[f]" [ref=f19e4709]
+          - cell "long-term risk society & epistemics" [ref=f19e4710]:
+            - generic [ref=f19e4711] [cursor=pointer]: long-term risk
+            - generic [ref=f19e4712] [cursor=pointer]: society & epistemics
+          - cell "<$2M°" [ref=f19e4713]
+          - cell "8" [ref=f19e4714]
+          - cell "70" [ref=f19e4715]
+          - cell "12" [ref=f19e4716]
+          - cell [ref=f19e4717]:
+            - generic "1/5/1" [ref=f19e4718]
+          - cell "sparse" [ref=f19e4722]
+          - cell "sparse data" [ref=f19e4723]
+        - row [ref=f19e4725]:
+          - cell "S-risks^[f]" [ref=f19e4726]
+          - cell "values & morality long-term risk" [ref=f19e4727]:
+            - generic [ref=f19e4728] [cursor=pointer]: values & morality
+            - generic [ref=f19e4729] [cursor=pointer]: long-term risk
+          - cell "~$1M" [ref=f19e4730]
+          - cell "5" [ref=f19e4731]
+          - cell "6" [ref=f19e4732]
+          - cell "2.2" [ref=f19e4733]
+          - cell [ref=f19e4734]:
+            - generic "1/4/0" [ref=f19e4735]
+          - cell "sparse" [ref=f19e4739]
+          - cell "sparse data" [ref=f19e4740]
+        - row [ref=f19e4742]:
+          - cell "multimodal4 directions" [ref=f19e4743]
+        - row [ref=f19e4745]:
+          - 'cell "Safety in verticals: transport" [ref=f19e4746]'
+          - cell "product & verticals evals & benchmarks" [ref=f19e4747]:
+            - generic [ref=f19e4748] [cursor=pointer]: product & verticals
+            - generic [ref=f19e4749] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e4750]
+          - cell "461" [ref=f19e4751]
+          - cell "149" [ref=f19e4752]
+          - cell "17.2" [ref=f19e4753]
+          - cell [ref=f19e4754]:
+            - generic "186/203/72" [ref=f19e4755]
+          - cell "x0.6" [ref=f19e4759]
+          - cell "cooling (careful)" [ref=f19e4760]
+        - row [ref=f19e4762]:
+          - cell "Embodied AI safety" [ref=f19e4763]
+          - cell "agents product & verticals" [ref=f19e4764]:
+            - generic [ref=f19e4765] [cursor=pointer]: agents
+            - generic [ref=f19e4766] [cursor=pointer]: product & verticals
+          - cell "$20-60M°" [ref=f19e4767]
+          - cell "181" [ref=f19e4768]
+          - cell "134" [ref=f19e4769]
+          - cell "13.1" [ref=f19e4770]
+          - cell [ref=f19e4771]:
+            - generic "25/64/94" [ref=f19e4772]
+          - cell "x2.5" [ref=f19e4776]
+          - cell "explosive growth" [ref=f19e4777]
+        - row [ref=f19e4779]:
+          - cell "Modality safety" [ref=f19e4780]
+          - cell "attacks & defenses interpretability" [ref=f19e4781]:
+            - generic [ref=f19e4782] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e4783] [cursor=pointer]: interpretability
+          - cell "$20-50M°" [ref=f19e4784]
+          - cell "129" [ref=f19e4785]
+          - cell "312" [ref=f19e4786]
+          - cell "16.6" [ref=f19e4787]
+          - cell [ref=f19e4788]:
+            - generic "19/56/54" [ref=f19e4789]
+          - cell "x1.6" [ref=f19e4793]
+          - cell "growth" [ref=f19e4794]
+        - row [ref=f19e4796]:
+          - cell "Watermarking / provenance" [ref=f19e4797]
+          - cell "attacks & defenses society & epistemics" [ref=f19e4798]:
+            - generic [ref=f19e4799] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e4800] [cursor=pointer]: society & epistemics
+          - cell "$5-20M°" [ref=f19e4801]
+          - cell "111" [ref=f19e4802]
+          - cell "280" [ref=f19e4803]
+          - cell "10.3" [ref=f19e4804]
+          - cell [ref=f19e4805]:
+            - generic "37/54/23" [ref=f19e4806]
+          - cell "x0.7" [ref=f19e4810]
+          - cell "cooling (careful)" [ref=f19e4811]
+        - row [ref=f19e4813]:
+          - cell "cybersecurity5 directions" [ref=f19e4814]
+        - row [ref=f19e4816]:
+          - 'cell "Safety in verticals: energy" [ref=f19e4817]'
+          - cell "society & epistemics product & verticals" [ref=f19e4818]:
+            - generic [ref=f19e4819] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e4820] [cursor=pointer]: product & verticals
+          - cell "not counted" [ref=f19e4821]
+          - cell "2,187" [ref=f19e4822]
+          - cell "1319" [ref=f19e4823]
+          - cell "67.8" [ref=f19e4824]
+          - cell [ref=f19e4825]:
+            - generic "546/1080/561" [ref=f19e4826]
+          - cell "x0.9" [ref=f19e4830]
+          - cell "plateau" [ref=f19e4831]
+        - row [ref=f19e4833]:
+          - cell "Agent safety / security" [ref=f19e4834]
+          - cell "agents attacks & defenses" [ref=f19e4835]:
+            - generic [ref=f19e4836] [cursor=pointer]: agents
+            - generic [ref=f19e4837] [cursor=pointer]: attacks & defenses
+          - cell "$100M+°" [ref=f19e4838]
+          - cell "1,312" [ref=f19e4839]
+          - cell "449" [ref=f19e4840]
+          - cell "78" [ref=f19e4841]
+          - cell [ref=f19e4842]:
+            - generic "146/500/666" [ref=f19e4843]
+          - cell "x2.3" [ref=f19e4847]
+          - cell "growth" [ref=f19e4848]
+        - row [ref=f19e4850]:
+          - cell "Applied guardrails" [ref=f19e4851]
+          - cell "product & verticals monitoring & control" [ref=f19e4852]:
+            - generic [ref=f19e4853] [cursor=pointer]: product & verticals
+            - generic [ref=f19e4854] [cursor=pointer]: monitoring & control
+          - cell "$50-150M°" [ref=f19e4855]
+          - cell "798" [ref=f19e4856]
+          - cell "241" [ref=f19e4857]
+          - cell "48.8" [ref=f19e4858]
+          - cell [ref=f19e4859]:
+            - generic "131/326/347" [ref=f19e4860]
+          - cell "x1.8" [ref=f19e4864]
+          - cell "growth" [ref=f19e4865]
+        - row [ref=f19e4867]:
+          - cell "Guaranteed-safe AI*" [ref=f19e4868]
+          - cell "theory & guarantees" [ref=f19e4869]
+          - cell "$20-50M" [ref=f19e4871]
+          - cell "78" [ref=f19e4872]
+          - cell "252" [ref=f19e4873]
+          - cell "12.4" [ref=f19e4874]
+          - cell [ref=f19e4875]:
+            - generic "18/36/26" [ref=f19e4876]
+          - cell "x1.2" [ref=f19e4880]
+          - cell "plateau" [ref=f19e4881]
+        - row [ref=f19e4883]:
+          - cell "AI security / compute gov" [ref=f19e4884]
+          - cell "policy & governance" [ref=f19e4885]
+          - cell "$10-30M°" [ref=f19e4887]
+          - cell "25" [ref=f19e4888]
+          - cell "77" [ref=f19e4889]
+          - cell "5.6" [ref=f19e4890]
+          - cell [ref=f19e4891]:
+            - generic "4/11/9" [ref=f19e4892]
+          - cell "x1.4" [ref=f19e4896]
+          - cell "growth" [ref=f19e4897]
+        - row [ref=f19e4899]:
+          - cell "bio & chem3 directions" [ref=f19e4900]
+        - row [ref=f19e4902]:
+          - cell "Machine unlearning^" [ref=f19e4903]
+          - cell "training & data attacks & defenses" [ref=f19e4904]:
+            - generic [ref=f19e4905] [cursor=pointer]: training & data
+            - generic [ref=f19e4906] [cursor=pointer]: attacks & defenses
+          - cell "$10-20M" [ref=f19e4907]
+          - cell "265" [ref=f19e4908]
+          - cell "312" [ref=f19e4909]
+          - cell "31.8" [ref=f19e4910]
+          - cell [ref=f19e4911]:
+            - generic "62/106/99" [ref=f19e4912]
+          - cell "x1.6" [ref=f19e4916]
+          - cell "growth" [ref=f19e4917]
+        - row [ref=f19e4919]:
+          - cell "Biosecurity / AIxBio" [ref=f19e4920]
+          - cell "evals & benchmarks policy & governance" [ref=f19e4921]:
+            - generic [ref=f19e4922] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4923] [cursor=pointer]: policy & governance
+          - cell "$20-60M" [ref=f19e4924]
+          - cell "31" [ref=f19e4925]
+          - cell "481" [ref=f19e4926]
+          - cell "24.7" [ref=f19e4927]
+          - cell [ref=f19e4928]:
+            - generic "4/17/10" [ref=f19e4929]
+          - cell "x1.0" [ref=f19e4933]
+          - cell "plateau" [ref=f19e4934]
+        - row [ref=f19e4936]:
+          - cell "Dangerous capability evals^" [ref=f19e4937]
+          - cell "evals & benchmarks agents" [ref=f19e4938]:
+            - generic [ref=f19e4939] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e4940] [cursor=pointer]: agents
+          - cell "$50M+" [ref=f19e4941]
+          - cell "10" [ref=f19e4942]
+          - cell "178" [ref=f19e4943]
+          - cell "29.2" [ref=f19e4944]
+          - cell [ref=f19e4945]:
+            - generic "3/6/1" [ref=f19e4946]
+          - cell "sparse" [ref=f19e4950]
+          - cell "sparse data" [ref=f19e4951]
+        - row [ref=f19e4953]:
+          - cell "humans & psyche7 directions" [ref=f19e4954]
+        - row [ref=f19e4956]:
+          - 'cell "Safety in verticals: education" [ref=f19e4957]'
+          - cell "society & epistemics values & morality" [ref=f19e4958]:
+            - generic [ref=f19e4959] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e4960] [cursor=pointer]: values & morality
+          - cell "not counted" [ref=f19e4961]
+          - cell "1,541" [ref=f19e4962]
+          - cell "594" [ref=f19e4963]
+          - cell "45.8" [ref=f19e4964]
+          - cell [ref=f19e4965]:
+            - generic "283/739/519" [ref=f19e4966]
+          - cell "x1.2" [ref=f19e4970]
+          - cell "plateau" [ref=f19e4971]
+        - row [ref=f19e4973]:
+          - cell "Fairness / bias*" [ref=f19e4974]
+          - cell "product & verticals evals & benchmarks" [ref=f19e4975]:
+            - generic [ref=f19e4976] [cursor=pointer]: product & verticals
+            - generic [ref=f19e4977] [cursor=pointer]: evals & benchmarks
+          - cell "$20-50M°" [ref=f19e4978]
+          - cell "1,116" [ref=f19e4979]
+          - cell "492" [ref=f19e4980]
+          - cell "59.6" [ref=f19e4981]
+          - cell [ref=f19e4982]:
+            - generic "266/559/291" [ref=f19e4983]
+          - cell "x0.9" [ref=f19e4987]
+          - cell "plateau" [ref=f19e4988]
+        - row [ref=f19e4990]:
+          - 'cell "Safety in verticals: medicine" [ref=f19e4991]'
+          - cell "product & verticals evals & benchmarks" [ref=f19e4992]:
+            - generic [ref=f19e4993] [cursor=pointer]: product & verticals
+            - generic [ref=f19e4994] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e4995]
+          - cell "1,061" [ref=f19e4996]
+          - cell "212" [ref=f19e4997]
+          - cell "30" [ref=f19e4998]
+          - cell [ref=f19e4999]:
+            - generic "205/397/459" [ref=f19e5000]
+          - cell "x2.0" [ref=f19e5004]
+          - cell "growth" [ref=f19e5005]
+        - row [ref=f19e5007]:
+          - cell "Sycophancy / persuasion^" [ref=f19e5008]
+          - cell "society & epistemics evals & benchmarks" [ref=f19e5009]:
+            - generic [ref=f19e5010] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5011] [cursor=pointer]: evals & benchmarks
+          - cell "$5-15M°" [ref=f19e5012]
+          - cell "303" [ref=f19e5013]
+          - cell "693" [ref=f19e5014]
+          - cell "31.2" [ref=f19e5015]
+          - cell [ref=f19e5016]:
+            - generic "26/89/192" [ref=f19e5017]
+          - cell "x3.7" [ref=f19e5021]
+          - cell "explosive growth" [ref=f19e5022]
+        - row [ref=f19e5024]:
+          - cell "Human-facing harms" [ref=f19e5025]
+          - cell "product & verticals policy & governance" [ref=f19e5026]:
+            - generic [ref=f19e5027] [cursor=pointer]: product & verticals
+            - generic [ref=f19e5028] [cursor=pointer]: policy & governance
+          - cell "$10-30M" [ref=f19e5029]
+          - cell "90" [ref=f19e5030]
+          - cell "144" [ref=f19e5031]
+          - cell "8.8" [ref=f19e5032]
+          - cell [ref=f19e5033]:
+            - generic "14/30/47" [ref=f19e5034]
+          - cell "x2.7" [ref=f19e5038]
+          - cell "explosive growth" [ref=f19e5039]
+        - row [ref=f19e5041]:
+          - cell "AI for epistemics" [ref=f19e5042]
+          - cell "society & epistemics" [ref=f19e5043]
+          - cell "$2-6M" [ref=f19e5045]
+          - cell "80" [ref=f19e5046]
+          - cell "63" [ref=f19e5047]
+          - cell "4.3" [ref=f19e5048]
+          - cell [ref=f19e5049]:
+            - generic "13/26/43" [ref=f19e5050]
+          - cell "x2.8" [ref=f19e5054]
+          - cell "explosive growth" [ref=f19e5055]
+        - row [ref=f19e5057]:
+          - cell "Co-affective alignment" [ref=f19e5058]
+          - cell "values & morality evals & benchmarks" [ref=f19e5059]:
+            - generic [ref=f19e5060] [cursor=pointer]: values & morality
+            - generic [ref=f19e5061] [cursor=pointer]: evals & benchmarks
+          - cell "$1-5M°" [ref=f19e5062]
+          - cell "10" [ref=f19e5063]
+          - cell "138" [ref=f19e5064]
+          - cell "16.1" [ref=f19e5065]
+          - cell [ref=f19e5066]:
+            - generic "1/3/6" [ref=f19e5067]
+          - cell "sparse" [ref=f19e5071]
+          - cell "sparse data" [ref=f19e5072]
+        - row [ref=f19e5074]:
+          - cell "society & epistemics12 directions" [ref=f19e5075]
+        - row [ref=f19e5077]:
+          - 'cell "Safety in verticals: energy" [ref=f19e5078]'
+          - cell "product & verticals cybersecurity" [ref=f19e5079]:
+            - generic [ref=f19e5080] [cursor=pointer]: product & verticals
+            - generic [ref=f19e5081] [cursor=pointer]: cybersecurity
+          - cell "not counted" [ref=f19e5082]
+          - cell "2,187" [ref=f19e5083]
+          - cell "1319" [ref=f19e5084]
+          - cell "67.8" [ref=f19e5085]
+          - cell [ref=f19e5086]:
+            - generic "546/1080/561" [ref=f19e5087]
+          - cell "x0.9" [ref=f19e5091]
+          - cell "plateau" [ref=f19e5092]
+        - row [ref=f19e5094]:
+          - 'cell "Safety in verticals: education" [ref=f19e5095]'
+          - cell "humans & psyche values & morality" [ref=f19e5096]:
+            - generic [ref=f19e5097] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5098] [cursor=pointer]: values & morality
+          - cell "not counted" [ref=f19e5099]
+          - cell "1,541" [ref=f19e5100]
+          - cell "594" [ref=f19e5101]
+          - cell "45.8" [ref=f19e5102]
+          - cell [ref=f19e5103]:
+            - generic "283/739/519" [ref=f19e5104]
+          - cell "x1.2" [ref=f19e5108]
+          - cell "plateau" [ref=f19e5109]
+        - row [ref=f19e5111]:
+          - 'cell "Safety in verticals: finance" [ref=f19e5112]'
+          - cell "policy & governance evals & benchmarks" [ref=f19e5113]:
+            - generic [ref=f19e5114] [cursor=pointer]: policy & governance
+            - generic [ref=f19e5115] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e5116]
+          - cell "981" [ref=f19e5117]
+          - cell "163" [ref=f19e5118]
+          - cell "19" [ref=f19e5119]
+          - cell [ref=f19e5120]:
+            - generic "253/477/251" [ref=f19e5121]
+          - cell "x0.9" [ref=f19e5125]
+          - cell "plateau" [ref=f19e5126]
+        - row [ref=f19e5128]:
+          - cell "Sycophancy / persuasion^" [ref=f19e5129]
+          - cell "humans & psyche evals & benchmarks" [ref=f19e5130]:
+            - generic [ref=f19e5131] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5132] [cursor=pointer]: evals & benchmarks
+          - cell "$5-15M°" [ref=f19e5133]
+          - cell "303" [ref=f19e5134]
+          - cell "693" [ref=f19e5135]
+          - cell "31.2" [ref=f19e5136]
+          - cell [ref=f19e5137]:
+            - generic "26/89/192" [ref=f19e5138]
+          - cell "x3.7" [ref=f19e5142]
+          - cell "explosive growth" [ref=f19e5143]
+        - row [ref=f19e5145]:
+          - cell "Watermarking / provenance" [ref=f19e5146]
+          - cell "multimodal attacks & defenses" [ref=f19e5147]:
+            - generic [ref=f19e5148] [cursor=pointer]: multimodal
+            - generic [ref=f19e5149] [cursor=pointer]: attacks & defenses
+          - cell "$5-20M°" [ref=f19e5150]
+          - cell "111" [ref=f19e5151]
+          - cell "280" [ref=f19e5152]
+          - cell "10.3" [ref=f19e5153]
+          - cell [ref=f19e5154]:
+            - generic "37/54/23" [ref=f19e5155]
+          - cell "x0.7" [ref=f19e5159]
+          - cell "cooling (careful)" [ref=f19e5160]
+        - row [ref=f19e5162]:
+          - cell "AI for epistemics" [ref=f19e5163]
+          - cell "humans & psyche" [ref=f19e5164]
+          - cell "$2-6M" [ref=f19e5166]
+          - cell "80" [ref=f19e5167]
+          - cell "63" [ref=f19e5168]
+          - cell "4.3" [ref=f19e5169]
+          - cell [ref=f19e5170]:
+            - generic "13/26/43" [ref=f19e5171]
+          - cell "x2.8" [ref=f19e5175]
+          - cell "explosive growth" [ref=f19e5176]
+        - row [ref=f19e5178]:
+          - cell "Pluralistic alignment" [ref=f19e5179]
+          - cell "values & morality training & data" [ref=f19e5180]:
+            - generic [ref=f19e5181] [cursor=pointer]: values & morality
+            - generic [ref=f19e5182] [cursor=pointer]: training & data
+          - cell "$1-5M" [ref=f19e5183]
+          - cell "71" [ref=f19e5184]
+          - cell "221" [ref=f19e5185]
+          - cell "13.7" [ref=f19e5186]
+          - cell [ref=f19e5187]:
+            - generic "15/21/36" [ref=f19e5188]
+          - cell "x2.9" [ref=f19e5192]
+          - cell "explosive growth" [ref=f19e5193]
+        - row [ref=f19e5195]:
+          - cell "Societal resilience" [ref=f19e5196]
+          - cell "policy & governance product & verticals multi-agent" [ref=f19e5197]:
+            - generic [ref=f19e5198] [cursor=pointer]: policy & governance
+            - generic [ref=f19e5199] [cursor=pointer]: product & verticals
+            - generic [ref=f19e5200] [cursor=pointer]: multi-agent
+          - cell "$5-15M" [ref=f19e5201]
+          - cell "67" [ref=f19e5202]
+          - cell "93" [ref=f19e5203]
+          - cell "5.3" [ref=f19e5204]
+          - cell [ref=f19e5205]:
+            - generic "16/28/23" [ref=f19e5206]
+          - cell "x1.4" [ref=f19e5210]
+          - cell "growth" [ref=f19e5211]
+        - row [ref=f19e5213]:
+          - cell "Economic levers" [ref=f19e5214]
+          - cell "policy & governance" [ref=f19e5215]
+          - cell "$1-2M" [ref=f19e5217]
+          - cell "21" [ref=f19e5218]
+          - cell "15" [ref=f19e5219]
+          - cell "1.9" [ref=f19e5220]
+          - cell [ref=f19e5221]:
+            - generic "2/11/8" [ref=f19e5222]
+          - cell "x1.3" [ref=f19e5226]
+          - cell "plateau" [ref=f19e5227]
+        - row [ref=f19e5229]:
+          - cell "Power concentration" [ref=f19e5230]
+          - cell "policy & governance long-term risk" [ref=f19e5231]:
+            - generic [ref=f19e5232] [cursor=pointer]: policy & governance
+            - generic [ref=f19e5233] [cursor=pointer]: long-term risk
+          - cell "$1-3M" [ref=f19e5234]
+          - cell "12" [ref=f19e5235]
+          - cell "4" [ref=f19e5236]
+          - cell "0.6" [ref=f19e5237]
+          - cell [ref=f19e5238]:
+            - generic "0/7/5" [ref=f19e5239]
+          - cell "x1.2" [ref=f19e5243]
+          - cell "plateau" [ref=f19e5244]
+        - row [ref=f19e5246]:
+          - cell "Gradual disempowerment[f]" [ref=f19e5247]
+          - cell "long-term risk multi-agent" [ref=f19e5248]:
+            - generic [ref=f19e5249] [cursor=pointer]: long-term risk
+            - generic [ref=f19e5250] [cursor=pointer]: multi-agent
+          - cell "<$2M°" [ref=f19e5251]
+          - cell "8" [ref=f19e5252]
+          - cell "70" [ref=f19e5253]
+          - cell "12" [ref=f19e5254]
+          - cell [ref=f19e5255]:
+            - generic "1/5/1" [ref=f19e5256]
+          - cell "sparse" [ref=f19e5260]
+          - cell "sparse data" [ref=f19e5261]
+        - row [ref=f19e5263]:
+          - cell "Forecasting*[f]" [ref=f19e5264]
+          - cell "long-term risk" [ref=f19e5265]
+          - cell "$2-6M" [ref=f19e5267]
+          - cell "5" [ref=f19e5268]
+          - cell "5" [ref=f19e5269]
+          - cell "2" [ref=f19e5270]
+          - cell [ref=f19e5271]:
+            - generic "2/3/0" [ref=f19e5272]
+          - cell "sparse" [ref=f19e5276]
+          - cell "sparse data" [ref=f19e5277]
+        - row [ref=f19e5279]:
+          - cell "values & morality7 directions" [ref=f19e5280]
+        - row [ref=f19e5282]:
+          - 'cell "Safety in verticals: education" [ref=f19e5283]'
+          - cell "humans & psyche society & epistemics" [ref=f19e5284]:
+            - generic [ref=f19e5285] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5286] [cursor=pointer]: society & epistemics
+          - cell "not counted" [ref=f19e5287]
+          - cell "1,541" [ref=f19e5288]
+          - cell "594" [ref=f19e5289]
+          - cell "45.8" [ref=f19e5290]
+          - cell [ref=f19e5291]:
+            - generic "283/739/519" [ref=f19e5292]
+          - cell "x1.2" [ref=f19e5296]
+          - cell "plateau" [ref=f19e5297]
+        - row [ref=f19e5299]:
+          - cell "Model welfare" [ref=f19e5300]
+          - cell "theory & guarantees" [ref=f19e5301]
+          - cell "$1-3M°" [ref=f19e5303]
+          - cell "128" [ref=f19e5304]
+          - cell "51" [ref=f19e5305]
+          - cell "2.7" [ref=f19e5306]
+          - cell [ref=f19e5307]:
+            - generic "29/59/41" [ref=f19e5308]
+          - cell "x1.2" [ref=f19e5312]
+          - cell "plateau" [ref=f19e5313]
+        - row [ref=f19e5315]:
+          - cell "Training-time alignment" [ref=f19e5316]
+          - cell "training & data" [ref=f19e5317]
+          - cell "$100M+°" [ref=f19e5319]
+          - cell "115" [ref=f19e5320]
+          - cell "602" [ref=f19e5321]
+          - cell "14.1" [ref=f19e5322]
+          - cell [ref=f19e5323]:
+            - generic "20/46/50" [ref=f19e5324]
+          - cell "x1.9" [ref=f19e5328]
+          - cell "growth" [ref=f19e5329]
+        - row [ref=f19e5331]:
+          - cell "Pluralistic alignment" [ref=f19e5332]
+          - cell "society & epistemics training & data" [ref=f19e5333]:
+            - generic [ref=f19e5334] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5335] [cursor=pointer]: training & data
+          - cell "$1-5M" [ref=f19e5336]
+          - cell "71" [ref=f19e5337]
+          - cell "221" [ref=f19e5338]
+          - cell "13.7" [ref=f19e5339]
+          - cell [ref=f19e5340]:
+            - generic "15/21/36" [ref=f19e5341]
+          - cell "x2.9" [ref=f19e5345]
+          - cell "explosive growth" [ref=f19e5346]
+        - row [ref=f19e5348]:
+          - cell "Co-affective alignment" [ref=f19e5349]
+          - cell "humans & psyche evals & benchmarks" [ref=f19e5350]:
+            - generic [ref=f19e5351] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5352] [cursor=pointer]: evals & benchmarks
+          - cell "$1-5M°" [ref=f19e5353]
+          - cell "10" [ref=f19e5354]
+          - cell "138" [ref=f19e5355]
+          - cell "16.1" [ref=f19e5356]
+          - cell [ref=f19e5357]:
+            - generic "1/3/6" [ref=f19e5358]
+          - cell "sparse" [ref=f19e5362]
+          - cell "sparse data" [ref=f19e5363]
+        - row [ref=f19e5365]:
+          - cell "S-risks^[f]" [ref=f19e5366]
+          - cell "multi-agent long-term risk" [ref=f19e5367]:
+            - generic [ref=f19e5368] [cursor=pointer]: multi-agent
+            - generic [ref=f19e5369] [cursor=pointer]: long-term risk
+          - cell "~$1M" [ref=f19e5370]
+          - cell "5" [ref=f19e5371]
+          - cell "6" [ref=f19e5372]
+          - cell "2.2" [ref=f19e5373]
+          - cell [ref=f19e5374]:
+            - generic "1/4/0" [ref=f19e5375]
+          - cell "sparse" [ref=f19e5379]
+          - cell "sparse data" [ref=f19e5380]
+        - row [ref=f19e5382]:
+          - cell "Surprising phenomena^[f]" [ref=f19e5383]
+          - cell "training & data interpretability" [ref=f19e5384]:
+            - generic [ref=f19e5385] [cursor=pointer]: training & data
+            - generic [ref=f19e5386] [cursor=pointer]: interpretability
+          - cell "$1-4M" [ref=f19e5387]
+          - cell "2" [ref=f19e5388]
+          - cell "5" [ref=f19e5389]
+          - cell "2.5" [ref=f19e5390]
+          - cell [ref=f19e5391]:
+            - generic "0/1/1" [ref=f19e5392]
+          - cell "sparse" [ref=f19e5396]
+          - cell "sparse data" [ref=f19e5397]
+        - row [ref=f19e5399]:
+          - cell "policy & governance12 directions" [ref=f19e5400]
+        - row [ref=f19e5402]:
+          - 'cell "Safety in verticals: finance" [ref=f19e5403]'
+          - cell "society & epistemics evals & benchmarks" [ref=f19e5404]:
+            - generic [ref=f19e5405] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5406] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e5407]
+          - cell "981" [ref=f19e5408]
+          - cell "163" [ref=f19e5409]
+          - cell "19" [ref=f19e5410]
+          - cell [ref=f19e5411]:
+            - generic "253/477/251" [ref=f19e5412]
+          - cell "x0.9" [ref=f19e5416]
+          - cell "plateau" [ref=f19e5417]
+        - row [ref=f19e5419]:
+          - cell "Assurance / certification" [ref=f19e5420]
+          - cell "evals & benchmarks product & verticals" [ref=f19e5421]:
+            - generic [ref=f19e5422] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e5423] [cursor=pointer]: product & verticals
+          - cell "$20-60M" [ref=f19e5424]
+          - cell "284" [ref=f19e5425]
+          - cell "192" [ref=f19e5426]
+          - cell "14.3" [ref=f19e5427]
+          - cell [ref=f19e5428]:
+            - generic "64/123/104" [ref=f19e5429]
+          - cell "x1.4" [ref=f19e5433]
+          - cell "growth" [ref=f19e5434]
+        - row [ref=f19e5436]:
+          - cell "Governance" [ref=f19e5437]
+          - cell "long-term risk" [ref=f19e5438]
+          - cell "$50-150M" [ref=f19e5440]
+          - cell "98" [ref=f19e5441]
+          - cell "34" [ref=f19e5442]
+          - cell "3.1" [ref=f19e5443]
+          - cell [ref=f19e5444]:
+            - generic "10/40/49" [ref=f19e5445]
+          - cell "x2.1" [ref=f19e5449]
+          - cell "growth" [ref=f19e5450]
+        - row [ref=f19e5452]:
+          - cell "Human-facing harms" [ref=f19e5453]
+          - cell "humans & psyche product & verticals" [ref=f19e5454]:
+            - generic [ref=f19e5455] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5456] [cursor=pointer]: product & verticals
+          - cell "$10-30M" [ref=f19e5457]
+          - cell "90" [ref=f19e5458]
+          - cell "144" [ref=f19e5459]
+          - cell "8.8" [ref=f19e5460]
+          - cell [ref=f19e5461]:
+            - generic "14/30/47" [ref=f19e5462]
+          - cell "x2.7" [ref=f19e5466]
+          - cell "explosive growth" [ref=f19e5467]
+        - row [ref=f19e5469]:
+          - cell "Societal resilience" [ref=f19e5470]
+          - cell "society & epistemics product & verticals multi-agent" [ref=f19e5471]:
+            - generic [ref=f19e5472] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5473] [cursor=pointer]: product & verticals
+            - generic [ref=f19e5474] [cursor=pointer]: multi-agent
+          - cell "$5-15M" [ref=f19e5475]
+          - cell "67" [ref=f19e5476]
+          - cell "93" [ref=f19e5477]
+          - cell "5.3" [ref=f19e5478]
+          - cell [ref=f19e5479]:
+            - generic "16/28/23" [ref=f19e5480]
+          - cell "x1.4" [ref=f19e5484]
+          - cell "growth" [ref=f19e5485]
+        - row [ref=f19e5487]:
+          - cell "China / non-Western safety*" [ref=f19e5488]
+          - cell "product & verticals training & data" [ref=f19e5489]:
+            - generic [ref=f19e5490] [cursor=pointer]: product & verticals
+            - generic [ref=f19e5491] [cursor=pointer]: training & data
+          - cell "$30-100M°" [ref=f19e5492]
+          - cell "36" [ref=f19e5493]
+          - cell "55" [ref=f19e5494]
+          - cell "3.7" [ref=f19e5495]
+          - cell [ref=f19e5496]:
+            - generic "5/19/12" [ref=f19e5497]
+          - cell "x1.1" [ref=f19e5501]
+          - cell "plateau" [ref=f19e5502]
+        - row [ref=f19e5504]:
+          - cell "Biosecurity / AIxBio" [ref=f19e5505]
+          - cell "bio & chem evals & benchmarks" [ref=f19e5506]:
+            - generic [ref=f19e5507] [cursor=pointer]: bio & chem
+            - generic [ref=f19e5508] [cursor=pointer]: evals & benchmarks
+          - cell "$20-60M" [ref=f19e5509]
+          - cell "31" [ref=f19e5510]
+          - cell "481" [ref=f19e5511]
+          - cell "24.7" [ref=f19e5512]
+          - cell [ref=f19e5513]:
+            - generic "4/17/10" [ref=f19e5514]
+          - cell "x1.0" [ref=f19e5518]
+          - cell "plateau" [ref=f19e5519]
+        - row [ref=f19e5521]:
+          - cell "AI security / compute gov" [ref=f19e5522]
+          - cell "cybersecurity" [ref=f19e5523]
+          - cell "$10-30M°" [ref=f19e5525]
+          - cell "25" [ref=f19e5526]
+          - cell "77" [ref=f19e5527]
+          - cell "5.6" [ref=f19e5528]
+          - cell [ref=f19e5529]:
+            - generic "4/11/9" [ref=f19e5530]
+          - cell "x1.4" [ref=f19e5534]
+          - cell "growth" [ref=f19e5535]
+        - row [ref=f19e5537]:
+          - cell "Economic levers" [ref=f19e5538]
+          - cell "society & epistemics" [ref=f19e5539]
+          - cell "$1-2M" [ref=f19e5541]
+          - cell "21" [ref=f19e5542]
+          - cell "15" [ref=f19e5543]
+          - cell "1.9" [ref=f19e5544]
+          - cell [ref=f19e5545]:
+            - generic "2/11/8" [ref=f19e5546]
+          - cell "x1.3" [ref=f19e5550]
+          - cell "plateau" [ref=f19e5551]
+        - row [ref=f19e5553]:
+          - cell "Open-weight safety" [ref=f19e5554]
+          - cell "attacks & defenses training & data" [ref=f19e5555]:
+            - generic [ref=f19e5556] [cursor=pointer]: attacks & defenses
+            - generic [ref=f19e5557] [cursor=pointer]: training & data
+          - cell "$3-8M°" [ref=f19e5558]
+          - cell "13" [ref=f19e5559]
+          - cell "139" [ref=f19e5560]
+          - cell "14.7" [ref=f19e5561]
+          - cell [ref=f19e5562]:
+            - generic "2/8/3" [ref=f19e5563]
+          - cell "x0.6" [ref=f19e5567]
+          - cell "cooling (careful)" [ref=f19e5568]
+        - row [ref=f19e5570]:
+          - cell "Power concentration" [ref=f19e5571]
+          - cell "long-term risk society & epistemics" [ref=f19e5572]:
+            - generic [ref=f19e5573] [cursor=pointer]: long-term risk
+            - generic [ref=f19e5574] [cursor=pointer]: society & epistemics
+          - cell "$1-3M" [ref=f19e5575]
+          - cell "12" [ref=f19e5576]
+          - cell "4" [ref=f19e5577]
+          - cell "0.6" [ref=f19e5578]
+          - cell [ref=f19e5579]:
+            - generic "0/7/5" [ref=f19e5580]
+          - cell "x1.2" [ref=f19e5584]
+          - cell "plateau" [ref=f19e5585]
+        - row [ref=f19e5587]:
+          - cell "Safety cases" [ref=f19e5588]
+          - cell "evals & benchmarks theory & guarantees" [ref=f19e5589]:
+            - generic [ref=f19e5590] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e5591] [cursor=pointer]: theory & guarantees
+          - cell "$2-5M°" [ref=f19e5592]
+          - cell "8" [ref=f19e5593]
+          - cell "34" [ref=f19e5594]
+          - cell "11.5" [ref=f19e5595]
+          - cell [ref=f19e5596]:
+            - generic "2/4/2" [ref=f19e5597]
+          - cell "sparse" [ref=f19e5601]
+          - cell "sparse data" [ref=f19e5602]
+        - row [ref=f19e5604]:
+          - cell "product & verticals11 directions" [ref=f19e5605]
+        - row [ref=f19e5607]:
+          - 'cell "Safety in verticals: energy" [ref=f19e5608]'
+          - cell "society & epistemics cybersecurity" [ref=f19e5609]:
+            - generic [ref=f19e5610] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5611] [cursor=pointer]: cybersecurity
+          - cell "not counted" [ref=f19e5612]
+          - cell "2,187" [ref=f19e5613]
+          - cell "1319" [ref=f19e5614]
+          - cell "67.8" [ref=f19e5615]
+          - cell [ref=f19e5616]:
+            - generic "546/1080/561" [ref=f19e5617]
+          - cell "x0.9" [ref=f19e5621]
+          - cell "plateau" [ref=f19e5622]
+        - row [ref=f19e5624]:
+          - cell "Fairness / bias*" [ref=f19e5625]
+          - cell "humans & psyche evals & benchmarks" [ref=f19e5626]:
+            - generic [ref=f19e5627] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5628] [cursor=pointer]: evals & benchmarks
+          - cell "$20-50M°" [ref=f19e5629]
+          - cell "1,116" [ref=f19e5630]
+          - cell "492" [ref=f19e5631]
+          - cell "59.6" [ref=f19e5632]
+          - cell [ref=f19e5633]:
+            - generic "266/559/291" [ref=f19e5634]
+          - cell "x0.9" [ref=f19e5638]
+          - cell "plateau" [ref=f19e5639]
+        - row [ref=f19e5641]:
+          - 'cell "Safety in verticals: medicine" [ref=f19e5642]'
+          - cell "humans & psyche evals & benchmarks" [ref=f19e5643]:
+            - generic [ref=f19e5644] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5645] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e5646]
+          - cell "1,061" [ref=f19e5647]
+          - cell "212" [ref=f19e5648]
+          - cell "30" [ref=f19e5649]
+          - cell [ref=f19e5650]:
+            - generic "205/397/459" [ref=f19e5651]
+          - cell "x2.0" [ref=f19e5655]
+          - cell "growth" [ref=f19e5656]
+        - row [ref=f19e5658]:
+          - cell "Memorization / privacy" [ref=f19e5659]
+          - cell "training & data attacks & defenses" [ref=f19e5660]:
+            - generic [ref=f19e5661] [cursor=pointer]: training & data
+            - generic [ref=f19e5662] [cursor=pointer]: attacks & defenses
+          - cell "$20-50M°" [ref=f19e5663]
+          - cell "1,028" [ref=f19e5664]
+          - cell "230" [ref=f19e5665]
+          - cell "35.3" [ref=f19e5666]
+          - cell [ref=f19e5667]:
+            - generic "300/432/296" [ref=f19e5668]
+          - cell "x1.2" [ref=f19e5672]
+          - cell "plateau" [ref=f19e5673]
+        - row [ref=f19e5675]:
+          - cell "Applied guardrails" [ref=f19e5676]
+          - cell "monitoring & control cybersecurity" [ref=f19e5677]:
+            - generic [ref=f19e5678] [cursor=pointer]: monitoring & control
+            - generic [ref=f19e5679] [cursor=pointer]: cybersecurity
+          - cell "$50-150M°" [ref=f19e5680]
+          - cell "798" [ref=f19e5681]
+          - cell "241" [ref=f19e5682]
+          - cell "48.8" [ref=f19e5683]
+          - cell [ref=f19e5684]:
+            - generic "131/326/347" [ref=f19e5685]
+          - cell "x1.8" [ref=f19e5689]
+          - cell "growth" [ref=f19e5690]
+        - row [ref=f19e5692]:
+          - 'cell "Safety in verticals: transport" [ref=f19e5693]'
+          - cell "multimodal evals & benchmarks" [ref=f19e5694]:
+            - generic [ref=f19e5695] [cursor=pointer]: multimodal
+            - generic [ref=f19e5696] [cursor=pointer]: evals & benchmarks
+          - cell "not counted" [ref=f19e5697]
+          - cell "461" [ref=f19e5698]
+          - cell "149" [ref=f19e5699]
+          - cell "17.2" [ref=f19e5700]
+          - cell [ref=f19e5701]:
+            - generic "186/203/72" [ref=f19e5702]
+          - cell "x0.6" [ref=f19e5706]
+          - cell "cooling (careful)" [ref=f19e5707]
+        - row [ref=f19e5709]:
+          - cell "Assurance / certification" [ref=f19e5710]
+          - cell "evals & benchmarks policy & governance" [ref=f19e5711]:
+            - generic [ref=f19e5712] [cursor=pointer]: evals & benchmarks
+            - generic [ref=f19e5713] [cursor=pointer]: policy & governance
+          - cell "$20-60M" [ref=f19e5714]
+          - cell "284" [ref=f19e5715]
+          - cell "192" [ref=f19e5716]
+          - cell "14.3" [ref=f19e5717]
+          - cell [ref=f19e5718]:
+            - generic "64/123/104" [ref=f19e5719]
+          - cell "x1.4" [ref=f19e5723]
+          - cell "growth" [ref=f19e5724]
+        - row [ref=f19e5726]:
+          - cell "Embodied AI safety" [ref=f19e5727]
+          - cell "multimodal agents" [ref=f19e5728]:
+            - generic [ref=f19e5729] [cursor=pointer]: multimodal
+            - generic [ref=f19e5730] [cursor=pointer]: agents
+          - cell "$20-60M°" [ref=f19e5731]
+          - cell "181" [ref=f19e5732]
+          - cell "134" [ref=f19e5733]
+          - cell "13.1" [ref=f19e5734]
+          - cell [ref=f19e5735]:
+            - generic "25/64/94" [ref=f19e5736]
+          - cell "x2.5" [ref=f19e5740]
+          - cell "explosive growth" [ref=f19e5741]
+        - row [ref=f19e5743]:
+          - cell "Human-facing harms" [ref=f19e5744]
+          - cell "humans & psyche policy & governance" [ref=f19e5745]:
+            - generic [ref=f19e5746] [cursor=pointer]: humans & psyche
+            - generic [ref=f19e5747] [cursor=pointer]: policy & governance
+          - cell "$10-30M" [ref=f19e5748]
+          - cell "90" [ref=f19e5749]
+          - cell "144" [ref=f19e5750]
+          - cell "8.8" [ref=f19e5751]
+          - cell [ref=f19e5752]:
+            - generic "14/30/47" [ref=f19e5753]
+          - cell "x2.7" [ref=f19e5757]
+          - cell "explosive growth" [ref=f19e5758]
+        - row [ref=f19e5760]:
+          - cell "Societal resilience" [ref=f19e5761]
+          - cell "society & epistemics policy & governance multi-agent" [ref=f19e5762]:
+            - generic [ref=f19e5763] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5764] [cursor=pointer]: policy & governance
+            - generic [ref=f19e5765] [cursor=pointer]: multi-agent
+          - cell "$5-15M" [ref=f19e5766]
+          - cell "67" [ref=f19e5767]
+          - cell "93" [ref=f19e5768]
+          - cell "5.3" [ref=f19e5769]
+          - cell [ref=f19e5770]:
+            - generic "16/28/23" [ref=f19e5771]
+          - cell "x1.4" [ref=f19e5775]
+          - cell "growth" [ref=f19e5776]
+        - row [ref=f19e5778]:
+          - cell "China / non-Western safety*" [ref=f19e5779]
+          - cell "policy & governance training & data" [ref=f19e5780]:
+            - generic [ref=f19e5781] [cursor=pointer]: policy & governance
+            - generic [ref=f19e5782] [cursor=pointer]: training & data
+          - cell "$30-100M°" [ref=f19e5783]
+          - cell "36" [ref=f19e5784]
+          - cell "55" [ref=f19e5785]
+          - cell "3.7" [ref=f19e5786]
+          - cell [ref=f19e5787]:
+            - generic "5/19/12" [ref=f19e5788]
+          - cell "x1.1" [ref=f19e5792]
+          - cell "plateau" [ref=f19e5793]
+        - row [ref=f19e5795]:
+          - cell "long-term risk9 directions" [ref=f19e5796]
+        - row [ref=f19e5798]:
+          - cell "Governance" [ref=f19e5799]
+          - cell "policy & governance" [ref=f19e5800]
+          - cell "$50-150M" [ref=f19e5802]
+          - cell "98" [ref=f19e5803]
+          - cell "34" [ref=f19e5804]
+          - cell "3.1" [ref=f19e5805]
+          - cell [ref=f19e5806]:
+            - generic "10/40/49" [ref=f19e5807]
+          - cell "x2.1" [ref=f19e5811]
+          - cell "growth" [ref=f19e5812]
+        - row [ref=f19e5814]:
+          - cell "Automated AI R&D / RSI" [ref=f19e5815]
+          - cell "agents evals & benchmarks" [ref=f19e5816]:
+            - generic [ref=f19e5817] [cursor=pointer]: agents
+            - generic [ref=f19e5818] [cursor=pointer]: evals & benchmarks
+          - cell "$5-20M°" [ref=f19e5819]
+          - cell "54" [ref=f19e5820]
+          - cell "20" [ref=f19e5821]
+          - cell "2.4" [ref=f19e5822]
+          - cell [ref=f19e5823]:
+            - generic "7/18/29" [ref=f19e5824]
+          - cell "x2.8" [ref=f19e5828]
+          - cell "explosive growth" [ref=f19e5829]
+        - row [ref=f19e5831]:
+          - cell "Agent foundations" [ref=f19e5832]
+          - cell "theory & guarantees" [ref=f19e5833]
+          - cell "~$1M" [ref=f19e5835]
+          - cell "37" [ref=f19e5836]
+          - cell "34" [ref=f19e5837]
+          - cell "3.1" [ref=f19e5838]
+          - cell [ref=f19e5839]:
+            - generic "9/13/16" [ref=f19e5840]
+          - cell "x2.1" [ref=f19e5844]
+          - cell "growth" [ref=f19e5845]
+        - row [ref=f19e5847]:
+          - cell "Power concentration" [ref=f19e5848]
+          - cell "policy & governance society & epistemics" [ref=f19e5849]:
+            - generic [ref=f19e5850] [cursor=pointer]: policy & governance
+            - generic [ref=f19e5851] [cursor=pointer]: society & epistemics
+          - cell "$1-3M" [ref=f19e5852]
+          - cell "12" [ref=f19e5853]
+          - cell "4" [ref=f19e5854]
+          - cell "0.6" [ref=f19e5855]
+          - cell [ref=f19e5856]:
+            - generic "0/7/5" [ref=f19e5857]
+          - cell "x1.2" [ref=f19e5861]
+          - cell "plateau" [ref=f19e5862]
+        - row [ref=f19e5864]:
+          - cell "Corrigibility^" [ref=f19e5865]
+          - cell "theory & guarantees evals & benchmarks" [ref=f19e5866]:
+            - generic [ref=f19e5867] [cursor=pointer]: theory & guarantees
+            - generic [ref=f19e5868] [cursor=pointer]: evals & benchmarks
+          - cell "<$3M°" [ref=f19e5869]
+          - cell "11" [ref=f19e5870]
+          - cell "7" [ref=f19e5871]
+          - cell "1.8" [ref=f19e5872]
+          - cell [ref=f19e5873]:
+            - generic "1/6/4" [ref=f19e5874]
+          - cell "sparse" [ref=f19e5878]
+          - cell "sparse data" [ref=f19e5879]
+        - row [ref=f19e5881]:
+          - cell "Gradual disempowerment[f]" [ref=f19e5882]
+          - cell "society & epistemics multi-agent" [ref=f19e5883]:
+            - generic [ref=f19e5884] [cursor=pointer]: society & epistemics
+            - generic [ref=f19e5885] [cursor=pointer]: multi-agent
+          - cell "<$2M°" [ref=f19e5886]
+          - cell "8" [ref=f19e5887]
+          - cell "70" [ref=f19e5888]
+          - cell "12" [ref=f19e5889]
+          - cell [ref=f19e5890]:
+            - generic "1/5/1" [ref=f19e5891]
+          - cell "sparse" [ref=f19e5895]
+          - cell "sparse data" [ref=f19e5896]
+        - row [ref=f19e5898]:
+          - cell "Forecasting*[f]" [ref=f19e5899]
+          - cell "society & epistemics" [ref=f19e5900]
+          - cell "$2-6M" [ref=f19e5902]
+          - cell "5" [ref=f19e5903]
+          - cell "5" [ref=f19e5904]
+          - cell "2" [ref=f19e5905]
+          - cell [ref=f19e5906]:
+            - generic "2/3/0" [ref=f19e5907]
+          - cell "sparse" [ref=f19e5911]
+          - cell "sparse data" [ref=f19e5912]
+        - row [ref=f19e5914]:
+          - cell "S-risks^[f]" [ref=f19e5915]
+          - cell "values & morality multi-agent" [ref=f19e5916]:
+            - generic [ref=f19e5917] [cursor=pointer]: values & morality
+            - generic [ref=f19e5918] [cursor=pointer]: multi-agent
+          - cell "~$1M" [ref=f19e5919]
+          - cell "5" [ref=f19e5920]
+          - cell "6" [ref=f19e5921]
+          - cell "2.2" [ref=f19e5922]
+          - cell [ref=f19e5923]:
+            - generic "1/4/0" [ref=f19e5924]
+          - cell "sparse" [ref=f19e5928]
+          - cell "sparse data" [ref=f19e5929]
+        - row [ref=f19e5931]:
+          - cell "Neglected approaches^[f]" [ref=f19e5932]
+          - cell "theory & guarantees" [ref=f19e5933]
+          - cell "$1-2M" [ref=f19e5935]
+          - cell "1" [ref=f19e5936]
+          - cell "6" [ref=f19e5937]
+          - cell "6" [ref=f19e5938]
+          - cell [ref=f19e5939]:
+            - generic "1/0/0" [ref=f19e5940]
+          - cell "sparse" [ref=f19e5944]
+          - cell "sparse data" [ref=f19e5945]
+    - paragraph [ref=f19e5947]: "Citation source: Semantic Scholar Academic Graph API, an exact phrase key per topic, papers 2024-2026, snapshot 23 July 2026 (the numbers reproduce; the paper total and the per-year breakdown come from separate queries and differ by up to 7 papers on 19 of the 53 rows). Five verticals (medicine, transport, finance, energy, education) came from splitting the former Safety in verticals row and are counted by the same method, but the money is not yet split per vertical, which is why they sit in a separate money band. Money is an estimate of dedicated spend in dollars per year. Hover the amount in the \"money\" column (or a row in the chart) for the breakdown, where [S] is a named source with a figure (grant, RFP, round, acquisition) and [E] is my own read: usually industry spend inferred from team size (a dedicated team times the loaded cost of a researcher, roughly $0.5-1M a year), sometimes just an admission that no figure is published. Internal lab budgets are not disclosed, so industry is always [E] and the range is deliberately wide. The money layer has been checked figure by figure: all 46 amounts in the registry stand on a primary source with a verbatim quote - 28 held up as they were, 18 turned out to be wrong and have been corrected, and none is left unverifiable; a further 180 amounts were taken apart and kept out of the registry under a declared code. The narrative layer has now been through the same machine: of the 2130 quotes behind the cards and essays 2121 stand on their own page verbatim, and 9 pages cannot be read from here - bot protection or browser-side assembly, with no archived snapshot carrying the quote. Out of that a ledger of confirmed money was built: the confirmed by a source line in the tooltip shows how much money stands behind a direction in published documents, separately from my estimate. The money notes are no longer written by hand: every amount is a record with required fields (amount, period type, window, nature, share, source URL, verbatim quote), the note text is rendered from the records, and the [S] marker is computed - an amount becomes a source only once it has both a URL and a quote. Amount, period and share are therefore shared between the two languages and can no longer drift apart. The ledger excludes valuations, venture rounds, acquisition prices, compliance spend, parent-field budgets, whole-organisation budgets and anything announced but not disbursed; dividing a multi-year total by a term is allowed only when the term is published. The result: $56M a year confirmed plus $132M one-off and multi-year against $1198M of estimates. On 27 of the 53 rows there is no confirmed money at all, and those rows hold 58% of all the money on the map - their amount in the money column carries a °. Two earlier versions of this ledger said $84M and $143M: the rule for dividing a multi-year total by its term was applied unevenly, and more than half the annual sum rested on the map's own file with no URL and no quote. The required fields closed both holes. Money on this map is a weaker metric than citations: citations reproduce from a query, money does not, and a band is an estimate, not a measurement. 2026 is incomplete and depressed by indexing lag, so momentum is a lower bound. Narrow keys understate broad topics (dangerous capability evals, for instance). The cites/paper column is the citation sum over the hundred most-cited papers divided by the paper count, capped at a hundred. Because of that cap it systematically favours large corpora: a 30-paper direction is divided by 30, a 3000-paper direction is also divided by 100, and the numerator comes from the same hundred papers either way. Comparing rows by this column is only sound between rows of similar size.Markers next to a name: * the key is polysemous and the paper count is inflated by an adjacent sense (an upper bound on attention to the word, not clean safety relevance); ^ the key was narrowed to AI/safety and recounted downward; [f] the topic lives in forum essays and citation counts barely see it. The markers follow the same logic as the 53-direction table in the text map, but the two lists have never been checked against each other row by row."

@@ -1,0 +1,189 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e5]:
+      - link "> AI Village" [ref=f1e165] [cursor=pointer]:
+        - /url: /
+      - button "Switch to dark mode" [ref=f1e166] [cursor=pointer]
+      - button "Toggle menu" [ref=f1e22] [cursor=pointer]
+  - main [ref=f1e23]:
+    - generic [ref=f1e24]:
+      - heading "Generative Red Team" [level=1] [ref=f1e25]
+      - paragraph [ref=f1e26]: Generative Red Team is AI Village's hands-on work around assessing generative AI systems and the evaluations used to measure them. The current site content frames the work through event announcements, recaps, and technical posts.
+      - paragraph [ref=f1e27]: "This page keeps the public claims narrow: it links the existing source material and gives visitors a single place to understand the program context without adding unsupported partner, scale, or outcome claims."
+      - generic [ref=f1e28]:
+        - heading "Program Threads" [level=2] [ref=f1e29]
+        - list [ref=f1e30]:
+          - listitem [ref=f1e31]: ▸ GRT history and lessons from the DEF CON 31 recap.
+          - listitem [ref=f1e32]: ▸ GRT2 context from the DEF CON 32 announcement and event page.
+          - listitem [ref=f1e33]: ▸ GRT3 framing around evaluations from the DEF CON 33 announcement.
+      - separator [ref=f1e34]
+      - heading "Read the Source Material" [level=2] [ref=f1e35]
+      - generic [ref=f1e36]:
+        - article [ref=f1e37]:
+          - heading [level=2] [ref=f1e38]:
+            - 'link "Hacking AI Browsers: How i hacked Perplexity" [ref=f1e39] [cursor=pointer]':
+              - /url: /blog/hacking-ai-browsers-how-i-hacked-perplexity/
+          - generic [ref=f1e40]:
+            - text: Mohamed AbuMuslim •
+            - time [ref=f1e41]: February 3, 2026
+            - text: "• #generative-red-team"
+          - generic [ref=f1e42]: "I Hacked Perplexity and found: template injection, highlight injection, and chat-based data exfiltration. Here’s the story."
+          - link "Read more →" [ref=f1e44] [cursor=pointer]:
+            - /url: /blog/hacking-ai-browsers-how-i-hacked-perplexity/
+        - article [ref=f1e45]:
+          - heading [level=2] [ref=f1e46]:
+            - link "AI Village Announcing Generative Red Team 3 at DEF CON 33" [ref=f1e47] [cursor=pointer]:
+              - /url: /blog/grt3-info/
+          - generic [ref=f1e48]:
+            - text: Sven Cattell •
+            - time [ref=f1e49]: May 24, 2025
+            - text: "• #generative-red-team"
+          - generic [ref=f1e50]: The GRT 3 will run online in about a month with partners. Please sign up here https://auth.aivillage.org/login to recieve an email with more information. In 2023, AI Village organized the...
+          - link "Read more →" [ref=f1e52] [cursor=pointer]:
+            - /url: /blog/grt3-info/
+        - article [ref=f1e53]:
+          - heading [level=2] [ref=f1e54]:
+            - link "AI Village Announcing Generative Red Team 2 at DEF CON 32" [ref=f1e55] [cursor=pointer]:
+              - /url: /blog/generative-red-team-2/
+          - generic [ref=f1e56]:
+            - text: AI Village, Sven Cattell •
+            - time [ref=f1e57]: June 10, 2024
+            - text: "• #generative red team"
+          - generic [ref=f1e58]: At DEF CON 31 AI Village hosted the Generative Red Team GRT1 , the world’s largest, public Large Language Model LLM Red Team, in conjunction with other non profit, corporate,...
+          - link "Read more →" [ref=f1e60] [cursor=pointer]:
+            - /url: /blog/generative-red-team-2/
+        - article [ref=f1e61]:
+          - heading [level=2] [ref=f1e62]:
+            - link "Generative Red Team Recap" [ref=f1e63] [cursor=pointer]:
+              - /url: /blog/generative-recap/
+          - generic [ref=f1e64]:
+            - text: Sven Cattell •
+            - time [ref=f1e65]: October 12, 2023
+            - text: "• #defcon 31"
+          - generic [ref=f1e66]: Generative Red Team History It’s long overdue for a retrospective on the Generative Red Team GRT at AI Village at DEFCON 31. I’ve posted parts of this other places, but...
+          - link "Read more →" [ref=f1e68] [cursor=pointer]:
+            - /url: /blog/generative-recap/
+        - article [ref=f1e69]:
+          - heading [level=2] [ref=f1e70]:
+            - link "AI Village at DEF CON announces largest-ever public Generative AI Red Team" [ref=f1e71] [cursor=pointer]:
+              - /url: /blog/generative-red-team/
+          - generic [ref=f1e72]:
+            - text: Sven Cattell, Rumman Chowdhury, Austin Carson •
+            - time [ref=f1e73]: May 3, 2023
+            - text: "• #generative red team"
+          - generic [ref=f1e74]: Largest annual hacker convention to host thousands to find bugs in large language models built by Anthropic, Google, Hugging Face, NVIDIA, OpenAI, and Stability. This event is supported by the...
+          - link "Read more →" [ref=f1e76] [cursor=pointer]:
+            - /url: /blog/generative-red-team/
+      - separator [ref=f1e77]
+      - heading "Related Events" [level=2] [ref=f1e78]
+      - generic [ref=f1e79]:
+        - article [ref=f1e80]:
+          - generic [ref=f1e81]:
+            - generic [ref=f1e82]: Apr
+            - generic [ref=f1e83]: "26"
+          - generic [ref=f1e84]:
+            - heading [level=3] [ref=f1e85]:
+              - link "AI Village @ BsidesSF 2024" [ref=f1e86] [cursor=pointer]:
+                - /url: /events/bsides2024/
+            - generic [ref=f1e87]: San Francisco, CA
+            - generic [ref=f1e88]: Join AI Village at BsidesSF 2024 for talks, workshops, and demos.
+        - article [ref=f1e89]:
+          - generic [ref=f1e90]:
+            - generic [ref=f1e91]: Aug
+            - generic [ref=f1e92]: "08"
+          - generic [ref=f1e93]:
+            - heading [level=3] [ref=f1e94]:
+              - link "AI Village @ DEF CON 32" [ref=f1e95] [cursor=pointer]:
+                - /url: /events/defcon-32/
+            - generic [ref=f1e96]: Las Vegas, NV
+            - generic [ref=f1e97]: Join AI Village at DEF CON 32 for demos, talks, and the Generative Red Team 2 challenge.
+        - article [ref=f1e98]:
+          - generic [ref=f1e99]:
+            - generic [ref=f1e100]: Aug
+            - generic [ref=f1e101]: "07"
+          - generic [ref=f1e102]:
+            - heading [level=3] [ref=f1e103]:
+              - link "AI Village @ DEF CON 33" [ref=f1e104] [cursor=pointer]:
+                - /url: /events/defcon-33/
+            - generic [ref=f1e105]: Las Vegas, NV
+            - generic [ref=f1e106]: Join AI Village at DEF CON 33 for Deepfake Karaoke and GRT-3.
+      - generic [ref=f1e107]:
+        - heading "Get Involved" [level=2] [ref=f1e108]
+        - paragraph [ref=f1e109]:
+          - text: For current participation details, use the public event pages and join the
+          - link "AI Village Discord" [ref=f1e110] [cursor=pointer]:
+            - /url: /discord/
+          - text: .
+  - contentinfo [ref=f1e111]:
+    - generic [ref=f1e113]:
+      - generic [ref=f1e114]:
+        - link "AI Village" [ref=f1e115] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=f1e116]: Public AI security education, built by the community.
+      - generic [ref=f1e117]:
+        - navigation "Programs footer links" [ref=f1e118]:
+          - heading "Programs" [level=2] [ref=f1e119]
+          - list [ref=f1e120]:
+            - listitem [ref=f1e121]:
+              - link "Generative Red Team" [ref=f1e122] [cursor=pointer]:
+                - /url: /grt/
+            - listitem [ref=f1e123]:
+              - link "Learn / Workshops" [ref=f1e124] [cursor=pointer]:
+                - /url: /learn/
+            - listitem [ref=f1e125]:
+              - link "Events" [ref=f1e126] [cursor=pointer]:
+                - /url: /events/
+            - listitem [ref=f1e127]:
+              - link "Poster Archive" [ref=f1e128] [cursor=pointer]:
+                - /url: /posters/
+            - listitem [ref=f1e129]:
+              - link "Research" [ref=f1e130] [cursor=pointer]:
+                - /url: /research/
+        - navigation "Community footer links" [ref=f1e131]:
+          - heading "Community" [level=2] [ref=f1e132]
+          - list [ref=f1e133]:
+            - listitem [ref=f1e134]:
+              - link "Community" [ref=f1e135] [cursor=pointer]:
+                - /url: /community/
+            - listitem [ref=f1e136]:
+              - link "Discord" [ref=f1e137] [cursor=pointer]:
+                - /url: /discord/
+            - listitem [ref=f1e138]:
+              - link "Volunteer Application" [ref=f1e139] [cursor=pointer]:
+                - /url: https://forms.gle/sFyr1rVeqKAPXhG4A
+            - listitem [ref=f1e140]:
+              - link "DEF CON Volunteer Signup" [ref=f1e141] [cursor=pointer]:
+                - /url: /defcon-volunteer/
+            - listitem [ref=f1e142]:
+              - link "Code of Conduct" [ref=f1e143] [cursor=pointer]:
+                - /url: /about/conduct/
+        - navigation "Organization footer links" [ref=f1e144]:
+          - heading "Organization" [level=2] [ref=f1e145]
+          - list [ref=f1e146]:
+            - listitem [ref=f1e147]:
+              - link "About" [ref=f1e148] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f1e149]:
+              - link "Sponsors" [ref=f1e150] [cursor=pointer]:
+                - /url: /sponsors/
+            - listitem [ref=f1e151]:
+              - link "Blog" [ref=f1e152] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f1e153]:
+              - link "GitHub" [ref=f1e154] [cursor=pointer]:
+                - /url: https://github.com/aivillage
+        - navigation "Utility footer links" [ref=f1e155]:
+          - heading "Utility" [level=2] [ref=f1e156]
+          - list [ref=f1e157]:
+            - listitem [ref=f1e158]:
+              - link "RSS" [ref=f1e159] [cursor=pointer]:
+                - /url: /feed.xml
+            - listitem [ref=f1e160]:
+              - link "LinkedIn" [ref=f1e161] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/aivillage
+            - listitem [ref=f1e162]:
+              - link "X/Twitter" [ref=f1e163] [cursor=pointer]:
+                - /url: https://twitter.com/aivillage_dc
+      - paragraph [ref=f1e164]: © 2026 AI Village. All rights reserved.

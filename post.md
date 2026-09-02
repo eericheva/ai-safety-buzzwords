@@ -3,7 +3,9 @@
 В облаке ниже — 125 концептов AI safety. По одному запросу в Semantic Scholar на каждый, вниз
 до arXiv, 4726 статей. Потом я пошла в обратную сторону, ловить то, что пропустила руками:
 намайненные из абстрактов фразы, ключевые слова OpenAlex, сверка с таксономией рисков MIT.
-Цифры лежат на сайте. Дальше — записи о том, что пошло не так, пока я всё это собирала.
+Цифры лежат на сайте:
+[mrswallbreakermaps.com/buzzwords](https://mrswallbreakermaps.com/buzzwords/index.html).
+Дальше — записи о том, что пошло не так, пока я всё это собирала.
 
 ![Облако из 125 концептов AI safety: размер — Papers, цвет — тема глоссария](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/wordcloud_dark.png)
 
@@ -539,5 +541,7 @@ decision-making` с `gradual disempowerment` в «свойство модели�
    LLM на одном и том же тексте расходятся достаточно часто, чтобы я стала помечать, кто из трёх
    выдал число, которое я записываю.
 
+Три страницы живут тут:
+[mrswallbreakermaps.com/buzzwords](https://mrswallbreakermaps.com/buzzwords/index.html).
 Полный разбор всех 125 концептов — в [глоссарии](ai-safety-concepts-glossary.md),
 методология сбора — в [methodology.md](methodology.md).

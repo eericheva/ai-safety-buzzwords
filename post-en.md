@@ -2,8 +2,9 @@
 
 The cloud below is 125 AI safety concepts. One Semantic Scholar query each, down to arXiv,
 4,726 papers after dedup. Then the other direction, to catch what I'd missed by hand:
-abstract-mined phrases, OpenAlex keywords, a diff against the MIT risk taxonomy. Counts live on
-the site. The rest of this is notes on what went sideways while I built it.
+abstract-mined phrases, OpenAlex keywords, a diff against the MIT risk taxonomy. The counts are
+live at [mrswallbreakermaps.com/buzzwords](https://mrswallbreakermaps.com/buzzwords/index.html).
+The rest of this is notes on what went sideways while I built it.
 
 ![A cloud of 125 AI safety concepts: size is paper count, color is glossary theme](https://raw.githubusercontent.com/eericheva/ai-safety-buzzwords/main/img/wordcloud_dark.png)
 
@@ -453,6 +454,7 @@ brought jailbreak papers with it; `factual knowledge` pulled RAG papers into *fa
 name says which harm, or whose. I check what an added form drags in now - started that after those
 two.
 
-Full breakdown of the 125 concepts in the
-[glossary](ai-safety-concepts-glossary_en.md); collection method in
-[methodology_en.md](methodology_en.md).
+The three pages are at
+[mrswallbreakermaps.com/buzzwords](https://mrswallbreakermaps.com/buzzwords/index.html). Full
+breakdown of the 125 concepts in the [glossary](ai-safety-concepts-glossary_en.md); collection
+method in [methodology_en.md](methodology_en.md).

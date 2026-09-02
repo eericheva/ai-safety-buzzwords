@@ -1,6 +1,13 @@
 # Methodology: how we collect and visualize AI-safety buzzwords
 
-Terms come from the companion glossary, [ai-safety-concepts-glossary_en.md](ai-safety-concepts-glossary_en.md). Everything below is the code between that list and the three pages.
+Terms come from the companion glossary,
+[ai-safety-concepts-glossary_en.md](ai-safety-concepts-glossary_en.md). Everything below is the
+method between that list and the three pages: what was queried, what was thrown away, what was
+counted and how the terms were grouped.
+
+The collection and analysis programs are not in this repository. What travels here is what they
+produced - the measurements in `data/` and the three pages built from them - so that the numbers
+can be checked and reused without rerunning anything (§12).
 
 ---
 
@@ -8,13 +15,13 @@ Terms come from the companion glossary, [ai-safety-concepts-glossary_en.md](ai-s
 
 A tile in the cloud needs a paper count behind it, then the citations on those papers, the year the term first showed up, and a cluster to colour it by. The cloud sizes each tile off whichever of those numbers is selected. Anything that resists being counted has no route onto a page, and I have not gone looking for one.
 
-Which script does what:
+Three layers of work sit behind that:
 
-| Layer | Scripts | Over what |
+| Layer | What it works over | Where |
 |---|---|---|
-| Top-down collection | [buzzwords.py](buzzwords.py) + [collect.py](collect.py) | a fixed, curated list of AI-safety concepts from the glossary (§3-§6) |
-| Bottom-up discovery | [discover.py](discover.py) | corpora and taxonomies, for candidate terms (§10) |
-| Visualization | [build_viz.py](build_viz.py), [build_source_data.py](build_source_data.py), [build_dashboard.py](build_dashboard.py) / [build_trends.py](build_trends.py) / [build_taxonomy.py](build_taxonomy.py) | word cloud, trends, groupings map (§9) |
+| Top-down collection | a fixed, curated list of AI-safety concepts taken from the glossary | §3-§6 |
+| Bottom-up discovery | corpora and taxonomies, searched for candidate terms nobody had listed | §10 |
+| Visualization | the word cloud, the trends view and the groupings map | §9 |
 
 Discovery feeds two things that have nothing to do with each other: single terms get hand-added to the glossary, and the lists as a whole become **standalone sources** for the pages (§8).
 
@@ -24,72 +31,70 @@ Discovery feeds two things that have nothing to do with each other: single terms
 
 ```mermaid
 flowchart TD
-    Glossary["ai-safety-concepts-glossary.md"] --> Buzzwords["buzzwords.py<br/>BUZZWORDS (125 terms)"]
-    Buzzwords --> Collect["collect.py"]
+    Glossary["ai-safety-concepts-glossary.md"] --> Terms["curated term list<br/>125 terms"]
+    Terms --> Collect["collection step"]
     Collect --> S2["Semantic Scholar<br/>bulk search + verify"]
-    S2 --> Papers["data/papers.csv<br/>data/buzzword_counts.csv"]
+    S2 --> Papers["data/papers.csv<br/>4,726 papers"]
 
-    Corpus["data/raw2 / OpenAlex / MIT"] --> Discover["discover.py"]
-    Discover --> Cand["candidate_terms.csv (300)<br/>openalex_keywords.csv (300)<br/>mit_risk_gaps.csv"]
+    Corpus["abstract cache / OpenAlex / MIT"] --> Discover["discovery step"]
+    Discover --> Cand["mined phrases (300)<br/>OpenAlex keywords (300)<br/>MIT risk gaps"]
     Cand -.manual review.-> Glossary
-    Cand --> CollectSrc["collect_source.py<br/>(same S2 pipeline over candidates)"]
-    CollectSrc --> SrcData["build_source_data.py<br/>co-occurrence + semantic"]
+    Cand --> CollectSrc["candidate collection step<br/>(same pipeline over candidates)"]
+    CollectSrc --> SrcData["candidate grouping step<br/>co-occurrence + semantic"]
 
-    Papers --> Viz["build_viz.py / groupings*.py"]
+    Papers --> Viz["measurement step<br/>metrics + lenses"]
     Viz --> VD["viz / trends / taxonomy_map .json<br/>(curated)"]
     SrcData --> SD["...(Mined phrases, OpenAlex)"]
-    VD --> Art["build_dashboard / build_trends / build_taxonomy"]
+    VD --> Art["page builders<br/>(in this repository)"]
     SD --> Art
     Art --> HTML["index.html · trends.html · taxonomy.html<br/>(Source switcher)"]
 ```
 
 ---
 
-## 3. Curated vocabulary and queries - `buzzwords.py`
+## 3. Curated vocabulary and queries
 
-`BUZZWORDS` is the list, curated by hand out of the glossary: rows of `(display_term, cluster, s2_query)`, **125 terms** over 19 semantic clusters. The clusters are glossary sections 1-20, minus §10 "Umbrella taxonomies", which tracks no terms of its own.
+The curated term list is built by hand out of the glossary. Each row holds three things - the term as displayed, the glossary cluster it belongs to, and the search query it goes out with - and there are **125 terms** over 19 semantic clusters. The clusters are glossary sections 1-20, minus §10 "Umbrella taxonomies", which tracks no terms of its own.
 
-Two helpers build the query:
+A query is built one of two ways:
 
-| Helper | What it builds | For |
+| Query form | What it is | Used for |
 |---|---|---|
-| `p(term)` | a "bare" quoted phrase | specific multi-word terms - `"prompt injection"`, `"membership inference"` |
-| `s(term)` | the phrase **scoped with safety context** `SCOPE` | generic single-word terms - `bias`, `probing`, `calibration` - which unscoped come back full of off-topic hits |
+| bare phrase | the term in quotes, nothing added | specific multi-word terms - `"prompt injection"`, `"membership inference"` |
+| scoped phrase | the term plus a safety context clause | generic single-word terms - `bias`, `probing`, `calibration` - which unscoped come back full of off-topic hits |
 
-`SCOPE` is built from the single `CONTEXT` list below. Section 5 verifies against that same list, and nothing checks that the two stay in step:
+The safety context is one list of six phrases, and the scoped query asks for any of them:
 
-```10:12:buzzwords.py
-CONTEXT = ["language model", "large language model", "LLM", "chatbot",
-           "AI safety", "AI alignment"]
-SCOPE = "(%s)" % " | ".join('"%s"' % c if " " in c else c for c in CONTEXT)
-```
+    language model, large language model, LLM, chatbot, AI safety, AI alignment
 
-S2 bulk syntax: `"phrase"`, `+`(AND), `|`(OR), `-`(NOT), `*`(prefix). A handful of rows carry a custom query with OR-synonyms instead of either helper (`scheming`, `reward overoptimization`, ...).
+Verification in §5 checks against that same list of six. Nothing enforces that the two stay in step - if one is edited and the other is not, papers get collected under a scope they are then not checked against.
 
-Surface forms, `VARIANTS` and `variants()`. A term can be written several ways - `dual-use`/`dual use`, `PII`/`personally identifiable information` - and they all have to land on one tile. `VARIANTS` defines the forms that count as a hit; otherwise `variants()` auto-derives them. Matching is case-insensitive, on a word boundary, and **prefix-based**:
+The bulk search syntax offers `"phrase"`, `+`(AND), `|`(OR), `-`(NOT), `*`(prefix). A handful of terms carry a hand-written query with OR-synonyms instead of either standard form (`scheming`, `reward overoptimization`, ...).
+
+Surface forms. A term can be written several ways - `dual-use`/`dual use`, `PII`/`personally identifiable information` - and they all have to land on one tile. A hand-written table lists the forms that count as a hit for a given term; where a term has no entry, the forms are derived from the term itself. Matching is case-insensitive, on a word boundary, and **prefix-based**:
 
 | Change | Example | Caught |
 |---|---|---|
 | glued on the right | `bias`→`biased`/`biases` | yes |
 | inside the stem | `hallucination`→`hallucinate` | no, has to be listed by hand |
 
-`variants()` merges one more source on top of `VARIANTS` - the human-approved semantic synonyms in `data/variants_approved.json` (§13). Which terms are still short a form, I have not checked.
+One more source of forms is merged on top of the hand-written table: the approved semantic synonyms in `data/variants_approved.json`, which is in this repository (§13). Which terms are still short a form, I have not checked.
 
 ---
 
-## 4. Collecting papers - `collect.py`
+## 4. Collecting papers
 
-One S2 bulk call per buzzword, on the parameters below, cached to `data/raw2/<slug>.json` so that a rerun costs nothing:
+One Semantic Scholar bulk call per term, on the parameters below, cached per term to disk so that a rerun costs nothing:
 
 | Call parameter | Value |
 |---|---|
 | `year` | `2005-` |
 | `fieldsOfStudy` | `Computer Science` |
-| `sort` | `citationCount:desc`, except `scheming` at `publicationDate:desc` (`SORT_OVERRIDE`) |
+| `sort` | `citationCount:desc`, except `scheming`, sorted by publication date instead |
 | fields | `title, abstract, year, publicationDate, citationCount, externalIds` |
 | ceiling | up to 1000 candidates, all of them **with abstracts** |
 
-Between calls, a 1.2 s pause and up to 5 retries with backoff when one errors out. The S2 key sits in `collect.py`, which is the reason that file lives in the private repo.
+Between calls, a 1.2 second pause and up to 5 retries with backoff when one errors out. The Semantic Scholar key is read from the environment, never written into a file; without a key the collection still runs, on a lower rate limit.
 
 ## 5. Filtering and verification
 
@@ -98,8 +103,8 @@ S2 matches **with stemming**, so what comes back is noisy. Three filters run ove
 | Filter | What it drops | Note |
 |---|---|---|
 | no `externalIds.ArXiv` | everything not on arXiv | |
-| surface form not in `title + abstract` as a whole word | the stemming false positives: `scheme` ≠ `scheming` | `make_matcher(variants(term))` |
-| no `CONTEXT` token | off-topic hits, but only where the query carried `SCOPE` | before it existed, `bias`/`backdoor`/`probing` were pulling in beamforming, DOA estimation, medicine, IoT |
+| surface form not in `title + abstract` as a whole word | the stemming false positives: `scheme` ≠ `scheming` | checked against the term's surface forms from §3 |
+| none of the six safety context phrases present | off-topic hits, but only for terms whose query was scoped | before it existed, `bias`/`backdoor`/`probing` were pulling in beamforming, DOA estimation, medicine, IoT |
 
 **125 terms → 4,726 unique arXiv papers** survive that (`data/papers.csv`, top-60 by citations per term, deduplicated). It is the Curated row of the source table in §8.
 
@@ -125,7 +130,7 @@ Each term also carries a per-year series, 2015-2026, papers and citations both, 
 
 ## 7. Groupings (lenses)
 
-Four **lenses** colour and lay out the curated set, built in `groupings.py` / `groupings_embed.py` and assembled in `lenses.py`:
+Four **lenses** colour and lay out the curated set. Three of them travel with this repository as the `grouping_*.json` files in `data/`; the fourth, the glossary one, is a hand-written grouping of clusters into themes, which is why the pages carry it inside their own data rather than as a file:
 
 | Lens | How it's computed |
 |---|---|
@@ -143,18 +148,18 @@ The **source** switch on every page swaps the whole vocabulary underneath it: th
 | Source | Method | Terms | Papers | Lenses | Lost in verification |
 |---|---|---|---|---|---|
 | **Curated** | manual glossary (§3-5) | 125 | 4,726 | glossary · MIT · semantic · co-occurrence | - |
-| **Mined phrases** | frequent phrases from abstracts (`discover.py --source raw2`) | 278 | 11,583 | co-occurrence · semantic | −22 of the top 300: n-gram artifacts with an acronym glued on, `retrieval-augmented generation rag`, `vision-language models vlms`. Abstracts write `... (RAG)` in parentheses, so the phrase is never there verbatim |
+| **Mined phrases** | frequent phrases mined from the collected abstracts (§10) | 278 | 11,583 | co-occurrence · semantic | −22 of the top 300: n-gram artifacts with an acronym glued on, `retrieval-augmented generation rag`, `vision-language models vlms`. Abstracts write `... (RAG)` in parentheses, so the phrase is never there verbatim |
 | **OpenAlex keywords** | keywords/topics from OpenAlex | 203 | 6,195 | co-occurrence · semantic | −97 of the top 300: long topic labels and parenthetical fields, `risk analysis (engineering)`, `context (archaeology)`, none of them present verbatim in CS arXiv |
 
 Neither candidate source reaches 300; the Lost in verification column is where the rest went. 1 phrase per source also died on a 429 mid-collection, which is a bug rather than a filter and has not been retried.
 
-### How candidate sources are collected - `collect_source.py`
+### How candidate sources are collected
 
-Top 300 by frequency out of `data/candidate_terms.csv` / `data/openalex_keywords.csv`, deduplicated, length ≥3. Each phrase then goes down the `collect.py` path unchanged: bulk search on the bare phrase, `year=2005-`, CS, **exact-phrase verification** in title+abstract. The cache lands in `data/src_<source>/raw/`, and what comes out is `terms.json` (per-term metrics + series) and `papers.csv` (top-60/term, deduplicated).
+The top 300 by frequency out of each discovery list, deduplicated, three characters or longer. Each phrase then goes down the §4 path unchanged: bulk search on the bare phrase, `year=2005-`, Computer Science, **exact-phrase verification** in title and abstract. What comes out is `terms.json` (per-term metrics and per-year series) and `papers.csv` (top 60 per term, deduplicated), both of which are in this repository under `data/src_raw2/` and `data/src_openalex/`.
 
-### Groupings for candidate sources - `build_source_data.py`
+### Groupings for candidate sources
 
-Glossary/MIT are tied to our own vocabulary, so foreign terms get neither and the other two lenses are computed here. Co-occurrence is Louvain over the paper co-occurrence graph, local, no API. Semantic needs SPECTER2 embeddings of the source's papers, pulled in one S2 batch and cached in `embeddings.npz`, then k-means + PCA.
+The glossary and MIT lenses are tied to our own vocabulary, so foreign terms get neither, and only the other two are computed. Co-occurrence is Louvain community detection over the graph where two terms are linked when one paper mentions both - local, no API. Semantic needs SPECTER2 embeddings of the source's papers, pulled in one Semantic Scholar batch, then k-means and a two-dimensional PCA.
 
 Output formats match the curated ones: `viz_data.json`, `trends_data.json`, `taxonomy_map.json` - cloud SVGs for each of the 7 metrics, per-year streams, map layouts.
 
@@ -164,25 +169,27 @@ Output formats match the curated ones: `viz_data.json`, `trends_data.json`, `tax
 
 All three pages read the same per-source data and share a nav, a light/dark theme and the **Source** switcher (Curated / Mined phrases / OpenAlex).
 
-The word cloud ([build_dashboard.py](build_dashboard.py) → `index.html`) is the page that gets looked at. Every term is a tile in an interactive SVG cloud, sized by whichever of the 7 metrics is selected and coloured by whichever lens; a top-terms bar chart under it re-sorts on the same metric. Four stat tiles: terms, papers, citations, year span.
+The word cloud ([build_dashboard.py](src/build_dashboard.py) → `index.html`) is the page that gets looked at. Every term is a tile in an interactive SVG cloud, sized by whichever of the 7 metrics is selected and coloured by whichever lens; a top-terms bar chart under it re-sorts on the same metric. Four stat tiles: terms, papers, citations, year span.
 
-Trends ([build_trends.py](build_trends.py) → `trends.html`) has three views. **Atlas** is heatmap cards, every term on one screen with a per-year heat-strip. **Overlay** draws all the lines at once and hides groups behind an "eye". **Themes** is a streamgraph of the field's composition over time, papers or citations.
+Trends ([build_trends.py](src/build_trends.py) → `trends.html`) has three views. **Atlas** is heatmap cards, every term on one screen with a per-year heat-strip. **Overlay** draws all the lines at once and hides groups behind an "eye". **Themes** is a streamgraph of the field's composition over time, papers or citations.
 
-Groupings ([build_taxonomy.py](build_taxonomy.py) → `taxonomy.html`) is a single scatter map: **Layout** positions by a lens, **Colour** colours by a lens, **Size** is the radius by metric. Set Layout and Colour to the same lens and the clusters come out in clean single colours, which is what a grouping looks like when it is real; set them to different ones and you get how one grouping cuts across the other.
+Groupings ([build_taxonomy.py](src/build_taxonomy.py) → `taxonomy.html`) is a single scatter map: **Layout** positions by a lens, **Colour** colours by a lens, **Size** is the radius by metric. Set Layout and Colour to the same lens and the clusters come out in clean single colours, which is what a grouping looks like when it is real; set them to different ones and you get how one grouping cuts across the other.
 
 ---
 
-## 10. Discovering candidates - `discover.py`
+## 10. Discovering candidates
 
-Top-down collection by design can't find new terms. A separate module, three `--source` modes; a candidate passes if it's **novel** (not in the glossary text nor in `BUZZWORDS`/`VARIANTS`):
+Top-down collection by design cannot find new terms. A separate step goes the other way, over three sources; a candidate passes if it is **novel**, meaning it appears neither in the glossary text nor among the curated terms and their surface forms:
 
-| Mode | Source | What it does | Output |
+| Source | Where it looks | What it does | What comes out |
 |---|---|---|---|
-| `raw2` | `data/raw2` cache | 2-3-grams from abstracts, ranked by frequency, minus known terms | `data/candidate_terms.csv` |
-| `openalex` | [OpenAlex API](https://api.openalex.org) | `keywords`/`topics` of works matching a safety query, aggregated by frequency | `data/openalex_keywords.csv` |
-| `mit` | MIT AI Risk Repository | diff of 7 domains / 24 subdomains against the glossary | `data/mit_risk_gaps.csv` |
+| Mined phrases | the cached abstracts from §4 | two- and three-word phrases from abstracts, ranked by frequency, minus the known terms | a ranked list of mined phrases |
+| OpenAlex | [OpenAlex API](https://api.openalex.org) | keywords and topics of works matching a safety query, aggregated by frequency | a ranked list of keywords |
+| MIT risk taxonomy | MIT AI Risk Repository | difference between its 7 domains / 24 subdomains and the glossary | a coverage sheet of gaps |
 
-Everything in those three files is ranked and nothing in them is automatic - a term enters the glossary when someone puts it there. From that point the raw2 and openalex lists go two ways at once: individual terms get promoted by hand, and the same lists whole become visualization sources (§8). The MIT diff has no papers behind it, so it stays a coverage/gap sheet.
+All three come out ranked and none of them is automatic - a term enters the glossary when someone puts it there. From that point the mined phrases and the OpenAlex keywords go two ways at once: individual terms get promoted by hand, and the same lists whole become visualization sources (§8). The MIT difference has no papers behind it, so it stays a coverage sheet.
+
+The three ranked lists are working sheets for review, not results, so they do not travel with this repository (§12). What did come of them is here: the two candidate sources under `data/src_raw2/` and `data/src_openalex/`.
 
 ---
 
@@ -192,59 +199,52 @@ Retrieval stops at 1000 candidates per query. For `bias` or `hallucination` that
 
 Two smaller ones:
 
-- `raw_s2_total` is not comparable across terms, because S2 stems. Compare `verified`/`Papers`.
+- The raw hit count Semantic Scholar reports for a query is not comparable across terms, because it stems. The verified count - the **Papers** metric - is the one to compare.
 - The candidate sources are noisy by construction. raw2 carries generic phrases (`findings suggest`), OpenAlex carries entire fields (`computer science`, `psychology`).
 
 And on the groupings map, Mined phrases and OpenAlex keywords can only be laid out and coloured by co-occurrence or semantic. The glossary and MIT lenses do not exist for them, so two of the four entries do nothing while either one is the source.
 
 ---
 
-## 12. How to run
+## 12. What travels with this repository
+
+`data/` holds the finished measurements: `papers.csv` (the 4,726-paper corpus), `viz_data.json`,
+`trends_data.json`, `taxonomy_map.json`, `variants_approved.json`, and the three lens files
+`grouping_cooccur.json`, `grouping_embed.json`, `grouping_mit.json`. Each candidate source
+carries its own smaller set under `data/src_raw2/` and `data/src_openalex/`: `papers.csv`,
+`terms.json`, `viz_data.json`, `trends_data.json`, `taxonomy_map.json`. Between them that is
+every number any of the three pages shows.
+
+The collection and analysis programs are not here, and neither are their working files: the
+per-term cache of Semantic Scholar responses, the SPECTER2 vectors, and the ranked review sheets
+of §10 and §13. They are all rebuilt from the APIs on every run, and none of them is needed to
+read, check or reuse the measurements.
+
+### Rebuilding the pages
+
+The three page builders are in this repository, they read `data/` and nothing else, and they run
+on the Python standard library - no install step:
 
 ```bash
-# - curated layer -
-python buzzwords.py            # stats over the list
-python collect.py             # collect papers (caches data/raw2)
-python build_viz.py           # metrics + clouds + viz_data (+ groupings*.py lenses)
-python trends_data.py; python taxonomy_map.py
-
-# - candidate discovery -
-python discover.py --source raw2
-python discover.py --source openalex --pages 25
-python discover.py --source mit
-
-# - candidate sources as corpora -
-python collect_source.py raw2 300      # collect + verify top-300
-python collect_source.py openalex 300
-python build_source_data.py raw2       # co-occurrence + semantic + formats
-python build_source_data.py openalex
-
-# - variant / candidate curation (no fetch; reuses cached embeddings) -
-python variants_suggest.py    # -> data/variants_suggestions.csv (synonym forms for review)
-python build_triage.py        # -> data/candidate_triage.csv (route candidates)
-
-# - build pages (embed all available sources) -
-python build_dashboard.py
-python build_trends.py
-python build_taxonomy.py
+python src/build_dashboard.py   # -> web/index.html
+python src/build_trends.py      # -> web/trends.html
+python src/build_taxonomy.py    # -> web/taxonomy.html
 ```
 
-### How to add a new buzzword (to the curated set)
-
-1. Add a line to `ai-safety-concepts-glossary.md` (canonical name + link).
-2. Add a tuple to `BUZZWORDS` (`buzzwords.py`), and surface forms to `VARIANTS` if needed.
-3. `python collect.py` → the term is pulled from S2 and enters the metrics; then rebuild the data and pages.
+Each one fills the matching template in `templates/` with the data for all three sources and
+writes a single self-contained file. Editing a template and rerunning the builder is the way to
+change how a page looks; the numbers it shows come from `data/` untouched.
 
 ---
 
-## 13. Enrichment tooling and future work
+## 13. Enrichment work and what is left
 
-Semantic `VARIANTS` enrichment: `variants_suggest.py` takes each term's mean-centered SPECTER2 centroid and ranks corpus n-grams by cosine against it into `data/variants_suggestions.csv`, closest at the top. Pruning is manual - a form reaches the counts once someone has approved the row.
+Semantic enrichment of the surface forms. Each term has a centroid in SPECTER2 space, mean-centered over the corpus; ranking the corpus n-grams by cosine against that centroid puts the likeliest missing synonyms at the top of a review sheet. Pruning is manual - a form reaches the counts once someone has approved the row.
 
-An unlisted synonym is a paper that never gets counted, and the number just comes back lower. Two guards sit under the suggestions. One is a generic-root blocklist. The other re-runs the proposed form over the cached candidates to see what it drags in, and that is what caught "harmful content" quietly pulling jailbreak papers into *harmfulness*. Survivors land in `data/variants_approved.json` and get merged by `variants()`.
+An unlisted synonym is a paper that never gets counted, and the number just comes back lower. Two guards sit under the suggestions. One is a generic-root blocklist. The other re-runs the proposed form over the cached candidates to see what it drags in, and that is what caught "harmful content" quietly pulling jailbreak papers into *harmfulness*. Survivors land in `data/variants_approved.json`, which is in this repository, and get merged into the surface forms of §3.
 
 Across 37 terms the effect was **+741 verified papers (+8.4%)**, most of it the stem changes the prefix matcher can never see: `memorize`/`memorized` for *memorization*, `hallucinate` for *hallucination*. Which terms are still missing one, nobody has gone through and checked.
 
-`build_triage.py` writes `data/candidate_triage.csv`, one row per candidate, one table to curate from. It scores the two bottom-up sources (`data/src_raw2`, `data/src_openalex`) against the 125 curated buzzwords on mean-centered SPECTER2 cosine, then sorts each candidate into `{variant, related, new-candidate, discard}` - proximity for the dedup, coherence to tell a concept from noise, a min-papers gate for the rest.
+Candidate triage produces one row per candidate, one table to curate from. It scores the two bottom-up sources against the 125 curated terms on mean-centered SPECTER2 cosine, then sorts each candidate into one of four buckets - variant, related, new candidate, discard - using proximity to remove duplicates, coherence to tell a concept from noise, and a minimum paper count for the rest.
 
-Cross-source validation via OpenAlex: nothing written yet. For terms carrying an OpenAlex topic ID, `works?filter=topics.id:...` gives a count that owes nothing to our `VARIANTS` list, and a large gap against our verified count would point at either a missing surface form or a scope mismatch. Whether it belongs next to `verified` as a column or outside the tables entirely, I haven't worked out.
+Cross-source validation via OpenAlex: nothing done yet. For terms carrying an OpenAlex topic identifier, asking OpenAlex for the works under that topic gives a count that owes nothing to our list of surface forms, and a large gap against our verified count would point at either a missing form or a mismatch of scope. Whether that belongs beside the verified count as a column, or outside the tables entirely, I have not worked out.

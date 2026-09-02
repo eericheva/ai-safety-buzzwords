@@ -10,33 +10,44 @@ highlighting, no linting and no readable diff. Templates now live in templates/.
 import json
 import os
 
-import common
+# CHANGED: the four names below used to come from common.py, which also carried the
+# collection and analysis helpers. Those stages no longer live in this repository, so
+# the paths and the one reader they need are declared here instead.
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(HERE, "data")
+WEB = os.path.join(HERE, "web")
+TEMPLATES = os.path.join(HERE, "templates")
 
 SOURCE_LABELS = {"curated": "Curated", "raw2": "Mined phrases",
                  "openalex": "OpenAlex keywords"}
 EXTRA_SOURCES = ("raw2", "openalex")
 
 
+def read_json(*parts):
+    with open(os.path.join(*parts), encoding="utf-8") as f:
+        return json.load(f)
+
+
 def build(data_file, page, drop_papers):
     """`page` names both the template and the output file, which is why they match."""
-    curated = common.read_json(common.DATA, data_file)
+    curated = read_json(DATA, data_file)
     curated["label"] = SOURCE_LABELS["curated"]
     sources = {"curated": curated}
     for s in EXTRA_SOURCES:      # bottom-up branches, shown behind the Source toggle
-        path = os.path.join(common.DATA, "src_" + s, data_file)
+        path = os.path.join(DATA, "src_" + s, data_file)
         if os.path.exists(path):
-            sd = common.read_json(path)
+            sd = read_json(path)
             sd["label"] = SOURCE_LABELS[s]
             sources[s] = sd
     if drop_papers:              # the paper table is served from data/papers.csv instead
         for sd in sources.values():
             sd.pop("papers", None)   # mined sources never carried one
 
-    template = os.path.join(common.TEMPLATES, page)
+    template = os.path.join(TEMPLATES, page)
     with open(template, encoding="utf-8") as f:
         html = f.read()
     payload = json.dumps(sources, ensure_ascii=False, separators=(",", ":"))
-    out = os.path.join(common.WEB, page)
+    out = os.path.join(WEB, page)
     with open(out, "w", encoding="utf-8") as f:
         f.write(html.replace("/*__DATA__*/", payload))
     # printing the source list keeps a missing optional branch visible rather than silent

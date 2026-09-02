@@ -4,6 +4,9 @@ __pycache__/
 *_backup_*
 *venv*
 
+# Browser-automation scratch output. Never part of the project.
+.playwright-mcp/
+
 # Regenerable caches, too large to carry: the per-term Semantic Scholar pages and
 # the SPECTER2 vectors. collect.py and collect_source.py refill the JSON caches from
 # the API, groupings_embed.py and build_source_data.py refill the .npz.

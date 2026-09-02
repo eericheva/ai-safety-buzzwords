@@ -2,7 +2,7 @@
 """Assemble web/taxonomy.html - ONE unified grouping map of the 125 buzzwords.
 Three independent controls: Layout (position), Colour, Size (radius).
 
-    python build_taxonomy.py
+    python src/build_taxonomy.py
 """
 import page
 

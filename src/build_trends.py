@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Assemble web/trends.html - the time-series visualizer (Atlas / Overlay / Themes).
 
-    python build_trends.py
+    python src/build_trends.py
 """
 import page
 

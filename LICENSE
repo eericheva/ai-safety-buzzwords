@@ -28,10 +28,10 @@ SOFTWARE.
 ===============================================================================
 2. WRITING, GLOSSARY AND DERIVED DATA - CC BY 4.0
 ===============================================================================
-Applies to the posts (post.md, post-en.md, README.md), the methodology notes
-(methodology.md, methodology_en.md), the glossary (ai-safety-concepts-glossary*.md),
-the figures in img/, the generated pages in web/, and the derived measurements in
-data/.
+Applies to the posts (post.md, post-en.md), the front page (README.md), the
+methodology notes (methodology.md, methodology_en.md), the glossary
+(ai-safety-concepts-glossary*.md), the figures in img/, the generated pages in web/,
+and the derived measurements in data/.
 
 Licensed under the Creative Commons Attribution 4.0 International License. You
 may share and adapt this material for any purpose, including commercially, as

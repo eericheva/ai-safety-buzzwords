@@ -5,7 +5,7 @@ The word clouds are rendered in-page as interactive SVGs (DATA.cloud_svgs), not 
 embedded images. The paper table is stripped from the payload - only per-term stats
 travel into the page - and the full corpus stays in data/papers.csv.
 
-    python build_dashboard.py
+    python src/build_dashboard.py
 """
 import page
 

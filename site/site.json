@@ -1,0 +1,11 @@
+{
+  "title": "AI Safety Buzzwords",
+  "desc": "The vocabulary of AI safety, counted from arXiv (2005–2026).",
+  "entry": "index.html",
+  "preview": "site/preview.png",
+  "files": {
+    "index.html": "web/index.html",
+    "taxonomy.html": "web/taxonomy.html",
+    "trends.html": "web/trends.html"
+  }
+}

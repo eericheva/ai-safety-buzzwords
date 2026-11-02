@@ -47,6 +47,7 @@ def build(data_file, page, drop_papers):
     with open(template, encoding="utf-8") as f:
         html = f.read()
     payload = json.dumps(sources, ensure_ascii=False, separators=(",", ":"))
+    os.makedirs(WEB, exist_ok=True)  # CHANGED: web/ is build output, untracked in the private repository since 2026-10-17
     out = os.path.join(WEB, page)
     with open(out, "w", encoding="utf-8") as f:
         f.write(html.replace("/*__DATA__*/", payload))

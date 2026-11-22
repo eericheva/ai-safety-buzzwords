@@ -26,27 +26,36 @@ a{color:var(--accent)}
 
 header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);background:var(--paper)}
 .hero{padding-top:40px;padding-bottom:26px;display:grid;gap:14px}
-.hero h1{font-size:clamp(28px,4.2vw,46px);font-weight:700;letter-spacing:-.01em}
+/* CHANGED 2026-11-22: inner page title 32px Unbounded 700 (brand book sizes) */
+.hero h1{font-size:32px;font-weight:700;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .lead{max-width:66ch;color:var(--ink2);font-size:16.5px}
 
 /* sticky control bar */
 .bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.bar-in{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-top:10px;padding-bottom:10px}
-.ctlrow{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;width:100%;
-  border-top:1px solid var(--line);padding-top:10px}
+/* CHANGED 2026-11-22: toolbar of switches: each 40px row gets 8px above and below, 56px per band (brand book sizes) */
+.bar-in{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding-top:8px;padding-bottom:8px}
+.ctlrow{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;width:100%;
+  border-top:1px solid var(--line);padding-top:8px}
 .tabs{display:flex;flex-wrap:wrap;gap:4px;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:4px}
 .tab{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 14px;
   border-radius:0;cursor:pointer;display:flex;gap:7px;align-items:center}
 .tab.on{background:var(--accent);color:var(--accent-ink)}
 .tab small{font:500 11px/1 var(--font-mono);color:var(--muted);text-transform:none;letter-spacing:0}
 .tab.on small{color:var(--accent-ink)}
+/* CHANGED 2026-11-22: the view tabs are switches: 40px, one width for the three, frame as a shadow (brand book sizes) */
+.tabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0;padding:0;border:0;box-shadow:0 0 0 1px var(--line)}
+.tab{height:40px;padding:0 14px;justify-content:center;white-space:nowrap}
 .seg{display:flex;flex-wrap:wrap;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:4px}
 .seg button{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 13px;
   border-radius:0;cursor:pointer}
 .seg button.on{background:var(--accent);color:var(--accent-ink)}
 .seg.dim{opacity:.4;pointer-events:none}
+/* CHANGED 2026-11-22: switch 40px; the frame is a shadow so the segment stays 40px tall; one width within a segment, free widths when it wraps on a narrow screen (brand book sizes) */
+.seg{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;padding:0;border:0;box-shadow:0 0 0 1px var(--line)}
+.seg button{height:40px;padding:0 13px;white-space:nowrap}
+@media (max-width:760px){.seg{display:inline-flex;flex-wrap:wrap}}
 .spacer{flex:1}
 .ctl{display:flex;gap:8px;align-items:center;color:var(--ink2);font-size:13px}
 .check{display:flex;align-items:center;gap:7px;cursor:pointer;user-select:none;font-size:13px;color:var(--ink2)}
@@ -63,6 +72,8 @@ section{padding:26px 0 40px}
   padding:5px 11px;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none}
 .chip .sw{width:9px;height:9px;border-radius:0}
 .chip.on{color:#fff;border-color:transparent}
+/* CHANGED 2026-11-22: group filter chips inside the content: 28px (brand book sizes) */
+.chip{height:28px;padding:0 11px}
 
 /* atlas grid */
 .atlasctl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:16px}
@@ -115,6 +126,10 @@ section{padding:26px 0 40px}
 .eyeall button{display:flex;align-items:center;gap:5px;font:600 12px/1 var(--font-text);color:var(--ink2);
   background:var(--card);border:1px solid var(--line2);border-radius:0;padding:4px 10px;cursor:pointer}
 .eyeall button:hover{color:var(--ink)}
+/* CHANGED 2026-11-22: the eye toggles and Show all / Hide all sit in one row of in-content chips: 28px; the two buttons share one width (brand book sizes) */
+.glg{height:28px;padding:0 10px 0 7px}
+.eyeall{display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.eyeall button{height:28px;padding:0 10px;justify-content:center}
 
 #tip{position:fixed;z-index:40;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--card);border:1px solid var(--line2);
   color:var(--ink);padding:8px 11px;border-radius:0;font-size:12.5px;box-shadow:var(--shadow);max-width:280px}
@@ -128,8 +143,11 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 .menu div{padding:8px 11px;font-size:13.5px;cursor:pointer;display:flex;align-items:center;gap:8px}
 .menu div:hover{background:var(--accent-soft)}
 .nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 0}
-.nav a{display:flex;align-items:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
-  color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;padding:8px 12px}
+/* CHANGED 2026-11-22: nav is a toolbar of switches: 40px links + 8px above and below = 56px; the three page links share one width (brand book sizes) */
+.nav{padding:8px 0}
+.navtabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
+.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;height:40px;padding:0 12px}
 .nav a.cur{color:var(--accent-ink);border-color:var(--accent);background:var(--accent)}
 .nav .sep{flex:1}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -138,9 +156,10 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 <div id="tip"></div>
 
 <div class="wrap"><nav class="nav">
-  <a href="index.html">🧭 Word cloud</a>
-  <a class="cur" href="#">📈 Trends</a>
-  <a href="taxonomy.html">🗂️ Groupings</a>
+  <!-- CHANGED 2026-11-22: no emoji in the UI; links grouped so they share one width (brand book sizes) -->
+  <div class="navtabs"><a href="index.html">Word cloud</a>
+  <a class="cur" href="#">Trends</a>
+  <a href="taxonomy.html">Groupings</a></div>
   <span class="sep"></span><span class="eyebrow" style="align-self:center">Source</span>
   <div class="seg" id="srcseg"></div>
 </nav></div>

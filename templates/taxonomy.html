@@ -23,13 +23,17 @@ h1,h2{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1
 a{color:var(--accent)}
 .eyebrow{font:700 12px/1.4 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 0}
-.nav a{display:flex;align-items:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
-  color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;padding:8px 12px}
+/* CHANGED 2026-11-22: nav is a toolbar of switches: 40px links + 8px above and below = 56px; the three page links share one width (brand book sizes) */
+.nav{padding:8px 0}
+.navtabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
+.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;height:40px;padding:0 12px}
 .nav a.cur{color:var(--accent-ink);border-color:var(--accent);background:var(--accent)}
 .nav .sep{flex:1}
 header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);background:var(--paper)}
 .hero{padding-top:40px;padding-bottom:26px;display:grid;gap:14px}
-.hero h1{font-size:clamp(28px,4.4vw,46px);font-weight:700;letter-spacing:-.01em}
+/* CHANGED 2026-11-22: inner page title 32px Unbounded 700 (brand book sizes) */
+.hero h1{font-size:32px;font-weight:700;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .lead{max-width:70ch;color:var(--ink2);font-size:16.5px}
 .findings{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
@@ -41,12 +45,16 @@ header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);ba
 /* control bar */
 .bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.bar-in{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center;padding-top:12px;padding-bottom:12px}
+/* CHANGED 2026-11-22: toolbar of switches: 8px above and below each 40px row, 56px for one row (brand book sizes) */
+.bar-in{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;padding-top:8px;padding-bottom:8px}
 .ctl{display:flex;align-items:center;gap:9px}
 .ctl>.eyebrow{color:var(--muted)}
 .seg{display:inline-flex;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:3px;flex-wrap:wrap}
 .seg button{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:7px 10px;border-radius:0;cursor:pointer}
 .seg button.on{background:var(--accent);color:var(--accent-ink)}
+/* CHANGED 2026-11-22: switch 40px; the frame is a shadow so the segment stays 40px tall; buttons keep their own widths, because one width per segment pushed Layout and Colour onto separate rows of the toolbar at 1440px (brand book sizes) */
+.seg{padding:0;border:0;box-shadow:0 0 0 1px var(--line)}
+.seg button{height:40px;padding:0 10px;white-space:nowrap}
 
 section{padding:26px 0 40px}
 .mapcard{background:var(--card);border:1px solid var(--line);border-radius:0;padding:8px;box-shadow:var(--shadow)}
@@ -77,9 +85,10 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 <div id="tip"></div>
 
 <div class="wrap"><nav class="nav">
-  <a href="index.html">🧭 Word cloud</a>
-  <a href="trends.html">📈 Trends</a>
-  <a class="cur" href="#">🗂️ Groupings</a>
+  <!-- CHANGED 2026-11-22: no emoji in the UI; links grouped so they share one width (brand book sizes) -->
+  <div class="navtabs"><a href="index.html">Word cloud</a>
+  <a href="trends.html">Trends</a>
+  <a class="cur" href="#">Groupings</a></div>
   <span class="sep"></span><span class="eyebrow" style="align-self:center">Source</span>
   <div class="seg" id="srcseg"></div>
 </nav></div>

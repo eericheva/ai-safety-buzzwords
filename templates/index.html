@@ -19,8 +19,11 @@
 html{-webkit-text-size-adjust:100%}
 /* cross-artifact nav */
 .nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 0}
-.nav a{display:flex;align-items:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
-  color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;padding:8px 12px}
+/* CHANGED 2026-11-22: nav is a toolbar of switches: 40px links + 8px above and below = 56px; the three page links share one width (brand book sizes) */
+.nav{padding:8px 0}
+.navtabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
+.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;height:40px;padding:0 12px}
 .nav a.cur{color:var(--accent-ink);border-color:var(--accent);background:var(--accent)}
 .nav a:hover{color:var(--ink)}
 .nav .sep{flex:1}
@@ -28,6 +31,10 @@ html{-webkit-text-size-adjust:100%}
 .seg{display:inline-flex;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:3px;flex-wrap:wrap}
 .seg button{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:7px 11px;border-radius:0;cursor:pointer}
 .seg button.on{background:var(--accent);color:var(--accent-ink)}
+/* CHANGED 2026-11-22: switch 40px; the frame is a shadow so the segment stays 40px tall; one width within a segment, free widths when it wraps on a narrow screen (brand book sizes) */
+.seg{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;padding:0;border:0;box-shadow:0 0 0 1px var(--line)}
+.seg button{height:40px;padding:0 11px;white-space:nowrap}
+@media (max-width:760px){.seg{display:inline-flex;flex-wrap:wrap}}
 .barlegend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 2px 2px}
 .barlegend .it{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink2)}
 .barlegend .sw{width:11px;height:11px;border-radius:0}
@@ -45,7 +52,8 @@ a{color:var(--accent)}
 /* header */
 header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);background:var(--paper)}
 .hero{padding-top:46px;padding-bottom:30px;display:grid;gap:16px}
-.hero h1{font-size:clamp(30px,4.6vw,50px);font-weight:700;letter-spacing:-.01em}
+/* CHANGED 2026-11-22: this page opens the project: title 48px Unbounded 900 (narrower on a phone) (brand book sizes) */
+.hero h1{font-size:clamp(30px,4.6vw,48px);font-weight:900;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .lead{max-width:64ch;color:var(--ink2);font-size:17px}
 
@@ -154,9 +162,10 @@ footer{padding:34px 0 60px;color:var(--muted);font-size:13px}
 <div id="tip"></div>
 
 <div class="wrap"><nav class="nav">
-  <a class="cur" href="#">🧭 Word cloud</a>
-  <a href="trends.html">📈 Trends</a>
-  <a href="taxonomy.html">🗂️ Groupings</a>
+  <!-- CHANGED 2026-11-22: no emoji in the UI; links grouped so they share one width (brand book sizes) -->
+  <div class="navtabs"><a class="cur" href="#">Word cloud</a>
+  <a href="trends.html">Trends</a>
+  <a href="taxonomy.html">Groupings</a></div>
   <span class="sep"></span>
   <span class="eyebrow" style="align-self:center">Source</span>
   <div class="seg" id="srcseg"></div>

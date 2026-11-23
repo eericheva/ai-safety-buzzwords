@@ -16,7 +16,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--plane);color:var(--ink);font-size:16px;
+body{margin:0;background:var(--plane);color:var(--ink);font-size:15px; /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   font-family:var(--font-text);line-height:1.5;-webkit-font-smoothing:antialiased}
 .mono{font-family:var(--font-mono)}
 .tnum{font-variant-numeric:tabular-nums}
@@ -30,7 +30,7 @@ header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);ba
 /* CHANGED 2026-11-22: inner page title 32px Unbounded 700 (brand book sizes) */
 .hero h1{font-size:32px;font-weight:700;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.lead{max-width:66ch;color:var(--ink2);font-size:16.5px}
+.lead{max-width:66ch;color:var(--ink2);font-size:17px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 
 /* sticky control bar */
 .bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
@@ -40,16 +40,17 @@ header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);ba
 .ctlrow{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;width:100%;
   border-top:1px solid var(--line);padding-top:8px}
 .tabs{display:flex;flex-wrap:wrap;gap:4px;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:4px}
-.tab{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 14px;
+.tab{border:0;background:transparent;color:var(--ink2);font:700 11px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 14px; /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   border-radius:0;cursor:pointer;display:flex;gap:7px;align-items:center}
 .tab.on{background:var(--accent);color:var(--accent-ink)}
-.tab small{font:500 11px/1 var(--font-mono);color:var(--muted);text-transform:none;letter-spacing:0}
+/* CHANGED 2026-11-22: design review: Mono 500 is not loaded and rendered as 400 anyway (F20) */
+.tab small{font:400 11px/1 var(--font-mono);color:var(--muted);text-transform:none;letter-spacing:0}
 .tab.on small{color:var(--accent-ink)}
 /* CHANGED 2026-11-22: the view tabs are switches: 40px, one width for the three, frame as a shadow (brand book sizes) */
 .tabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0;padding:0;border:0;box-shadow:0 0 0 1px var(--line)}
 .tab{height:40px;padding:0 14px;justify-content:center;white-space:nowrap}
 .seg{display:flex;flex-wrap:wrap;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:4px}
-.seg button{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 13px;
+.seg button{border:0;background:transparent;color:var(--ink2);font:700 11px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 13px; /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   border-radius:0;cursor:pointer}
 .seg button.on{background:var(--accent);color:var(--accent-ink)}
 .seg.dim{opacity:.4;pointer-events:none}
@@ -60,7 +61,7 @@ header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);ba
 .spacer{flex:1}
 .ctl{display:flex;gap:8px;align-items:center;color:var(--ink2);font-size:13px}
 .check{display:flex;align-items:center;gap:7px;cursor:pointer;user-select:none;font-size:13px;color:var(--ink2)}
-.inp{background:var(--card);border:1px solid var(--line2);border-radius:0;padding:7px 10px;color:var(--ink);font-size:13.5px;min-width:180px}
+.inp{background:var(--card);border:1px solid var(--line2);border-radius:0;padding:7px 10px;color:var(--ink);font-size:13px;min-width:180px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .inp:focus{outline:2px solid var(--accent);outline-offset:1px}
 
 section{padding:26px 0 40px}
@@ -70,7 +71,7 @@ section{padding:26px 0 40px}
 /* group filter chips */
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
 .chip{border:1px solid var(--line2);background:var(--card);color:var(--ink2);border-radius:0;
-  padding:5px 11px;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none}
+  padding:5px 11px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .chip .sw{width:9px;height:9px;border-radius:0}
 .chip.on{color:#fff;border-color:transparent}
 /* CHANGED 2026-11-22: group filter chips inside the content: 28px (brand book sizes) */
@@ -85,7 +86,8 @@ section{padding:26px 0 40px}
 .hrow:hover{background:var(--accent-soft)}
 .hsw{width:9px;height:9px;border-radius:0}
 .hnm{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hnum{font:600 11px/1 var(--font-mono);color:var(--ink2);font-variant-numeric:tabular-nums}
+/* CHANGED 2026-11-22: design review: weights that are not loaded (600, 650) rendered as 700 anyway; written as the loaded 700 (F20) */
+.hnum{font:700 11px/1 var(--font-mono);color:var(--ink2);font-variant-numeric:tabular-nums}
 .hcells{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;height:12px}
 .hcells i{border-radius:0;display:block}
 .mini{background:var(--card);border:1px solid var(--line);border-radius:0;padding:12px 12px 8px;
@@ -93,8 +95,8 @@ section{padding:26px 0 40px}
 .mini:hover{border-color:var(--line2);transform:translateY(-1px)}
 .mini.sel{border-color:var(--accent);box-shadow:0 0 0 1.5px var(--accent),var(--shadow)}
 .mini .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:4px}
-.mini .nm{font-size:13.5px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mini .tot{font:600 12px/1 var(--font-mono);color:var(--ink2);white-space:nowrap}
+.mini .nm{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
+.mini .tot{font:700 12px/1 var(--font-mono);color:var(--ink2);white-space:nowrap}
 .mini .meta{display:flex;justify-content:space-between;font:11px/1.3 var(--font-mono);color:var(--muted);margin-top:5px}
 .mini svg{width:100%;height:52px;display:block}
 
@@ -105,7 +107,7 @@ section{padding:26px 0 40px}
 .lg{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink);background:var(--plane);
   border:1px solid var(--line);border-radius:0;padding:4px 10px 4px 8px}
 .lg .sw{width:11px;height:11px;border-radius:0;flex:none}
-.lg button{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:0 0 0 2px}
+.lg button{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:13px;line-height:1;padding:0 0 0 2px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .lg button:hover{color:var(--c8)}
 .emptysel{color:var(--muted);font-size:13px;padding:6px 0}
 .axis{fill:var(--muted);font:11px var(--font-mono)}
@@ -118,13 +120,13 @@ section{padding:26px 0 40px}
 .ovln{fill:none;stroke-width:1.6;opacity:.85;transition:opacity .1s,stroke-width .1s}
 .ovhit{fill:none;stroke:transparent;stroke-width:9;cursor:pointer}
 .eye{color:currentColor;flex:none} .eye .slash{display:none}
-.glg{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink);background:var(--plane);
+.glg{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink);background:var(--plane); /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   border:1px solid var(--line);border-radius:0;padding:3px 10px 3px 7px;cursor:pointer;user-select:none}
 .glg .sw{width:11px;height:11px;border-radius:0;flex:none}
-.glg .ct{color:var(--muted);font:600 11px/1 var(--font-mono);margin-left:2px}
+.glg .ct{color:var(--muted);font:700 11px/1 var(--font-mono);margin-left:2px}
 .glg.off{opacity:.45} .glg.off .eye .slash{display:block}
 .eyeall{display:flex;gap:6px;margin-right:2px}
-.eyeall button{display:flex;align-items:center;gap:5px;font:600 12px/1 var(--font-text);color:var(--ink2);
+.eyeall button{display:flex;align-items:center;gap:5px;font:700 12px/1 var(--font-text);color:var(--ink2);
   background:var(--card);border:1px solid var(--line2);border-radius:0;padding:4px 10px;cursor:pointer}
 .eyeall button:hover{color:var(--ink)}
 /* CHANGED 2026-11-22: the eye toggles and Show all / Hide all sit in one row of in-content chips: 28px; the two buttons share one width (brand book sizes) */
@@ -133,7 +135,7 @@ section{padding:26px 0 40px}
 .eyeall button{height:28px;padding:0 10px;justify-content:center}
 
 #tip{position:fixed;z-index:40;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--card);border:1px solid var(--line2);
-  color:var(--ink);padding:8px 11px;border-radius:0;font-size:12.5px;box-shadow:var(--shadow);max-width:280px}
+  color:var(--ink);padding:8px 11px;border-radius:0;font-size:13px;box-shadow:var(--shadow);max-width:280px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 #tip .tv{font-weight:700} #tip .row{display:flex;justify-content:space-between;gap:14px}
 #tip .sw{display:inline-block;width:9px;height:9px;border-radius:0;margin-right:5px}
 footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
@@ -141,31 +143,54 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 .menu{position:absolute;top:calc(100% + 4px);left:0;z-index:25;background:var(--card);border:1px solid var(--line2);
   border-radius:0;box-shadow:var(--shadow);max-height:280px;overflow:auto;width:240px;display:none}
 .menu.open{display:block}
-.menu div{padding:8px 11px;font-size:13.5px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.menu div{padding:8px 11px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .menu div:hover{background:var(--accent-soft)}
 .nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 0}
 /* CHANGED 2026-11-22: nav is a toolbar of switches: 40px links + 8px above and below = 56px; the three page links share one width (brand book sizes) */
 .nav{padding:8px 0}
 .navtabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
-.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
+.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em; /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;height:40px;padding:0 12px}
 .nav a.cur{color:var(--accent-ink);border-color:var(--accent);background:var(--accent)}
 .nav .sep{flex:1}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* CHANGED 2026-11-22: design review: keyboard focus shows the accent ring instead of the browser's blue one; offset 2px keeps it on the page background around an accent-filled button (F4) */
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* CHANGED 2026-11-22: design review: the way back to the site, written as on the Genealogy landing: 12px mono 700, .14em, accent, uppercase; 24px tap target (F9) */
+.home{padding-top:10px}
+.home a{display:inline-flex;align-items:center;min-height:24px;font:700 12px/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.home a:hover{text-decoration:underline}
+/* CHANGED 2026-11-22: design review: a control label never parts from its segment: the two wrap as one group (F5) */
+.lblgrp{display:inline-flex;align-items:center;gap:8px;min-width:0;max-width:100%}
+/* CHANGED 2026-11-22: design review: one hero and one lead on all three tabs (F3) */
+.hero{padding-top:40px;padding-bottom:26px;gap:14px}
+.lead{font-size:17px;line-height:1.55;max-width:66ch}
+/* CHANGED 2026-11-22: design review: at 390px the three view tabs scrolled the page sideways and clipped THEMES: below 480px the small hints go (F6) */
+@media (max-width:480px){.tab small{display:none}}
+/* CHANGED 2026-11-22: design review: on a narrow screen Sort and Colour wrap as two groups instead of squeezing their segments into one row; at 1440 they stay on one row as before (F5) */
+@media (max-width:760px){#ctxctl{flex-wrap:wrap;gap:8px 16px}}
+/* CHANGED 2026-11-22: design review: the panel holds the nav above the eyebrow; its divider is #26231f; the back link needs no top padding inside it (F8) */
+header{border-bottom-color:#26231f}
+.hero .home{padding-top:0}
+.hero .nav{padding:0;margin-bottom:12px}
+.hero .lead{margin:0} /* CHANGED 2026-11-22: design review: the lede sits on the panel's 14px rhythm and the panel ends 26px under it, as on the other projects (F8) */
 </style>
 
 <div id="tip"></div>
 
-<div class="wrap"><nav class="nav">
+<!-- CHANGED 2026-11-22: design review: one header pattern for every project: the 4px accent rule at the very top, then one #11100e panel
+     holding the way back to the site, the tab nav, the eyebrow, the title and the lede (F8) -->
+<header><div class="wrap hero">
+  <div class="home"><a href="https://mrswallbreakermaps.com/">← Mrs Wallbreaker</a></div>
+  <nav class="nav">
   <!-- CHANGED 2026-11-22: no emoji in the UI; links grouped so they share one width (brand book sizes) -->
   <div class="navtabs"><a href="index.html">Word cloud</a>
   <a class="cur" href="#">Trends</a>
   <a href="taxonomy.html">Groupings</a></div>
-  <span class="sep"></span><span class="eyebrow" style="align-self:center">Source</span>
-  <div class="seg" id="srcseg"></div>
-</nav></div>
-
-<header><div class="wrap hero">
+  <span class="sep"></span>
+  <!-- CHANGED 2026-11-22: design review: label and segment in one group (F5) -->
+  <div class="lblgrp"><span class="eyebrow">Source</span><div class="seg" id="srcseg"></div></div>
+</nav>
   <div class="eyebrow">arXiv · Semantic Scholar · time series 2015–2026</div>
   <h1>How AI-safety buzzwords <em>emerge &amp; shift</em></h1>
   <p class="lead">Each buzzword’s trajectory by year — how many papers use it and how much
@@ -429,10 +454,10 @@ function renderThemes(){
 
 /* ---------- context controls per view ---------- */
 function lensSegHTML(){
-  return `<span class="eyebrow">Colour</span><div class="seg" id="lensseg">`+
+  return `<div class="lblgrp"><span class="eyebrow">Colour</span><div class="seg" id="lensseg">`+ // CHANGED 2026-11-22: design review: label and segment in one group (F5)
     Object.entries(D.lens_meta).map(([k,m])=>
       `<button data-l="${k}" class="${k===state.lens?'on':''}">${m.label.replace(' theme','').replace(' risk domain',' risk').replace(' cluster','').replace(' community','')}</button>`).join('')+
-    `</div>`;
+    `</div></div>`;
 }
 function wireLensSeg(after){
   document.querySelectorAll('#lensseg button').forEach(b=>b.onclick=()=>{
@@ -441,9 +466,9 @@ function wireLensSeg(after){
 function renderCtx(){
   const el=document.getElementById('ctxctl');
   if(state.view==='atlas'){
-    el.innerHTML=`<span class="eyebrow">Sort</span><div class="seg" id="sortseg">`+
+    el.innerHTML=`<div class="lblgrp"><span class="eyebrow">Sort</span><div class="seg" id="sortseg">`+ // CHANGED 2026-11-22: design review: label and segment in one group (F5)
       D.weight_metrics.map(m=>`<button data-s="${m.key}" class="${m.key===state.sort?'on':''}">${WSHORT[m.key]}</button>`).join('')
-      +`</div>`+ lensSegHTML();
+      +`</div></div>`+ lensSegHTML();
     el.querySelectorAll('#sortseg button').forEach(b=>b.onclick=()=>{state.sort=b.dataset.s;renderAtlas();renderCtx();});
     wireLensSeg(()=>{renderAtlas();renderCtx();});
   }else if(state.view==='overlay'){

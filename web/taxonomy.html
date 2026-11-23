@@ -16,7 +16,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--plane);color:var(--ink);font-size:16px;line-height:1.55;
+body{margin:0;background:var(--plane);color:var(--ink);font-size:15px;line-height:1.55; /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   font-family:var(--font-text);-webkit-font-smoothing:antialiased}
 .mono{font-family:var(--font-mono)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
@@ -27,7 +27,7 @@ a{color:var(--accent)}
 /* CHANGED 2026-11-22: nav is a toolbar of switches: 40px links + 8px above and below = 56px; the three page links share one width (brand book sizes) */
 .nav{padding:8px 0}
 .navtabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
-.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;
+.nav a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 11px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em; /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
   color:var(--ink2);border:1px solid var(--line2);background:var(--card);border-radius:0;height:40px;padding:0 12px}
 .nav a.cur{color:var(--accent-ink);border-color:var(--accent);background:var(--accent)}
 .nav .sep{flex:1}
@@ -36,7 +36,7 @@ header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);ba
 /* CHANGED 2026-11-22: inner page title 32px Unbounded 700 (brand book sizes) */
 .hero h1{font-size:32px;font-weight:700;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.lead{max-width:70ch;color:var(--ink2);font-size:16.5px}
+.lead{max-width:70ch;color:var(--ink2);font-size:17px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .findings{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
 /* CHANGED 2026-11-22: brand book: a card carries a 4px coloured top edge (owner) */
 .finding{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);
@@ -50,9 +50,9 @@ header{border-top:4px solid var(--accent);border-bottom:1px solid var(--line);ba
 /* CHANGED 2026-11-22: toolbar of switches: 8px above and below each 40px row, 56px for one row (brand book sizes) */
 .bar-in{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;padding-top:8px;padding-bottom:8px}
 .ctl{display:flex;align-items:center;gap:9px}
-.ctl>.eyebrow{color:var(--muted)}
+.ctl>.eyebrow{color:var(--accent)} /* CHANGED 2026-11-22: design review: control labels in the accent, as on Word cloud and Trends (F13) */
 .seg{display:inline-flex;background:var(--plane);border:1px solid var(--line);border-radius:0;padding:3px;flex-wrap:wrap}
-.seg button{border:0;background:transparent;color:var(--ink2);font:700 11.5px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:7px 10px;border-radius:0;cursor:pointer}
+.seg button{border:0;background:transparent;color:var(--ink2);font:700 11px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;padding:7px 10px;border-radius:0;cursor:pointer} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .seg button.on{background:var(--accent);color:var(--accent-ink)}
 /* CHANGED 2026-11-22: switch 40px; the frame is a shadow so the segment stays 40px tall; buttons keep their own widths, because one width per segment pushed Layout and Colour onto separate rows of the toolbar at 1440px (brand book sizes) */
 .seg{padding:0;border:0;box-shadow:0 0 0 1px var(--line)}
@@ -66,37 +66,57 @@ section{padding:26px 0 40px}
 @media (prefers-reduced-motion:no-preference){
   .map circle{transition:cx .55s cubic-bezier(.4,0,.2,1),cy .55s cubic-bezier(.4,0,.2,1),r .3s,fill .25s,opacity .15s}
 }
-.map .glabel{fill:var(--ink);font:600 13px/1 var(--font-text);paint-order:stroke;
+/* CHANGED 2026-11-22: design review: 600 is not loaded and rendered as 700 anyway (F20) */
+.map .glabel{fill:var(--ink);font:700 13px/1 var(--font-text);paint-order:stroke;
   stroke:var(--card);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
 .legend{display:flex;flex-wrap:wrap;gap:7px 14px;margin-top:14px;align-items:center}
-.legend .cap{font:600 12px/1 var(--font-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.lg{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink2)}
+.legend .cap{font:700 12px/1 var(--font-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.lg{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink2)} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .lg .sw{width:11px;height:11px;border-radius:0}
 .hint{color:var(--muted);font-size:13px;margin:14px 2px 0;max-width:90ch}
 .hint b{color:var(--ink2)}
 .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gap);border-radius:0;
-  padding:13px 15px;color:var(--ink2);font-size:13.5px;margin-top:22px}
+  padding:13px 15px;color:var(--ink2);font-size:13px;margin-top:22px;max-width:72ch} /* CHANGED 2026-11-22: design review: reading prose capped at 72ch (F11) */ /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 .note b{color:var(--ink)}
 #tip{position:fixed;z-index:40;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--card);border:1px solid var(--line2);
-  color:var(--ink);padding:8px 11px;border-radius:0;font-size:12.5px;box-shadow:var(--shadow);max-width:280px}
+  color:var(--ink);padding:8px 11px;border-radius:0;font-size:13px;box-shadow:var(--shadow);max-width:280px} /* CHANGED 2026-11-22: design review: type scale 11/13/15/17/19/24/32/48, no half pixels (F12) */
 #tip .tv{font-weight:700}#tip .sw{display:inline-block;width:9px;height:9px;border-radius:0;margin-right:5px}
 #tip .row{display:flex;justify-content:space-between;gap:16px}
 footer{padding:30px 0 60px;color:var(--muted);font-size:13px}
 @media (max-width:760px){.findings{grid-template-columns:1fr}}
+/* CHANGED 2026-11-22: design review: keyboard focus shows the accent ring instead of the browser's blue one; offset 2px keeps it on the page background around an accent-filled button (F4) */
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* CHANGED 2026-11-22: design review: the way back to the site, written as on the Genealogy landing: 12px mono 700, .14em, accent, uppercase; 24px tap target (F9) */
+.home{padding-top:10px}
+.home a{display:inline-flex;align-items:center;min-height:24px;font:700 12px/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.home a:hover{text-decoration:underline}
+/* CHANGED 2026-11-22: design review: a control label never parts from its segment: the two wrap as one group (F5) */
+.lblgrp{display:inline-flex;align-items:center;gap:8px;min-width:0;max-width:100%}
+/* CHANGED 2026-11-22: design review: one hero and one lead on all three tabs (F3) */
+.hero{padding-top:40px;padding-bottom:26px;gap:14px}
+.lead{font-size:17px;line-height:1.55;max-width:66ch}
+/* CHANGED 2026-11-22: design review: the panel holds the nav above the eyebrow; its divider is #26231f; the back link needs no top padding inside it (F8) */
+header{border-bottom-color:#26231f}
+.hero .home{padding-top:0}
+.hero .nav{padding:0;margin-bottom:12px}
+.hero .lead{margin:0} /* CHANGED 2026-11-22: design review: the lede sits on the panel's 14px rhythm and the panel ends 26px under it, as on the other projects (F8) */
 </style>
 
 <div id="tip"></div>
 
-<div class="wrap"><nav class="nav">
+<!-- CHANGED 2026-11-22: design review: one header pattern for every project: the 4px accent rule at the very top, then one #11100e panel
+     holding the way back to the site, the tab nav, the eyebrow, the title and the lede (F8) -->
+<header><div class="wrap hero">
+  <div class="home"><a href="https://mrswallbreakermaps.com/">← Mrs Wallbreaker</a></div>
+  <nav class="nav">
   <!-- CHANGED 2026-11-22: no emoji in the UI; links grouped so they share one width (brand book sizes) -->
   <div class="navtabs"><a href="index.html">Word cloud</a>
   <a href="trends.html">Trends</a>
   <a class="cur" href="#">Groupings</a></div>
-  <span class="sep"></span><span class="eyebrow" style="align-self:center">Source</span>
-  <div class="seg" id="srcseg"></div>
-</nav></div>
-
-<header><div class="wrap hero">
+  <span class="sep"></span>
+  <!-- CHANGED 2026-11-22: design review: label and segment in one group (F5) -->
+  <div class="lblgrp"><span class="eyebrow">Source</span><div class="seg" id="srcseg"></div></div>
+</nav>
   <div class="eyebrow" id="eyebrow">125 buzzwords · one map · three controls</div>
   <h1>One map, <em>many groupings</em></h1>
   <p class="lead">Every buzzword is a dot. <b>Layout</b> arranges the dots in space by one grouping;
